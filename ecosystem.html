@@ -50,12 +50,22 @@
                 </script>
             </section>
             
-            <section id="highlightSection">
-                <script type="text/javascript">
-                    // This template is supposed to be injected (partial)
-                    $("#highlightSection").load("templates/view_highlightSection.html");
-                </script>
+            <section id="ecosystemSection">
+                <div class="container">
+                    <aside id="filterSection" class="col-md-3">
+                        Filters
+                    </aside>
+                    
+                    <section id="listContainer" class="listContainer col-md-9">
+                        <script type="text/javascript">
+                            // This template is supposed to be injected (partial)
+                            $("#listContainer").load("templates/view_highlightSection.html");
+                            //images/ecosystem.jpg
+                        </script>
+                    </section>
+                </div>
             </section>
+            
             
             <footer id="footer">
                 <script type="text/javascript">
