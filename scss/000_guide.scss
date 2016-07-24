@@ -80,28 +80,75 @@ $bg_img: "../sysimages/bg.png";
 }
 
 
-//typography
+// Typography
+@font-face {
+    font-family: 'intro';
+    src: url('../fonts/intro-webfont.woff2') format('woff2'),
+         url('../fonts/intro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'merriweather';
+    src: url('../fonts/merriweather-regular-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'merriweatherbold';
+    src: url('../fonts/merriweather-bold-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helvetica';
+	src: url('../fonts/helvetic-webfont.eot');
+    src: url('../fonts/helvetic-webfont.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/helvetic-webfont.woff') format('woff'),
+		 url('../fonts/helvetic-webfont.ttf') format('truetype'),
+		 url('../fonts/helvetic-webfont.svg#atroxnormal') format('svg');
+    font-weight: normal;
+    font-style: normal;     
+}
+
+@font-face {
+    font-family: 'helveticabold';
+	src: url('../fonts/helveticabold-webfont.eot');
+    src: url('../fonts/helveticabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticabold-webfont.woff') format('woff'),
+		 url('../fonts/helveticabold-webfont.ttf') format('truetype'),
+		 url('../fonts/helveticabold-webfont.svg#atroxnormal') format('svg');
+    font-weight: normal;
+    font-style: normal;     
+}
+
+
 $font_size1: 24px;
 $font_size2: 16px;
 
 
-
 h1, .h1{
-	font-family: Intro;
+	font-family: 'intro';
 	font-size: $font_size1;
 	color: $color_bl;
 }
 
 
 h2, .h2{
-	font-family: Merriweather;
+	font-family: 'merriweather';
 	font-size: $font_size1;
 	line-height: 120%;
 	color: $color_bl;
 }
 
 h3, .h3 {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'helvetica', Arial, Helvetica, sans-serif;
 	font-size: $font_size2;
 	font-weight: bold;
 	line-height: 120%;
@@ -109,7 +156,7 @@ h3, .h3 {
 }
 
 p{
-	font-family: Merriweather; 
+	font-family: 'merriweather'; 
 	font-weight: regular;
 	font-size: 16px;
 	line-height: 21px;
@@ -164,7 +211,7 @@ p{
 
 
 a{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'helvetica', Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 	color: $color_solidGold;
@@ -176,8 +223,6 @@ a{
 	}
 }
 
-
-	
 
 /*
 h4, .h4 {
@@ -380,7 +425,7 @@ HTML:
 .button,
 button,
 input[type=submit]{
-font-family: Intro;
+font-family: 'intro';
 font-size: 14px;
 color: #FFF;
 padding: 20px 25px;
@@ -496,7 +541,7 @@ position: relative;
 					vertical-align: middle;
 					padding: 0 7px;
 					margin: 0;
-					font-family: Intro;
+					font-family: 'intro';
 					font-size: 12px;
 					color: #FFF;
 					text-decoration: none;
@@ -585,7 +630,7 @@ position: relative;
 		vertical-align: middle;
 		padding: 0 7px;
 		margin: 0;
-		font-family: Intro;
+		font-family: 'intro';
 		font-size: 12px;
 		color: $color_bl;
 		
@@ -775,7 +820,8 @@ position: relative;
 
 // ===================================================================================================================
 // Highlights
-#highlightSection{
+#highlightSection,
+#ecosystemSection{
 	padding-bottom: 50px;
 	background: url( $bg_img ) repeat left top;
 	position: relative;
@@ -814,8 +860,11 @@ $c_academia:#935491;
 $c_briefs:#8cc63f;
 
 
-.listContainer{
 
+// ===================================================================================================================
+// Lists
+.listContainer{
+	
 	.listElement{
 		position: relative;
 		color: inherit;
@@ -859,7 +908,7 @@ $c_briefs:#8cc63f;
 				top: 20px;
 				right: 20px;
 				z-index: 2;
-				font-family: Helvetica-Bold;
+				font-family: 'helveticabold';
 				font-size: 10px;
 				color: #FFF;
 				padding: 4px 22px;
@@ -886,7 +935,7 @@ $c_briefs:#8cc63f;
 			padding: 3px 20px;
 			
 			span{
-				font-family: Helvetica;
+				font-family: 'helvetica';
 				font-weight: bold;
 				text-transform: uppercase;
 				float: right;
