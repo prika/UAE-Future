@@ -196,6 +196,8 @@ p{
 	
 	h3{
 		position: relative;
+		font-family: 'intro';
+		display: inline-block;
 	
 		&::before{
 			position: absolute;
@@ -1083,6 +1085,38 @@ $c_briefs:#8cc63f;
 			float: left;
 			background: $color_gold;
 			height: 250px;
+			padding: 20px;
+			
+			&:first-child{
+				background: $color_w;
+				
+				.dateEvent{
+					color: $color_bl;
+				}
+				.timeEvent{
+					color: $color_gold;
+				}
+				
+			}
+			
+			.dateEvent{
+				font-family: 'merriweatherbold';
+				color: $color_w;
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+			.eventDescription{
+				font-family: 'helveticabold'; 
+				font-size: 16px;
+				line-height: 21px;
+				color: $color_bl;
+			}
+			.timeEvent{
+				font-family: 'merriweather';
+				font-size: 14px;
+				line-height: 21px;
+				color: rgba($color: $color_w, $alpha: .6)
+			}
 		}
 	}
 }
@@ -1096,6 +1130,11 @@ $c_briefs:#8cc63f;
 	
 	.element{
 		padding: 60px 60px;
+		
+		a{ 
+			display: inline-block; 
+			margin-left: 20px;
+		}
 	}
 	
 }

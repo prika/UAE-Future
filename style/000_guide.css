@@ -122,7 +122,9 @@ p, .reduced {
 .subtitle {
   padding: 30px 0; }
   .subtitle h3 {
-    position: relative; }
+    position: relative;
+    font-family: 'intro';
+    display: inline-block; }
     .subtitle h3::before {
       position: absolute;
       top: -20px;
@@ -934,12 +936,37 @@ input[type=submit] {
     margin: 0 .5%;
     float: left;
     background: rgba(190, 151, 95, 0.8);
-    height: 250px; }
+    height: 250px;
+    padding: 20px; }
+    #weeklycalendarSection .listContainerCalendar .element:first-child {
+      background: #FFF; }
+      #weeklycalendarSection .listContainerCalendar .element:first-child .dateEvent {
+        color: #21282f; }
+      #weeklycalendarSection .listContainerCalendar .element:first-child .timeEvent {
+        color: rgba(190, 151, 95, 0.8); }
+    #weeklycalendarSection .listContainerCalendar .element .dateEvent {
+      font-family: 'merriweatherbold';
+      color: #FFF;
+      font-size: 14px;
+      margin-bottom: 10px; }
+    #weeklycalendarSection .listContainerCalendar .element .eventDescription {
+      font-family: 'helveticabold';
+      font-size: 16px;
+      line-height: 21px;
+      color: #21282f; }
+    #weeklycalendarSection .listContainerCalendar .element .timeEvent {
+      font-family: 'merriweather';
+      font-size: 14px;
+      line-height: 21px;
+      color: rgba(255, 255, 255, 0.6); }
 
 #newsSection {
   padding: 40px;
   position: relative; }
   #newsSection .element {
     padding: 60px 60px; }
+    #newsSection .element a {
+      display: inline-block;
+      margin-left: 20px; }
 
 /*# sourceMappingURL=000_guide.css.map */
