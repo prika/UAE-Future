@@ -42,13 +42,17 @@
             </header>
       
             <section id="fullBanner">
-                <div></div>
-                
-                <script type="text/javascript">
-                    // This template is supposed to be injected (partial)
-                    $("#fullBanner>div").load("templates/view_fullBanner.html");
-                </script>
-            </section>
+            <div></div>
+
+            <script type="text/javascript">
+
+                // This template is supposed to be injected (partial)
+                imageUrl = "images/ecosystem.jpg";
+                $("#fullBanner").css("background-image", 'url(' + imageUrl + ')');
+                $("#fullBanner>div").load("templates/view_fullBanner.html");
+
+            </script>
+        </section>
             
             <section id="ecosystemSection">
                 <div class="container">
@@ -117,22 +121,22 @@
            
         </div>
         
-        <script type="text/javascript">
+         <script type="text/javascript">
 
-            (function($) {
-                
-                // init controller
-                var options =   { triggerHook: "onEnter", duration: "200%" }; 
-                var controller = new ScrollMagic.Controller( { globalSceneOptions:options });
+        (function ($) {
 
-                // build scenes
-                new ScrollMagic.Scene({triggerElement: "#fullBanner"})
-                                .setTween("#fullBanner > div", {y: "60%", ease: Linear.easeNone})
-                                .addIndicators()
-                                .addTo(controller);
-                                
-            })(jQuery);
-            
-        </script>
+            // init controller
+            var options = { triggerHook: "onEnter", duration: "200%" };
+            var controller = new ScrollMagic.Controller({ globalSceneOptions: options });
+
+            // build scenes
+            new ScrollMagic.Scene({ triggerElement: "#fullBanner" })
+                            .setTween("#fullBanner > div", { y: "60%", ease: Linear.easeNone })
+                            .addIndicators()
+                            .addTo(controller);
+
+        })(jQuery);
+
+    </script>
     </body>
 </html>

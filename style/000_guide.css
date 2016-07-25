@@ -524,7 +524,8 @@ input[type=submit] {
     display: inline-block;
     width: 80px;
     background: #be9857;
-    color: #FFF; }
+    color: #FFF;
+    padding: 40px 20px; }
 
 #fullBanner {
   background: url(../images/homepageBanner.jpg) no-repeat center bottom;
