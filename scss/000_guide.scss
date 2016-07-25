@@ -226,59 +226,63 @@ a{
 }
 
 
-/*
-h4, .h4 {
-	font-family: $font_regular;
-	font-size: $font_size_3;
-	color: $color_grey;
-	line-height: 150%;
-}
-
-%uppercase{
-	font-size: 13px;
-	font-family: $font_semibold;
-	letter-spacing: 2px;
-	text-align: center;
-	text-transform: uppercase;
-}	
-}*/
-
-
 // =================================================================================== //
 // Inputs / Textareas / Selects
-
-
 
 
 // =================================================================================== //
 // Clickables / Buttons
 
-/* green background */
-/*%clickable {
-	@include transition(all .2s linear);
-	
-	-webkit-tap-highlight-color: $color_transparent;
-	display: inline-block;
-	
-	@extend %uppercase;
+%clickable {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 7px;
+	margin: 0;
+	font-family: 'intro';
+	font-size: 12px;
+	color: #FFF;
 	text-decoration: none;
+	position: relative;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 	
-	color: $color_white;
-	border: 2px solid $color_green;
-	background: $color_green;
-	padding: 10px 25px;
+	&::before,
+	&::after{
+		position: absolute;
+		display: block;
+		height: 5px;
+		width: 26px;
+		content:'';
+		background: url(../sysimages/triangles.svg) no-repeat;
+		opacity: 0;
+		@include transition(all .2s ease);
+	}
+	
+	&::before{
+		top:-5px;
+		left: calc(50% - 12px);
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+	
+	&::after{
+		bottom:-5px;
+		left: calc(50% - 12px);
+	}
 	
 	&:hover{
-		background: $color_transparent;
-		color: $color_green;
+		background: #BE975F;
+		color: #FFF;
+		
+		&::before,
+		&::after{
+			opacity: 1;
+		}
 	}
-	
-	&:after,
-	&:before{
-		@include transition(all .2s linear);
-	}
-}*/
+}
 
 
 
@@ -427,8 +431,27 @@ HTML:
 .button,
 button,
 input[type=submit]{
-font-family: 'intro';
-font-size: 14px;
+	@extend %clickable;
+	border: none;
+	background: $color_gold;
+	padding: 20px 25px;
+	font-size: 14px;
+	
+	&::before,
+	&::after{
+		opacity: 1;
+	}
+	
+	&:hover{
+		background: $color_w;
+		color: $color_gold;
+		
+		&::before,
+		&::after{}
+	}
+	
+/*font-family: 'intro';
+
 color: #FFF;
 padding: 20px 25px;
 border: none;
@@ -468,7 +491,7 @@ position: relative;
     &:hover {
         background: rgba(255,255,255,0.80);
         color: #BE975F;
-    }
+    }*/
     
 }
 
@@ -537,49 +560,13 @@ position: relative;
 				display: inline-block;
 				margin: 0;
 				
-				a{
+				a {
+					@extend %clickable;
 					height: $header_height;
-					display: table-cell;
-					vertical-align: middle;
-					padding: 0 7px;
-					margin: 0;
-					font-family: 'intro';
-					font-size: 12px;
-					color: #FFF;
-					text-decoration: none;
-					position: relative;
-					
-					&::before,
-					&::after{
-						position: absolute;
-						display: block;
-						height: 5px;
-						width: 26px;
-						content:'';
-						background: url(../sysimages/triangles.svg) no-repeat;
-						opacity: 0;
-						@include transition(all .2s ease);
-					}
-					
-					&::before{
-						top:-5px;
-						left: calc(50% - 12px);
-						-webkit-transform: rotate(180deg);
-						-moz-transform: rotate(180deg);
-						-ms-transform: rotate(180deg);
-						-o-transform: rotate(180deg);
-						transform: rotate(180deg);
-					}
-					
-					&::after{
-						bottom:-5px;
-						left: calc(50% - 12px);
-					}
 				}
 				
-				&.active > a,
-				&.active > a:focus, 
-				& > a:hover{
+				&.active > a, 
+				a:hover{
 					background: #BE975F;
 					color: #FFF;
 					
@@ -603,6 +590,12 @@ position: relative;
 			
 			#searchbutton{
 				padding: 25px 7px;
+			}
+			
+			#loginButton{
+				@extend %clickable;
+				height: $header_height;
+				float: none;
 			}
 			
 			#userProfile {
@@ -651,45 +644,45 @@ position: relative;
     		margin-left: -50px;
 			
 			&.fb{
-				background: url(../sysimages/icon_facebook.svg) no-repeat center center;
+				background: url(../sysimages/social/icon_facebook.svg) no-repeat center center;
 				
 				&:hover{
-					background: url(../sysimages/icon_facebook_over.svg) no-repeat center center;
+					background: url(../sysimages/social/icon_facebook_over.svg) no-repeat center center;
 				}
 			}
 			&.yt{
-				background: url(../sysimages/icon_youtube.svg) no-repeat center center;
+				background: url(../sysimages/social/icon_youtube.svg) no-repeat center center;
 				
 				&:hover{
-					background: url(../sysimages/icon_youtube_over.svg) no-repeat center center;
+					background: url(../sysimages/social/icon_youtube_over.svg) no-repeat center center;
 				}				
 			}
 			&.lk{
-				background: url(../sysimages/icon_linkedin.svg) no-repeat center center;
+				background: url(../sysimages/social/icon_linkedin.svg) no-repeat center center;
 				
 				&:hover{
-					background: url(../sysimages/icon_linkedin_over.svg) no-repeat center center;
+					background: url(../sysimages/social/icon_linkedin_over.svg) no-repeat center center;
 				}			
 			}
 			&.wap{
-				background: url(../sysimages/icon_whatsapp.svg) no-repeat center center;
+				background: url(../sysimages/social/icon_whatsapp.svg) no-repeat center center;
 				
 				&:hover{
-					background: url(../sysimages/icon_whatsapp_over.svg) no-repeat center center;
+					background: url(../sysimages/social/icon_whatsapp_over.svg) no-repeat center center;
 				}				
 			}
 			&.twt{
-				background: url(../sysimages/icon_twitter.svg) no-repeat center center;
+				background: url(../sysimages/social/icon_twitter.svg) no-repeat center center;
 				
 				&:hover{
-					background: url(../sysimages/icon_twitter_over.svg) no-repeat center center;
+					background: url(../sysimages/social/icon_twitter_over.svg) no-repeat center center;
 				}				
 			}
 			&.inst{
-				background: url(../sysimages/icon_instagram.svg) no-repeat center center;
+				background: url(../sysimages/social/icon_instagram.svg) no-repeat center center;
 				
 				&:hover{
-					background: url(../sysimages/icon_instagram_over.svg) no-repeat center center;
+					background: url(../sysimages/social/icon_instagram_over.svg) no-repeat center center;
 				}				
 			}	
 			
@@ -1087,9 +1080,10 @@ $c_briefs:#8cc63f;
 			background: $color_gold;
 			height: 250px;
 			padding: 20px;
+			position: relative;
 			
 			&:first-child{
-				background: $color_w;
+				background: $color_w!important;
 				
 				.dateEvent{
 					color: $color_bl;
@@ -1097,7 +1091,15 @@ $c_briefs:#8cc63f;
 				.timeEvent{
 					color: $color_gold;
 				}
-				
+			}
+			
+			.day {
+				font-family: 'helvetica'; 
+				font-size: 14px;
+				color: $color_w;
+				position: absolute;
+				top: -26px;
+    			left: 20px;
 			}
 			
 			.dateEvent{
@@ -1116,7 +1118,19 @@ $c_briefs:#8cc63f;
 				font-family: 'merriweather';
 				font-size: 14px;
 				line-height: 21px;
-				color: rgba($color: $color_w, $alpha: .6)
+				color: rgba($color: $color_w, $alpha: .6);
+			}
+			
+			
+			&:hover{
+				background: rgba($color: $color_w, $alpha: .9);
+				
+				.dateEvent{
+					color: $color_bl;
+				}
+				.timeEvent{
+					color: $color_gold;
+				}
 			}
 		}
 	}

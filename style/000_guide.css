@@ -147,48 +147,63 @@ a {
   a:hover {
     color: #21282f; }
 
-/*
-h4, .h4 {
-	font-family: $font_regular;
-	font-size: $font_size_3;
-	color: $color_grey;
-	line-height: 150%;
-}
+.button,
+button,
+input[type=submit], #header .navbar #nav li a, #header .navbar .navbar-right #loginButton {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 7px;
+  margin: 0;
+  font-family: 'intro';
+  font-size: 12px;
+  color: #FFF;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; }
+  .button::before,
+  button::before,
+  input[type=submit]::before, #header .navbar #nav li a::before, #header .navbar .navbar-right #loginButton::before, .button::after,
+  button::after,
+  input[type=submit]::after, #header .navbar #nav li a::after, #header .navbar .navbar-right #loginButton::after {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 26px;
+    content: '';
+    background: url(../sysimages/triangles.svg) no-repeat;
+    opacity: 0;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .button::before,
+  button::before,
+  input[type=submit]::before, #header .navbar #nav li a::before, #header .navbar .navbar-right #loginButton::before {
+    top: -5px;
+    left: calc(50% - 12px);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .button::after,
+  button::after,
+  input[type=submit]::after, #header .navbar #nav li a::after, #header .navbar .navbar-right #loginButton::after {
+    bottom: -5px;
+    left: calc(50% - 12px); }
+  .button:hover,
+  button:hover,
+  input[type=submit]:hover, #header .navbar #nav li a:hover, #header .navbar .navbar-right #loginButton:hover {
+    background: #BE975F;
+    color: #FFF; }
+    .button:hover::before,
+    button:hover::before,
+    input[type=submit]:hover::before, #header .navbar #nav li a:hover::before, #header .navbar .navbar-right #loginButton:hover::before, .button:hover::after,
+    button:hover::after,
+    input[type=submit]:hover::after, #header .navbar #nav li a:hover::after, #header .navbar .navbar-right #loginButton:hover::after {
+      opacity: 1; }
 
-%uppercase{
-	font-size: 13px;
-	font-family: $font_semibold;
-	letter-spacing: 2px;
-	text-align: center;
-	text-transform: uppercase;
-}	
-}*/
-/* green background */
-/*%clickable {
-	@include transition(all .2s linear);
-	
-	-webkit-tap-highlight-color: $color_transparent;
-	display: inline-block;
-	
-	@extend %uppercase;
-	text-decoration: none;
-	cursor: pointer;
-	
-	color: $color_white;
-	border: 2px solid $color_green;
-	background: $color_green;
-	padding: 10px 25px;
-	
-	&:hover{
-		background: $color_transparent;
-		color: $color_green;
-	}
-	
-	&:after,
-	&:before{
-		@include transition(all .2s linear);
-	}
-}*/
 /*
 .accordion { 
 	list-style: none; 
@@ -326,53 +341,63 @@ HTML:
 .button,
 button,
 input[type=submit] {
-  font-family: 'intro';
+  border: none;
+  background: rgba(190, 151, 95, 0.8);
+  padding: 20px 25px;
   font-size: 14px;
+  /*font-family: 'intro';
+  
   color: #FFF;
   padding: 20px 25px;
   border: none;
-  background: rgba(190, 151, 95, 0.8);
+  background: $color_gold;
   position: relative;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
+  @include transition(all .2s ease);
+      
+  	// Triangles Top and Bottom
+      &::before,
+  	&::after{
+        position: absolute;
+        display: block;
+        height: 5px;
+        width: 26px;
+        content:'';
+        background: url(../sysimages/triangles.svg) no-repeat;
+  	  opacity: .8;
+  	  @include transition(all .2s ease);
+      }
+  	
+  	&::before{
+  	  top:-5px;
+        left: calc(50% - 12px);
+  	  -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+  	}
+  	
+      &::after{
+        bottom:-5px;
+        left: calc(50% - 12px);
+      }
+      
+      // Hover
+      &:hover {
+          background: rgba(255,255,255,0.80);
+          color: #BE975F;
+      }*/ }
   .button::before, .button::after,
   button::before,
   button::after,
   input[type=submit]::before,
   input[type=submit]::after {
-    position: absolute;
-    display: block;
-    height: 5px;
-    width: 26px;
-    content: '';
-    background: url(../sysimages/triangles.svg) no-repeat;
-    opacity: .8;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
-  .button::before,
-  button::before,
-  input[type=submit]::before {
-    top: -5px;
-    left: calc(50% - 12px);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg); }
-  .button::after,
-  button::after,
-  input[type=submit]::after {
-    bottom: -5px;
-    left: calc(50% - 12px); }
+    opacity: 1; }
   .button:hover,
   button:hover,
   input[type=submit]:hover {
-    background: rgba(255, 255, 255, 0.8);
-    color: #BE975F; }
+    background: #FFF;
+    color: rgba(190, 151, 95, 0.8); }
 
 /* GRID STATIC */
 .container {
@@ -420,43 +445,14 @@ input[type=submit] {
       display: inline-block;
       margin: 0; }
       #header .navbar #nav li a {
-        height: 80px;
-        display: table-cell;
-        vertical-align: middle;
-        padding: 0 7px;
-        margin: 0;
-        font-family: 'intro';
-        font-size: 12px;
-        color: #FFF;
-        text-decoration: none;
-        position: relative; }
-        #header .navbar #nav li a::before, #header .navbar #nav li a::after {
-          position: absolute;
-          display: block;
-          height: 5px;
-          width: 26px;
-          content: '';
-          background: url(../sysimages/triangles.svg) no-repeat;
-          opacity: 0;
-          -moz-transition: all 0.2s ease;
-          -o-transition: all 0.2s ease;
-          -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease; }
-        #header .navbar #nav li a::before {
-          top: -5px;
-          left: calc(50% - 12px);
-          -webkit-transform: rotate(180deg);
-          -moz-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-          -o-transform: rotate(180deg);
-          transform: rotate(180deg); }
-        #header .navbar #nav li a::after {
-          bottom: -5px;
-          left: calc(50% - 12px); }
-      #header .navbar #nav li.active > a, #header .navbar #nav li.active > a:focus, #header .navbar #nav li > a:hover {
+        height: 80px; }
+      #header .navbar #nav li.active > a,
+      #header .navbar #nav li a:hover {
         background: #BE975F;
         color: #FFF; }
-        #header .navbar #nav li.active > a::before, #header .navbar #nav li.active > a::after, #header .navbar #nav li.active > a:focus::before, #header .navbar #nav li.active > a:focus::after, #header .navbar #nav li > a:hover::before, #header .navbar #nav li > a:hover::after {
+        #header .navbar #nav li.active > a::before, #header .navbar #nav li.active > a::after,
+        #header .navbar #nav li a:hover::before,
+        #header .navbar #nav li a:hover::after {
           opacity: 1; }
   #header .navbar .navbar-right {
     -webkit-flex: 1 auto;
@@ -467,6 +463,9 @@ input[type=submit] {
       float: right; }
     #header .navbar .navbar-right #searchbutton {
       padding: 25px 7px; }
+    #header .navbar .navbar-right #loginButton {
+      height: 80px;
+      float: none; }
     #header .navbar .navbar-right #userProfile {
       padding: 20px 0 16px 7px; }
       #header .navbar .navbar-right #userProfile img {
@@ -496,29 +495,29 @@ input[type=submit] {
       height: 108px;
       margin-left: -50px; }
       #footer .socialIcons a.fb {
-        background: url(../sysimages/icon_facebook.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_facebook.svg) no-repeat center center; }
         #footer .socialIcons a.fb:hover {
-          background: url(../sysimages/icon_facebook_over.svg) no-repeat center center; }
+          background: url(../sysimages/social/icon_facebook_over.svg) no-repeat center center; }
       #footer .socialIcons a.yt {
-        background: url(../sysimages/icon_youtube.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_youtube.svg) no-repeat center center; }
         #footer .socialIcons a.yt:hover {
-          background: url(../sysimages/icon_youtube_over.svg) no-repeat center center; }
+          background: url(../sysimages/social/icon_youtube_over.svg) no-repeat center center; }
       #footer .socialIcons a.lk {
-        background: url(../sysimages/icon_linkedin.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_linkedin.svg) no-repeat center center; }
         #footer .socialIcons a.lk:hover {
-          background: url(../sysimages/icon_linkedin_over.svg) no-repeat center center; }
+          background: url(../sysimages/social/icon_linkedin_over.svg) no-repeat center center; }
       #footer .socialIcons a.wap {
-        background: url(../sysimages/icon_whatsapp.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_whatsapp.svg) no-repeat center center; }
         #footer .socialIcons a.wap:hover {
-          background: url(../sysimages/icon_whatsapp_over.svg) no-repeat center center; }
+          background: url(../sysimages/social/icon_whatsapp_over.svg) no-repeat center center; }
       #footer .socialIcons a.twt {
-        background: url(../sysimages/icon_twitter.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_twitter.svg) no-repeat center center; }
         #footer .socialIcons a.twt:hover {
-          background: url(../sysimages/icon_twitter_over.svg) no-repeat center center; }
+          background: url(../sysimages/social/icon_twitter_over.svg) no-repeat center center; }
       #footer .socialIcons a.inst {
-        background: url(../sysimages/icon_instagram.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_instagram.svg) no-repeat center center; }
         #footer .socialIcons a.inst:hover {
-          background: url(../sysimages/icon_instagram_over.svg) no-repeat center center; }
+          background: url(../sysimages/social/icon_instagram_over.svg) no-repeat center center; }
   #footer #backTop {
     height: 108px;
     display: inline-block;
@@ -938,13 +937,21 @@ input[type=submit] {
     float: left;
     background: rgba(190, 151, 95, 0.8);
     height: 250px;
-    padding: 20px; }
+    padding: 20px;
+    position: relative; }
     #weeklycalendarSection .listContainerCalendar .element:first-child {
-      background: #FFF; }
+      background: #FFF !important; }
       #weeklycalendarSection .listContainerCalendar .element:first-child .dateEvent {
         color: #21282f; }
       #weeklycalendarSection .listContainerCalendar .element:first-child .timeEvent {
         color: rgba(190, 151, 95, 0.8); }
+    #weeklycalendarSection .listContainerCalendar .element .day {
+      font-family: 'helvetica';
+      font-size: 14px;
+      color: #FFF;
+      position: absolute;
+      top: -26px;
+      left: 20px; }
     #weeklycalendarSection .listContainerCalendar .element .dateEvent {
       font-family: 'merriweatherbold';
       color: #FFF;
@@ -960,6 +967,12 @@ input[type=submit] {
       font-size: 14px;
       line-height: 21px;
       color: rgba(255, 255, 255, 0.6); }
+    #weeklycalendarSection .listContainerCalendar .element:hover {
+      background: rgba(255, 255, 255, 0.9); }
+      #weeklycalendarSection .listContainerCalendar .element:hover .dateEvent {
+        color: #21282f; }
+      #weeklycalendarSection .listContainerCalendar .element:hover .timeEvent {
+        color: rgba(190, 151, 95, 0.8); }
 
 #newsSection {
   padding: 40px;
