@@ -102,7 +102,7 @@ $bg_img: "../sysimages/bg.png";
     font-family: 'merriweatherbold';
     src: url('../fonts/merriweather-bold-webfont.woff2') format('woff2'),
          url('../fonts/merriweather-bold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -124,7 +124,7 @@ $bg_img: "../sysimages/bg.png";
          url('../fonts/helveticabold-webfont.woff') format('woff'),
 		 url('../fonts/helveticabold-webfont.ttf') format('truetype'),
 		 url('../fonts/helveticabold-webfont.svg#atroxnormal') format('svg');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;     
 }
 
@@ -165,10 +165,10 @@ p{
 	//@include responsive-font-size ($font_min_size_4, $font_size_4, 640px, 1200px, 0.1em);
 }
 
-.reduced{
-	@extend p;
+//.reduced{
+	//@extend p;
 	//font-size: $font_size_6!important;
-}
+//}
 
 
 .title{
@@ -228,6 +228,17 @@ a{
 
 // =================================================================================== //
 // Inputs / Textareas / Selects
+
+input[type='checkbox'] {
+	-webkit-appearance: none;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 100;
+	width: 40px;
+	height: 20px;
+	background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
+	@include transition( background .4s ease);
+}
 
 
 // =================================================================================== //
@@ -564,11 +575,16 @@ input[type=submit]{
 
 
 
+// Global Container
+.globalContainer{
+	background: url($bg_img) repeat left top;
+}
+
+
 // ===================================================================================================================
 // Header
 
 #header {
-	
 	.navbar{
 		top: 20px;
 		height: $header_height;
@@ -901,7 +917,6 @@ input[type=submit]{
 #highlightSection,
 #ecosystemSection{
 	padding-bottom: 50px;
-	background: url( $bg_img ) repeat left top;
 	position: relative;
     z-index: 9;
 	overflow: hidden;
@@ -922,20 +937,6 @@ input[type=submit]{
         @include animation('anim_opacity 7s 3');
     }
 }
-
-// Color Categories
-$c_trends:#991720;
-$c_institutes:#2db677;
-$c_consultancies:#515354;
-$c_organizations:#b1b2b3;
-$c_courses:#0064a6;
-$c_news:#f7931e;
-$c_scholarships:#ed1c24;
-$c_conferences:#be9857;
-$c_initiatives:#998675;
-$c_tools:#29abe2;
-$c_academia:#935491;
-$c_briefs:#8cc63f;
 
 
 
@@ -1037,155 +1038,310 @@ $c_briefs:#8cc63f;
 			
 			.downloadPDF span{ display: block; }
 		}
+	}
+}
+
+
+
+// CATEGORIES
+// Colors
+$c_trends:#991720;
+$c_institutes:#2db677;
+$c_consultancies:#515354;
+$c_organizations:#b1b2b3;
+$c_courses:#0064a6;
+$c_news:#f7931e;
+$c_scholarships:#ed1c24;
+$c_conferences:#be9857;
+$c_initiatives:#998675;
+$c_tools:#29abe2;
+$c_academia:#935491;
+$c_briefs:#8cc63f;
+
+.trends{
+	// element in list
+	.flag,
+	.downloadPDF{ background: $c_trends;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/trends@2x.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background: $c_trends;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/trends.svg);
+		}
+		label::before{
+			background: $c_trends;
+		}
+	}				
+}
+.institutes{
+	// element in list
+	.flag,
+	.downloadPDF{ background: $c_institutes;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/institutes@2x.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background: $c_institutes;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/institutes.svg);
+		}
+		label::before{
+			background: $c_institutes;
+		}
+	}	
+}
+.consultancies{
+	.flag,
+	.downloadPDF{ background: $c_consultancies;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/consultancies@2x.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background: $c_consultancies;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/consultancies.svg);
+		}	
+		label::before{
+			background: $c_consultancies;
+		}
+	}	
+}
+.organizations{
+	.flag,
+	.downloadPDF{ background: $c_organizations;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/organizations.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background: $c_organizations;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/consultancies.svg);
+		}
+		label::before{
+			background: $c_organizations;
+		}
+	}		
+}
+.courses{
+	.flag,
+	.downloadPDF{ background: $c_courses;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/courses.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background-color: $c_courses;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/courses.svg);
+		}
+		label::before{
+			background: $c_courses;
+		}
+	}		
+}
+.news{
+	.flag,
+	.downloadPDF{ background: $c_news;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/news.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background-color: $c_news;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/news.svg);
+		}
+		label::before{
+			background: $c_news;
+		}
+	}		
+}
+.scholarships{
+	.flag,
+	.downloadPDF{ background: $c_scholarships;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/scholarships.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background-color: $c_scholarships;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/scholarships.svg);
+		}	
+		label::before{
+			background: $c_scholarships;
+		}
+	}	
+}
+.conferences{
+	.flag,
+	.downloadPDF{ background: $c_conferences;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/conferences.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background-color: $c_conferences;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/conferences.svg);
+		}
+		label::before{
+			background: $c_conferences;
+		}
+	}	
+}
+.initiatives{
+	.flag,
+	.downloadPDF{ background-color: $c_initiatives;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/initiatives.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background-color: $c_initiatives;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/initiatives.svg);
+		}
+		label::before{
+			background: $c_initiatives;
+		}
+	}		
+}
+.tools{
+	.flag,
+	.downloadPDF{ background-color: $c_tools;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/tools.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background-color: $c_tools;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/tools.svg);
+		}
+		label::before{
+			background: $c_tools;
+		}
+	}		
+}
+.academia{
+	.flag,
+	.downloadPDF{ background-color: $c_academia;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/academia.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background-color: $c_academia;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/academia.svg);
+		}
+		label::before{
+			background: $c_academia;
+		}
+	}	
+}
+.briefs{
+	.flag,
+	.downloadPDF{ background-color: $c_briefs;}
+	
+	.elementTitle{
+		background: url(../sysimages/categories/briefs.png) no-repeat center center;
+	}
+	
+	&:hover{
+		.elementTitle{ background-color: $c_briefs;}
+	}
+	
+	&.filter{
+		input[type='checkbox']:checked {
+			background-image: url(../sysimages/checkbox/briefs.svg);
+		}	
+		label::before{
+			background: $c_briefs;
+		}
+	}	
+}
+
+.filter{
+	label{
+		width: 100%;
+		height: 25px;
+    	padding: 1px 0;
+		display: block;
+		position: relative;
+		font-family: 'helveticabold';
+		font-size: 12px;
+		color: $color_lightgrey;
+		margin-bottom: 3px;
 		
+		&::before{
+			position: absolute;
+			left: -21px;
+    		top: 7px;
+			width: 8px;
+			height: 8px;
+			border-radius: 4px;
+			content: '';
+			display: block;
+		}
 		
-		
-		&.trends{
-			.flag,
-			.downloadPDF{ background: $c_trends;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/trends@2x.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background: $c_trends;}
-			}
-		}
-		&.institutes{
-			.flag,
-			.downloadPDF{ background: $c_institutes;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/institutes@2x.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background: $c_institutes;}
-			}
-		}
-		&.consultancies{
-			.flag,
-			.downloadPDF{ background: $c_consultancies;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/consultancies@2x.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background: $c_consultancies;}
-			}
-		}
-		&.organizations{
-			.flag,
-			.downloadPDF{ background: $c_organizations;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/organizations.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background: $c_organizations;}
-			}
-		}
-		&.courses{
-			.flag,
-			.downloadPDF{ background: $c_courses;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/courses.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background-color: $c_courses;}
-			}
-		}
-		&.news{
-			.flag,
-			.downloadPDF{ background: $c_news;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/news.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background-color: $c_news;}
-			}
-		}
-		&.scholarships{
-			.flag,
-			.downloadPDF{ background: $c_scholarships;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/scholarships.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background-color: $c_scholarships;}
-			}
-		}
-		&.conferences{
-			.flag,
-			.downloadPDF{ background: $c_conferences;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/conferences.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background-color: $c_conferences;}
-			}
-		}
-		&.initiatives{
-			.flag,
-			.downloadPDF{ background-color: $c_initiatives;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/initiatives.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background-color: $c_initiatives;}
-			}
-		}
-		&.tools{
-			.flag,
-			.downloadPDF{ background-color: $c_tools;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/tools.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background-color: $c_tools;}
-			}
-		}
-		&.academia{
-			.flag,
-			.downloadPDF{ background-color: $c_academia;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/academia.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background-color: $c_academia;}
-			}
-		}
-		&.briefs{
-			.flag,
-			.downloadPDF{ background-color: $c_briefs;}
-			
-			.elementTitle{
-				background: url(../sysimages/categories/briefs.png) no-repeat center center;
-			}
-			
-			&:hover{
-				.elementTitle{ background-color: $c_briefs;}
-			}
+		input[type='checkbox']{
+			float: right;
 		}
 	}
 }
+
 
 
 // ===================================================================================================================
