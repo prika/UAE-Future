@@ -248,13 +248,33 @@ input[type=submit], #header .navbar #nav li a, #header .navbar .navbar-right #lo
       opacity: 1; }
 
 .buttonPrev {
+  height: 37px;
+  width: 34px;
   background: url(../sysimages/button/previous@2x.png) no-repeat top left; }
 
 .buttonNext {
-  background: url(../sysimages/button/next@2x.png) no-repeat top left; }
+  height: 37px;
+  width: 34px;
+  background: red url(../sysimages/button/next@2x.png) no-repeat top left; }
 
-.buttonClose {
+.buttonClose,
+.fancybox-close {
+  height: 37px;
+  width: 34px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-size: cover !important;
   background: url(../sysimages/button/close@2x.png) no-repeat top left; }
+
+.fancybox-skin {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0 !important; }
 
 /*
 .accordion { 
@@ -918,63 +938,87 @@ input[type=submit] {
   .listContainer .listElement.trends .flag,
   .listContainer .listElement.trends .downloadPDF {
     background: #991720; }
+  .listContainer .listElement.trends .elementTitle {
+    background: url(../sysimages/categories/trends@2x.png) no-repeat center center; }
   .listContainer .listElement.trends:hover .elementTitle {
     background: #991720; }
   .listContainer .listElement.institutes .flag,
   .listContainer .listElement.institutes .downloadPDF {
     background: #2db677; }
+  .listContainer .listElement.institutes .elementTitle {
+    background: url(../sysimages/categories/institutes@2x.png) no-repeat center center; }
   .listContainer .listElement.institutes:hover .elementTitle {
     background: #2db677; }
   .listContainer .listElement.consultancies .flag,
   .listContainer .listElement.consultancies .downloadPDF {
     background: #515354; }
+  .listContainer .listElement.consultancies .elementTitle {
+    background: url(../sysimages/categories/consultancies@2x.png) no-repeat center center; }
   .listContainer .listElement.consultancies:hover .elementTitle {
     background: #515354; }
   .listContainer .listElement.organizations .flag,
   .listContainer .listElement.organizations .downloadPDF {
     background: #b1b2b3; }
+  .listContainer .listElement.organizations .elementTitle {
+    background: url(../sysimages/categories/organizations.png) no-repeat center center; }
   .listContainer .listElement.organizations:hover .elementTitle {
     background: #b1b2b3; }
   .listContainer .listElement.courses .flag,
   .listContainer .listElement.courses .downloadPDF {
     background: #0064a6; }
+  .listContainer .listElement.courses .elementTitle {
+    background: url(../sysimages/categories/courses.png) no-repeat center center; }
   .listContainer .listElement.courses:hover .elementTitle {
-    background: #0064a6; }
+    background-color: #0064a6; }
   .listContainer .listElement.news .flag,
   .listContainer .listElement.news .downloadPDF {
     background: #f7931e; }
+  .listContainer .listElement.news .elementTitle {
+    background: url(../sysimages/categories/news.png) no-repeat center center; }
   .listContainer .listElement.news:hover .elementTitle {
-    background: #f7931e; }
+    background-color: #f7931e; }
   .listContainer .listElement.scholarships .flag,
   .listContainer .listElement.scholarships .downloadPDF {
     background: #ed1c24; }
+  .listContainer .listElement.scholarships .elementTitle {
+    background: url(../sysimages/categories/scholarships.png) no-repeat center center; }
   .listContainer .listElement.scholarships:hover .elementTitle {
-    background: #ed1c24; }
+    background-color: #ed1c24; }
   .listContainer .listElement.conferences .flag,
   .listContainer .listElement.conferences .downloadPDF {
     background: #be9857; }
+  .listContainer .listElement.conferences .elementTitle {
+    background: url(../sysimages/categories/conferences.png) no-repeat center center; }
   .listContainer .listElement.conferences:hover .elementTitle {
-    background: #be9857; }
+    background-color: #be9857; }
   .listContainer .listElement.initiatives .flag,
   .listContainer .listElement.initiatives .downloadPDF {
-    background: #998675; }
+    background-color: #998675; }
+  .listContainer .listElement.initiatives .elementTitle {
+    background: url(../sysimages/categories/initiatives.png) no-repeat center center; }
   .listContainer .listElement.initiatives:hover .elementTitle {
-    background: #998675; }
+    background-color: #998675; }
   .listContainer .listElement.tools .flag,
   .listContainer .listElement.tools .downloadPDF {
-    background: #29abe2; }
+    background-color: #29abe2; }
+  .listContainer .listElement.tools .elementTitle {
+    background: url(../sysimages/categories/tools.png) no-repeat center center; }
   .listContainer .listElement.tools:hover .elementTitle {
-    background: #29abe2; }
+    background-color: #29abe2; }
   .listContainer .listElement.academia .flag,
   .listContainer .listElement.academia .downloadPDF {
-    background: #935491; }
+    background-color: #935491; }
+  .listContainer .listElement.academia .elementTitle {
+    background: url(../sysimages/categories/academia.png) no-repeat center center; }
   .listContainer .listElement.academia:hover .elementTitle {
-    background: #935491; }
+    background-color: #935491; }
   .listContainer .listElement.briefs .flag,
   .listContainer .listElement.briefs .downloadPDF {
-    background: #8cc63f; }
+    background-color: #8cc63f; }
+  .listContainer .listElement.briefs .elementTitle {
+    background: url(../sysimages/categories/briefs.png) no-repeat center center; }
   .listContainer .listElement.briefs:hover .elementTitle {
-    background: #8cc63f; }
+    background-color: #8cc63f; }
 
 #weeklycalendarSection {
   background: url(../images/homepageCalendar.jpg) no-repeat center center;

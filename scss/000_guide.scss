@@ -285,7 +285,6 @@ a{
 }
 
 .buttonIc{
-	
 	position: relative;
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
@@ -341,13 +340,35 @@ a{
 }
 
 .buttonPrev{
+	height: 37px;
+    width: 34px;
 	background: url(../sysimages/button/previous@2x.png) no-repeat top left;
 }
 .buttonNext{
-	background: url(../sysimages/button/next@2x.png) no-repeat top left;
+	height: 37px;
+    width: 34px;
+	background: red url(../sysimages/button/next@2x.png) no-repeat top left;
 }
-.buttonClose{
+
+.buttonClose,
+.fancybox-close{
+	height: 37px;
+    width: 34px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background-size: cover!important; 
 	background: url(../sysimages/button/close@2x.png) no-repeat top left;
+}
+
+.fancybox-skin{
+	-webkit-box-shadow: none; 
+    -moz-box-shadow: none;
+    box-shadow: none;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; 
+	padding: 0!important;
 }
 
 
@@ -968,7 +989,6 @@ $c_briefs:#8cc63f;
 				font-family: 'helveticabold';
 				font-size: 11px;
 				color: #FFF;
-				//padding: 4px 22px;
 				padding: 2px 22px 4px;
 				text-transform: capitalize;
 			}
@@ -1024,6 +1044,10 @@ $c_briefs:#8cc63f;
 			.flag,
 			.downloadPDF{ background: $c_trends;}
 			
+			.elementTitle{
+				background: url(../sysimages/categories/trends@2x.png) no-repeat center center;
+			}
+			
 			&:hover{
 				.elementTitle{ background: $c_trends;}
 			}
@@ -1031,6 +1055,10 @@ $c_briefs:#8cc63f;
 		&.institutes{
 			.flag,
 			.downloadPDF{ background: $c_institutes;}
+			
+			.elementTitle{
+				background: url(../sysimages/categories/institutes@2x.png) no-repeat center center;
+			}
 			
 			&:hover{
 				.elementTitle{ background: $c_institutes;}
@@ -1040,6 +1068,10 @@ $c_briefs:#8cc63f;
 			.flag,
 			.downloadPDF{ background: $c_consultancies;}
 			
+			.elementTitle{
+				background: url(../sysimages/categories/consultancies@2x.png) no-repeat center center;
+			}
+			
 			&:hover{
 				.elementTitle{ background: $c_consultancies;}
 			}
@@ -1047,6 +1079,10 @@ $c_briefs:#8cc63f;
 		&.organizations{
 			.flag,
 			.downloadPDF{ background: $c_organizations;}
+			
+			.elementTitle{
+				background: url(../sysimages/categories/organizations.png) no-repeat center center;
+			}
 			
 			&:hover{
 				.elementTitle{ background: $c_organizations;}
@@ -1056,64 +1092,96 @@ $c_briefs:#8cc63f;
 			.flag,
 			.downloadPDF{ background: $c_courses;}
 			
+			.elementTitle{
+				background: url(../sysimages/categories/courses.png) no-repeat center center;
+			}
+			
 			&:hover{
-				.elementTitle{ background: $c_courses;}
+				.elementTitle{ background-color: $c_courses;}
 			}
 		}
 		&.news{
 			.flag,
 			.downloadPDF{ background: $c_news;}
 			
+			.elementTitle{
+				background: url(../sysimages/categories/news.png) no-repeat center center;
+			}
+			
 			&:hover{
-				.elementTitle{ background: $c_news;}
+				.elementTitle{ background-color: $c_news;}
 			}
 		}
 		&.scholarships{
 			.flag,
 			.downloadPDF{ background: $c_scholarships;}
 			
+			.elementTitle{
+				background: url(../sysimages/categories/scholarships.png) no-repeat center center;
+			}
+			
 			&:hover{
-				.elementTitle{ background: $c_scholarships;}
+				.elementTitle{ background-color: $c_scholarships;}
 			}
 		}
 		&.conferences{
 			.flag,
 			.downloadPDF{ background: $c_conferences;}
 			
+			.elementTitle{
+				background: url(../sysimages/categories/conferences.png) no-repeat center center;
+			}
+			
 			&:hover{
-				.elementTitle{ background: $c_conferences;}
+				.elementTitle{ background-color: $c_conferences;}
 			}
 		}
 		&.initiatives{
 			.flag,
-			.downloadPDF{ background: $c_initiatives;}
+			.downloadPDF{ background-color: $c_initiatives;}
+			
+			.elementTitle{
+				background: url(../sysimages/categories/initiatives.png) no-repeat center center;
+			}
 			
 			&:hover{
-				.elementTitle{ background: $c_initiatives;}
+				.elementTitle{ background-color: $c_initiatives;}
 			}
 		}
 		&.tools{
 			.flag,
-			.downloadPDF{ background: $c_tools;}
+			.downloadPDF{ background-color: $c_tools;}
+			
+			.elementTitle{
+				background: url(../sysimages/categories/tools.png) no-repeat center center;
+			}
 			
 			&:hover{
-				.elementTitle{ background: $c_tools;}
+				.elementTitle{ background-color: $c_tools;}
 			}
 		}
 		&.academia{
 			.flag,
-			.downloadPDF{ background: $c_academia;}
+			.downloadPDF{ background-color: $c_academia;}
+			
+			.elementTitle{
+				background: url(../sysimages/categories/academia.png) no-repeat center center;
+			}
 			
 			&:hover{
-				.elementTitle{ background: $c_academia;}
+				.elementTitle{ background-color: $c_academia;}
 			}
 		}
 		&.briefs{
 			.flag,
-			.downloadPDF{ background: $c_briefs;}
+			.downloadPDF{ background-color: $c_briefs;}
+			
+			.elementTitle{
+				background: url(../sysimages/categories/briefs.png) no-repeat center center;
+			}
 			
 			&:hover{
-				.elementTitle{ background: $c_briefs;}
+				.elementTitle{ background-color: $c_briefs;}
 			}
 		}
 	}
