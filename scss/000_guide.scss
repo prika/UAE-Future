@@ -192,7 +192,7 @@ p{
 }
 
 .subtitle{
-	padding: 30px 0;
+	padding: 25px 0;
 	
 	h3{
 		position: relative;
@@ -282,6 +282,72 @@ a{
 			opacity: 1;
 		}
 	}
+}
+
+.buttonIc{
+	
+	position: relative;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	display: inline-block;
+	height: 37px;
+    width: 34px;
+	overflow: hidden;
+	background-size: contain!important;
+	padding: 3px 10px 3px 40px;
+	@include transition( width .4s ease .2s);
+	
+	span{ 
+		font-family: 'intro';
+		font-size: 12px;
+		color: #FFF;
+		text-decoration: none;
+		color: $color_w;
+		white-space: nowrap; 
+		opacity: 0;
+		@include transition( all .4s ease);
+	}
+	
+	&.buttonDownload{
+		background: url(../sysimages/button/download@2x.png) no-repeat top left;
+	}
+
+	&.buttonShare{
+		background: url(../sysimages/button/share@2x.png) no-repeat top left;
+	}
+	
+	&.buttonPrint{
+		background: url(../sysimages/button/print@2x.png) no-repeat top left;
+	}
+	
+	&.buttonOpenNew{
+		background: url(../sysimages/button/openNewWindow@2x.png) no-repeat top left;
+	}
+	
+	&.buttonFav{
+		background: url(../sysimages/button/fav@2x.png) no-repeat top left;
+	}
+	
+
+	&:hover{
+		background-color: $color_bl;
+		width: auto;
+		
+		span{
+			width: 100%;
+			opacity: 1;
+		}
+	}
+}
+
+.buttonPrev{
+	background: url(../sysimages/button/previous@2x.png) no-repeat top left;
+}
+.buttonNext{
+	background: url(../sysimages/button/next@2x.png) no-repeat top left;
+}
+.buttonClose{
+	background: url(../sysimages/button/close@2x.png) no-repeat top left;
 }
 
 
@@ -445,54 +511,7 @@ input[type=submit]{
 	&:hover{
 		background: $color_w;
 		color: $color_gold;
-		
-		&::before,
-		&::after{}
 	}
-	
-/*font-family: 'intro';
-
-color: #FFF;
-padding: 20px 25px;
-border: none;
-background: $color_gold;
-position: relative;
-@include transition(all .2s ease);
-    
-	// Triangles Top and Bottom
-    &::before,
-	&::after{
-      position: absolute;
-      display: block;
-      height: 5px;
-      width: 26px;
-      content:'';
-      background: url(../sysimages/triangles.svg) no-repeat;
-	  opacity: .8;
-	  @include transition(all .2s ease);
-    }
-	
-	&::before{
-	  top:-5px;
-      left: calc(50% - 12px);
-	  -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
-      transform: rotate(180deg);
-	}
-	
-    &::after{
-      bottom:-5px;
-      left: calc(50% - 12px);
-    }
-    
-    // Hover
-    &:hover {
-        background: rgba(255,255,255,0.80);
-        color: #BE975F;
-    }*/
-    
 }
 
 
@@ -501,7 +520,7 @@ position: relative;
 /* GRID STATIC */
 .container {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1350px;
 }
 
 /* GRID RESPONSIVE */
@@ -589,7 +608,10 @@ position: relative;
 			}
 			
 			#searchbutton{
-				padding: 25px 7px;
+				//padding: 25px 7px;
+				width: 50px;
+				height: $header_height;
+				background: url(../sysimages/button/button_search.svg) no-repeat center center;
 			}
 			
 			#loginButton{
@@ -608,6 +630,35 @@ position: relative;
 				} 	
 			}
 		}	
+		
+		
+		.container-search{
+			visibility: hidden;
+			opacity:.8;
+			position: fixed;
+			top: 100px;
+			left:0;
+			width: 100%;
+			height: 100vh;
+			background: rgba($color: $color_w, $alpha: .7);
+			z-index: 0; 
+			text-align: center;
+		}
+			
+		.container-search .wrapper-input{
+			display: table;margin: 0 auto;padding: 19px 0 19px;}
+		.container-search input[type=submit]{
+			float: left;width: 43px;height: 37px;padding: 0;
+			//background: url(sysimages/.png) no-repeat left top;
+		}
+		.container-search input[type=search]{float: left;font-size: 30px;border: 0;color: #515151;padding: 2px 11px;}
+		
+		/*.container-search ::-webkit-input-placeholder{color: #DCDCDC;}
+		.container-search :-moz-placeholder{color: #DCDCDC; }
+		.container-search ::-moz-placeholder{color: #DCDCDC; }
+		.container-search :-ms-input-placeholder{  color: #DCDCDC; }*/
+		.container-search .helper{display: none;padding: 0 10px;font-size: 30px;}
+		.container-search .search-input{-webkit-transition: all .07s linear;-moz-transition: all .07s linear;-ms-transition: all .07s linear;-o-transition: all .07s linear;transition: all .07s linear;}
 	}
 }
 
@@ -636,18 +687,20 @@ position: relative;
 	
 	.socialIcons{
 		display: inline-block;
+		margin-right: 40px;
 		
 		a{
 			display: inline-block;
-			width: 108px;
+			width: 70px;
     		height: 108px;
-    		margin-left: -50px;
+    		margin-left: -13px;
 			
 			&.fb{
 				background: url(../sysimages/social/icon_facebook.svg) no-repeat center center;
 				
 				&:hover{
 					background: url(../sysimages/social/icon_facebook_over.svg) no-repeat center center;
+					background-size: 100%;
 				}
 			}
 			&.yt{
@@ -655,6 +708,7 @@ position: relative;
 				
 				&:hover{
 					background: url(../sysimages/social/icon_youtube_over.svg) no-repeat center center;
+					background-size: 100%;
 				}				
 			}
 			&.lk{
@@ -662,6 +716,7 @@ position: relative;
 				
 				&:hover{
 					background: url(../sysimages/social/icon_linkedin_over.svg) no-repeat center center;
+					background-size: 100%;
 				}			
 			}
 			&.wap{
@@ -669,6 +724,7 @@ position: relative;
 				
 				&:hover{
 					background: url(../sysimages/social/icon_whatsapp_over.svg) no-repeat center center;
+					background-size: 100%;
 				}				
 			}
 			&.twt{
@@ -676,6 +732,7 @@ position: relative;
 				
 				&:hover{
 					background: url(../sysimages/social/icon_twitter_over.svg) no-repeat center center;
+					background-size: 100%;
 				}				
 			}
 			&.inst{
@@ -683,6 +740,7 @@ position: relative;
 				
 				&:hover{
 					background: url(../sysimages/social/icon_instagram_over.svg) no-repeat center center;
+					background-size: 100%;
 				}				
 			}	
 			
@@ -693,11 +751,14 @@ position: relative;
 		height: $footer_height;
 		display: inline-block;
 		width: 80px;
-		background: $color_solidGold;
 		color: $color_w;
 		padding: 40px 20px;
-	}
-	
+		background: $color_gold url(../sysimages/button/button_up@2x.png) no-repeat center center;
+		
+		&:hover{
+			background-color: $color_solidGold; 
+		}
+	}	
 }
 
 
@@ -905,9 +966,11 @@ $c_briefs:#8cc63f;
 				right: 20px;
 				z-index: 2;
 				font-family: 'helveticabold';
-				font-size: 10px;
+				font-size: 11px;
 				color: #FFF;
-				padding: 4px 22px;
+				//padding: 4px 22px;
+				padding: 2px 22px 4px;
+				text-transform: capitalize;
 			}
 			.text{
 				color: inherit;
@@ -1146,9 +1209,12 @@ $c_briefs:#8cc63f;
 	.element{
 		padding: 60px 60px;
 		
-		a{ 
+		a.link{ 
 			display: inline-block; 
 			margin-left: 20px;
+			font-family: "helvetica";
+			font-weight: regular;
+			font-size: 16px;
 		}
 	}
 	
