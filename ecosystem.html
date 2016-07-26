@@ -53,86 +53,118 @@
             <script type="text/javascript">
                 // This template is supposed to be injected (partial)
                 imageUrl = "images/ecosystem.jpg";
-                
-                //$("#fullBanner h1").text("INNOVATION ECOSYSTEM");
-                //$("#fullBanner h2").text("THIS SECTION DOCUMENTS THE DIFFERENT PILLARS OF THE INNOVATION ECOSYSTEM IN THE UAE STARTING FROM THE STRATEGIC VISION TO THE IMPLEMENTATION ACROSS ALL THE LEVELS OF THE COUNTRY.");
+
                 $("#fullBanner").css("background-image", 'url(' + imageUrl + ')');
-                $("#fullBanner>div").load("templates/view_fullBanner.html");
+                $.get("templates/view_fullBanner.html", function (data) {
+
+                    $("#fullBanner>div").html($(data));
+                    // Mocked content
+                    $("#fullBanner h1").text("INNOVATION ECOSYSTEM");
+                    $("#fullBanner h2").text("THIS SECTION DOCUMENTS THE DIFFERENT PILLARS OF THE INNOVATION ECOSYSTEM IN THE UAE STARTING FROM THE STRATEGIC VISION TO THE IMPLEMENTATION ACROSS ALL THE LEVELS OF THE COUNTRY.");
+                    $("#fullBanner button").hide();
+                });
 
             </script>
         </section>
 
         <section id="ecosystemSection">
+
             <div class="container">
+
                 <div class="title">
-                     <h1>ECOSYSTEM</h1>
+                    <h1>ECOSYSTEM</h1>
                 </div>
-                    
+
                 <aside id="filterSection" class="col-md-2">
                     <script type="text/javascript">
-                       // This template is supposed to be injected (partial)
+                        // This template is supposed to be injected (partial)
                         $("#filterSection").load("templates/view_asideFilters.html");
                     </script>
-                    
+
                 </aside>
 
                 <section id="listContainer" class="listContainer col-md-10">
                     <div></div>
-                    
-                    
+
+
                     <ul class="accordionMenu">
                         <li>
                             <a href="javascript:void(0);" class="clearfix">
-                                <span style="display: inline-block; width:95%">Como posso comprar na PROF Online?</span>
-                                <span>37 items</span>
-                                <span class="signal"></span>
+                                <span class="accordionHeader">AGENDA </span>
+
+                                <span class="signal">37 items</span>
                             </a>
-                            
+
                             <div class="accordionContent"></div>
                         </li>
-                        
-                        
+
+
                         <li>
                             <a href="javascript:void(0);" class="clearfix">
-                                <span style="display: inline-block; width:95%">Como posso comprar na PROF Online?</span>
-                                <span>37 items</span>
-                                <span class="signal"></span>
+                                <span class="accordionHeader">STRATEGIES</span>
+
+                                <span class="signal">25 items</span>
                             </a>
-                            
+
                             <div class="accordionContent"></div>
                         </li>
-                        
+
                         <li>
                             <a href="javascript:void(0);" class="clearfix">
-                                <span style="display: inline-block; width:95%">Como posso comprar na PROF Online?</span>
-                                <span>37 items</span>
-                                <span class="signal"></span>
+                                <span class="accordionHeader">POLICIES </span>
+                                <span class="signal">17 items</span>
                             </a>
-                            
+
+                            <div class="accordionContent"></div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="clearfix">
+                                <span class="accordionHeader">COUNCILS  </span>
+                                <span class="signal">17 items</span>
+                            </a>
+
                             <div class="accordionContent"></div>
                         </li>
                     </ul>
-                    
+
                     <script type="text/javascript">
                         // This template is supposed to be injected (partial)
-                        $.get("templates/view_highlightSection.html", function (data)
-                        {
-                            $data = $(data);
-                            $("#listContainer .accordionMenu li .accordionContent").html($data);
-                        });
-                        
-                        $(document).ready(function(){
+                        $.get("templates/view_highlightSection.html", function (data) {
+
+                            // Insert html and hides all
+                            $("#listContainer .accordionMenu li .accordionContent").html($(data)).hide();
+
+                            // Set the first as active
+                            $("#listContainer .accordionMenu li").first().addClass('active');
+
+                            // Shows the first content
+                            $("#listContainer .accordionMenu li .accordionContent").first().show();
+
                             accordionMenu();
                         });
-	                    function accordionMenu(){
-                            $('.accordionMenu > li > a').click(function(){
-                                if($(this).parent().hasClass('active')){
-                                    $('.accordionMenu > li').removeClass('active');
-                                    $('.accordionContent').stop(true,true).slideUp('normal');}
-                                else{$('.accordionMenu > li').removeClass('active');
-                                    $('.accordionContent').slideUp('normal');
-                                    $(this).parent().addClass('active');
-                                    this2=$(this).parent();$('.accordionContent',this2).stop(true,true).slideDown('normal');}});
+
+                        function accordionMenu() {
+                            $('.accordionMenu > li > a').click(function () {
+
+                                // Elem is already active
+                                if ($(this).parent().hasClass('active')) return;
+
+                                // Removes all actives
+                                $('.accordionMenu > li').removeClass('active');
+
+                                // Hides all contents
+                                $('.accordionContent').slideUp('normal');
+
+                                // Set elem as active
+                                var parent = $(this).parent();
+
+                                // Set parent as active
+                                parent.addClass('active');
+
+                                // Displays the content
+                                parent.find('.accordionContent').stop(true, true).slideDown('normal');
+
+                            });
                         }
                     </script>
                 </section>
@@ -150,8 +182,6 @@
     </div>
 
     <script type="text/javascript">
-
-        
 
         (function ($) {
 
