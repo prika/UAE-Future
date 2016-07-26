@@ -196,8 +196,9 @@ p{
 	
 	h3{
 		position: relative;
-		font-family: 'intro';
 		display: inline-block;
+		font-family: 'intro';
+		font-weight: normal;
 	
 		&::before{
 			position: absolute;
@@ -207,6 +208,71 @@ p{
 			height: 5px;
 			content: '';
 			background: url(../sysimages/triangles_title.svg) no-repeat; 
+		}
+	}
+}
+
+.accordionMenu{
+	margin: 0;
+	
+	li{
+		list-style: none;
+		display: block;
+		
+		a {
+			border-bottom: 1px solid rgba($color: $color_lightgrey, $alpha: .3);
+			width: 100%;
+			display: block;
+			padding: 10px 0;
+			
+			.accordionHeader{
+				@extend h3;
+				font-family: 'intro';
+				font-weight: normal;
+				display: inline-block; 
+				width: 70%;
+				color: $color_bl;
+			}
+			.signal{
+				font-family: 'merriweather';
+				font-size: 12px;
+				line-height: 21px;
+				color: $color_lightgrey;
+				float: right;
+				padding-right: 40px;
+				position: relative;
+				
+				&::after{
+					background: url('../sysimages/button/openAccordion.svg') no-repeat center center;
+					display: block; 
+					width: 20px;
+					height: 20px;
+					top: 0; right: 0;
+					content:'';
+					display: block;
+					position: absolute;
+				}
+			}
+			
+			&.hover .accordionHeader{color: $color_gold;}
+			
+		}
+		
+		&.active{
+			.accordionHeader,.signal{color: $color_gold;}
+			
+			.signal::after {
+				background: url('../sysimages/button/closeAccordion.svg') no-repeat center center;
+			}
+		}
+		
+		.accordionContent{
+			margin: 20px -15px 20px 0;
+			@include clearfix();
+		
+			> div{
+				padding-left: 0;
+			}
 		}
 	}
 }
@@ -946,12 +1012,16 @@ input[type=submit]{
 	
 	.listElement{
 		position: relative;
-		color: inherit;
+		//color: inherit;
 		width: 100%;
 		height: 320px;
 		display: block;
 		margin-bottom: 15px; 
 		@include clearfix();
+		
+		.cardBg{
+			width: 100%;
+		}
 		
 		.elementTitle{
 			position: absolute;
@@ -959,12 +1029,11 @@ input[type=submit]{
 			left: 0;
 			right: 0;
 			height: 320px;
-			background: $color_w;
+			/*background: $color_w;
 			-webkit-clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
 			clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
 			@include transition( all .4s ease );
-			@include box-shadow(0, 0, 1px, $color_lightgrey);
-			//border: 1px solid rgba($color: $color_lightgrey, $alpha: .2);
+			@include box-shadow(0, 0, 1px, $color_lightgrey);*/
 		}
 		
 		.elementContent{
@@ -973,14 +1042,14 @@ input[type=submit]{
 			top: 0;
 			left:0;
 			right: -1px;
-			-webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
+			/*-webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
 			clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
 			background-color: $color_w!important;
 			background-size: 100%!important; 
 			background-position: 300px 500px!important;
 			@include transition( background-position .4s ease );
-			@include box-shadow(0, 0, 1px, $color_lightgrey);
-			//border: 1px solid rgba($color: $color_lightgrey, $alpha: .2);
+			@include box-shadow(0, 0, 1px, $color_lightgrey);*/
+			
 			
 			.flag{
 				position: absolute;
@@ -1013,6 +1082,7 @@ input[type=submit]{
 			z-index: 2;
 			text-decoration: none;
 			padding: 3px 20px;
+			height: 30px;
 			
 			span{
 				font-family: 'helvetica';
@@ -1313,36 +1383,6 @@ $c_briefs:#8cc63f;
 	}	
 }
 
-.filter{
-	label{
-		width: 100%;
-		height: 25px;
-    	padding: 1px 0;
-		display: block;
-		position: relative;
-		font-family: 'helveticabold';
-		font-size: 12px;
-		color: $color_lightgrey;
-		margin-bottom: 3px;
-		
-		&::before{
-			position: absolute;
-			left: -21px;
-    		top: 7px;
-			width: 8px;
-			height: 8px;
-			border-radius: 4px;
-			content: '';
-			display: block;
-		}
-		
-		input[type='checkbox']{
-			float: right;
-		}
-	}
-}
-
-
 
 // ===================================================================================================================
 // Highlights
@@ -1442,4 +1482,39 @@ $c_briefs:#8cc63f;
 		}
 	}
 	
+}
+
+// ===================================================================================================================
+// Filters 
+#filterSection{
+	margin-top: -12px;
+	
+	.filter{
+		label{
+			width: 100%;
+			height: 25px;
+			padding: 1px 0;
+			display: block;
+			position: relative;
+			font-family: 'helveticabold';
+			font-size: 12px;
+			color: $color_lightgrey;
+			margin-bottom: 3px;
+			
+			&::before{
+				position: absolute;
+				left: -21px;
+				top: 7px;
+				width: 8px;
+				height: 8px;
+				border-radius: 4px;
+				content: '';
+				display: block;
+			}
+			
+			input[type='checkbox']{
+				float: right;
+			}
+		}
+	}
 }

@@ -90,7 +90,7 @@ h2, .h2 {
   line-height: 120%;
   color: #21282f; }
 
-h3, .h3 {
+h3, .accordionMenu li a .accordionHeader, .h3 {
   font-family: 'helvetica', Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -121,11 +121,12 @@ p {
 
 .subtitle {
   padding: 25px 0; }
-  .subtitle h3 {
+  .subtitle h3, .subtitle .accordionMenu li a .accordionHeader, .accordionMenu li a .subtitle .accordionHeader {
     position: relative;
+    display: inline-block;
     font-family: 'intro';
-    display: inline-block; }
-    .subtitle h3::before {
+    font-weight: normal; }
+    .subtitle h3::before, .subtitle .accordionMenu li a .accordionHeader::before, .accordionMenu li a .subtitle .accordionHeader::before {
       position: absolute;
       top: -20px;
       left: 0;
@@ -133,6 +134,56 @@ p {
       height: 5px;
       content: '';
       background: url(../sysimages/triangles_title.svg) no-repeat; }
+
+.accordionMenu {
+  margin: 0; }
+  .accordionMenu li {
+    list-style: none;
+    display: block; }
+    .accordionMenu li a {
+      border-bottom: 1px solid rgba(123, 124, 126, 0.3);
+      width: 100%;
+      display: block;
+      padding: 10px 0; }
+      .accordionMenu li a .accordionHeader {
+        font-family: 'intro';
+        font-weight: normal;
+        display: inline-block;
+        width: 70%;
+        color: #21282f; }
+      .accordionMenu li a .signal {
+        font-family: 'merriweather';
+        font-size: 12px;
+        line-height: 21px;
+        color: #7b7c7e;
+        float: right;
+        padding-right: 40px;
+        position: relative; }
+        .accordionMenu li a .signal::after {
+          background: url("../sysimages/button/openAccordion.svg") no-repeat center center;
+          display: block;
+          width: 20px;
+          height: 20px;
+          top: 0;
+          right: 0;
+          content: '';
+          display: block;
+          position: absolute; }
+      .accordionMenu li a.hover .accordionHeader {
+        color: rgba(190, 151, 95, 0.8); }
+    .accordionMenu li.active .accordionHeader, .accordionMenu li.active .signal {
+      color: rgba(190, 151, 95, 0.8); }
+    .accordionMenu li.active .signal::after {
+      background: url("../sysimages/button/closeAccordion.svg") no-repeat center center; }
+    .accordionMenu li .accordionContent {
+      margin: 20px -15px 20px 0; }
+      .accordionMenu li .accordionContent:before, .accordionMenu li .accordionContent:after {
+        content: "";
+        display: table; }
+      .accordionMenu li .accordionContent:after {
+        clear: both; }
+      .accordionMenu li .accordionContent > div {
+        padding-left: 0; }
 
 a {
   font-family: 'helvetica', Arial, Helvetica, sans-serif;
@@ -860,7 +911,6 @@ input[type=submit] {
 
 .listContainer .listElement {
   position: relative;
-  color: inherit;
   width: 100%;
   height: 320px;
   display: block;
@@ -870,40 +920,32 @@ input[type=submit] {
     display: table; }
   .listContainer .listElement:after {
     clear: both; }
+  .listContainer .listElement .cardBg {
+    width: 100%; }
   .listContainer .listElement .elementTitle {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 320px;
-    background: #FFF;
+    /*background: $color_w;
     -webkit-clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
     clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    -webkit-box-shadow: 0 0 1px #7b7c7e ;
-    -moz-box-shadow: 0 0 1px #7b7c7e ;
-    box-shadow: 0 0 1px #7b7c7e ; }
+    @include transition( all .4s ease );
+    @include box-shadow(0, 0, 1px, $color_lightgrey);*/ }
   .listContainer .listElement .elementContent {
     position: absolute;
     height: 320px;
     top: 0;
     left: 0;
     right: -1px;
-    -webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
+    /*-webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
     clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
-    background-color: #FFF !important;
-    background-size: 100% !important;
-    background-position: 300px 500px !important;
-    -moz-transition: background-position 0.4s ease;
-    -o-transition: background-position 0.4s ease;
-    -webkit-transition: background-position 0.4s ease;
-    transition: background-position 0.4s ease;
-    -webkit-box-shadow: 0 0 1px #7b7c7e ;
-    -moz-box-shadow: 0 0 1px #7b7c7e ;
-    box-shadow: 0 0 1px #7b7c7e ; }
+    background-color: $color_w!important;
+    background-size: 100%!important; 
+    background-position: 300px 500px!important;
+    @include transition( background-position .4s ease );
+    @include box-shadow(0, 0, 1px, $color_lightgrey);*/ }
     .listContainer .listElement .elementContent .flag {
       position: absolute;
       top: 20px;
@@ -933,7 +975,8 @@ input[type=submit] {
     right: 0;
     z-index: 2;
     text-decoration: none;
-    padding: 3px 20px; }
+    padding: 3px 20px;
+    height: 30px; }
     .listContainer .listElement .downloadPDF span {
       font-family: 'helvetica';
       font-weight: bold;
@@ -1095,28 +1138,6 @@ input[type=submit] {
 .briefs.filter label::before {
   background: #8cc63f; }
 
-.filter label {
-  width: 100%;
-  height: 25px;
-  padding: 1px 0;
-  display: block;
-  position: relative;
-  font-family: 'helveticabold';
-  font-size: 12px;
-  color: #7b7c7e;
-  margin-bottom: 3px; }
-  .filter label::before {
-    position: absolute;
-    left: -21px;
-    top: 7px;
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
-    content: '';
-    display: block; }
-  .filter label input[type='checkbox'] {
-    float: right; }
-
 #weeklycalendarSection {
   background: url(../images/homepageCalendar.jpg) no-repeat center center;
   padding: 30px 30px 100px;
@@ -1188,5 +1209,29 @@ input[type=submit] {
       font-family: "helvetica";
       font-weight: regular;
       font-size: 16px; }
+
+#filterSection {
+  margin-top: -12px; }
+  #filterSection .filter label {
+    width: 100%;
+    height: 25px;
+    padding: 1px 0;
+    display: block;
+    position: relative;
+    font-family: 'helveticabold';
+    font-size: 12px;
+    color: #7b7c7e;
+    margin-bottom: 3px; }
+    #filterSection .filter label::before {
+      position: absolute;
+      left: -21px;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      content: '';
+      display: block; }
+    #filterSection .filter label input[type='checkbox'] {
+      float: right; }
 
 /*# sourceMappingURL=000_guide.css.map */
