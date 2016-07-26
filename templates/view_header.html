@@ -1,10 +1,10 @@
 <nav class="navbar navbar-fixed-top" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <div class="container">
-        
+
         <a id="logo" href="index.html" itemprop="url" id="logo" itemscope itemtype="http://schema.org/Organization">
             <img src="sysimages/logo_future program.svg" alt="UAE Future" title="UAE Future" itemprop="logo">
         </a>
-        
+
         <ul id="nav">
             <li class="active"><a href="index.html" itemprop="url" class="headerlinks">Homepage</a></li>
             <li><a href="ecosystem.html" itemprop="url" class="headerlinks">Ecosystem</a></li>
@@ -17,58 +17,60 @@
             <li><a href="about.html" itemprop="url" class="headerlinks">UAE Future</a></li>
             <li><a href="partners.html" itemprop="url" class="headerlinks">Partners</a></li>
         </ul>
-        
+
         <div class="navbar-right">
             <a href="javascript:void(0)" id="userProfile">
                 <img src="images/user.jpg" alt="Rashid Halam">
             </a>
-            
+
             <a href="javascript:void(0)" id="searchbutton"></a>
-            
+
             <a href="login.html" id="loginButton">Login</a>
-            
+
         </div>
     </div>
-    
-    <!--<div class="container-search">
-    <form name="frmPesq" method="GET" action="/index.php">
-        <input type="hidden" name="id" value="36">
-        <div class="wrapper-input">
-            <span class="helper">bogoougo</span>
-            <input type="submit" value="">
-            <input type="search" class="search-input" placeholder="O que procura?" name="term" style="width: 179px;">
-        </div>
-    </form>
-    </div>-->
-</nav>  
+
+    <div class="container-search">
+        <form name="frmPesq" method="GET" action="/index.php">
+            <input type="hidden" name="id" value="36">
+            <div class="wrapper-input">
+                <span class="helper">bogoougo</span>
+                <input type="submit" value="">
+                <input type="search" class="search-input" placeholder="O que procura?" name="term" style="width: 179px;">
+            </div>
+        </form>
+    </div>
+</nav>
 
 <script>
-/*    $('#searchbutton').click(function(){
-        if($('.container-search').hasClass('open')){
+
+    $('#searchbutton').click(function () {
+
+        if ($('.container-search').hasClass('open')) {
             $('.container-search').removeClass('open');
             $('#overlay').fadeOut('fast');
             $('.container-search').css('visibility', 'hidden');
             $('.container-search').css('opacity', '0');
-        }else{
+        } else {
             $('.container-search').addClass('open');
             $('#overlay').fadeIn('fast');
             $('.container-search').css('visibility', 'visible');
             $('.container-search').css('opacity', '1');
 
-    setTimeout(function(){
-        $('.search-input').focus();
-    }, 100);
+            setTimeout(function () {
+                $('.search-input').focus();
+            }, 100);
         }
     });
 
     $("html").click(function (ev) {
         var _parentsLength = jQuery(ev.target).parents("#header").length;
 
-        if(_parentsLength == 0) {
+        if (_parentsLength == 0) {
             $('.container-search').removeClass('open');
             $('#overlay').fadeOut('fast');
             $('.container-search').css('visibility', 'hidden');
             $('.container-search').css('opacity', '0');
         }
-    });*/
+    });
 </script>
