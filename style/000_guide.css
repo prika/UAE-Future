@@ -90,7 +90,7 @@ h2, .h2 {
   line-height: 120%;
   color: #21282f; }
 
-h3, .accordionMenu li a .accordionHeader, .h3 {
+h3, .accordionMenu > li > a .accordionHeader, .h3 {
   font-family: 'helvetica', Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -121,12 +121,12 @@ p {
 
 .subtitle {
   padding: 25px 0; }
-  .subtitle h3, .subtitle .accordionMenu li a .accordionHeader, .accordionMenu li a .subtitle .accordionHeader {
+  .subtitle h3, .subtitle .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .subtitle .accordionHeader {
     position: relative;
     display: inline-block;
     font-family: 'intro';
     font-weight: normal; }
-    .subtitle h3::before, .subtitle .accordionMenu li a .accordionHeader::before, .accordionMenu li a .subtitle .accordionHeader::before {
+    .subtitle h3::before, .subtitle .accordionMenu > li > a .accordionHeader::before, .accordionMenu > li > a .subtitle .accordionHeader::before {
       position: absolute;
       top: -20px;
       left: 0;
@@ -137,21 +137,21 @@ p {
 
 .accordionMenu {
   margin: 0; }
-  .accordionMenu li {
+  .accordionMenu > li {
     list-style: none;
     display: block; }
-    .accordionMenu li a {
+    .accordionMenu > li > a {
       border-bottom: 1px solid rgba(123, 124, 126, 0.3);
       width: 100%;
       display: block;
       padding: 10px 0; }
-      .accordionMenu li a .accordionHeader {
+      .accordionMenu > li > a .accordionHeader {
         font-family: 'intro';
         font-weight: normal;
         display: inline-block;
         width: 70%;
         color: #21282f; }
-      .accordionMenu li a .signal {
+      .accordionMenu > li > a .signal {
         font-family: 'merriweather';
         font-size: 12px;
         line-height: 21px;
@@ -159,7 +159,7 @@ p {
         float: right;
         padding-right: 40px;
         position: relative; }
-        .accordionMenu li a .signal::after {
+        .accordionMenu > li > a .signal::after {
           background: url("../sysimages/button/openAccordion.svg") no-repeat center center;
           display: block;
           width: 20px;
@@ -169,20 +169,20 @@ p {
           content: '';
           display: block;
           position: absolute; }
-      .accordionMenu li a.hover .accordionHeader {
+      .accordionMenu > li > a.hover .accordionHeader {
         color: rgba(190, 151, 95, 0.8); }
-    .accordionMenu li.active .accordionHeader, .accordionMenu li.active .signal {
+    .accordionMenu > li.active .accordionHeader, .accordionMenu > li.active .signal {
       color: rgba(190, 151, 95, 0.8); }
-    .accordionMenu li.active .signal::after {
+    .accordionMenu > li.active .signal::after {
       background: url("../sysimages/button/closeAccordion.svg") no-repeat center center; }
-    .accordionMenu li .accordionContent {
+    .accordionMenu > li .accordionContent {
       margin: 20px -15px 20px 0; }
-      .accordionMenu li .accordionContent:before, .accordionMenu li .accordionContent:after {
+      .accordionMenu > li .accordionContent:before, .accordionMenu > li .accordionContent:after {
         content: "";
         display: table; }
-      .accordionMenu li .accordionContent:after {
+      .accordionMenu > li .accordionContent:after {
         clear: both; }
-      .accordionMenu li .accordionContent > div {
+      .accordionMenu > li .accordionContent > div {
         padding-left: 0; }
 
 a {
@@ -912,22 +912,46 @@ input[type=submit] {
 .listContainer .listElement {
   position: relative;
   width: 100%;
-  height: 320px;
+  min-height: 320px;
   display: block;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  		/*#svg1,
+  		#svg2{
+  			position: absolute;
+  			top: 0;
+  			left: 0;
+  			right: 0;
+  			bottom: 0;
+  			z-index: 0;
+  		}
+  		
+  		
+  		#shape{
+  			stroke: $color_lightgrey;
+  			//fill: ;
+  			position: absolute;
+  			top: 0;
+  			left: 0;
+  			z-index: 0;
+  		}
+  
+  		#contentShape{
+  			stroke: $color_lightgrey;
+  			fill: #FFF;
+  		}*/ }
   .listContainer .listElement:before, .listContainer .listElement:after {
     content: "";
     display: table; }
   .listContainer .listElement:after {
     clear: both; }
-  .listContainer .listElement .cardBg {
-    width: 100%; }
   .listContainer .listElement .elementTitle {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 6px;
+    left: 6px;
     right: 0;
-    height: 320px;
+    height: 40px;
+    width: 40px;
+    background-size: 100% 100%;
     /*background: $color_w;
     -webkit-clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
     clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
@@ -936,9 +960,9 @@ input[type=submit] {
   .listContainer .listElement .elementContent {
     position: absolute;
     height: 320px;
+    width: 100%;
     top: 0;
     left: 0;
-    right: -1px;
     /*-webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
     clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
     background-color: $color_w!important;
@@ -946,6 +970,11 @@ input[type=submit] {
     background-position: 300px 500px!important;
     @include transition( background-position .4s ease );
     @include box-shadow(0, 0, 1px, $color_lightgrey);*/ }
+    .listContainer .listElement .elementContent img {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0; }
     .listContainer .listElement .elementContent .flag {
       position: absolute;
       top: 20px;
@@ -957,6 +986,10 @@ input[type=submit] {
       padding: 2px 22px 4px;
       text-transform: capitalize; }
     .listContainer .listElement .elementContent .text {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
       color: inherit;
       text-decoration: none;
       padding: 120px 20px 20px;
@@ -976,7 +1009,7 @@ input[type=submit] {
     z-index: 2;
     text-decoration: none;
     padding: 3px 20px;
-    height: 30px; }
+    height: 0; }
     .listContainer .listElement .downloadPDF span {
       font-family: 'helvetica';
       font-weight: bold;
@@ -991,16 +1024,18 @@ input[type=submit] {
     background-position: 0 !important; }
     .listContainer .listElement:hover .elementContent .text * {
       color: #FFF !important; }
-  .listContainer .listElement:hover .downloadPDF span {
-    display: block; }
+  .listContainer .listElement:hover .downloadPDF {
+    height: 40px; }
+    .listContainer .listElement:hover .downloadPDF span {
+      display: block; }
 
 .trends .flag,
 .trends .downloadPDF {
   background: #991720; }
 .trends .elementTitle {
   background: url(../sysimages/categories/trends@2x.png) no-repeat center center; }
-.trends:hover .elementTitle {
-  background: #991720; }
+.trends:hover #elementIcon {
+  fill: #991720; }
 .trends.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/trends.svg); }
 .trends.filter label::before {
@@ -1011,8 +1046,8 @@ input[type=submit] {
   background: #2db677; }
 .institutes .elementTitle {
   background: url(../sysimages/categories/institutes@2x.png) no-repeat center center; }
-.institutes:hover .elementTitle {
-  background: #2db677; }
+.institutes:hover #elementIcon {
+  fill: #2db677; }
 .institutes.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/institutes.svg); }
 .institutes.filter label::before {
@@ -1023,8 +1058,8 @@ input[type=submit] {
   background: #515354; }
 .consultancies .elementTitle {
   background: url(../sysimages/categories/consultancies@2x.png) no-repeat center center; }
-.consultancies:hover .elementTitle {
-  background: #515354; }
+.consultancies:hover #elementIcon {
+  fill: #515354; }
 .consultancies.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/consultancies.svg); }
 .consultancies.filter label::before {
@@ -1035,8 +1070,8 @@ input[type=submit] {
   background: #b1b2b3; }
 .organizations .elementTitle {
   background: url(../sysimages/categories/organizations.png) no-repeat center center; }
-.organizations:hover .elementTitle {
-  background: #b1b2b3; }
+.organizations:hover #elementIcon {
+  fill: #b1b2b3; }
 .organizations.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/consultancies.svg); }
 .organizations.filter label::before {
@@ -1047,8 +1082,8 @@ input[type=submit] {
   background: #0064a6; }
 .courses .elementTitle {
   background: url(../sysimages/categories/courses.png) no-repeat center center; }
-.courses:hover .elementTitle {
-  background-color: #0064a6; }
+.courses:hover #elementIcon {
+  fill: #0064a6; }
 .courses.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/courses.svg); }
 .courses.filter label::before {
@@ -1059,8 +1094,8 @@ input[type=submit] {
   background: #f7931e; }
 .news .elementTitle {
   background: url(../sysimages/categories/news.png) no-repeat center center; }
-.news:hover .elementTitle {
-  background-color: #f7931e; }
+.news:hover #elementIcon {
+  fill: #f7931e; }
 .news.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/news.svg); }
 .news.filter label::before {
@@ -1071,8 +1106,8 @@ input[type=submit] {
   background: #ed1c24; }
 .scholarships .elementTitle {
   background: url(../sysimages/categories/scholarships.png) no-repeat center center; }
-.scholarships:hover .elementTitle {
-  background-color: #ed1c24; }
+.scholarships:hover #elementIcon {
+  fill: #ed1c24; }
 .scholarships.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/scholarships.svg); }
 .scholarships.filter label::before {
@@ -1083,8 +1118,8 @@ input[type=submit] {
   background: #be9857; }
 .conferences .elementTitle {
   background: url(../sysimages/categories/conferences.png) no-repeat center center; }
-.conferences:hover .elementTitle {
-  background-color: #be9857; }
+.conferences:hover #elementIcon {
+  fill: #be9857; }
 .conferences.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/conferences.svg); }
 .conferences.filter label::before {
@@ -1095,8 +1130,8 @@ input[type=submit] {
   background-color: #998675; }
 .initiatives .elementTitle {
   background: url(../sysimages/categories/initiatives.png) no-repeat center center; }
-.initiatives:hover .elementTitle {
-  background-color: #998675; }
+.initiatives:hover #elementIcon {
+  fill: #998675; }
 .initiatives.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/initiatives.svg); }
 .initiatives.filter label::before {
@@ -1107,8 +1142,8 @@ input[type=submit] {
   background-color: #29abe2; }
 .tools .elementTitle {
   background: url(../sysimages/categories/tools.png) no-repeat center center; }
-.tools:hover .elementTitle {
-  background-color: #29abe2; }
+.tools:hover #elementIcon {
+  fill: #29abe2; }
 .tools.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/tools.svg); }
 .tools.filter label::before {
@@ -1119,8 +1154,8 @@ input[type=submit] {
   background-color: #935491; }
 .academia .elementTitle {
   background: url(../sysimages/categories/academia.png) no-repeat center center; }
-.academia:hover .elementTitle {
-  background-color: #935491; }
+.academia:hover #elementIcon {
+  fill: #935491; }
 .academia.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/academia.svg); }
 .academia.filter label::before {
@@ -1131,8 +1166,8 @@ input[type=submit] {
   background-color: #8cc63f; }
 .briefs .elementTitle {
   background: url(../sysimages/categories/briefs.png) no-repeat center center; }
-.briefs:hover .elementTitle {
-  background-color: #8cc63f; }
+.briefs:hover #elementIcon {
+  fill: #8cc63f; }
 .briefs.filter input[type='checkbox']:checked {
   background-image: url(../sysimages/checkbox/briefs.svg); }
 .briefs.filter label::before {

@@ -2,11 +2,48 @@
 <!-- 1 - insert category in class .listElement and inside content of element .flag -->
 <!-- 2 - insert background-image on elementContent -->
 <div class="col-xs-12 col-sm-6 col-md-3">
-    <div class="listElement trends" href="javascript:void(0)">
+    <div class="listElement trends" >
+        <!--img src="sysimages/bgCards.svg" alt=""-->
+        <!--img src="sysimages/maskCards.svg" alt=""-->
+        
+        
+        <svg viewBox="0 0 252 315" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            <defs>
+                <path d="M82,5.32907052e-15 L0,5.32907052e-15 L0,82 L82,1.42108547e-14 Z" id="path-1"></path>
+                <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="82" height="82" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <path d="M94,0 L252,0 L252,315 L0,315 L0,94 L94,5.32907052e-15 Z" id="path-3"></path>
+                <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="252" height="315" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="252" height="315" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+            </defs>
+            
+            <use id="elementIcon" stroke="#979797" mask="url(#mask-2)" stroke-width="2" fill="none" xlink:href="#path-1"></use>
+            <mask id="mask-5" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            
+            <g id="Combined-Shape" stroke="#979797" mask="url(#mask-4)" stroke-width="2" fill="none">
+                <use mask="url(#mask-6)" xlink:href="#path-3"></use>
+            </g>
+            
+        
+            <image id="Bitmap" stroke="none" fill="none" mask="url(#mask-4)" x="0" y="0" width="100%" height="100%" xlink:href="images/card-institute.jpg">
+        </svg>
+        
+        
         <div class="elementTitle"></div>
         
-        <div class="elementContent" style="background: url(images/card-institute.jpg) no-repeat">
+        <div class="elementContent">
+            
+            
             <div class="flag">trends</div>
+            
             <a href="templates/view_popup_image.html" class="text">
                 <h3>Conneting Minds, Creating the Future</h3>
                 <p>Announcing 2015 as the Year of Innovation comes support federal.</p>
@@ -17,6 +54,10 @@
         </a>
     </div>
 </div>
+
+
+
+
 <!-- Element to repeat -->
 <!-- Element to repeat -->
 <div class="col-xs-12 col-sm-6 col-md-3">

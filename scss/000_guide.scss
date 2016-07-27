@@ -215,11 +215,11 @@ p{
 .accordionMenu{
 	margin: 0;
 	
-	li{
+	> li{
 		list-style: none;
 		display: block;
 		
-		a {
+		> a {
 			border-bottom: 1px solid rgba($color: $color_lightgrey, $alpha: .3);
 			width: 100%;
 			display: block;
@@ -1014,21 +1014,48 @@ input[type=submit]{
 		position: relative;
 		//color: inherit;
 		width: 100%;
-		height: 320px;
+		min-height: 320px;
 		display: block;
 		margin-bottom: 15px; 
 		@include clearfix();
+		//background: url(../sysimages/bgCards.svg) no-repeat top center;
+		//background-size: 100% 100%; 
 		
-		.cardBg{
-			width: 100%;
-		}
-		
-		.elementTitle{
+		/*#svg1,
+		#svg2{
 			position: absolute;
 			top: 0;
 			left: 0;
 			right: 0;
-			height: 320px;
+			bottom: 0;
+			z-index: 0;
+		}
+		
+		
+		#shape{
+			stroke: $color_lightgrey;
+			//fill: ;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+		}
+
+		#contentShape{
+			stroke: $color_lightgrey;
+			fill: #FFF;
+		}*/
+		
+		
+		.elementTitle{
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			right: 0;
+			height: 40px;
+			width: 40px;
+			background-size: 100% 100%;
+				
 			/*background: $color_w;
 			-webkit-clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
 			clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
@@ -1039,9 +1066,11 @@ input[type=submit]{
 		.elementContent{
 			position: absolute;
 			height: 320px;
+			width: 100%;
 			top: 0;
 			left:0;
-			right: -1px;
+			    
+			
 			/*-webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
 			clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
 			background-color: $color_w!important;
@@ -1051,6 +1080,11 @@ input[type=submit]{
 			@include box-shadow(0, 0, 1px, $color_lightgrey);*/
 			
 			
+			img{
+				position: absolute;
+				z-index: 0;
+				top: 0; left: 0;
+			}
 			.flag{
 				position: absolute;
 				top: 20px;
@@ -1063,6 +1097,9 @@ input[type=submit]{
 				text-transform: capitalize;
 			}
 			.text{
+				position: absolute;
+				z-index: 1;
+				top: 0; left: 0;
 				color: inherit;
 				text-decoration: none;
 				padding: 120px 20px 20px;
@@ -1082,7 +1119,7 @@ input[type=submit]{
 			z-index: 2;
 			text-decoration: none;
 			padding: 3px 20px;
-			height: 30px;
+			height: 0;
 			
 			span{
 				font-family: 'helvetica';
@@ -1106,7 +1143,11 @@ input[type=submit]{
 				}
 			}
 			
-			.downloadPDF span{ display: block; }
+			.downloadPDF{
+				height: 40px;
+				
+				span{ display: block; }
+			}
 		}
 	}
 }
@@ -1138,7 +1179,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background: $c_trends;}
+		//.elementTitle { background: $c_trends;}
+		#elementIcon { fill: $c_trends;}
 	}
 	
 	&.filter{
@@ -1160,7 +1202,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background: $c_institutes;}
+		//.elementTitle{ background: $c_institutes;}
+		#elementIcon { fill: $c_institutes;}
 	}
 	
 	&.filter{
@@ -1181,7 +1224,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background: $c_consultancies;}
+		//.elementTitle{ background: $c_consultancies;}
+		#elementIcon { fill: $c_consultancies;}
 	}
 	
 	&.filter{
@@ -1202,7 +1246,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background: $c_organizations;}
+		//.elementTitle{ background: $c_organizations;}
+		#elementIcon { fill: $c_organizations;}
 	}
 	
 	&.filter{
@@ -1223,7 +1268,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background-color: $c_courses;}
+		//.elementTitle{ background-color: $c_courses;}
+		#elementIcon { fill: $c_courses;}
 	}
 	
 	&.filter{
@@ -1244,7 +1290,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background-color: $c_news;}
+		//.elementTitle{ background-color: $c_news;}
+		#elementIcon { fill: $c_news;}
 	}
 	
 	&.filter{
@@ -1265,7 +1312,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background-color: $c_scholarships;}
+		//.elementTitle{ background-color: $c_scholarships;}
+		#elementIcon { fill: $c_scholarships;}
 	}
 	
 	&.filter{
@@ -1286,7 +1334,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background-color: $c_conferences;}
+		//.elementTitle{ background-color: $c_conferences;}
+		#elementIcon { fill: $c_conferences;}
 	}
 	
 	&.filter{
@@ -1307,7 +1356,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background-color: $c_initiatives;}
+		//.elementTitle{ background-color: $c_initiatives;}
+		#elementIcon { fill: $c_initiatives;}
 	}
 	
 	&.filter{
@@ -1328,7 +1378,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background-color: $c_tools;}
+		//.elementTitle{ background-color: $c_tools;}
+		#elementIcon { fill: $c_tools;}
 	}
 	
 	&.filter{
@@ -1349,7 +1400,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background-color: $c_academia;}
+		//.elementTitle{ background-color: $c_academia;}
+		#elementIcon { fill: $c_academia;}
 	}
 	
 	&.filter{
@@ -1370,7 +1422,8 @@ $c_briefs:#8cc63f;
 	}
 	
 	&:hover{
-		.elementTitle{ background-color: $c_briefs;}
+		//.elementTitle{ background-color: $c_briefs;}
+		#elementIcon { fill: $c_briefs;}
 	}
 	
 	&.filter{
