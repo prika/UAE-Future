@@ -91,9 +91,9 @@ h2, .h2 {
   color: #21282f; }
 
 h3, .accordionMenu > li > a .accordionHeader, .h3 {
-  font-family: 'helvetica', Arial, Helvetica, sans-serif;
+  font-family: 'helveticabold', Arial, Helvetica, sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 120%;
   color: #21282f; }
 
@@ -944,6 +944,14 @@ input[type=submit] {
     display: table; }
   .listContainer .listElement:after {
     clear: both; }
+  .listContainer .listElement #Bitmap {
+    opacity: 0;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+  .listContainer .listElement #myShape {
+    fill: #FFF; }
   .listContainer .listElement .elementTitle {
     position: absolute;
     top: 6px;
@@ -952,9 +960,7 @@ input[type=submit] {
     height: 40px;
     width: 40px;
     background-size: 100% 100%;
-    /*background: $color_w;
-    -webkit-clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
-    clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
+    /*
     @include transition( all .4s ease );
     @include box-shadow(0, 0, 1px, $color_lightgrey);*/ }
   .listContainer .listElement .elementContent {
@@ -963,11 +969,7 @@ input[type=submit] {
     width: 100%;
     top: 0;
     left: 0;
-    /*-webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
-    clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
-    background-color: $color_w!important;
-    background-size: 100%!important; 
-    background-position: 300px 500px!important;
+    /*
     @include transition( background-position .4s ease );
     @include box-shadow(0, 0, 1px, $color_lightgrey);*/ }
     .listContainer .listElement .elementContent img {
@@ -1020,6 +1022,10 @@ input[type=submit] {
       padding: 6px 0;
       color: rgba(255, 255, 255, 0.8);
       display: none; }
+  .listContainer .listElement:hover #myShape {
+    fill: none; }
+  .listContainer .listElement:hover #Bitmap {
+    opacity: 1; }
   .listContainer .listElement:hover .elementContent {
     background-position: 0 !important; }
     .listContainer .listElement:hover .elementContent .text * {
