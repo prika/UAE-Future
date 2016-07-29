@@ -35,6 +35,7 @@
 				a {
 					@extend %clickable;
 					height: $header_height;
+                    color: $color_gold;
 				}
 				
 				&.active > a, 

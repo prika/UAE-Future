@@ -39,11 +39,21 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+        var scope =  { currentPage: "ecosystem" }
+        var headerColor =  { bgHeader: "rgba(86,86,86,0.85)" };
+    </script>
     <div class="globalContainer">
         <header id="header">
             <script type="text/javascript">
                 // This template is supposed to be injected (partial)
-                $("#header").load("templates/view_header.html");
+                
+                $.get("templates/view_header.html", function (data) {
+                    var html = $(data);
+                    html.find("#" + scope.currentPage).addClass("active");
+                    $("#header").html(html);
+                    $("#header .navbar").css("background",headerColor.bgHeader);
+                });
             </script>
         </header>
 
@@ -58,6 +68,7 @@
                 $.get("templates/view_fullBanner.html", function (data) {
 
                     $("#fullBanner>div").html($(data));
+                    
                     // Mocked content
                     $("#fullBanner h1").text("INNOVATION ECOSYSTEM");
                     $("#fullBanner h2").text("THIS SECTION DOCUMENTS THE DIFFERENT PILLARS OF THE INNOVATION ECOSYSTEM IN THE UAE STARTING FROM THE STRATEGIC VISION TO THE IMPLEMENTATION ACROSS ALL THE LEVELS OF THE COUNTRY.");

@@ -157,7 +157,7 @@ h3, .h3 {
 
 p{
 	font-family: 'merriweather'; 
-	font-weight: regular;
+	font-weight: normal;
 	font-size: 16px;
 	line-height: 21px;
 	color: $color_lightgrey;
@@ -626,14 +626,11 @@ input[type=submit],
 	
 	.listElement{
 		position: relative;
-		//color: inherit;
 		width: 100%;
-		min-height: 320px;
+		//min-height: 320px;
 		display: block;
 		margin-bottom: 15px; 
 		@include clearfix();
-		//background: url(../sysimages/bgCards.svg) no-repeat top center;
-		//background-size: 100% 100%; 
 		
 		#Bitmap{
 			opacity: 0;
@@ -644,31 +641,6 @@ input[type=submit],
 			fill: $color_w;
 		}
 		
-		/*#svg1,
-		#svg2{
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 0;
-		}
-		
-		#shape{
-			stroke: $color_lightgrey;
-			//fill: ;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 0;
-		}
-
-		#contentShape{
-			stroke: $color_lightgrey;
-			fill: #FFF;
-		}*/
-		
-		
 		.elementTitle{
 			position: absolute;
 			top: 6px;
@@ -677,10 +649,7 @@ input[type=submit],
 			height: 40px;
 			width: 40px;
 			background-size: 100% 100%;
-				
-			/*
-			@include transition( all .4s ease );
-			@include box-shadow(0, 0, 1px, $color_lightgrey);*/
+			@include transition( all .4s ease);
 		}
 		
 		.elementContent{
@@ -689,11 +658,7 @@ input[type=submit],
 			width: 100%;
 			top: 0;
 			left:0;
-			    
-			/*
-			@include transition( background-position .4s ease );
-			@include box-shadow(0, 0, 1px, $color_lightgrey);*/
-			
+			@include transition( all .4s ease );
 			
 			img{
 				position: absolute;
@@ -717,12 +682,19 @@ input[type=submit],
 				top: 0; left: 0;
 				color: inherit;
 				text-decoration: none;
-				padding: 120px 20px 20px;
+				padding: 40% 20px 20px;
 				display: block;
 				opacity: 1;
 				@include transition( color .2s ease );
 				
-				p{ margin-top: 25px; }
+				p{ 
+					margin-top: 25px;
+					//height: 100%;
+					display: -webkit-box;
+  					-webkit-line-clamp: 3;
+  					-webkit-box-orient: vertical; 
+					  overflow: hidden;
+				}
 			}
 		}
 		
@@ -791,9 +763,9 @@ input[type=submit],
 }
 
 
-@media screen and (max-width: 990px){
+@media screen and (max-width: 767px){
 	.listContainer .listElement .elementContent .text{
-		padding: 170px 37px 20px!important;
+		padding: 40% 37px 20px!important;
 		
 		h3{ font-size: 24px;}
 	}

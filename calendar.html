@@ -36,11 +36,22 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+        var scope =  { currentPage: "calendar" }
+        var headerColor =  { bgHeader: "rgba(41,50,59,0.85)" };
+    </script>
+    
     <div class="container-full">
         <header id="header">
             <script type="text/javascript">
-                    // This template is supposed to be injected (partial)
-                    $("#header").load("templates/view_header.html");
+                // This template is supposed to be injected (partial)
+                
+                $.get("templates/view_header.html", function (data) {
+                    var html = $(data);
+                    html.find("#" + scope.currentPage).addClass("active");
+                    $("#header").html(html);
+                    $("#header .navbar").css("background",headerColor.bgHeader);
+                });
             </script>
         </header>
 

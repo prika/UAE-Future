@@ -99,7 +99,7 @@ h3, .accordionMenu > li > a .accordionHeader, .h3 {
 
 p {
   font-family: 'merriweather';
-  font-weight: regular;
+  font-weight: normal;
   font-size: 16px;
   line-height: 21px;
   color: #7b7c7e; }
@@ -495,7 +495,8 @@ input[type=submit],
       display: inline-block;
       margin: 0; }
       #header .navbar #nav li a {
-        height: 80px; }
+        height: 80px;
+        color: rgba(190, 151, 95, 0.8); }
       #header .navbar #nav li.active > a,
       #header .navbar #nav li a:hover {
         background: #BE975F;
@@ -724,7 +725,7 @@ input[type=submit],
         height: 68px; }
     #footer #backTop {
       position: fixed;
-      bottom: 178px;
+      bottom: 0;
       right: 0;
       height: 68px;
       z-index: 999999;
@@ -984,32 +985,8 @@ input[type=submit],
 .listContainer .listElement {
   position: relative;
   width: 100%;
-  min-height: 320px;
   display: block;
-  margin-bottom: 15px;
-  		/*#svg1,
-  		#svg2{
-  			position: absolute;
-  			top: 0;
-  			left: 0;
-  			right: 0;
-  			bottom: 0;
-  			z-index: 0;
-  		}
-  		
-  		#shape{
-  			stroke: $color_lightgrey;
-  			//fill: ;
-  			position: absolute;
-  			top: 0;
-  			left: 0;
-  			z-index: 0;
-  		}
-  
-  		#contentShape{
-  			stroke: $color_lightgrey;
-  			fill: #FFF;
-  		}*/ }
+  margin-bottom: 15px; }
   .listContainer .listElement:before, .listContainer .listElement:after {
     content: "";
     display: table; }
@@ -1031,18 +1008,20 @@ input[type=submit],
     height: 40px;
     width: 40px;
     background-size: 100% 100%;
-    /*
-    @include transition( all .4s ease );
-    @include box-shadow(0, 0, 1px, $color_lightgrey);*/ }
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
   .listContainer .listElement .elementContent {
     position: absolute;
     height: 320px;
     width: 100%;
     top: 0;
     left: 0;
-    /*
-    @include transition( background-position .4s ease );
-    @include box-shadow(0, 0, 1px, $color_lightgrey);*/ }
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
     .listContainer .listElement .elementContent img {
       position: absolute;
       z-index: 0;
@@ -1065,7 +1044,7 @@ input[type=submit],
       left: 0;
       color: inherit;
       text-decoration: none;
-      padding: 120px 20px 20px;
+      padding: 40% 20px 20px;
       display: block;
       opacity: 1;
       -moz-transition: color 0.2s ease;
@@ -1073,7 +1052,11 @@ input[type=submit],
       -webkit-transition: color 0.2s ease;
       transition: color 0.2s ease; }
       .listContainer .listElement .elementContent .text p {
-        margin-top: 25px; }
+        margin-top: 25px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden; }
   .listContainer .listElement .downloadPDF {
     position: absolute;
     bottom: 0;
@@ -1122,9 +1105,9 @@ input[type=submit],
     .listContainer .listElement:hover .downloadPDF span {
       display: block; }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 767px) {
   .listContainer .listElement .elementContent .text {
-    padding: 170px 37px 20px !important; }
+    padding: 40% 37px 20px !important; }
     .listContainer .listElement .elementContent .text h3, .listContainer .listElement .elementContent .text .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .listContainer .listElement .elementContent .text .accordionHeader {
       font-size: 24px; } }
 .trends .flag,
