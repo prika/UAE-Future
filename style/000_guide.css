@@ -266,15 +266,11 @@ input[type='checkbox'] {
 button,
 input[type='submit'],
 .fc-state-default, #header .navbar #nav li a, #header .navbar .navbar-right #loginButton {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0 7px;
-  margin: 0;
   font-family: 'intro';
   font-size: 12px;
   color: #FFF;
-  border-radius: 0 !important;
-  border: 0 !important;
+  border-radius: 0;
+  border: 0;
   text-decoration: none;
   position: relative;
   cursor: pointer;
@@ -483,6 +479,10 @@ input[type='submit'],
       display: inline-block;
       margin: 0; }
       #header .navbar #nav li a {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 7px;
+        margin: 0;
         height: 80px;
         color: rgba(190, 151, 95, 0.8); }
       #header .navbar #nav li.active > a,
@@ -560,6 +560,8 @@ input[type='submit'],
       #header .navbar .navbar-right #searchbutton:hover {
         background-color: rgba(190, 151, 95, 0.8); }
     #header .navbar .navbar-right #loginButton {
+      display: table-cell;
+      vertical-align: middle;
       height: 80px;
       float: none;
       display: none; }
@@ -953,6 +955,9 @@ input[type='submit'],
       line-height: 190%; }
     #fullBanner .bannerContent::before, #fullBanner .bannerContent::after {
       display: none !important; } }
+.popup {
+  max-width: 760px; }
+
 #highlightSection,
 #ecosystemSection {
   padding-bottom: 50px;
@@ -1001,9 +1006,11 @@ input[type='submit'],
     -o-transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
-  .listContainer .listElement .myShape {
+  .listContainer .listElement .myShape,
+  .listContainer .listElement #elementIcon,
+  .listContainer .listElement #path-3 {
     fill: #FFF;
-    stroke: red;
+    stroke: #dfdfdf;
     -moz-transition: fill 0.7s ease;
     -o-transition: fill 0.7s ease;
     -webkit-transition: fill 0.7s ease;
@@ -1345,7 +1352,7 @@ input[type='submit'],
       margin-left: 20px;
       font-family: "helvetica";
       font-weight: regular;
-      font-size: 16px; }
+      font-size: 14px; }
 
 /*@media (max-width: 1100px) {
   #newsSection .element{
@@ -1425,26 +1432,26 @@ input[type='submit'],
     display: table; }
   #aboutSection .container:after {
     clear: both; }
-  #aboutSection .title, #aboutSection p, #aboutSection input[type='text'],
+  #aboutSection p, #aboutSection input[type='text'],
   #aboutSection input[type='number'],
   #aboutSection input[type='email'],
   #aboutSection textarea,
   #aboutSection select, #aboutSection blockquote {
-    padding-bottom: 30px; }
+    padding: 15px 0 30px; }
   #aboutSection .imageContainer {
-    border-bottom: 1px solid #7b7c7e;
+    border-bottom: 1px solid;
     min-height: 130px;
     width: 100%;
     padding-bottom: 30px;
     margin-bottom: 40px; }
   #aboutSection blockquote {
-    border: 1px solid rgba(190, 151, 95, 0.8);
-    padding: 50px;
+    border: 1px solid #be9857;
+    padding: 60px;
     margin-left: 0;
-    color: rgba(190, 151, 95, 0.8);
+    color: #be9857;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 30px; }
+    margin-bottom: 25px; }
 
 /*# sourceMappingURL=000_guide.css.map */
