@@ -1,19 +1,28 @@
 $(document).ready(function(){
     
+    fixedHeader();
+    
     // Link back to top
     $('#backTop').click(function(){
         $('body, html').animate({scrollTop:0}, 2000);
-    });
+    }); 
     
+    $('#navIcon').click(function(){
+		$(this).toggleClass('open');
+	});
+});
+
+$(window).scroll(function(){
+    fixedHeader();
 });
 
 function fixedHeader() {
     var winscroll = $(this).scrollTop();
 
     if(winscroll >= 20) {
-        $("#header").addClass("fixedHeader");
+        $("#header").addClass("stickyHeader");
     } else {
-        $("#header").removeClass("fixedHeader");
+        $("#header").removeClass("stickyHeader");
     }
 }
 

@@ -1,0 +1,124 @@
+#footer{
+	height: $footer_height;
+	border-top: 2px solid $color_gold;
+	
+	p , a {
+		height: $footer_height;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 7px;
+		margin: 0;
+		font-family: 'intro';
+		font-size: 12px;
+		color: $color_bl;
+		
+		&#contacts:hover{
+			color: $color_solidGold;
+		}
+	}
+	
+	.socialIcons{
+		display: inline-block;
+		margin-right: 40px;
+		
+		a{
+			display: inline-block;
+			width: 70px;
+    		height: 108px;
+    		margin-left: -13px;
+			
+			&.fb{
+				background: url(../sysimages/social/icon_facebook.svg) no-repeat center center;
+				
+				&:hover{
+					background: url(../sysimages/social/icon_facebook_over.svg) no-repeat center center;
+					background-size: 100%;
+				}
+			}
+			&.yt{
+				background: url(../sysimages/social/icon_youtube.svg) no-repeat center center;
+				
+				&:hover{
+					background: url(../sysimages/social/icon_youtube_over.svg) no-repeat center center;
+					background-size: 100%;
+				}				
+			}
+			&.lk{
+				background: url(../sysimages/social/icon_linkedin.svg) no-repeat center center;
+				
+				&:hover{
+					background: url(../sysimages/social/icon_linkedin_over.svg) no-repeat center center;
+					background-size: 100%;
+				}			
+			}
+			&.wap{
+				background: url(../sysimages/social/icon_whatsapp.svg) no-repeat center center;
+				
+				&:hover{
+					background: url(../sysimages/social/icon_whatsapp_over.svg) no-repeat center center;
+					background-size: 100%;
+				}				
+			}
+			&.twt{
+				background: url(../sysimages/social/icon_twitter.svg) no-repeat center center;
+				
+				&:hover{
+					background: url(../sysimages/social/icon_twitter_over.svg) no-repeat center center;
+					background-size: 100%;
+				}				
+			}
+			&.inst{
+				background: url(../sysimages/social/icon_instagram.svg) no-repeat center center;
+				
+				&:hover{
+					background: url(../sysimages/social/icon_instagram_over.svg) no-repeat center center;
+					background-size: 100%;
+				}				
+			}	
+			
+		}
+	}
+	
+	#backTop{
+		height: $footer_height;
+		display: inline-block;
+		width: 80px;
+		color: $color_w;
+		padding: 40px 20px;
+		background: $color_gold url(../sysimages/button/button_up@2x.png) no-repeat center center;
+		
+		&:hover{
+			background-color: $color_solidGold; 
+		}
+	}	
+}
+
+@media (max-width: 900px) {
+	
+	#footer {
+    	height: auto;
+		
+		p, a{
+			height: auto;
+			padding: 10px 7px;
+		}
+		
+		.socialIcons{
+			margin-right: 0;
+			
+			a{
+				margin-left: 0;
+				height: 68px;
+			}
+		}
+		
+		#backTop{
+		    position: fixed;
+			bottom: 0;
+			right: 0;
+			height: 68px;
+			z-index: 999999;
+			width: 60px;
+		}
+	}
+}

@@ -148,28 +148,34 @@ h2, .h2{
 }
 
 h3, .h3 {
-	font-family: 'helvetica', Arial, Helvetica, sans-serif;
+	font-family: 'helveticabold', Arial, Helvetica, sans-serif;
 	font-size: $font_size2;
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 120%;
 	color: $color_bl;
 }
 
 p{
 	font-family: 'merriweather'; 
-	font-weight: regular;
+	font-weight: normal;
 	font-size: 16px;
 	line-height: 21px;
 	color: $color_lightgrey;
-	
-	//@include responsive-font-size ($font_min_size_4, $font_size_4, 640px, 1200px, 0.1em);
 }
 
-//.reduced{
-	//@extend p;
-	//font-size: $font_size_6!important;
-//}
 
+a{
+	font-family: 'helvetica', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	color: $color_solidGold;
+	text-decoration: none;
+	@include transition(all .3s ease);
+	
+	&:hover {
+		color: $color_bl;
+	}
+}
 
 .title{
 	padding: 70px 0 50px;
@@ -187,6 +193,18 @@ p{
 			height: 5px;
 			content: '';
 			background: url(../sysimages/triangles_title.svg) no-repeat; 
+		}
+	}
+	
+	&.leftTitle{
+		padding: 70px 0 20px;
+		
+		h1 {
+			text-align: left;
+			&::before{
+				left: 0;
+				transform: none;
+			}
 		}
 	}
 }
@@ -212,6 +230,10 @@ p{
 	}
 }
 
+
+// =================================================================================== //
+// Accordion
+
 .accordionMenu{
 	margin: 0;
 	
@@ -232,6 +254,10 @@ p{
 				display: inline-block; 
 				width: 70%;
 				color: $color_bl;
+				
+				&:hover{
+					color: $color_gold;
+				}
 			}
 			.signal{
 				font-family: 'merriweather';
@@ -278,22 +304,45 @@ p{
 }
 
 
-a{
-	font-family: 'helvetica', Arial, Helvetica, sans-serif;
-	font-weight: normal;
-	font-size: 16px;
-	color: $color_solidGold;
-	text-decoration: none;
-	@include transition(all .3s ease);
-	
-	&:hover {
-		color: $color_bl;
-	}
-}
-
-
 // =================================================================================== //
 // Inputs / Textareas / Selects
+
+.inputElement,
+.inputSelect {
+	margin-bottom:25px;
+	position:relative;
+	 
+	/*&::before{
+		position:absolute; 
+		top:-10px; 
+		left:-3px; 
+		width:auto;
+	}*/
+	
+
+}
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+textarea,
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+	border: 1px solid rgba($color_lightgrey, .3);
+	background: $color_w;
+	padding: 15px 10px;
+	width: 100%;
+	
+	@extend p;
+	@include transition(all .2s ease);
+	
+	&:hover,
+	&:focus{
+		border-color: $color_gold;
+	}
+}
 
 input[type='checkbox'] {
 	-webkit-appearance: none;
@@ -318,6 +367,8 @@ input[type='checkbox'] {
 	font-family: 'intro';
 	font-size: 12px;
 	color: #FFF;
+	border-radius: 0!important;
+	border: 0!important;
 	text-decoration: none;
 	position: relative;
 	cursor: pointer;
@@ -370,7 +421,7 @@ input[type='checkbox'] {
     width: 34px;
 	overflow: hidden;
 	background-size: contain!important;
-	padding: 3px 10px 3px 40px;
+	padding: 4px 10px 3px 40px;
 	@include transition( width .4s ease .2s);
 	
 	span{ 
@@ -448,155 +499,14 @@ input[type='checkbox'] {
 	padding: 0!important;
 }
 
-
-
-// =================================================================================== //
-// Accordion
-/*
-.accordion { 
-	list-style: none; 
-	margin: 0 0 30px;
-	@include transition(all .2s linear);
-	
-	&:hover {
-		@include card_shadow(2);
-	}
-	
-	> li{
-		border-bottom: 1px solid $color_lightgrey;
-		
-		> a{
-			display: block;
-			position: relative;
-			
-			line-height: 20px;
-			text-decoration: none;
-			
-			@extend %clickable;
-			background: none;
-			color: $color_blue;
-			@include border-radius(0);
-			border: 0;
-			width: 100%;
-			padding: 20px 30px;
-		}
-		
-		> a:after{
-			font: normal normal normal 14px/1 FontAwesome;
-			font-size: 23px;
-			display: block;
-			content: "\f107";
-			position: absolute;
-			right: 20px;
-			top: 18px;
-			z-index: 22;
-		}
-		
-		.accordion_content{
-			display: none;
-			padding: 30px;
-			line-height: 24px;
-			
-			*{
-				text-align: left;
-				@extend p;
-				font-size: inherit!important;
-				font-family: inherit!important;
-				color: inherit!important;
-				line-height: 150%;
-			}
-			
-			ul{ list-style: disc; }
-		}
-		
-		&.active {
-
-			a {
-				background: $color_blue;
-				color: $color_white;
-				
-				&:after{
-					content: "\f106";
-				}	
-			}
-			.accordion_content{display: block;}
-		}
-
-	}
-}*/
-
-
-/*SPECIAL*/
-
-/*INPUT ERROR*/
-/*ERRO NAS INPUTS DO SLIDER DO TOPO*/
-
-/*
-.inputError{
-padding:0px; 
-margin-bottom:25px;
-margin-right: 3px;
-height:32px; 
-position:relative; 
-}
-
-.errorToolTip{ display: none;}
-
-.displayError .errorToolTip{ display: block;}
-
-  .errorToolTip{
-  position:absolute; 
-  top:-10px; 
-  left:-3px; 
-  width:auto;
-  }
-
-    .imgError{
-    height:9px; 
-    width:15px; 
-    background:url(../sysimages/bgToolTipError.png) no-repeat top left; 
-    float:left;
-    position: absolute;
-    top:26px;
-    left: 10px;
-    }
-
-    .bgError{
-    background-color:rgb(156,31,47);
-    }
-
-    .errorToolTip .bgError p{
-    color:#fff; 
-    font-size: 12px;
-    line-height: 26px;
-    margin-left: 10px;
-    margin-right: 10px;
-    }
-
---------------------
-HTML:
-
-<div class="inputError">
-    <label>Text input
-        <input type="text" value="default value that goes on and on without stopping or punctuation">
-    </label>
-      
-    <div class="errorToolTip">
-        <div class="imgError"></div>
-        <div class="bgError"><p>Campo de preenchimento obrigat�rio.</p></div>
-        <div class="clear"></div>
-    </div>
-    <div class="clear"></div>
-</div>
-*/
-
-
 /*Buttons*/
 .button,
 button,
-input[type=submit]{
+input[type='submit'],
+.fc-state-default{
 	@extend %clickable;
 	border: none;
+	border-radius: 0;
 	background: $color_gold;
 	padding: 20px 25px;
 	font-size: 14px;
@@ -611,8 +521,6 @@ input[type=submit]{
 		color: $color_gold;
 	}
 }
-
-
 
 
 /* GRID STATIC */
@@ -650,332 +558,20 @@ input[type=submit]{
 // ===================================================================================================================
 // Header
 
-#header {
-	.navbar{
-		top: 20px;
-		height: $header_height;
-		background: rgba(83,59,42,0.85);
-		border: none;
-		margin-bottom: 0;
-		
-		& > div{
-			display: -webkit-flex;
-			display: flex;
-			-webkit-flex-flow: row wrap;
-			flex-flow: row wrap;
-		}
-		
-		#logo{
-			height: $header_height;
-			padding-top: 28px;
-			-webkit-flex: 1 auto;
-			flex: 1 auto;
-		}
-		
-		#nav {
-			height: $header_height;
-			-webkit-flex: 1 auto;
-			flex: 1 auto;
-			text-align: center;
-			
-			li{
-				display: inline-block;
-				margin: 0;
-				
-				a {
-					@extend %clickable;
-					height: $header_height;
-				}
-				
-				&.active > a, 
-				a:hover{
-					background: #BE975F;
-					color: #FFF;
-					
-					&::before,
-					&::after{
-						opacity: 1;
-					}
-				}
-			}
-		} 
-		
-		.navbar-right{
-			-webkit-flex: 1 auto;
-			flex: 1 auto;
-			display: inline-block;
-			
-			a{
-				display: block;
-				float: right;	
-			}
-			
-			#searchbutton{
-				//padding: 25px 7px;
-				width: 50px;
-				height: $header_height;
-				background: url(../sysimages/button/button_search.svg) no-repeat center center;
-			}
-			
-			#loginButton{
-				@extend %clickable;
-				height: $header_height;
-				float: none;
-			}
-			
-			#userProfile {
-				padding: 20px 0 16px 7px;
-				
-				img{
-					width: 40px;
-					height: 40px;
-					border-radius: 20px;
-				} 	
-			}
-		}	
-		
-		
-		.container-search{
-			visibility: hidden;
-			opacity:.8;
-			position: fixed;
-			top: 100px;
-			left:0;
-			width: 100%;
-			height: 100vh;
-			background: rgba($color: $color_w, $alpha: .7);
-			z-index: 0; 
-			text-align: center;
-		}
-			
-		.container-search .wrapper-input{
-			display: table;margin: 0 auto;padding: 19px 0 19px;}
-		.container-search input[type=submit]{
-			float: left;width: 43px;height: 37px;padding: 0;
-			//background: url(sysimages/.png) no-repeat left top;
-		}
-		.container-search input[type=search]{float: left;font-size: 30px;border: 0;color: #515151;padding: 2px 11px;}
-		
-		/*.container-search ::-webkit-input-placeholder{color: #DCDCDC;}
-		.container-search :-moz-placeholder{color: #DCDCDC; }
-		.container-search ::-moz-placeholder{color: #DCDCDC; }
-		.container-search :-ms-input-placeholder{  color: #DCDCDC; }*/
-		.container-search .helper{display: none;padding: 0 10px;font-size: 30px;}
-		.container-search .search-input{-webkit-transition: all .07s linear;-moz-transition: all .07s linear;-ms-transition: all .07s linear;-o-transition: all .07s linear;transition: all .07s linear;}
-	}
-}
+@import '_header.scss';
 
 
 // ===================================================================================================================
 // Footer
 
-#footer{
-	height: $footer_height;
-	border-top: 2px solid $color_gold;
-	
-	p , a {
-		height: $footer_height;
-		display: table-cell;
-		vertical-align: middle;
-		padding: 0 7px;
-		margin: 0;
-		font-family: 'intro';
-		font-size: 12px;
-		color: $color_bl;
-		
-		&#contacts:hover{
-			color: $color_solidGold;
-		}
-	}
-	
-	.socialIcons{
-		display: inline-block;
-		margin-right: 40px;
-		
-		a{
-			display: inline-block;
-			width: 70px;
-    		height: 108px;
-    		margin-left: -13px;
-			
-			&.fb{
-				background: url(../sysimages/social/icon_facebook.svg) no-repeat center center;
-				
-				&:hover{
-					background: url(../sysimages/social/icon_facebook_over.svg) no-repeat center center;
-					background-size: 100%;
-				}
-			}
-			&.yt{
-				background: url(../sysimages/social/icon_youtube.svg) no-repeat center center;
-				
-				&:hover{
-					background: url(../sysimages/social/icon_youtube_over.svg) no-repeat center center;
-					background-size: 100%;
-				}				
-			}
-			&.lk{
-				background: url(../sysimages/social/icon_linkedin.svg) no-repeat center center;
-				
-				&:hover{
-					background: url(../sysimages/social/icon_linkedin_over.svg) no-repeat center center;
-					background-size: 100%;
-				}			
-			}
-			&.wap{
-				background: url(../sysimages/social/icon_whatsapp.svg) no-repeat center center;
-				
-				&:hover{
-					background: url(../sysimages/social/icon_whatsapp_over.svg) no-repeat center center;
-					background-size: 100%;
-				}				
-			}
-			&.twt{
-				background: url(../sysimages/social/icon_twitter.svg) no-repeat center center;
-				
-				&:hover{
-					background: url(../sysimages/social/icon_twitter_over.svg) no-repeat center center;
-					background-size: 100%;
-				}				
-			}
-			&.inst{
-				background: url(../sysimages/social/icon_instagram.svg) no-repeat center center;
-				
-				&:hover{
-					background: url(../sysimages/social/icon_instagram_over.svg) no-repeat center center;
-					background-size: 100%;
-				}				
-			}	
-			
-		}
-	}
-	
-	#backTop{
-		height: $footer_height;
-		display: inline-block;
-		width: 80px;
-		color: $color_w;
-		padding: 40px 20px;
-		background: $color_gold url(../sysimages/button/button_up@2x.png) no-repeat center center;
-		
-		&:hover{
-			background-color: $color_solidGold; 
-		}
-	}	
-}
+@import '_footer.scss';
 
 
 // ===================================================================================================================
-// Full Banner		
-#fullBanner{
-    background: url(../images/homepageBanner.jpg) no-repeat center bottom;
-    background-size: cover;
-    height: 100vh;
-	width: 100%;
-    display: table;
-    position: relative;
-	overflow: hidden;
-	
-	/*& > div {
-		height: 200%;
-		position: relative;
-		top: -100%;
-	}*/
-	
-	@include keyframes(anim_opacity) {
-		0% { opacity: .3; }
-		50% { opacity: .1; }
-		100% { opacity: .3; }
-	}
-	@include keyframes(anim_opacity_invert) {
-		0% { opacity: .1; }
-		50% { opacity: .4; }
-		100% { opacity: .1; }
-	}
-	@include keyframes(slideFromLeft) {
-		0% { left: -100%; }
-		100% { left: 10px; }
-	}
-	@include keyframes(slideFromRight) {
-		0% { right: -100%; }
-		100% { right: 10px; }
-	}
-    
-    // Element 1
-    &::before {
-        background: url(../sysimages/animate/banner_graf1.svg) no-repeat center center;
-        //background-size: 60%;
-        content:'';
-        display: block;
-        z-index: 0;
-        width: 100%;
-		max-width: 1100px;
-        height: 100%;
-		opacity: .3;
-		@include verticalAlign();
-        @include animation('anim_opacity 7s 3');
-    }
-    
-    .bannerContent{
-        text-align: center;
-        text-transform: uppercase;
-        height: 100vh;
-        position: relative;
-        z-index: 2;
-		padding: 0 20%;
-		//display: table-cell;
-        //vertical-align: middle;
-		//overflow: hidden;
-        
-        h1 {
-          font-size: 60px;
-          line-height: 110%;
-          padding-top: 40px;
-          color: $color_w;
-        }
+// Full Banner
 
-        h2 {
-          font-size: 22px;
-          line-height: 150%;
-          margin-bottom: 50px;
-          color: $color_w;
-        }
-        
-        /*bg animation 2*/
-        &::before{
-          background: url(../sysimages/animate/banner_graf2.svg) no-repeat center center;
-          opacity: .3;
-          content:'';
-          display: block;
-          position: absolute;
-          left: 10px;
-          top: -5%;
-          z-index: 0;
-          width: 200px;
-          height: 200px;
-		  //@include animation('anim_opacity 5s 5');
-		  @include animation('slideFromLeft 3s');
-		  
-		  
-        }
-        
-        /*bg animation 3*/
-       &::after{
-          background: url(../sysimages/animate/banner_graf4.svg) no-repeat center center;
-          opacity: .3;
-          content:'';
-          display: block;
-          position: absolute;
-          right: 10px;
-          top: 5%;
-          z-index: 0;
-          width: 200px;
-          height: 200px;
-		  //@include animation('anim_opacity_invert 7s 5');
-		  @include animation('slideFromRight 3s');
-        }
-    }
-}
+@import '_fullBanner.scss';
+
 
 
 // ===================================================================================================================
@@ -1005,47 +601,27 @@ input[type=submit]{
 }
 
 
-
 // ===================================================================================================================
 // Lists
 .listContainer{
 	
 	.listElement{
 		position: relative;
-		//color: inherit;
 		width: 100%;
-		min-height: 320px;
 		display: block;
 		margin-bottom: 15px; 
 		@include clearfix();
-		//background: url(../sysimages/bgCards.svg) no-repeat top center;
-		//background-size: 100% 100%; 
 		
-		/*#svg1,
-		#svg2{
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 0;
+		.Bitmap{
+			opacity: 0;
+			@include transition( all .4s ease );
 		}
 		
-		
-		#shape{
-			stroke: $color_lightgrey;
-			//fill: ;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 0;
+		.myShape {
+			fill: $color_w;
+			stroke: red;
+			@include transition( fill .7s ease );
 		}
-
-		#contentShape{
-			stroke: $color_lightgrey;
-			fill: #FFF;
-		}*/
-		
 		
 		.elementTitle{
 			position: absolute;
@@ -1055,12 +631,7 @@ input[type=submit]{
 			height: 40px;
 			width: 40px;
 			background-size: 100% 100%;
-				
-			/*background: $color_w;
-			-webkit-clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
-			clip-path: polygon(0 0, 0 0, 0% 25%, 25% 0);
-			@include transition( all .4s ease );
-			@include box-shadow(0, 0, 1px, $color_lightgrey);*/
+			@include transition( all .4s ease);
 		}
 		
 		.elementContent{
@@ -1069,16 +640,7 @@ input[type=submit]{
 			width: 100%;
 			top: 0;
 			left:0;
-			    
-			
-			/*-webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
-			clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0 100%, 0% 30%, 30% 0);
-			background-color: $color_w!important;
-			background-size: 100%!important; 
-			background-position: 300px 500px!important;
-			@include transition( background-position .4s ease );
-			@include box-shadow(0, 0, 1px, $color_lightgrey);*/
-			
+			@include transition( all .4s ease );
 			
 			img{
 				position: absolute;
@@ -1102,28 +664,49 @@ input[type=submit]{
 				top: 0; left: 0;
 				color: inherit;
 				text-decoration: none;
-				padding: 120px 20px 20px;
+				padding: 40% 20px 20px;
 				display: block;
 				opacity: 1;
 				@include transition( color .2s ease );
 				
-				p{ margin-top: 25px; }
+				p{ 
+					margin-top: 25px;
+					//height: 100%;
+					display: -webkit-box;
+  					-webkit-line-clamp: 3;
+  					-webkit-box-orient: vertical; 
+					  overflow: hidden;
+				}
 			}
 		}
 		
 		.downloadPDF{
 			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
+			bottom: 4px;
+			left: 0; right: 0;
+			//left: 1px;
+			//right: 1px;
 			z-index: 2;
 			text-decoration: none;
 			padding: 3px 20px;
 			height: 0;
 			
+			&::before {
+				display: block;
+				position: absolute;
+				top: 9px;
+    			left: -20px;
+				opacity: 0;
+				content: '';
+				background: url(../sysimages/button/bg_pdf.png) no-repeat left center;
+				width: 300px; height: 20px;
+				@include transition( all .2s ease .3s);
+			}
+			
+			
+			
 			span{
-				font-family: 'helvetica';
-				font-weight: bold;
+				font-family: 'helveticabold';
 				text-transform: uppercase;
 				float: right;
 				font-size: 12px;
@@ -1135,6 +718,13 @@ input[type=submit]{
 		}
 		
 		&:hover {
+			.myShape {
+				fill: none;
+			}
+			.Bitmap{
+				opacity: 1;
+			}
+		
 			.elementContent {	
 				background-position: 0!important;
 			
@@ -1146,9 +736,22 @@ input[type=submit]{
 			.downloadPDF{
 				height: 40px;
 				
+				&::before{
+					left: 25px;
+					opacity: 1;
+				}
 				span{ display: block; }
 			}
 		}
+	}
+}
+
+
+@media screen and (max-width: 767px){
+	.listContainer .listElement .elementContent .text{
+		padding: 40% 37px 20px!important;
+		
+		h3{ font-size: 24px;}
 	}
 }
 
@@ -1175,7 +778,7 @@ $c_briefs:#8cc63f;
 	.downloadPDF{ background: $c_trends;}
 	
 	.elementTitle{
-		background: url(../sysimages/categories/trends@2x.png) no-repeat center center;
+		background-image: url(../sysimages/categories/trends@2x.png) ;
 	}
 	
 	&:hover{
@@ -1349,7 +952,7 @@ $c_briefs:#8cc63f;
 }
 .initiatives{
 	.flag,
-	.downloadPDF{ background-color: $c_initiatives;}
+	.downloadPDF{ background: $c_initiatives;}
 	
 	.elementTitle{
 		background: url(../sysimages/categories/initiatives.png) no-repeat center center;
@@ -1371,7 +974,7 @@ $c_briefs:#8cc63f;
 }
 .tools{
 	.flag,
-	.downloadPDF{ background-color: $c_tools;}
+	.downloadPDF{ background: $c_tools;}
 	
 	.elementTitle{
 		background: url(../sysimages/categories/tools.png) no-repeat center center;
@@ -1393,7 +996,7 @@ $c_briefs:#8cc63f;
 }
 .academia{
 	.flag,
-	.downloadPDF{ background-color: $c_academia;}
+	.downloadPDF{ background: $c_academia;}
 	
 	.elementTitle{
 		background: url(../sysimages/categories/academia.png) no-repeat center center;
@@ -1415,7 +1018,7 @@ $c_briefs:#8cc63f;
 }
 .briefs{
 	.flag,
-	.downloadPDF{ background-color: $c_briefs;}
+	.downloadPDF{ background: $c_briefs;}
 	
 	.elementTitle{
 		background: url(../sysimages/categories/briefs.png) no-repeat center center;
@@ -1455,7 +1058,7 @@ $c_briefs:#8cc63f;
 		
 		.element{
 			width: 19%;
-			margin: 0 .5%;
+			margin: 0 .5% 10px;
 			float: left;
 			background: $color_gold;
 			height: 250px;
@@ -1516,12 +1119,36 @@ $c_briefs:#8cc63f;
 	}
 }
 
+
+
+@media (max-width: 1100px) {
+  .listContainerCalendar .element{
+	  width: 49%!important;
+  }
+}
+@media (max-width: 900px) {
+	
+  .listContainerCalendar .element{
+	  width: 99%!important;
+  }
+  
+}
+
+
+
 // ===================================================================================================================
 // News Section
 #newsSection{
 	padding: 40px;
 	//background: $color_w;
-	position: relative;
+	
+	
+	.container{
+		background: url(../sysimages/newsBg.png) no-repeat left top;
+		background-size: 100% 100%;
+		position: relative;
+	}
+	
 	
 	.element{
 		padding: 60px 60px;
@@ -1536,6 +1163,28 @@ $c_briefs:#8cc63f;
 	}
 	
 }
+
+/*@media (max-width: 1100px) {
+  #newsSection .element{
+	  padding: 0!important;
+	  width: 99%!important;
+  }
+  #newsSection { background: $color_w; }
+  #newsSection .container{ background: none; }
+}*/
+
+@media (max-width: 900px) {
+	
+   #newsSection .element{
+	  padding: 0!important;
+	  width: 99%!important;
+	  margin-bottom: 40px;
+  }
+  #newsSection { background: $color_w; }
+  #newsSection .container{ background: none; }
+  
+}
+
 
 // ===================================================================================================================
 // Filters 
@@ -1553,6 +1202,7 @@ $c_briefs:#8cc63f;
 			font-size: 12px;
 			color: $color_lightgrey;
 			margin-bottom: 3px;
+			cursor: pointer;
 			
 			&::before{
 				position: absolute;
@@ -1568,6 +1218,81 @@ $c_briefs:#8cc63f;
 			input[type='checkbox']{
 				float: right;
 			}
+			
+			&:hover{
+				color: $color_bl;
+			}
 		}
+	}
+}
+
+
+
+// ===================================================================================================================
+// Filters 
+#calendarSection{
+	background: url($bg_img);
+	padding-bottom: 40px;
+	
+	#calendar {
+		max-width: 1100px;
+		margin: 0 auto;
+		
+		.fc-head,
+		.fc-head td,
+		.fc-head th{
+			border-color: transparent;
+		}
+		.fc-body{
+			background: $color_w;
+		}
+	}
+}
+
+
+// ===================================================================================================================
+// Contacts page
+#contactsSection{
+	background: url($bg_img);
+	padding: 0 15px 50px;
+	
+	#contactForm{
+		max-width: 900px;
+		margin: 0 auto;
+		@include clearfix();
+	}
+}
+
+
+#aboutSection{
+	background: $color_w;
+	
+	.container{
+		@include clearfix();	
+	}
+	
+	.title, p{
+		padding-bottom: 30px;
+	}
+
+	
+	.imageContainer{
+		border-bottom: 1px solid $color_lightgrey;
+		min-height: 130px;
+		width: 100%;
+		padding-bottom: 30px;
+		margin-bottom: 40px;
+	}
+
+	blockquote{
+		border: 1px solid $color_gold;
+		padding: 50px;
+		margin-left: 0;
+		@extend p;
+		color: $color_gold;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 30px;
 	}
 }
