@@ -66,10 +66,11 @@ $footer_height: 108px;
 $color_w: #FFF;
 $color_bl: #21282f;
 $color_lightgrey:#7b7c7e;
-//$color_grey: ;
+$color_lightergrey: #dfdfdf;
 //$color_br: ;
 $color_gold: rgba(190,151,95,0.80);
 $color_solidGold: #be9857;
+//B39155
 
 $bg_img: "../sysimages/bg.png";
 
@@ -360,15 +361,15 @@ input[type='checkbox'] {
 // Clickables / Buttons
 
 %clickable {
-	display: table-cell;
-	vertical-align: middle;
-	padding: 0 7px;
-	margin: 0;
+	//display: table-cell;
+	//vertical-align: middle;
+	//padding: 0 7px;
+	//margin: 0;
 	font-family: 'intro';
 	font-size: 12px;
 	color: #FFF;
-	border-radius: 0!important;
-	border: 0!important;
+	border-radius: 0;
+	border: 0;
 	text-decoration: none;
 	position: relative;
 	cursor: pointer;
@@ -505,6 +506,7 @@ button,
 input[type='submit'],
 .fc-state-default{
 	@extend %clickable;
+	
 	border: none;
 	border-radius: 0;
 	background: $color_gold;
@@ -574,6 +576,12 @@ input[type='submit'],
 
 
 
+
+
+.popup{
+	max-width: 760px;
+}
+
 // ===================================================================================================================
 // Highlights
 #highlightSection,
@@ -617,11 +625,15 @@ input[type='submit'],
 			@include transition( all .4s ease );
 		}
 		
-		.myShape {
+		.myShape,
+		#elementIcon,
+		#path-3 {
 			fill: $color_w;
-			stroke: red;
+			stroke: $color_lightergrey;
 			@include transition( fill .7s ease );
 		}
+		
+		
 		
 		.elementTitle{
 			position: absolute;
@@ -1157,8 +1169,8 @@ $c_briefs:#8cc63f;
 			display: inline-block; 
 			margin-left: 20px;
 			font-family: "helvetica";
-			font-weight: regular;
-			font-size: 16px;
+			font-weight: normal;
+			font-size: 14px;
 		}
 	}
 	
@@ -1227,7 +1239,6 @@ $c_briefs:#8cc63f;
 }
 
 
-
 // ===================================================================================================================
 // Filters 
 #calendarSection{
@@ -1264,6 +1275,8 @@ $c_briefs:#8cc63f;
 }
 
 
+// ===================================================================================================================
+// About page
 #aboutSection{
 	background: $color_w;
 	
@@ -1271,13 +1284,13 @@ $c_briefs:#8cc63f;
 		@include clearfix();	
 	}
 	
-	.title, p{
-		padding-bottom: 30px;
+	p{
+		padding: 15px 0 30px;
 	}
 
 	
 	.imageContainer{
-		border-bottom: 1px solid $color_lightgrey;
+		border-bottom: 1px solid; 
 		min-height: 130px;
 		width: 100%;
 		padding-bottom: 30px;
@@ -1285,14 +1298,14 @@ $c_briefs:#8cc63f;
 	}
 
 	blockquote{
-		border: 1px solid $color_gold;
-		padding: 50px;
+		border: 1px solid $color_solidGold;
+		padding: 60px;
 		margin-left: 0;
 		@extend p;
-		color: $color_gold;
+		color: $color_solidGold;
 		font-size: 18px;
 		font-weight: bold;
 		text-align: center;
-		margin-bottom: 30px;
+		margin-bottom: 25px;
 	}
 }

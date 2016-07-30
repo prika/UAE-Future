@@ -34,6 +34,10 @@
 				
 				a {
 					@extend %clickable;
+                    display: table-cell;
+	                vertical-align: middle;
+	                padding: 0 7px;
+	                margin: 0;
 					height: $header_height;
                     color: $color_gold;
 				}
@@ -146,6 +150,9 @@
 			
 			#loginButton{
 				@extend %clickable;
+                display: table-cell;
+	            vertical-align: middle;
+                
 				height: $header_height;
 				float: none;
 				display: none;
