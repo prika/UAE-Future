@@ -1,0 +1,96 @@
+﻿$default_time: 1s;
+
+$step: -40;
+$offset: -200px;
+
+/* _animate_index is the col of the png of the icon*/
+
+$elem_list:  trend, institutes,  organizations;
+
+$organizations_animate_index:2;
+
+$courses_animate:courses;
+$courses_animate_index:3;
+
+$news_animate:news;
+$news_animate_index:4;
+
+$scholarships_animate:scholarships;
+$scholarships_animate_index:5;
+
+$conferences_animate:conferences;
+$conferences_animate_index:6;
+
+$initiatives_animate:initiatives;
+$initiatives_animate_index:7;
+
+$tools_animate:tools;
+$tools_animate_index:8;
+
+$academia_animate:academia;
+$academia_animate_index:9;
+
+$briefs_animate:briefs;
+$briefs_animate_index:10;
+
+@mixin keyframes($animationName, $col)
+{
+    @-webkit-keyframes #{$animationName} {
+        from { background-position: ($col*$step)+px 0px; }
+          to { background-position: ($col*$step)+px $offset; }
+    }
+
+    @-moz-keyframes #{$animationName}  {
+         from { background-position: ($col*$step)+px 0px; }
+           to { background-position: ($col*$step)+px $offset; }
+    }
+
+    @-o-keyframes #{$animationName} {
+        from { background-position: ($col*$step)+px 0px; }
+          to { background-position: ($col*$step)+px $offset; }
+    }
+
+    @keyframes #{$animationName} {
+        from { background-position: ($col*$step)+px 0px; }
+          to { background-position: ($col*$step)+px $offset; }
+    }
+}
+
+@mixin animation($str) 
+{
+  -webkit-animation: #{$str} steps(5) $default_time forwards;
+     -moz-animation: #{$str} steps(5) $default_time forwards;
+       -o-animation: #{$str} steps(5)  $default_time forwards;
+          animation: #{$str} steps(5) $default_time forwards;      
+}
+
+.elementTitle
+{
+    width: 40px;
+    height: 40px;
+    background-image: url("../sysimages/animate/spriteicons.png");
+}
+
+ .elementTitle:hover 
+ {
+    @include animation($scholarships_animate);
+ }
+
+ @for $i from 0 through length($elem_list) 
+ {
+    @include keyframes("#{nth($hrs, $i)}", $i); 
+ }
+
+ /*
+@include keyframes($trend_animate, $trend_animate_index);
+@include keyframes($institutes_animate, $institutes_animate_index);
+@include keyframes($organizations_animate, $organizations_animate_index);
+@include keyframes($courses_animate, $courses_animate_index);
+@include keyframes($news_animate, $news_animate_index);
+@include keyframes($scholarships_animate,$scholarships_animate_index);
+@include keyframes($conferences_animate,$conferences_animate_index);
+@include keyframes($initiatives_animate,$initiatives_animate_index);
+@include keyframes($tools_animate,$tools_animate_index);
+@include keyframes($academia_animate,$academia_animate_index);
+@include keyframes($briefs_animate, $briefs_animate_index);
+     */
