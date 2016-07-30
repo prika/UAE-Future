@@ -64,7 +64,8 @@
                     $("#fullBanner>div").html($(data));
                     // Mocked content
                     $("#fullBanner h1").text("PRIME MINISTER'S OFFICE");
-                    $("#fullBanner h2").text("E-MAIL: INFO@PMO.GOV.AE DUBAI PHONE: 00971 4 330 4433");
+                    $("#fullBanner h2").empty().append("E-MAIL:  <a href='mailto:INFO@PMO.GOV.AE'>INFO@PMO.GOV.AE</a><br>DUBAI PHONE:  <a href='tel:00971 4 330 4433'>00971 4 330 4433</a>")
+                    $("#fullBanner button").hide();
                 });
 
             </script>
@@ -72,15 +73,13 @@
         </section>
 
 
-        <section id="">
-            <div class="container">
-                <div class="title">
-                    <h1>CONTACT US</h1>
-                </div>
-
-                
-            </div>
+        <section id="contactsSection">
+                 <script type="text/javascript">
+                    // This template is supposed to be injected (partial)
+                    $("#contactsSection").load("templates/view_contactsSection.html");
+                </script>
         </section>
+
 
         <footer id="footer">
             <script type="text/javascript">

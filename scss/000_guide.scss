@@ -195,6 +195,18 @@ a{
 			background: url(../sysimages/triangles_title.svg) no-repeat; 
 		}
 	}
+	
+	&.leftTitle{
+		padding: 70px 0 20px;
+		
+		h1 {
+			text-align: left;
+			&::before{
+				left: 0;
+				transform: none;
+			}
+		}
+	}
 }
 
 .subtitle{
@@ -295,6 +307,43 @@ a{
 // =================================================================================== //
 // Inputs / Textareas / Selects
 
+.inputElement,
+.inputSelect {
+	margin-bottom:25px;
+	position:relative;
+	 
+	/*&::before{
+		position:absolute; 
+		top:-10px; 
+		left:-3px; 
+		width:auto;
+	}*/
+	
+
+}
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+textarea,
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+	border: 1px solid rgba($color_lightgrey, .3);
+	background: $color_w;
+	padding: 15px 10px;
+	width: 100%;
+	
+	@extend p;
+	@include transition(all .2s ease);
+	
+	&:hover,
+	&:focus{
+		border-color: $color_gold;
+	}
+}
+
 input[type='checkbox'] {
 	-webkit-appearance: none;
 	display: inline-block;
@@ -372,7 +421,7 @@ input[type='checkbox'] {
     width: 34px;
 	overflow: hidden;
 	background-size: contain!important;
-	padding: 3px 10px 3px 40px;
+	padding: 4px 10px 3px 40px;
 	@include transition( width .4s ease .2s);
 	
 	span{ 
@@ -450,76 +499,10 @@ input[type='checkbox'] {
 	padding: 0!important;
 }
 
-
-/*SPECIAL*/
-
-/*INPUT ERROR*/
-/*ERRO NAS INPUTS DO SLIDER DO TOPO*/
-
-/*
-.inputError{
-padding:0px; 
-margin-bottom:25px;
-margin-right: 3px;
-height:32px; 
-position:relative; 
-}
-
-.errorToolTip{ display: none;}
-
-.displayError .errorToolTip{ display: block;}
-
-  .errorToolTip{
-  position:absolute; 
-  top:-10px; 
-  left:-3px; 
-  width:auto;
-  }
-
-    .imgError{
-    height:9px; 
-    width:15px; 
-    background:url(../sysimages/bgToolTipError.png) no-repeat top left; 
-    float:left;
-    position: absolute;
-    top:26px;
-    left: 10px;
-    }
-
-    .bgError{
-    background-color:rgb(156,31,47);
-    }
-
-    .errorToolTip .bgError p{
-    color:#fff; 
-    font-size: 12px;
-    line-height: 26px;
-    margin-left: 10px;
-    margin-right: 10px;
-    }
-
---------------------
-HTML:
-
-<div class="inputError">
-    <label>Text input
-        <input type="text" value="default value that goes on and on without stopping or punctuation">
-    </label>
-      
-    <div class="errorToolTip">
-        <div class="imgError"></div>
-        <div class="bgError"><p>Campo de preenchimento obrigat�rio.</p></div>
-        <div class="clear"></div>
-    </div>
-    <div class="clear"></div>
-</div>
-*/
-
-
 /*Buttons*/
 .button,
 button,
-input[type=submit],
+input[type='submit'],
 .fc-state-default{
 	@extend %clickable;
 	border: none;
@@ -538,8 +521,6 @@ input[type=submit],
 		color: $color_gold;
 	}
 }
-
-
 
 
 /* GRID STATIC */
@@ -627,18 +608,19 @@ input[type=submit],
 	.listElement{
 		position: relative;
 		width: 100%;
-		//min-height: 320px;
 		display: block;
 		margin-bottom: 15px; 
 		@include clearfix();
 		
-		#Bitmap{
+		.Bitmap{
 			opacity: 0;
 			@include transition( all .4s ease );
 		}
 		
-		#myShape {
+		.myShape {
 			fill: $color_w;
+			stroke: red;
+			@include transition( fill .7s ease );
 		}
 		
 		.elementTitle{
@@ -700,9 +682,10 @@ input[type=submit],
 		
 		.downloadPDF{
 			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
+			bottom: 4px;
+			left: 0; right: 0;
+			//left: 1px;
+			//right: 1px;
 			z-index: 2;
 			text-decoration: none;
 			padding: 3px 20px;
@@ -719,7 +702,8 @@ input[type=submit],
 				width: 300px; height: 20px;
 				@include transition( all .2s ease .3s);
 			}
-			 
+			
+			
 			
 			span{
 				font-family: 'helveticabold';
@@ -734,10 +718,10 @@ input[type=submit],
 		}
 		
 		&:hover {
-			#myShape {
+			.myShape {
 				fill: none;
 			}
-			#Bitmap{
+			.Bitmap{
 				opacity: 1;
 			}
 		
@@ -1266,3 +1250,49 @@ $c_briefs:#8cc63f;
 }
 
 
+// ===================================================================================================================
+// Contacts page
+#contactsSection{
+	background: url($bg_img);
+	padding: 0 15px 50px;
+	
+	#contactForm{
+		max-width: 900px;
+		margin: 0 auto;
+		@include clearfix();
+	}
+}
+
+
+#aboutSection{
+	background: $color_w;
+	
+	.container{
+		@include clearfix();	
+	}
+	
+	.title, p{
+		padding-bottom: 30px;
+	}
+
+	
+	.imageContainer{
+		border-bottom: 1px solid $color_lightgrey;
+		min-height: 130px;
+		width: 100%;
+		padding-bottom: 30px;
+		margin-bottom: 40px;
+	}
+
+	blockquote{
+		border: 1px solid $color_gold;
+		padding: 50px;
+		margin-left: 0;
+		@extend p;
+		color: $color_gold;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+}

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes fadeIn {
   0% {
     transform: translateY(50%);
@@ -84,7 +83,8 @@ h1, .h1 {
   font-size: 24px;
   color: #21282f; }
 
-h2, .h2 {
+h2, #fullBanner .bannerContent h2,
+#fullBanner .bannerContent h2 *, .h2 {
   font-family: 'merriweather';
   font-size: 24px;
   line-height: 120%;
@@ -97,7 +97,11 @@ h3, .accordionMenu > li > a .accordionHeader, .h3 {
   line-height: 120%;
   color: #21282f; }
 
-p {
+p, input[type='text'],
+input[type='number'],
+input[type='email'],
+textarea,
+select, #aboutSection blockquote {
   font-family: 'merriweather';
   font-weight: normal;
   font-size: 16px;
@@ -131,6 +135,13 @@ a {
       height: 5px;
       content: '';
       background: url(../sysimages/triangles_title.svg) no-repeat; }
+  .title.leftTitle {
+    padding: 70px 0 20px; }
+    .title.leftTitle h1 {
+      text-align: left; }
+      .title.leftTitle h1::before {
+        left: 0;
+        transform: none; }
 
 .subtitle {
   padding: 25px 0; }
@@ -200,6 +211,44 @@ a {
       .accordionMenu > li .accordionContent > div {
         padding-left: 0; }
 
+.inputElement,
+.inputSelect {
+  margin-bottom: 25px;
+  position: relative;
+  /*&::before{
+  	position:absolute; 
+  	top:-10px; 
+  	left:-3px; 
+  	width:auto;
+  }*/ }
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border: 1px solid rgba(123, 124, 126, 0.3);
+  background: #FFF;
+  padding: 15px 10px;
+  width: 100%;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  input[type='text']:hover, input[type='text']:focus,
+  input[type='number']:hover,
+  input[type='number']:focus,
+  input[type='email']:hover,
+  input[type='email']:focus,
+  textarea:hover,
+  textarea:focus,
+  select:hover,
+  select:focus {
+    border-color: rgba(190, 151, 95, 0.8); }
+
 input[type='checkbox'] {
   -webkit-appearance: none;
   display: inline-block;
@@ -215,7 +264,7 @@ input[type='checkbox'] {
 
 .button,
 button,
-input[type=submit],
+input[type='submit'],
 .fc-state-default, #header .navbar #nav li a, #header .navbar .navbar-right #loginButton {
   display: table-cell;
   vertical-align: middle;
@@ -232,10 +281,10 @@ input[type=submit],
   -webkit-tap-highlight-color: transparent; }
   .button::before,
   button::before,
-  input[type=submit]::before,
+  input[type='submit']::before,
   .fc-state-default::before, #header .navbar #nav li a::before, #header .navbar .navbar-right #loginButton::before, .button::after,
   button::after,
-  input[type=submit]::after,
+  input[type='submit']::after,
   .fc-state-default::after, #header .navbar #nav li a::after, #header .navbar .navbar-right #loginButton::after {
     position: absolute;
     display: block;
@@ -250,7 +299,7 @@ input[type=submit],
     transition: all 0.2s ease; }
   .button::before,
   button::before,
-  input[type=submit]::before,
+  input[type='submit']::before,
   .fc-state-default::before, #header .navbar #nav li a::before, #header .navbar .navbar-right #loginButton::before {
     top: -5px;
     left: calc(50% - 12px);
@@ -261,22 +310,22 @@ input[type=submit],
     transform: rotate(180deg); }
   .button::after,
   button::after,
-  input[type=submit]::after,
+  input[type='submit']::after,
   .fc-state-default::after, #header .navbar #nav li a::after, #header .navbar .navbar-right #loginButton::after {
     bottom: -5px;
     left: calc(50% - 12px); }
   .button:hover,
   button:hover,
-  input[type=submit]:hover,
+  input[type='submit']:hover,
   .fc-state-default:hover, #header .navbar #nav li a:hover, #header .navbar .navbar-right #loginButton:hover {
     background: #BE975F;
     color: #FFF; }
     .button:hover::before,
     button:hover::before,
-    input[type=submit]:hover::before,
+    input[type='submit']:hover::before,
     .fc-state-default:hover::before, #header .navbar #nav li a:hover::before, #header .navbar .navbar-right #loginButton:hover::before, .button:hover::after,
     button:hover::after,
-    input[type=submit]:hover::after,
+    input[type='submit']:hover::after,
     .fc-state-default:hover::after, #header .navbar #nav li a:hover::after, #header .navbar .navbar-right #loginButton:hover::after {
       opacity: 1; }
 
@@ -289,7 +338,7 @@ input[type=submit],
   width: 34px;
   overflow: hidden;
   background-size: contain !important;
-  padding: 3px 10px 3px 40px;
+  padding: 4px 10px 3px 40px;
   -moz-transition: width 0.4s ease 0.2s;
   -o-transition: width 0.4s ease 0.2s;
   -webkit-transition: width 0.4s ease 0.2s;
@@ -352,71 +401,10 @@ input[type=submit],
   border-radius: 0;
   padding: 0 !important; }
 
-/*SPECIAL*/
-/*INPUT ERROR*/
-/*ERRO NAS INPUTS DO SLIDER DO TOPO*/
-/*
-.inputError{
-padding:0px; 
-margin-bottom:25px;
-margin-right: 3px;
-height:32px; 
-position:relative; 
-}
-
-.errorToolTip{ display: none;}
-
-.displayError .errorToolTip{ display: block;}
-
-  .errorToolTip{
-  position:absolute; 
-  top:-10px; 
-  left:-3px; 
-  width:auto;
-  }
-
-    .imgError{
-    height:9px; 
-    width:15px; 
-    background:url(../sysimages/bgToolTipError.png) no-repeat top left; 
-    float:left;
-    position: absolute;
-    top:26px;
-    left: 10px;
-    }
-
-    .bgError{
-    background-color:rgb(156,31,47);
-    }
-
-    .errorToolTip .bgError p{
-    color:#fff; 
-    font-size: 12px;
-    line-height: 26px;
-    margin-left: 10px;
-    margin-right: 10px;
-    }
-
---------------------
-HTML:
-
-<div class="inputError">
-    <label>Text input
-        <input type="text" value="default value that goes on and on without stopping or punctuation">
-    </label>
-      
-    <div class="errorToolTip">
-        <div class="imgError"></div>
-        <div class="bgError"><p>Campo de preenchimento obrigat�rio.</p></div>
-        <div class="clear"></div>
-    </div>
-    <div class="clear"></div>
-</div>
-*/
 /*Buttons*/
 .button,
 button,
-input[type=submit],
+input[type='submit'],
 .fc-state-default {
   border: none;
   border-radius: 0;
@@ -426,14 +414,14 @@ input[type=submit],
   .button::before, .button::after,
   button::before,
   button::after,
-  input[type=submit]::before,
-  input[type=submit]::after,
+  input[type='submit']::before,
+  input[type='submit']::after,
   .fc-state-default::before,
   .fc-state-default::after {
     opacity: 1; }
   .button:hover,
   button:hover,
-  input[type=submit]:hover,
+  input[type='submit']:hover,
   .fc-state-default:hover {
     background: #FFF;
     color: rgba(190, 151, 95, 0.8); }
@@ -653,7 +641,11 @@ input[type=submit],
 #footer {
   height: 108px;
   border-top: 2px solid rgba(190, 151, 95, 0.8); }
-  #footer p, #footer a {
+  #footer p, #footer input[type='text'],
+  #footer input[type='number'],
+  #footer input[type='email'],
+  #footer textarea,
+  #footer select, #footer #aboutSection blockquote, #aboutSection #footer blockquote, #footer a {
     height: 108px;
     display: table-cell;
     vertical-align: middle;
@@ -662,7 +654,11 @@ input[type=submit],
     font-family: 'intro';
     font-size: 12px;
     color: #21282f; }
-    #footer p#contacts:hover, #footer a#contacts:hover {
+    #footer p#contacts:hover, #footer input#contacts[type='text']:hover,
+    #footer input#contacts[type='number']:hover,
+    #footer input#contacts[type='email']:hover,
+    #footer textarea#contacts:hover,
+    #footer select#contacts:hover, #footer #aboutSection blockquote#contacts:hover, #aboutSection #footer blockquote#contacts:hover, #footer a#contacts:hover {
       color: #be9857; }
   #footer .socialIcons {
     display: inline-block;
@@ -715,7 +711,11 @@ input[type=submit],
 @media (max-width: 900px) {
   #footer {
     height: auto; }
-    #footer p, #footer a {
+    #footer p, #footer input[type='text'],
+    #footer input[type='number'],
+    #footer input[type='email'],
+    #footer textarea,
+    #footer select, #footer #aboutSection blockquote, #aboutSection #footer blockquote, #footer a {
       height: auto;
       padding: 10px 7px; }
     #footer .socialIcons {
@@ -902,7 +902,9 @@ input[type=submit],
       line-height: 110%;
       padding-top: 40px;
       color: #FFF; }
-    #fullBanner .bannerContent h2 {
+    #fullBanner .bannerContent h2,
+    #fullBanner .bannerContent h2 *,
+    #fullBanner .bannerContent h2 * {
       font-size: 22px;
       line-height: 150%;
       margin-bottom: 50px;
@@ -945,7 +947,8 @@ input[type=submit],
     padding: 0; }
     #fullBanner .bannerContent h1 {
       font-size: 35px; }
-    #fullBanner .bannerContent h2 {
+    #fullBanner .bannerContent h2,
+    #fullBanner .bannerContent h2 * {
       font-size: 19px;
       line-height: 190%; }
     #fullBanner .bannerContent::before, #fullBanner .bannerContent::after {
@@ -992,14 +995,19 @@ input[type=submit],
     display: table; }
   .listContainer .listElement:after {
     clear: both; }
-  .listContainer .listElement #Bitmap {
+  .listContainer .listElement .Bitmap {
     opacity: 0;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
-  .listContainer .listElement #myShape {
-    fill: #FFF; }
+  .listContainer .listElement .myShape {
+    fill: #FFF;
+    stroke: red;
+    -moz-transition: fill 0.7s ease;
+    -o-transition: fill 0.7s ease;
+    -webkit-transition: fill 0.7s ease;
+    transition: fill 0.7s ease; }
   .listContainer .listElement .elementTitle {
     position: absolute;
     top: 6px;
@@ -1051,7 +1059,11 @@ input[type=submit],
       -o-transition: color 0.2s ease;
       -webkit-transition: color 0.2s ease;
       transition: color 0.2s ease; }
-      .listContainer .listElement .elementContent .text p {
+      .listContainer .listElement .elementContent .text p, .listContainer .listElement .elementContent .text input[type='text'],
+      .listContainer .listElement .elementContent .text input[type='number'],
+      .listContainer .listElement .elementContent .text input[type='email'],
+      .listContainer .listElement .elementContent .text textarea,
+      .listContainer .listElement .elementContent .text select, .listContainer .listElement .elementContent .text #aboutSection blockquote, #aboutSection .listContainer .listElement .elementContent .text blockquote {
         margin-top: 25px;
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -1059,7 +1071,7 @@ input[type=submit],
         overflow: hidden; }
   .listContainer .listElement .downloadPDF {
     position: absolute;
-    bottom: 0;
+    bottom: 4px;
     left: 0;
     right: 0;
     z-index: 2;
@@ -1089,9 +1101,9 @@ input[type=submit],
       padding: 6px 0;
       color: rgba(255, 255, 255, 0.8);
       display: none; }
-  .listContainer .listElement:hover #myShape {
+  .listContainer .listElement:hover .myShape {
     fill: none; }
-  .listContainer .listElement:hover #Bitmap {
+  .listContainer .listElement:hover .Bitmap {
     opacity: 1; }
   .listContainer .listElement:hover .elementContent {
     background-position: 0 !important; }
@@ -1393,5 +1405,46 @@ input[type=submit],
       border-color: transparent; }
     #calendarSection #calendar .fc-body {
       background: #FFF; }
+
+#contactsSection {
+  background: url("../sysimages/bg.png");
+  padding: 0 15px 50px; }
+  #contactsSection #contactForm {
+    max-width: 900px;
+    margin: 0 auto; }
+    #contactsSection #contactForm:before, #contactsSection #contactForm:after {
+      content: "";
+      display: table; }
+    #contactsSection #contactForm:after {
+      clear: both; }
+
+#aboutSection {
+  background: #FFF; }
+  #aboutSection .container:before, #aboutSection .container:after {
+    content: "";
+    display: table; }
+  #aboutSection .container:after {
+    clear: both; }
+  #aboutSection .title, #aboutSection p, #aboutSection input[type='text'],
+  #aboutSection input[type='number'],
+  #aboutSection input[type='email'],
+  #aboutSection textarea,
+  #aboutSection select, #aboutSection blockquote {
+    padding-bottom: 30px; }
+  #aboutSection .imageContainer {
+    border-bottom: 1px solid #7b7c7e;
+    min-height: 130px;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 40px; }
+  #aboutSection blockquote {
+    border: 1px solid rgba(190, 151, 95, 0.8);
+    padding: 50px;
+    margin-left: 0;
+    color: rgba(190, 151, 95, 0.8);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px; }
 
 /*# sourceMappingURL=000_guide.css.map */
