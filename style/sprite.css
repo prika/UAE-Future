@@ -1,0 +1,15 @@
+﻿body {
+  background-color: #000; }
+
+hi:hover {
+  width: 40px;
+  height: 40px;
+  background-image: url("../sysimages/animate/spriteicons.png");
+  animation: play 0.2s steps(5) forwards; }
+
+@keyframes play {
+  from {
+    background-position: 0 0px; }
+  to {
+    background-position: 0 -200px; } }
+

@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "scss/000_guide.css",
+    "inputFile": "scss/000_guide.scss"
+  },
+  {
+    "outputFile": "scss/sprite.css",
+    "inputFile": "scss/sprite.scss"
+  }
+]

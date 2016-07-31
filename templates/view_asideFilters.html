@@ -1,6 +1,15 @@
 <div class="subtitle">
-    <h3>CATEGORIES <a href="#">Reset</a></h3>
+    <h3>CATEGORIES <a id="reset" onclick="reset()">Reset</a></h3>
 </div>
+<script>
+
+    function reset() {
+        
+        $(".filter input").prop('checked', false);
+    };
+
+</script>
+
 <div class="filters">
     <div class="filter academia">
         <label>Academia

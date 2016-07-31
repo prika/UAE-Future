@@ -144,7 +144,7 @@
                         $.get("templates/view_highlightSection.html", function (data) {
 
                             // Insert html and hides all
-                            $("#listContainer .accordionMenu li .accordionContent").html($(data)).hide();
+                            $("#listContainer .accordionMenu li .accordionContent").first().html($(data));
 
                             // Set the first as active
                             $("#listContainer .accordionMenu li").first().addClass('active');
@@ -153,6 +153,13 @@
                             $("#listContainer .accordionMenu li .accordionContent").first().show();
 
                             accordionMenu();
+                        });
+
+                        $.get("templates/view_highlightSection2.html", function (data) {
+
+                            // Insert html and hides all
+                            $($("#listContainer .accordionMenu li .accordionContent")[1]).html($(data)).hide();
+
                         });
 
                         function accordionMenu() {

@@ -1,0 +1,276 @@
+﻿/* _animate_index is the col of the png of the icon*/
+.elementTitle {
+  width: 40px;
+  height: 40px;
+  background-image: url("../sysimages/animate/spriteicons.png"); }
+
+.elementTitle:hover {
+  -webkit-animation: trend steps(5) 1s forwards;
+  -moz-animation: trend steps(5) 1s forwards;
+  -o-animation: trend steps(5) 1s forwards;
+  animation: trend steps(5) 1s forwards; }
+
+@-webkit-keyframes trend {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+
+@-moz-keyframes trend {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+
+@-o-keyframes trend {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+
+@keyframes trend {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+
+@-webkit-keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+
+@-moz-keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+
+@-o-keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+
+@keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+
+@-webkit-keyframes organizations {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+
+@-moz-keyframes organizations {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+
+@-o-keyframes organizations {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+
+@keyframes organizations {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+
+@-webkit-keyframes courses {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+
+@-moz-keyframes courses {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+
+@-o-keyframes courses {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+
+@keyframes courses {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+
+@-webkit-keyframes news {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+
+@-moz-keyframes news {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+
+@-o-keyframes news {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+
+@keyframes news {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+
+@-webkit-keyframes scholarships {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+
+@-moz-keyframes scholarships {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+
+@-o-keyframes scholarships {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+
+@keyframes scholarships {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+
+@-webkit-keyframes conferences {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+
+@-moz-keyframes conferences {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+
+@-o-keyframes conferences {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+
+@keyframes conferences {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+
+@-webkit-keyframes initiatives {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+
+@-moz-keyframes initiatives {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+
+@-o-keyframes initiatives {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+
+@keyframes initiatives {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+
+@-webkit-keyframes tools {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+
+@-moz-keyframes tools {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+
+@-o-keyframes tools {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+
+@keyframes tools {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+
+@-webkit-keyframes academia {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+
+@-moz-keyframes academia {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+
+@-o-keyframes academia {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+
+@keyframes academia {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+
+@-webkit-keyframes briefs {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+
+@-moz-keyframes briefs {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+
+@-o-keyframes briefs {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+
+@keyframes briefs {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+
