@@ -579,7 +579,71 @@ input[type='submit'],
 
 
 .popup{
-	max-width: 760px;
+	max-width: 780px;
+	
+	.bannerTop{
+		position: relative;
+		
+		.tag{
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			z-index: 9;
+			font-family: 'helveticabold';
+			font-size: 11px;
+			color: #FFF;
+			padding: 2px 22px 4px;
+			text-transform: capitalize;
+		}
+		
+		&.bannerText + .content {
+			.col-md-4 {
+				padding-top: 30px;
+			}
+			
+			.headerActions{
+				padding-top: 60px;
+			}
+		}
+	}
+	
+	
+	.content{
+		@include clearfix();
+		padding-bottom: 30px;
+		
+		.headerActions{
+			height: 60px;
+			float: right;
+			padding-top: 15px;
+		}
+		
+		.date{
+			color: $color_gold;
+			margin-bottom: 15px;
+		}
+		
+		h4.h1{
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+		
+		.tagsContainer { 
+			margin-bottom: 30px;
+			
+			a {
+				font-size: 14px;
+				display: inline-block;
+			}
+		}
+		.relatedContainer a{
+			font-size: 14px;
+			display: block;
+			margin-bottom: 5px;
+			font-family: 'helveticabold';
+		}
+	}
+	
 }
 
 // ===================================================================================================================
@@ -786,6 +850,7 @@ $c_briefs:#8cc63f;
 
 .trends{
 	// element in list
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_trends;}
 	
@@ -809,6 +874,7 @@ $c_briefs:#8cc63f;
 }
 .institutes{
 	// element in list
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_institutes;}
 	
@@ -831,6 +897,7 @@ $c_briefs:#8cc63f;
 	}	
 }
 .consultancies{
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_consultancies;}
 	
@@ -853,6 +920,7 @@ $c_briefs:#8cc63f;
 	}	
 }
 .organizations{
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_organizations;}
 	
@@ -875,6 +943,7 @@ $c_briefs:#8cc63f;
 	}		
 }
 .courses{
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_courses;}
 	
@@ -897,6 +966,7 @@ $c_briefs:#8cc63f;
 	}		
 }
 .news{
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_news;}
 	
@@ -919,6 +989,7 @@ $c_briefs:#8cc63f;
 	}		
 }
 .scholarships{
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_scholarships;}
 	
@@ -941,6 +1012,7 @@ $c_briefs:#8cc63f;
 	}	
 }
 .conferences{
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_conferences;}
 	
@@ -963,6 +1035,7 @@ $c_briefs:#8cc63f;
 	}	
 }
 .initiatives{
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_initiatives;}
 	
@@ -985,6 +1058,7 @@ $c_briefs:#8cc63f;
 	}		
 }
 .tools{
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_tools;}
 	
@@ -1007,6 +1081,7 @@ $c_briefs:#8cc63f;
 	}		
 }
 .academia{
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_academia;}
 	
@@ -1029,6 +1104,7 @@ $c_briefs:#8cc63f;
 	}	
 }
 .briefs{
+	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_briefs;}
 	
@@ -1154,13 +1230,11 @@ $c_briefs:#8cc63f;
 	padding: 40px;
 	//background: $color_w;
 	
-	
 	.container{
 		background: url(../sysimages/newsBg.png) no-repeat left top;
 		background-size: 100% 100%;
 		position: relative;
 	}
-	
 	
 	.element{
 		padding: 60px 60px;
@@ -1240,7 +1314,7 @@ $c_briefs:#8cc63f;
 
 
 // ===================================================================================================================
-// Filters 
+// Calendar Section 
 #calendarSection{
 	background: url($bg_img);
 	padding-bottom: 40px;
@@ -1249,14 +1323,34 @@ $c_briefs:#8cc63f;
 		max-width: 1100px;
 		margin: 0 auto;
 		
-		.fc-head,
+		//.fc-head,
 		.fc-head td,
-		.fc-head th{
+		.fc-head th {
 			border-color: transparent;
 		}
-		.fc-body{
+		
+		.fc-head th,
+		.fc-body .fc-day-number{
+			text-align: left;
+			padding: 5px;
+			font-size: 16px;
+			font-family: 'merriweather';
+		}
+		.fc-unthemed .fc-content, 
+		.fc-unthemed .fc-divider, 
+		.fc-unthemed .fc-popover, 
+		.fc-unthemed .fc-row, 
+		.fc-unthemed tbody, 
+		.fc-unthemed td, 
+		.fc-unthemed th, 
+		.fc-unthemed thead{
+			border-color: $color_lightergrey;
+		}
+		
+		.fc-widget-content {
 			background: $color_w;
 		}
+		
 	}
 }
 
@@ -1279,6 +1373,7 @@ $c_briefs:#8cc63f;
 // About page
 #aboutSection{
 	background: $color_w;
+	padding-bottom: 60px;
 	
 	.container{
 		@include clearfix();	
@@ -1290,11 +1385,17 @@ $c_briefs:#8cc63f;
 
 	
 	.imageContainer{
-		border-bottom: 1px solid; 
+		border-bottom: 1px solid $color_lightergrey;
 		min-height: 130px;
 		width: 100%;
 		padding-bottom: 30px;
 		margin-bottom: 40px;
+		
+		p{
+			font-family: 'helvetica';
+			font-size: 12px;
+			padding: 5px 0 10px;
+		}
 	}
 
 	blockquote{
@@ -1308,4 +1409,32 @@ $c_briefs:#8cc63f;
 		text-align: center;
 		margin-bottom: 25px;
 	}
+}
+
+
+
+// ===================================================================================================================
+// Resources page
+#resourcesSection1,
+#resourcesSection2 {
+	
+	img{ max-width: 100%; }
+	
+	.element{
+		padding: 50px;
+		@include clearfix();
+		
+		.subtitle, h1, p{
+			padding-bottom: 15px;
+		}
+		
+		.date{
+			color: $color_solidGold;
+			padding-bottom: 0;
+		}
+	}
+}
+
+#resourcesSection1{
+	background: url($bg_img);
 }

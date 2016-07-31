@@ -977,7 +977,50 @@ input[type='submit'],
     #fullBanner .bannerContent::before, #fullBanner .bannerContent::after {
       display: none !important; } }
 .popup {
-  max-width: 760px; }
+  max-width: 780px; }
+  .popup .bannerTop {
+    position: relative; }
+    .popup .bannerTop .tag {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 9;
+      font-family: 'helveticabold';
+      font-size: 11px;
+      color: #FFF;
+      padding: 2px 22px 4px;
+      text-transform: capitalize; }
+    .popup .bannerTop.bannerText + .content .col-md-4 {
+      padding-top: 30px; }
+    .popup .bannerTop.bannerText + .content .headerActions {
+      padding-top: 60px; }
+  .popup .content {
+    padding-bottom: 30px; }
+    .popup .content:before, .popup .content:after {
+      content: "";
+      display: table; }
+    .popup .content:after {
+      clear: both; }
+    .popup .content .headerActions {
+      height: 60px;
+      float: right;
+      padding-top: 15px; }
+    .popup .content .date {
+      color: rgba(190, 151, 95, 0.8);
+      margin-bottom: 15px; }
+    .popup .content h4.h1 {
+      font-size: 14px;
+      margin-bottom: 5px; }
+    .popup .content .tagsContainer {
+      margin-bottom: 30px; }
+      .popup .content .tagsContainer a {
+        font-size: 14px;
+        display: inline-block; }
+    .popup .content .relatedContainer a {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+      font-family: 'helveticabold'; }
 
 #highlightSection,
 #ecosystemSection {
@@ -1150,6 +1193,7 @@ input[type='submit'],
     padding: 40% 37px 20px !important; }
     .listContainer .listElement .elementContent .text h3, .listContainer .listElement .elementContent .text .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .listContainer .listElement .elementContent .text .accordionHeader {
       font-size: 24px; } }
+.trends.tag,
 .trends .flag,
 .trends .downloadPDF {
   background: #991720; }
@@ -1162,6 +1206,7 @@ input[type='submit'],
 .trends.filter label::before {
   background: #991720; }
 
+.institutes.tag,
 .institutes .flag,
 .institutes .downloadPDF {
   background: #2db677; }
@@ -1174,6 +1219,7 @@ input[type='submit'],
 .institutes.filter label::before {
   background: #2db677; }
 
+.consultancies.tag,
 .consultancies .flag,
 .consultancies .downloadPDF {
   background: #515354; }
@@ -1186,6 +1232,7 @@ input[type='submit'],
 .consultancies.filter label::before {
   background: #515354; }
 
+.organizations.tag,
 .organizations .flag,
 .organizations .downloadPDF {
   background: #b1b2b3; }
@@ -1198,6 +1245,7 @@ input[type='submit'],
 .organizations.filter label::before {
   background: #b1b2b3; }
 
+.courses.tag,
 .courses .flag,
 .courses .downloadPDF {
   background: #0064a6; }
@@ -1210,6 +1258,7 @@ input[type='submit'],
 .courses.filter label::before {
   background: #0064a6; }
 
+.news.tag,
 .news .flag,
 .news .downloadPDF {
   background: #f7931e; }
@@ -1222,6 +1271,7 @@ input[type='submit'],
 .news.filter label::before {
   background: #f7931e; }
 
+.scholarships.tag,
 .scholarships .flag,
 .scholarships .downloadPDF {
   background: #ed1c24; }
@@ -1234,6 +1284,7 @@ input[type='submit'],
 .scholarships.filter label::before {
   background: #ed1c24; }
 
+.conferences.tag,
 .conferences .flag,
 .conferences .downloadPDF {
   background: #be9857; }
@@ -1246,6 +1297,7 @@ input[type='submit'],
 .conferences.filter label::before {
   background: #be9857; }
 
+.initiatives.tag,
 .initiatives .flag,
 .initiatives .downloadPDF {
   background: #998675; }
@@ -1258,6 +1310,7 @@ input[type='submit'],
 .initiatives.filter label::before {
   background: #998675; }
 
+.tools.tag,
 .tools .flag,
 .tools .downloadPDF {
   background: #29abe2; }
@@ -1270,6 +1323,7 @@ input[type='submit'],
 .tools.filter label::before {
   background: #29abe2; }
 
+.academia.tag,
 .academia .flag,
 .academia .downloadPDF {
   background: #935491; }
@@ -1282,6 +1336,7 @@ input[type='submit'],
 .academia.filter label::before {
   background: #935491; }
 
+.briefs.tag,
 .briefs .flag,
 .briefs .downloadPDF {
   background: #8cc63f; }
@@ -1427,11 +1482,25 @@ input[type='submit'],
   #calendarSection #calendar {
     max-width: 1100px;
     margin: 0 auto; }
-    #calendarSection #calendar .fc-head,
     #calendarSection #calendar .fc-head td,
     #calendarSection #calendar .fc-head th {
       border-color: transparent; }
-    #calendarSection #calendar .fc-body {
+    #calendarSection #calendar .fc-head th,
+    #calendarSection #calendar .fc-body .fc-day-number {
+      text-align: left;
+      padding: 5px;
+      font-size: 16px;
+      font-family: 'merriweather'; }
+    #calendarSection #calendar .fc-unthemed .fc-content,
+    #calendarSection #calendar .fc-unthemed .fc-divider,
+    #calendarSection #calendar .fc-unthemed .fc-popover,
+    #calendarSection #calendar .fc-unthemed .fc-row,
+    #calendarSection #calendar .fc-unthemed tbody,
+    #calendarSection #calendar .fc-unthemed td,
+    #calendarSection #calendar .fc-unthemed th,
+    #calendarSection #calendar .fc-unthemed thead {
+      border-color: #dfdfdf; }
+    #calendarSection #calendar .fc-widget-content {
       background: #FFF; }
 
 #contactsSection {
@@ -1447,7 +1516,8 @@ input[type='submit'],
       clear: both; }
 
 #aboutSection {
-  background: #FFF; }
+  background: #FFF;
+  padding-bottom: 60px; }
   #aboutSection .container:before, #aboutSection .container:after {
     content: "";
     display: table; }
@@ -1460,11 +1530,19 @@ input[type='submit'],
   #aboutSection select, #aboutSection blockquote {
     padding: 15px 0 30px; }
   #aboutSection .imageContainer {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #dfdfdf;
     min-height: 130px;
     width: 100%;
     padding-bottom: 30px;
     margin-bottom: 40px; }
+    #aboutSection .imageContainer p, #aboutSection .imageContainer input[type='text'],
+    #aboutSection .imageContainer input[type='number'],
+    #aboutSection .imageContainer input[type='email'],
+    #aboutSection .imageContainer textarea,
+    #aboutSection .imageContainer select, #aboutSection .imageContainer blockquote {
+      font-family: 'helvetica';
+      font-size: 12px;
+      padding: 5px 0 10px; }
   #aboutSection blockquote {
     border: 1px solid #be9857;
     padding: 60px;
@@ -1474,5 +1552,43 @@ input[type='submit'],
     font-weight: bold;
     text-align: center;
     margin-bottom: 25px; }
+
+#resourcesSection1 img,
+#resourcesSection2 img {
+  max-width: 100%; }
+#resourcesSection1 .element,
+#resourcesSection2 .element {
+  padding: 50px; }
+  #resourcesSection1 .element:before, #resourcesSection1 .element:after,
+  #resourcesSection2 .element:before,
+  #resourcesSection2 .element:after {
+    content: "";
+    display: table; }
+  #resourcesSection1 .element:after,
+  #resourcesSection2 .element:after {
+    clear: both; }
+  #resourcesSection1 .element .subtitle, #resourcesSection1 .element h1, #resourcesSection1 .element p, #resourcesSection1 .element input[type='text'],
+  #resourcesSection1 .element input[type='number'],
+  #resourcesSection1 .element input[type='email'],
+  #resourcesSection1 .element textarea,
+  #resourcesSection1 .element select, #resourcesSection1 .element #aboutSection blockquote, #aboutSection #resourcesSection1 .element blockquote,
+  #resourcesSection2 .element .subtitle,
+  #resourcesSection2 .element h1,
+  #resourcesSection2 .element p,
+  #resourcesSection2 .element input[type='text'],
+  #resourcesSection2 .element input[type='number'],
+  #resourcesSection2 .element input[type='email'],
+  #resourcesSection2 .element textarea,
+  #resourcesSection2 .element select,
+  #resourcesSection2 .element #aboutSection blockquote,
+  #aboutSection #resourcesSection2 .element blockquote {
+    padding-bottom: 15px; }
+  #resourcesSection1 .element .date,
+  #resourcesSection2 .element .date {
+    color: #be9857;
+    padding-bottom: 0; }
+
+#resourcesSection1 {
+  background: url("../sysimages/bg.png"); }
 
 /*# sourceMappingURL=000_guide.css.map */

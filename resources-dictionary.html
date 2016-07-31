@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="Cache-Control" content="private">
+    <meta name="revisit-after" content="3 days">
+    <link type="image/x-icon" href="" rel="shortcut icon">
+    <link href="icon-ios.png" rel="apple-touch-icon">
+
+    <title>UAE Future - Resources</title>
+
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"-->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"> </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.velocity.min.js"></script>
+    
+    <script src="js/site.js"> </script>
+
+    <link rel="stylesheet" href="style/000_base.css" type="text/css">
+    <link rel="stylesheet" href="style/000_guide.css" type="text/css">
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var scope =  { currentPage: "resources",
+                        bgHeader: "rgba(48,44,54,0.80)" };
+    </script>
+    
+    <div class="container-full">
+        <header id="header">
+            <script type="text/javascript">
+                // This template is supposed to be injected (partial)
+                
+                $.get("templates/view_header.html", function (data) {
+                    var html = $(data);
+                    html.find("#" + scope.currentPage).addClass("active");
+                    $("#header").html(html);
+                    $("#header .navbar").css("background",scope.bgHeader);
+                });
+            </script>
+        </header>
+
+        <section id="fullBanner">
+            <div></div>
+            
+            <script type="text/javascript">
+                // This template is supposed to be injected (partial)
+                imageUrl = "images/contacts.jpg";
+
+                $("#fullBanner").css("background-image", 'url(' + imageUrl + ')');
+                $.get("templates/view_fullBanner.html", function (data) {
+
+                    $("#fullBanner>div").html($(data));
+                    // Mocked content
+                    $("#fullBanner h1").text("Future Resources");
+                    //$("#fullBanner h2").text("E-MAIL: INFO@PMO.GOV.AE DUBAI PHONE: 00971 4 330 4433");
+                });
+
+            </script>
+            
+        </section>
+
+
+        <section id="">
+            <header>
+                <div class="container">
+                    <div class="title">
+                        <h1>Dictionary</h1>
+                        <h2>The ideal dictionary to translate from Arabic-English and Eglish-Arabic. Most common words, phrases and definitions.</h2>
+                        <p class="reduced">Write the word or search from the list.</p>
+                    </div>
+                </div>
+            </header>
+            <div class="container">
+                <div class="col-md-6">
+                    <div class="subtitle">
+                        <h3>English</h3>
+                    </div>
+                    <input type="text" name="" value="" placeholder="Insert Word">
+                </div>
+                
+                 <div class="col-md-6">
+                    <div class="subtitle">
+                        <h3>Arabian</h3>
+                    </div>
+                    <input type="text" name="" value="" placeholder="Insert Word">
+                </div>
+                
+                <div class="col-md-3 col-offset-md-3">
+                    <input type="submit" name="" value="Translate & View Definition">
+                </div>
+            </div>
+        </section>
+        
+
+        <footer id="footer">
+            <script type="text/javascript">
+                    // This template is supposed to be injected (partial)
+                    $("#footer").load("templates/view_footer.html");
+            </script>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript">
+
+            (function($) {
+
+                // init controller
+                //var options =   { triggerHook: "onEnter", duration: "200%" };
+                var controller = new ScrollMagic.Controller( { globalSceneOptions: {triggerHook: "onEnter", duration: "200%"} });
+
+                // build scenes
+                new ScrollMagic.Scene({triggerElement: "#fullBanner"})
+                                .setTween("#fullBanner > div", {y: "60%", ease: Linear.easeNone})
+                                .addTo(controller);
+
+            
+               })(jQuery);
+
+    </script>
+</body>
+</html>
