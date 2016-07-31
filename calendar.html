@@ -37,8 +37,8 @@
 
 <body>
     <script type="text/javascript">
-        var scope =  { currentPage: "calendar" }
-        var headerColor =  { bgHeader: "rgba(41,50,59,0.85)" };
+        var scope =  { currentPage: "calendar",
+                       bgHeader: "rgba(41,50,59,0.85)" };
     </script>
     
     <div class="container-full">
@@ -50,7 +50,7 @@
                     var html = $(data);
                     html.find("#" + scope.currentPage).addClass("active");
                     $("#header").html(html);
-                    $("#header .navbar").css("background",headerColor.bgHeader);
+                    $("#header .navbar").css("background",scope.bgHeader);
                 });
             </script>
         </header>

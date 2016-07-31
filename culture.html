@@ -33,8 +33,8 @@
 
 <body>
     <script type="text/javascript">
-        var scope =  { currentPage: "culture" }
-        var headerColor =  { bgHeader: "rgba(171,188,203,0.80)" };
+        var scope =  { currentPage: "culture",
+                        bgHeader: "rgba(171,188,203,0.80)" };
     </script>
 
     <div class="container-full">
@@ -46,7 +46,7 @@
                     var html = $(data);
                     html.find("#" + scope.currentPage).addClass("active");
                     $("#header").html(html);
-                    $("#header .navbar").css("background",headerColor.bgHeader);
+                    $("#header .navbar").css("background",scope.bgHeader);
                 });
             </script>
         </header>

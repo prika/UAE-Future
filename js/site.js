@@ -9,7 +9,17 @@ $(document).ready(function(){
     
     $('#navIcon').click(function(){
 		$(this).toggleClass('open');
+        $('#nav').toggleClass('openNav');
 	});
+});
+
+$(window).resize(function(){
+    var winSize = $(this).width();
+
+    if(winSize >= 1100 ) {
+        $('#navIcon').removeClass('open');
+        $('#nav').removeClass('openNav');
+    }
 });
 
 $(window).scroll(function(){
@@ -19,7 +29,7 @@ $(window).scroll(function(){
 function fixedHeader() {
     var winscroll = $(this).scrollTop();
 
-    if(winscroll >= 20) {
+    if( winscroll >= 20 ) {
         $("#header").addClass("stickyHeader");
     } else {
         $("#header").removeClass("stickyHeader");

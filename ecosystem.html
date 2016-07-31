@@ -40,8 +40,9 @@
 
 <body>
     <script type="text/javascript">
-        var scope =  { currentPage: "ecosystem" }
-        var headerColor =  { bgHeader: "rgba(86,86,86,0.85)" };
+        var scope =  { currentPage: "ecosystem", 
+                       bgHeader: "rgba(86,86,86,0.85)" 
+                     };
     </script>
     <div class="globalContainer">
         <header id="header">
@@ -52,7 +53,7 @@
                     var html = $(data);
                     html.find("#" + scope.currentPage).addClass("active");
                     $("#header").html(html);
-                    $("#header .navbar").css("background",headerColor.bgHeader);
+                    $("#header .navbar").css("background",scope.bgHeader);
                 });
             </script>
         </header>

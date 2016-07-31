@@ -39,8 +39,8 @@
 
     <body>
         <script type="text/javascript">
-            var scope =  { currentPage: "homepage" };
-            var headerColor =  { bgHeader: "rgba(83, 59, 42, 0.85)" };
+            var scope =  { currentPage: "homepage",
+                            bgHeader: "rgba(83, 59, 42, 0.85)" };
         </script>
         <div class="globalContainer">
            <header id="header">
@@ -51,7 +51,7 @@
                         var html = $(data);
                         html.find("#" + scope.currentPage).addClass("active");
                         $("#header").html(html);
-                        $("#header .navbar").css("background",headerColor.bgHeader);
+                        $("#header .navbar").css("background",scope.bgHeader);
                     });
                 </script>
             </header>
