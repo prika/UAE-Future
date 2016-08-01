@@ -229,6 +229,7 @@ textarea,
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   border-radius: 0;
   border: 1px solid rgba(123, 124, 126, 0.3);
   background: #FFF;
@@ -251,6 +252,8 @@ select {
 
 input[type='checkbox'] {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
   vertical-align: middle;
   z-index: 100;

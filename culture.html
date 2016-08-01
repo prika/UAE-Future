@@ -51,22 +51,25 @@
             </script>
         </header>
 
-        <section id="fullBanner">
-            <div></div>
+        <section id="culturePlayerSection">
             
-            <script type="text/javascript">
-                // This template is supposed to be injected (partial)
-                imageUrl = "images/culture.jpg";
-
-                $("#fullBanner").css("background-image", 'url(' + imageUrl + ')');
-                $.get("templates/view_fullBanner.html", function (data) {
-
-                    $("#fullBanner>div").html($(data));
-                    // Mocked content
-                    $("#fullBanner .bannerContent").hide();
-                });
-
-            </script>
+            <iframe src="//www.youtube.com/embed/Hazuw0ghjXc" frameborder="0" allowfullscreen class="video"></iframe>
+            
+            <style>
+            #culturePlayerSection {
+                position: relative;
+                height: 100vh; width: 100vw;
+                
+                
+            }
+            .video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            </style>
             
         </section>
 
@@ -76,7 +79,8 @@
                 <div class="title">
                     <h1>Online Training Video</h1>
                 </div>
-
+                
+                <a href=""></a>
                 
             </div>
         </section>

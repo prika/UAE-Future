@@ -329,7 +329,9 @@ input[type='email'],
 textarea,
 select {
 	-webkit-appearance: none;
-	-moz-appearance: none;
+   	-moz-appearance:    none;
+   	appearance:         none;
+   
 	border-radius: 0;
 	border: 1px solid rgba($color_lightgrey, .3);
 	background: $color_w;
@@ -347,6 +349,9 @@ select {
 
 input[type='checkbox'] {
 	-webkit-appearance: none;
+   	-moz-appearance:    none;
+   	appearance:         none;
+	   
 	display: inline-block;
 	vertical-align: middle;
 	z-index: 100;
