@@ -158,6 +158,12 @@ a {
       height: 5px;
       content: '';
       background: url(../sysimages/triangles_title.svg) no-repeat; }
+  .subtitle.centeredSubtitle h3, .subtitle.centeredSubtitle .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .subtitle.centeredSubtitle .accordionHeader {
+    text-align: center;
+    width: 100%; }
+    .subtitle.centeredSubtitle h3::before, .subtitle.centeredSubtitle .accordionMenu > li > a .accordionHeader::before, .accordionMenu > li > a .subtitle.centeredSubtitle .accordionHeader::before {
+      left: 50%;
+      transform: translate(-50%, 0); }
 
 .accordionMenu {
   margin: 0; }
@@ -1593,5 +1599,21 @@ input[type='submit'],
 
 #resourcesSection1 {
   background: url("../sysimages/bg.png"); }
+
+#dictionarySection {
+  padding: 60px 10%; }
+
+.noFullBannerTitle {
+  background: url("../sysimages/bg.png"); }
+  .noFullBannerTitle .title {
+    padding: 180px 0 80px;
+    text-align: center; }
+    .noFullBannerTitle .title h2, .noFullBannerTitle .title #fullBanner .bannerContent h2, #fullBanner .bannerContent .noFullBannerTitle .title h2,
+    .noFullBannerTitle .title #fullBanner .bannerContent h2 *,
+    #fullBanner .bannerContent h2 .noFullBannerTitle .title * {
+      color: #be9857;
+      font-weight: normal;
+      max-width: 70%;
+      margin: 30px auto 10px; }
 
 /*# sourceMappingURL=000_guide.css.map */

@@ -51,54 +51,40 @@
             </script>
         </header>
 
-        <section id="fullBanner">
-            <div></div>
-            
-            <script type="text/javascript">
-                // This template is supposed to be injected (partial)
-                imageUrl = "images/contacts.jpg";
-
-                $("#fullBanner").css("background-image", 'url(' + imageUrl + ')');
-                $.get("templates/view_fullBanner.html", function (data) {
-
-                    $("#fullBanner>div").html($(data));
-                    // Mocked content
-                    $("#fullBanner h1").text("Future Resources");
-                    //$("#fullBanner h2").text("E-MAIL: INFO@PMO.GOV.AE DUBAI PHONE: 00971 4 330 4433");
-                });
-
-            </script>
-            
-        </section>
-
-
-        <section id="">
-            <header>
-                <div class="container">
-                    <div class="title">
-                        <h1>Dictionary</h1>
-                        <h2>The ideal dictionary to translate from Arabic-English and Eglish-Arabic. Most common words, phrases and definitions.</h2>
-                        <p class="reduced">Write the word or search from the list.</p>
-                    </div>
-                </div>
-            </header>
+        <section class="noFullBannerTitle">
             <div class="container">
-                <div class="col-md-6">
-                    <div class="subtitle">
-                        <h3>English</h3>
-                    </div>
-                    <input type="text" name="" value="" placeholder="Insert Word">
+                <div class="title">
+                    <h1>Dictionary</h1>
+                    <h2>The ideal dictionary to translate from Arabic-English and Eglish-Arabic. Most common words, phrases and definitions.</h2>
+                    <p class="reduced">Write the word or search from the list.</p>
                 </div>
-                
-                 <div class="col-md-6">
-                    <div class="subtitle">
-                        <h3>Arabian</h3>
+            </div>
+        </section>
+            
+         <section id="dictionarySection"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="subtitle centeredSubtitle">
+                            <h3>English</h3>
+                        </div>
+                        <div class="inputElement">                       
+                            <input type="text" placeholder="Insert Word" name="" value="" class="required" require="">
+                        </div>
                     </div>
-                    <input type="text" name="" value="" placeholder="Insert Word">
-                </div>
-                
-                <div class="col-md-3 col-offset-md-3">
-                    <input type="submit" name="" value="Translate & View Definition">
+                    
+                    <div class="col-md-6">
+                        <div class="subtitle centeredSubtitle">
+                            <h3>Arabian</h3>
+                        </div>
+                        <div class="inputElement">                       
+                            <input type="text" placeholder="Insert Word" name="" value="" class="required" require="">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <input style="display:block; margin: 10px auto;" type="submit" value="Translate & View Definition">
+                    </div>
                 </div>
             </div>
         </section>
