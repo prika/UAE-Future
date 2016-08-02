@@ -13,7 +13,7 @@
     <link type="image/x-icon" href="" rel="shortcut icon">
     <link href="icon-ios.png" rel="apple-touch-icon">
 
-    <title>UAE Future - Dictionary</title>
+    <title>UAE Future - Favorites</title>
 
     <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"-->
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
@@ -28,39 +28,25 @@
 
     <link rel="stylesheet" href="style/000_base.css" type="text/css">
     <link rel="stylesheet" href="style/000_guide.css" type="text/css">
-    
+
     <style>
-        /*TODO*/
-        #dictionaryResultsSection{
+
+        #loginSection{
             max-width: 900px;
-            margin: 0 auto 30px;
+            margin: 60px auto;
         }
-        #dictionaryResultsSection .containerLetters{
-            width: 100%;
-            display: table;
-            margin-bottom: 30px;
-        }
-        
-        .containerLetters > a,
-        .containerWords > a{ 
+        a.link{ 
             display:table-cell;
             text-align: center;
             font-family: 'intro';
             font-weight: normal;
             color: #21282f;
+            text-align: center;
         }
 
-        .containerLetters > a:hover,
-        .containerLetters > a.active,
-        .containerWords > a:hover,
-        .containerWords > a.active{
+        a.link:hover,
+        a.link.active{
             color: #be9857;
-        }
-
-        .containerWords > a{
-            display: block;
-            clear: right;
-            text-align: left;
         }
     </style>
 </head>
@@ -88,92 +74,43 @@
         <section class="noFullBannerTitle">
             <div class="container">
                 <div class="title">
-                    <h1>Dictionary</h1>
-                    <h2>The ideal dictionary to translate from Arabic-English and Eglish-Arabic. Most common words, phrases and definitions.</h2>
-                    <p class="reduced">Write the word or search from the list.</p>
+                    <h1>Login</h1>
                 </div>
             </div>
         </section>
             
-         <section id="dictionarySection"> 
+         <section id="loginSection"> 
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="subtitle centeredSubtitle">
-                            <h3>English</h3>
+                            <h3>Email</h3>
                         </div>
                         <div class="inputElement">                       
-                            <input type="text" placeholder="Insert Word" name="" value="" class="required" require="">
+                            <input type="text" placeholder="Insert Email" name="" value="" class="required" require="">
                         </div>
                     </div>
                     
                     <div class="col-md-6">
                         <div class="subtitle centeredSubtitle">
-                            <h3>Arabian</h3>
+                            <h3>Password</h3>
                         </div>
                         <div class="inputElement">                       
-                            <input type="text" placeholder="Insert Word" name="" value="" class="required" require="">
+                            <input type="password" placeholder="Insert Password" name="" value="" class="required" require="">
                         </div>
                     </div>
                     
                     <div class="col-md-12">
-                        <input style="display:block; margin: 10px auto;" type="submit" value="Translate & View Definition">
+                        <input style="display:block; margin: 10px auto;" type="submit" value="Login">
+                    </div>
+
+                     <div class="col-md-12">
+                        <a href="" class="link">FORGOT PASSWORD</a>
+                        <a href="" class="link">CREATE ACCOUNT</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="dictionaryResultsSection"> 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 containerLetters">
-                        <a href="javascript:void(0)">A</a>
-                        <a href="javascript:void(0)">B</a>
-                        <a href="javascript:void(0)">C</a>
-                        <a href="javascript:void(0)">D</a>
-                        <a href="javascript:void(0)">E</a>
-                        <a href="javascript:void(0)">F</a>
-                        <a href="javascript:void(0)">G</a>
-                        <a href="javascript:void(0)">H</a>
-                        <a href="javascript:void(0)">I</a>
-                        <a href="javascript:void(0)">J</a>
-                        <a href="javascript:void(0)">K</a>
-                        <a href="javascript:void(0)">L</a>
-                        <a href="javascript:void(0)">M</a>
-                        <a href="javascript:void(0)">N</a>
-                        <a href="javascript:void(0)">O</a>
-                        <a href="javascript:void(0)">P</a>
-                        <a href="javascript:void(0)">Q</a>
-                        <a href="javascript:void(0)">R</a>
-                        <a href="javascript:void(0)">S</a>
-                        <a href="javascript:void(0)">T</a>
-                        <a href="javascript:void(0)">U</a>
-                        <a href="javascript:void(0)">V</a>
-                        <a href="javascript:void(0)">X</a>
-                        <a href="javascript:void(0)">Y</a>
-                        <a href="javascript:void(0)">Z</a>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 containerWords">
-                        <a href="javascript:void(0)">SALAM</a>
-                        <a href="javascript:void(0)">SABAH</a>
-                        <a href="javascript:void(0)">SHIMALAN</a>
-                        <a href="javascript:void(0)">SADIQI</a>
-                        <a href="javascript:void(0)" class="active">SHUKRAN</a>
-                        <a href="javascript:void(0)">SALAMAH</a>
-                    </div>
-
-                     <article class="col-md-6 containerDefinition">
-                        <h1>Shukran</h1>
-                        <p>"Shukr" as a noun means "Thanks (noun)", so when you want to say "Thank you" to someone you'd normally say "Shukran Lak" ("Lak" is equivalent of "you" in this context), but you can use just the word "Shukran" if you want and it'll keep the same meaning, just like when you say "Thanks!" to somebody in english.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-                    
-        
 
         <footer id="footer">
             <script type="text/javascript">
