@@ -5,7 +5,7 @@
   - [x] Header sticky
   - [x] Header mobile
   - [x] Footer
-  - [ ] #####Footer reduced
+  - [ ] *Footer reduced*
 
 
 ###Homepage
