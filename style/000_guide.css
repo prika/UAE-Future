@@ -767,10 +767,8 @@ input[type='submit'],
       z-index: 999999;
       width: 60px; } }
 #fullBanner {
-  background: url(../images/homepageBanner.jpg) no-repeat center bottom;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
+  height: 102vh;
+  width: 102%;
   display: table;
   position: relative;
   overflow: hidden;
@@ -932,7 +930,35 @@ input[type='submit'],
     z-index: 2;
     padding: 0 20%;
     text-shadow: 1px 1px #21282f;
-    /*bg animation 3*/ }
+       /* &::before{
+          background: url(../sysimages/animate/banner_graf2.svg) no-repeat center center;
+          opacity: .3;
+          content:'';
+          display: block;
+          position: absolute;
+          left: 10px;
+          top: -5%;
+          z-index: 0;
+          width: 200px;
+          height: 200px;
+		  @include animation('slideFromLeft 3s');
+		  
+		  
+        }
+        
+       &::after{
+          background: url(../sysimages/animate/banner_graf4.svg) no-repeat center center;
+          opacity: .3;
+          content:'';
+          display: block;
+          position: absolute;
+          right: 10px;
+          top: 5%;
+          z-index: 0;
+          width: 200px;
+          height: 200px;
+		  @include animation('slideFromRight 3s');
+        }*/ }
     #fullBanner .bannerContent h1 {
       font-size: 60px;
       line-height: 110%;
@@ -946,38 +972,6 @@ input[type='submit'],
       line-height: 150%;
       margin-bottom: 50px;
       color: #FFF; }
-    #fullBanner .bannerContent::before {
-      background: url(../sysimages/animate/banner_graf2.svg) no-repeat center center;
-      opacity: .3;
-      content: '';
-      display: block;
-      position: absolute;
-      left: 10px;
-      top: -5%;
-      z-index: 0;
-      width: 200px;
-      height: 200px;
-      -webkit-animation: slideFromLeft 3s;
-      -moz-animation: slideFromLeft 3s;
-      -ms-animation: slideFromLeft 3s;
-      -o-animation: slideFromLeft 3s;
-      animation: slideFromLeft 3s; }
-    #fullBanner .bannerContent::after {
-      background: url(../sysimages/animate/banner_graf4.svg) no-repeat center center;
-      opacity: .3;
-      content: '';
-      display: block;
-      position: absolute;
-      right: 10px;
-      top: 5%;
-      z-index: 0;
-      width: 200px;
-      height: 200px;
-      -webkit-animation: slideFromRight 3s;
-      -moz-animation: slideFromRight 3s;
-      -ms-animation: slideFromRight 3s;
-      -o-animation: slideFromRight 3s;
-      animation: slideFromRight 3s; }
 
 @media screen and (max-width: 900px) {
   #fullBanner .bannerContent {
