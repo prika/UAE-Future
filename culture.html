@@ -23,7 +23,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.velocity.min.js"></script>
-    
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="js/site.js"> </script>
 
     <link rel="stylesheet" href="style/000_base.css" type="text/css">
@@ -33,44 +33,91 @@
 
 <body>
     <script type="text/javascript">
-        var scope =  { currentPage: "culture",
-                        bgHeader: "rgba(171,188,203,0.80)" };
+        var scope = {
+            currentPage: "culture",
+            bgHeader: "rgba(171,188,203,0.80)"
+        };
     </script>
 
     <div class="container-full">
         <header id="header">
             <script type="text/javascript">
                 // This template is supposed to be injected (partial)
-                
+
                 $.get("templates/view_header.html", function (data) {
                     var html = $(data);
                     html.find("#" + scope.currentPage).addClass("active");
                     $("#header").html(html);
-                    $("#header .navbar").css("background",scope.bgHeader);
+                    $("#header .navbar").css("background", scope.bgHeader);
                 });
             </script>
         </header>
 
         <section id="culturePlayerSection">
-            
-            <iframe src="//www.youtube.com/embed/Hazuw0ghjXc" frameborder="0" allowfullscreen class="video"></iframe>
-            
+            <div id="player" class="video"></div>
             <style>
-            #culturePlayerSection {
-                position: relative;
-                height: 100vh; width: 100vw;
-                
-                
-            }
-            .video {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
+                #culturePlayerSection {
+                    position: relative;
+                    height: 100vh;
+                    width: 100vw;
+                }
+
+                .video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
             </style>
-            
+
+            <script>
+
+                var player;
+                var done = false;
+                var playlistId = 'PLt3h35Kb9DZiFkYcnTJItTA2mdcVmiQrG';
+
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player', {
+                        height: '390',
+                        width: '640',
+                        playerVars: {
+                            autoplay: 0,
+                            controls: 1
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
+
+                function onPlayerReady(event) {
+                    event.target.cuePlaylist({
+                        listType: 'playlist',
+                        list: playlistId,
+                    });
+                }
+
+                function onPlayerStateChange(event) {
+                    
+                    if (event.data == YT.PlayerState.ENDED && !done) {
+                        done = true;
+                        console.log('Video Finished');
+                        stopVideo();
+                    }
+                }
+
+                function stopVideo() {
+                    player.stopVideo();
+                }
+
+                function playAtIndex(index) {
+                    player.playVideoAt(index)
+                }
+
+            </script>
+
         </section>
 
 
@@ -79,16 +126,16 @@
                 <div class="title">
                     <h1>Online Training Video</h1>
                 </div>
-                
-                <a href=""></a>
-                
+
+                <a href="javascript: playAtIndex(3);">next </a>
+
             </div>
         </section>
 
         <footer id="footer">
             <script type="text/javascript">
-                    // This template is supposed to be injected (partial)
-                    $("#footer").load("templates/view_footer.html");
+                // This template is supposed to be injected (partial)
+                $("#footer").load("templates/view_footer.html");
             </script>
         </footer>
 
@@ -96,19 +143,19 @@
 
     <script type="text/javascript">
 
-            (function($) {
+        (function ($) {
 
-                // init controller
-                //var options =   { triggerHook: "onEnter", duration: "200%" };
-                var controller = new ScrollMagic.Controller( { globalSceneOptions: {triggerHook: "onEnter", duration: "200%"} });
+            // init controller
+            //var options =   { triggerHook: "onEnter", duration: "200%" };
+            var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
 
-                // build scenes
-                new ScrollMagic.Scene({triggerElement: "#fullBanner"})
-                                .setTween("#fullBanner > div", {y: "60%", ease: Linear.easeNone})
-                                .addTo(controller);
+            // build scenes
+            new ScrollMagic.Scene({ triggerElement: "#fullBanner" })
+                            .setTween("#fullBanner > div", { y: "60%", ease: Linear.easeNone })
+                            .addTo(controller);
 
-            
-               })(jQuery);
+
+        })(jQuery);
 
     </script>
 </body>
