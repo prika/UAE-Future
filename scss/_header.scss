@@ -40,6 +40,11 @@
 	                margin: 0;
 					height: $header_height;
                     color: $color_gold;
+					
+					&::before,
+					&::after{
+						left: -100%;
+					}
 				}
 				
 				&.active > a, 
@@ -50,6 +55,7 @@
 					&::before,
 					&::after{
 						opacity: 1;
+						left: calc(50% - 12px);
 					}
 				}
 			}
@@ -205,33 +211,40 @@
 		
 		.container-search{
 			visibility: hidden;
-			opacity:.8;
 			position: fixed;
-			top: 100px;
+			top: 0;
 			left:0;
-			width: 100%;
+			width: 100vw;
 			height: 100vh;
-			background: rgba($color: $color_w, $alpha: .7);
-			z-index: 0; 
+			background: rgba($color: $color_bl, $alpha: .97);
+			z-index: -1;
 			text-align: center;
-		}
+			opacity: 0;
 			
-		.container-search .wrapper-input{
-			display: table;margin: 0 auto;padding: 19px 0 19px;}
-		.container-search input[type=submit]{
-			float: left;width: 43px;height: 37px;padding: 0;
-			//background: url(sysimages/.png) no-repeat left top;
+			form{
+				width: 100vw;
+				height: 100vh;
+				position: relative;
+				
+				.wrapper-input{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					
+					.search-input{
+						margin-bottom: 20px;
+						background: transparent;
+						text-align: center;
+						padding: 20px 60px;
+						
+						&:focus{
+							color: $color_w;
+						}
+					}
+				}
+			}
 		}
-		.container-search input[type=search]{float: left;font-size: 30px;border: 0;color: #515151;padding: 2px 11px;}
-		
-		/*.container-search ::-webkit-input-placeholder{color: #DCDCDC;}
-		.container-search :-moz-placeholder{color: #DCDCDC; }
-		.container-search ::-moz-placeholder{color: #DCDCDC; }
-		.container-search :-ms-input-placeholder{  color: #DCDCDC; }*/
-		.container-search .helper{display: none;padding: 0 10px;font-size: 30px;}
-		.container-search .search-input{-webkit-transition: all .07s linear;-moz-transition: all .07s linear;-ms-transition: all .07s linear;-o-transition: all .07s linear;transition: all .07s linear;}
-		
-
 	}
 	
 	&.stickyHeader{

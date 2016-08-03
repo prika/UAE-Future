@@ -100,6 +100,8 @@ h3, .accordionMenu > li > a .accordionHeader, .h3 {
 p, input[type='text'],
 input[type='number'],
 input[type='email'],
+input[type='search'],
+input[type='password'],
 textarea,
 select, #aboutSection blockquote {
   font-family: 'merriweather';
@@ -231,6 +233,8 @@ a {
 input[type='text'],
 input[type='number'],
 input[type='email'],
+input[type='search'],
+input[type='password'],
 textarea,
 select {
   -webkit-appearance: none;
@@ -250,6 +254,10 @@ select {
   input[type='number']:focus,
   input[type='email']:hover,
   input[type='email']:focus,
+  input[type='search']:hover,
+  input[type='search']:focus,
+  input[type='password']:hover,
+  input[type='password']:focus,
   textarea:hover,
   textarea:focus,
   select:hover,
@@ -277,6 +285,7 @@ input[type='submit'],
 .fc-state-default, #header .navbar #nav li a, #header .navbar .navbar-right #loginButton {
   font-family: 'intro';
   font-size: 12px;
+  letter-spacing: 1px;
   color: #FFF;
   border-radius: 0;
   border: 0;
@@ -298,6 +307,7 @@ input[type='submit'],
     content: '';
     background: url(../sysimages/triangles.svg) no-repeat;
     opacity: 0;
+    left: calc(50% - 12px);
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     -webkit-transition: all 0.2s ease;
@@ -307,7 +317,6 @@ input[type='submit'],
   input[type='submit']::before,
   .fc-state-default::before, #header .navbar #nav li a::before, #header .navbar .navbar-right #loginButton::before {
     top: -5px;
-    left: calc(50% - 12px);
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -317,8 +326,7 @@ input[type='submit'],
   button::after,
   input[type='submit']::after,
   .fc-state-default::after, #header .navbar #nav li a::after, #header .navbar .navbar-right #loginButton::after {
-    bottom: -5px;
-    left: calc(50% - 12px); }
+    bottom: -5px; }
   .button:hover,
   button:hover,
   input[type='submit']:hover,
@@ -343,7 +351,7 @@ input[type='submit'],
   width: 34px;
   overflow: hidden;
   background-size: contain !important;
-  padding: 4px 10px 3px 40px;
+  padding: 4px 10px 4px 40px;
   -moz-transition: width 0.4s ease 0.2s;
   -o-transition: width 0.4s ease 0.2s;
   -webkit-transition: width 0.4s ease 0.2s;
@@ -464,11 +472,7 @@ input[type='submit'],
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  /*.container-search ::-webkit-input-placeholder{color: #DCDCDC;}
-  .container-search :-moz-placeholder{color: #DCDCDC; }
-  .container-search ::-moz-placeholder{color: #DCDCDC; }
-  .container-search :-ms-input-placeholder{  color: #DCDCDC; }*/ }
+  transition: all 0.3s ease; }
   #header .navbar > div {
     display: -webkit-flex;
     display: flex;
@@ -494,6 +498,8 @@ input[type='submit'],
         margin: 0;
         height: 80px;
         color: rgba(190, 151, 95, 0.8); }
+        #header .navbar #nav li a::before, #header .navbar #nav li a::after {
+          left: -100%; }
       #header .navbar #nav li.active > a,
       #header .navbar #nav li a:hover {
         background: #BE975F;
@@ -501,7 +507,8 @@ input[type='submit'],
         #header .navbar #nav li.active > a::before, #header .navbar #nav li.active > a::after,
         #header .navbar #nav li a:hover::before,
         #header .navbar #nav li a:hover::after {
-          opacity: 1; }
+          opacity: 1;
+          left: calc(50% - 12px); }
     #header .navbar #nav.openNav {
       display: block;
       position: absolute;
@@ -605,40 +612,31 @@ input[type='submit'],
         background-color: rgba(190, 151, 95, 0.8); }
   #header .navbar .container-search {
     visibility: hidden;
-    opacity: .8;
     position: fixed;
-    top: 100px;
+    top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.7);
-    z-index: 0;
-    text-align: center; }
-  #header .navbar .container-search .wrapper-input {
-    display: table;
-    margin: 0 auto;
-    padding: 19px 0 19px; }
-  #header .navbar .container-search input[type=submit] {
-    float: left;
-    width: 43px;
-    height: 37px;
-    padding: 0; }
-  #header .navbar .container-search input[type=search] {
-    float: left;
-    font-size: 30px;
-    border: 0;
-    color: #515151;
-    padding: 2px 11px; }
-  #header .navbar .container-search .helper {
-    display: none;
-    padding: 0 10px;
-    font-size: 30px; }
-  #header .navbar .container-search .search-input {
-    -webkit-transition: all .07s linear;
-    -moz-transition: all .07s linear;
-    -ms-transition: all .07s linear;
-    -o-transition: all .07s linear;
-    transition: all .07s linear; }
+    background: rgba(33, 40, 47, 0.97);
+    z-index: -1;
+    text-align: center;
+    opacity: 0; }
+    #header .navbar .container-search form {
+      width: 100vw;
+      height: 100vh;
+      position: relative; }
+      #header .navbar .container-search form .wrapper-input {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        #header .navbar .container-search form .wrapper-input .search-input {
+          margin-bottom: 20px;
+          background: transparent;
+          text-align: center;
+          padding: 20px 60px; }
+          #header .navbar .container-search form .wrapper-input .search-input:focus {
+            color: #FFF; }
 #header.stickyHeader .navbar {
   top: 0;
   background: rgba(83, 59, 42, 0.95); }
@@ -676,6 +674,8 @@ input[type='submit'],
   #footer p, #footer input[type='text'],
   #footer input[type='number'],
   #footer input[type='email'],
+  #footer input[type='search'],
+  #footer input[type='password'],
   #footer textarea,
   #footer select, #footer #aboutSection blockquote, #aboutSection #footer blockquote, #footer a {
     height: 108px;
@@ -689,6 +689,8 @@ input[type='submit'],
     #footer p#contacts:hover, #footer input#contacts[type='text']:hover,
     #footer input#contacts[type='number']:hover,
     #footer input#contacts[type='email']:hover,
+    #footer input#contacts[type='search']:hover,
+    #footer input#contacts[type='password']:hover,
     #footer textarea#contacts:hover,
     #footer select#contacts:hover, #footer #aboutSection blockquote#contacts:hover, #aboutSection #footer blockquote#contacts:hover, #footer a#contacts:hover {
       color: #be9857; }
@@ -746,6 +748,8 @@ input[type='submit'],
     #footer p, #footer input[type='text'],
     #footer input[type='number'],
     #footer input[type='email'],
+    #footer input[type='search'],
+    #footer input[type='password'],
     #footer textarea,
     #footer select, #footer #aboutSection blockquote, #aboutSection #footer blockquote, #footer a {
       height: auto;
@@ -933,11 +937,12 @@ input[type='submit'],
       font-size: 60px;
       line-height: 110%;
       padding-top: 40px;
-      color: #FFF; }
+      color: #FFF;
+      letter-spacing: 5px; }
     #fullBanner .bannerContent h2,
     #fullBanner .bannerContent h2 *,
     #fullBanner .bannerContent h2 * {
-      font-size: 22px;
+      font-size: 24px;
       line-height: 150%;
       margin-bottom: 50px;
       color: #FFF; }
@@ -1066,6 +1071,7 @@ input[type='submit'],
 .listContainer .listElement {
   position: relative;
   width: 100%;
+  min-height: 342px;
   display: block;
   margin-bottom: 15px; }
   .listContainer .listElement:before, .listContainer .listElement:after {
@@ -1142,6 +1148,8 @@ input[type='submit'],
       .listContainer .listElement .elementContent .text p, .listContainer .listElement .elementContent .text input[type='text'],
       .listContainer .listElement .elementContent .text input[type='number'],
       .listContainer .listElement .elementContent .text input[type='email'],
+      .listContainer .listElement .elementContent .text input[type='search'],
+      .listContainer .listElement .elementContent .text input[type='password'],
       .listContainer .listElement .elementContent .text textarea,
       .listContainer .listElement .elementContent .text select, .listContainer .listElement .elementContent .text #aboutSection blockquote, #aboutSection .listContainer .listElement .elementContent .text blockquote {
         margin-top: 25px;
@@ -1535,6 +1543,8 @@ input[type='submit'],
   #aboutSection p, #aboutSection input[type='text'],
   #aboutSection input[type='number'],
   #aboutSection input[type='email'],
+  #aboutSection input[type='search'],
+  #aboutSection input[type='password'],
   #aboutSection textarea,
   #aboutSection select, #aboutSection blockquote {
     padding: 15px 0 30px; }
@@ -1547,6 +1557,8 @@ input[type='submit'],
     #aboutSection .imageContainer p, #aboutSection .imageContainer input[type='text'],
     #aboutSection .imageContainer input[type='number'],
     #aboutSection .imageContainer input[type='email'],
+    #aboutSection .imageContainer input[type='search'],
+    #aboutSection .imageContainer input[type='password'],
     #aboutSection .imageContainer textarea,
     #aboutSection .imageContainer select, #aboutSection .imageContainer blockquote {
       font-family: 'helvetica';
@@ -1579,6 +1591,8 @@ input[type='submit'],
   #resourcesSection1 .element .subtitle, #resourcesSection1 .element h1, #resourcesSection1 .element p, #resourcesSection1 .element input[type='text'],
   #resourcesSection1 .element input[type='number'],
   #resourcesSection1 .element input[type='email'],
+  #resourcesSection1 .element input[type='search'],
+  #resourcesSection1 .element input[type='password'],
   #resourcesSection1 .element textarea,
   #resourcesSection1 .element select, #resourcesSection1 .element #aboutSection blockquote, #aboutSection #resourcesSection1 .element blockquote,
   #resourcesSection2 .element .subtitle,
@@ -1587,6 +1601,8 @@ input[type='submit'],
   #resourcesSection2 .element input[type='text'],
   #resourcesSection2 .element input[type='number'],
   #resourcesSection2 .element input[type='email'],
+  #resourcesSection2 .element input[type='search'],
+  #resourcesSection2 .element input[type='password'],
   #resourcesSection2 .element textarea,
   #resourcesSection2 .element select,
   #resourcesSection2 .element #aboutSection blockquote,

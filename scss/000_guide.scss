@@ -339,6 +339,7 @@ a{
 input[type='text'],
 input[type='number'],
 input[type='email'],
+input[type='search'],
 input[type='password'],
 textarea,
 select {
@@ -386,6 +387,7 @@ input[type='checkbox'] {
 	//margin: 0;
 	font-family: 'intro';
 	font-size: 12px;
+	letter-spacing: 1px;
 	color: #FFF;
 	border-radius: 0;
 	border: 0;
@@ -403,12 +405,12 @@ input[type='checkbox'] {
 		content:'';
 		background: url(../sysimages/triangles.svg) no-repeat;
 		opacity: 0;
+		left: calc(50% - 12px);
 		@include transition(all .2s ease);
 	}
 	
 	&::before{
 		top:-5px;
-		left: calc(50% - 12px);
 		-webkit-transform: rotate(180deg);
 		-moz-transform: rotate(180deg);
 		-ms-transform: rotate(180deg);
@@ -418,7 +420,6 @@ input[type='checkbox'] {
 	
 	&::after{
 		bottom:-5px;
-		left: calc(50% - 12px);
 	}
 	
 	&:hover{
@@ -441,7 +442,7 @@ input[type='checkbox'] {
     width: 34px;
 	overflow: hidden;
 	background-size: contain!important;
-	padding: 4px 10px 3px 40px;
+	padding: 4px 10px 4px 40px;
 	@include transition( width .4s ease .2s);
 	
 	span{ 
@@ -699,6 +700,7 @@ input[type='submit'],
 	.listElement{
 		position: relative;
 		width: 100%;
+		min-height: 342px;
 		display: block;
 		margin-bottom: 15px; 
 		@include clearfix();
