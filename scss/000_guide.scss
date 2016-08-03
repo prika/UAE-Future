@@ -229,6 +229,19 @@ a{
 			background: url(../sysimages/triangles_title.svg) no-repeat; 
 		}
 	}
+	
+	&.centeredSubtitle{
+		
+		h3{
+			text-align: center;
+			width: 100%;
+			
+			&::before{
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+		}
+	}
 }
 
 
@@ -326,6 +339,7 @@ a{
 input[type='text'],
 input[type='number'],
 input[type='email'],
+input[type='password'],
 textarea,
 select {
 	-webkit-appearance: none;
@@ -1443,3 +1457,28 @@ $c_briefs:#8cc63f;
 #resourcesSection1{
 	background: url($bg_img);
 }
+
+
+
+// ===================================================================================================================
+// Resources page DICTIONARY
+#dictionarySection{
+	padding: 60px 10%;
+}
+
+.noFullBannerTitle{
+	background: url($bg_img);
+	
+	.title{
+		padding: 180px 0 80px;
+		text-align: center;
+		
+		h2{
+			color: $color_solidGold;
+			font-weight: normal;
+			max-width: 70%;
+			margin: 30px auto 10px;
+		}
+	}
+}	
+
