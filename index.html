@@ -60,7 +60,7 @@
         </header>
 
         <section id="fullBanner" data-jkit="[parallax:strength=2;axis=both;scope=local]">
-            <img class="backgroundBanner" src="images/homepageBanner.jpg" alt="" style="position: absolute; margin: -20%;">
+            <img class="backgroundBanner" src="images/homepageBanner.jpg" alt="">
             <div></div>
 
             <script type="text/javascript">
@@ -75,13 +75,15 @@
                 });
 
                 function parallax(e, target, layer) {
-                    var layer_coeff = 50 / layer;
+                    var layer_coeff = 20 / layer;
+                    
                     var x = (($(window).width() - target.offsetWidth) / 2 - (e.pageX - ($(window).width() / 2)) / layer_coeff );
                     var y = (($(window).height() - target.offsetHeight) / 2 - (e.pageY - ($(window).height() / 2)) / layer_coeff);
                     
                     $target = $(".backgroundBanner");
                     $target.css('left', x);
                     $target.css('top', y);
+                    $target.css('opacity', 1);
 
                    
                 };

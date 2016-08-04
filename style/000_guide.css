@@ -634,7 +634,8 @@ input[type='submit'],
           margin-bottom: 20px;
           background: transparent;
           text-align: center;
-          padding: 20px 60px; }
+          padding: 20px 60px;
+          font-size: 24px; }
           #header .navbar .container-search form .wrapper-input .search-input:focus {
             color: #FFF; }
 #header.stickyHeader .navbar {
@@ -767,8 +768,8 @@ input[type='submit'],
       z-index: 999999;
       width: 60px; } }
 #fullBanner {
-  height: 102vh;
-  width: 102%;
+  height: 100vh;
+  width: 100%;
   display: table;
   position: relative;
   overflow: hidden;
@@ -910,11 +911,6 @@ input[type='submit'],
   100% {
     right: 10px; } }
   #fullBanner #animationFullBanner {
-    -webkit-animation: anim_opacity 7s 3;
-    -moz-animation: anim_opacity 7s 3;
-    -ms-animation: anim_opacity 7s 3;
-    -o-animation: anim_opacity 7s 3;
-    animation: anim_opacity 7s 3;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -984,6 +980,44 @@ input[type='submit'],
       line-height: 190%; }
     #fullBanner .bannerContent::before, #fullBanner .bannerContent::after {
       display: none !important; } }
+.backgroundBanner {
+  margin: -20%;
+  position: absolute; }
+
+.bg1,
+.bg2,
+.bg3 {
+  position: absolute;
+  -webkit-animation: anim_opacity 7s 3;
+  -moz-animation: anim_opacity 7s 3;
+  -ms-animation: anim_opacity 7s 3;
+  -o-animation: anim_opacity 7s 3;
+  animation: anim_opacity 7s 3; }
+
+.bg1 {
+  position: absolute;
+  left: 10px;
+  top: -5%;
+  z-index: 2;
+  width: 200px;
+  height: 200px; }
+
+.bg2 {
+  position: absolute;
+  right: 10px;
+  top: 5%;
+  z-index: 2;
+  width: 200px;
+  height: 200px; }
+
+.bg3 {
+  position: absolute;
+  right: 13%;
+  bottom: 42%;
+  z-index: 2;
+  width: 130px;
+  height: 130px; }
+
 .popup {
   max-width: 780px; }
   .popup .bannerTop {

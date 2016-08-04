@@ -294,7 +294,10 @@
         </g>
 </svg>
 <script>
-    TweenLite.to($("#circles"), 5, {ease: Back.easeOut, rotation: 360, transformOrigin:"50% 50%"});
+    $(document).ready(function(){
+        TweenLite.to( $("#circles"), 50, { rotation: "360", repeat:-1,  ease: Linear.easeNone,  transformOrigin:"50% 50%"});
+        TweenLite.to( $(".bg1, .bg3"), 50, { rotation: "-360", repeat:-1,  ease: Linear.easeNone,  transformOrigin:"50% 50%"});       
+    });
 </script>
 
 <div class="bannerContent">
@@ -306,27 +309,3 @@
     <img class="bg2" src="sysimages/animate/banner_graf3.svg" alt="">
     <img class="bg3" src="sysimages/animate/banner_graf4.svg" alt="">
 </div>
-
-
-
-
-<style>
-.bg1{
-    position: absolute;
-    left: 10px; top: -5%;
-    z-index: 2; 
-    width: 200px; height: 200px;
-}
-.bg2{
-    position: absolute;
-    right: 10px; top: 5%;
-    z-index: 2; 
-    width: 200px; height: 200px;
-}
-.bg3{
-    position: absolute;
-    right: 13%; bottom: 42%;
-    z-index: 2;
-    width: 130px; height: 130px;
-}
-</style>
