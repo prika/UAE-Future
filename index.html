@@ -59,7 +59,8 @@
             </script>
         </header>
 
-        <section id="fullBanner" data-jkit="[parallax:strength=2;axis=both;scope=local]">
+
+        <section id="fullBanner">
             <img class="backgroundBanner" src="images/homepageBanner.jpg" alt="">
             <div></div>
 
@@ -69,23 +70,32 @@
                 $.get("templates/view_fullBanner.html", function (data) {
 
                     $("#fullBanner > div").html($(data));
+
                     $("#fullBanner").mousemove(function (e) {
-                        parallax(e, this, 2);
+                        parallax(e, this, ".backgroundBanner", 2);
+                        // parallax(e, this, "#animationFullBanner", -1);
+                        // parallax(e, this, ".bg1", 3);
+                        // parallax(e, this, ".bg2", 3);
+                        // parallax(e, this, ".bg3", 3);
                     });
+
                 });
 
-                function parallax(e, target, layer) {
-                    var layer_coeff = 20 / layer;
-                    
-                    var x = (($(window).width() - target.offsetWidth) / 2 - (e.pageX - ($(window).width() / 2)) / layer_coeff );
-                    var y = (($(window).height() - target.offsetHeight) / 2 - (e.pageY - ($(window).height() / 2)) / layer_coeff);
-                    
-                    $target = $(".backgroundBanner");
+                function parallax(e, parent, child, layer) {
+                    var speed = 50 / layer;
+                    var $window = $(window);
+                    var $target = $(child);
+
+                    var z = $window.width() - e.pageX - (parent.offsetWidth / 2);
+                    var k = $window.height() - e.pageY - (parent.offsetHeight / 2);
+
+                    var x = (z / speed);
+                    var y = (k / speed);
+
+                    console.log(x, y)
+
                     $target.css('left', x);
                     $target.css('top', y);
-                    $target.css('opacity', 1);
-
-                   
                 };
 
             </script>
