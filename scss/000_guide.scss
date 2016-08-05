@@ -6,6 +6,7 @@
 
 // ============================================================================================================
 // Mixin and General Animations
+@import '_animations.scss';
 
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
@@ -138,6 +139,7 @@ h1, .h1{
 	font-family: 'intro';
 	font-size: $font_size1;
 	color: $color_bl;
+	font-weight: 300;
 }
 
 
@@ -217,7 +219,7 @@ a{
 		position: relative;
 		display: inline-block;
 		font-family: 'intro';
-		font-weight: normal;
+		font-weight: 300;
 	
 		&::before{
 			position: absolute;
@@ -264,7 +266,7 @@ a{
 			.accordionHeader{
 				@extend h3;
 				font-family: 'intro';
-				font-weight: normal;
+				font-weight: 300;
 				display: inline-block; 
 				width: 70%;
 				color: $color_bl;
@@ -325,15 +327,15 @@ a{
 .inputSelect {
 	margin-bottom:25px;
 	position:relative;
-	 
-	/*&::before{
-		position:absolute; 
-		top:-10px; 
-		left:-3px; 
-		width:auto;
-	}*/
 	
-
+	&::before{
+		background: url(../sysimages/cornerTop.png) no-repeat left top;
+		width: 15px;
+		height: 15px;
+		content: ''; display: block;
+		position: absolute; top: 0; left: 0;
+		background-size: 15px;
+	}
 }
 
 input[type='text'],
@@ -346,7 +348,6 @@ select {
 	-webkit-appearance: none;
    	-moz-appearance:    none;
    	appearance:         none;
-   
 	border-radius: 0;
 	border: 1px solid rgba($color_lightgrey, .3);
 	background: $color_w;
@@ -355,6 +356,8 @@ select {
 	
 	@extend p;
 	@include transition(all .2s ease);
+	
+	
 	
 	&:hover,
 	&:focus{
@@ -386,6 +389,7 @@ input[type='checkbox'] {
 	//padding: 0 7px;
 	//margin: 0;
 	font-family: 'intro';
+	font-weight: 300;
 	font-size: 12px;
 	letter-spacing: 1px;
 	color: #FFF;
@@ -441,35 +445,47 @@ input[type='checkbox'] {
 	height: 37px;
     width: 34px;
 	overflow: hidden;
-	background-size: contain!important;
+	//background-size: contain!important;
 	padding: 4px 10px 4px 40px;
-	@include transition( width .4s ease .2s);
+	//@include transition( width .4s ease .2s);
+	@include transition( all .4s ease);
 	
 	span{ 
 		font-family: 'intro';
 		font-size: 12px;
+		font-weight: 300;
 		color: #FFF;
 		text-decoration: none;
 		color: $color_w;
 		white-space: nowrap; 
 		opacity: 0;
 		@include transition( all .4s ease);
+		
+		background-size: 33px;
+
 	}
 	
 	&.buttonDownload{
-		background: url(../sysimages/button/download@2x.png) no-repeat top left;
+		//background: url(../sysimages/button/download@2x.png) no-repeat top left;
+		background: url(../sysimages/REMOVE/btnDownload.png) no-repeat 3px 0;
+		//@include transition( background .4s ease);
+		
 	}
 
 	&.buttonShare{
-		background: url(../sysimages/button/share@2x.png) no-repeat top left;
+		//background: url(../sysimages/button/share@2x.png) no-repeat top left;
+		background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0;
+		
 	}
 	
 	&.buttonPrint{
-		background: url(../sysimages/button/print@2x.png) no-repeat top left;
+		//background: url(../sysimages/button/print@2x.png) no-repeat top left;
+		background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0;
 	}
 	
 	&.buttonOpenNew{
-		background: url(../sysimages/button/openNewWindow@2x.png) no-repeat top left;
+		//background: url(../sysimages/button/openNewWindow@2x.png) no-repeat top left;
+		background: url(../sysimages/REMOVE/btnSend.png) no-repeat 3px 0;
 	}
 	
 	&.buttonFav{
@@ -479,6 +495,7 @@ input[type='checkbox'] {
 
 	&:hover{
 		background-color: $color_bl;
+		background-position: 3px -34px;
 		width: auto;
 		
 		span{
@@ -524,14 +541,20 @@ input[type='checkbox'] {
 .button,
 button,
 input[type='submit'],
-.fc-state-default{
-	@extend %clickable;
-	
+.fc-state-default {
+	//@extend %clickable;
 	border: none;
 	border-radius: 0;
-	background: $color_gold;
 	padding: 20px 25px;
-	font-size: 14px;
+	font-size: 16px;
+	@include transition( all .4s ease );
+	
+	background: url(../sysimages/REMOVE/button.png) no-repeat center top;
+	font-family: 'intro';
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: #FFF;
+	height: 75px;
 	
 	&::before,
 	&::after{
@@ -539,7 +562,8 @@ input[type='submit'],
 	}
 	
 	&:hover{
-		background: $color_w;
+		//background: $color_w;
+		background-position: center bottom;
 		color: $color_gold;
 	}
 }
@@ -600,6 +624,21 @@ input[type='submit'],
 
 .popup{
 	max-width: 780px;
+	//position: relative;
+	//background: $color_w;
+	
+	/*&::before{
+		position: absolute;
+		top: 0;
+		left:0;
+		width: 20px;
+		height: 20px;
+		content: '';
+		display: block;
+		z-index: 9999;*/
+		background: $color_w url(../sysimages/cornerTopPopup.png) no-repeat top left;
+	//}
+	
 	
 	.bannerTop{
 		position: relative;
@@ -673,12 +712,12 @@ input[type='submit'],
 	padding-bottom: 50px;
 	position: relative;
     z-index: 9;
-	overflow: hidden;
+	//overflow: hidden;
 	@include clearfix();
 	
-	&::before {
+	/*&::before {
         background: url(../sysimages/animate/banner_graf3.svg) no-repeat center center;
-        //background-size: 60%;
+        background-size: 60%;
         content:'';
         display: block;
 		position: absolute;
@@ -689,7 +728,7 @@ input[type='submit'],
         height: 170px;
 		opacity: .3;
         @include animation('anim_opacity 7s 3');
-    }
+    }*/
 }
 
 
@@ -744,7 +783,8 @@ input[type='submit'],
 				z-index: 0;
 				top: 0; left: 0;
 			}
-			.flag{
+			.flag,
+			.flagState{
 				position: absolute;
 				top: 20px;
 				right: 20px;
@@ -752,8 +792,24 @@ input[type='submit'],
 				font-family: 'helveticabold';
 				font-size: 11px;
 				color: #FFF;
-				padding: 2px 22px 4px;
+				padding: 4px 22px 4px;
 				text-transform: capitalize;
+				height: 23px;
+			}
+			
+			.flagState{
+				top: -10px;
+				font-family: 'intro';
+				
+				&.new{
+					background: $color_solidGold;
+					border: 1px solid $color_w;
+				}
+				&.important{
+					background: $color_w;
+					border: 1px solid red;
+					color: red;
+				}
 			}
 			.text{
 				position: absolute;
@@ -1175,7 +1231,7 @@ $c_briefs:#8cc63f;
 			position: relative;
 			
 			&:first-child{
-				background: $color_w!important;
+				background: $color_w url(../sysimages/REMOVE/newsCorner.png) no-repeat left top;
 				
 				.dateEvent{
 					color: $color_bl;
@@ -1215,6 +1271,18 @@ $c_briefs:#8cc63f;
 			
 			
 			&:hover{
+				
+				&:first-child{
+					background: $color_w url(../sysimages/REMOVE/newsCorner.png) no-repeat left top;
+					
+					.dateEvent{
+						color: $color_bl;
+					}
+					.timeEvent{
+						color: $color_gold;
+					}
+				}
+				
 				background: rgba($color: $color_w, $alpha: .9);
 				
 				.dateEvent{
@@ -1249,16 +1317,40 @@ $c_briefs:#8cc63f;
 // News Section
 #newsSection{
 	padding: 40px;
-	//background: $color_w;
+	position: relative;
+	overflow: hidden;
+	
+	&::before{
+		position: absolute;
+		bottom: -90%;
+		left: -10%;
+		opacity: .3;
+		content: '';
+		display: block; z-index: 0;
+		background: url(../sysimages/animate/banner_graf1.svg) no-repeat 0 -100%;
+    //background-size: 50%;
+	    width: 700px;
+    	height: 700px;
+	}
+	
+	
+	.bgLines2{
+		position: absolute;
+		right: -30%;
+		top: 50px;
+		z-index: 9;
+		overflow: hidden;
+	}
 	
 	.container{
 		background: url(../sysimages/newsBg.png) no-repeat left top;
 		background-size: 100% 100%;
 		position: relative;
+		max-width: 1200px;
 	}
 	
 	.element{
-		padding: 60px 60px;
+		padding: 55px 40px 55px 55px;
 		
 		a.link{ 
 			display: inline-block; 

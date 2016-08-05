@@ -1,60 +1,9 @@
 #fullBanner{
-    //background: url(../images/homepageBanner.jpg) no-repeat -10% -10%;
-    //background-size: 110%;
     height: 100vh;
 	width: 100%;
     display: table;
     position: relative;
 	overflow: hidden;
-	
-	/*& > div {
-		height: 200%;
-		position: relative;
-		top: -100%;
-	}*/
-	
-	@include keyframes(anim_opacity) {
-		0% { opacity: .3; }
-		50% { opacity: .1; }
-		100% { opacity: .3; }
-	}
-	@include keyframes(anim_opacity_invert) {
-		0% { opacity: .1; }
-		50% { opacity: .4; }
-		100% { opacity: .1; }
-	}
-	@include keyframes(slideFromLeft) {
-		0% { left: -100%; }
-		100% { left: 10px; }
-	}
-	@include keyframes(slideFromRight) {
-		0% { right: -100%; }
-		100% { right: 10px; }
-	}
-    
-	#animationFullBanner {
-		
-		@include verticalAlign();
-		top: 20%;
-		left: 50%;
-		opacity: .5;
-	}
-    
-    
-   
-    // Element 1
-   /* &::before {
-        background: url(../sysimages/animate/banner_graf1.svg) no-repeat center center;
-        content:'';
-        display: block;
-        z-index: 0;
-        width: 100%;
-		max-width: 1100px;
-        height: 100%;
-		opacity: .3;
-		@include verticalAlign();
-        @include animation('anim_opacity 7s 3');
-    }*/
     
     .bannerContent{
         text-align: center;
@@ -64,16 +13,13 @@
         z-index: 2;
 		padding: 0 20%;
 		text-shadow: 1px 1px $color_bl;
-		//display: table-cell;
-        //vertical-align: middle;
-		//overflow: hidden;
         
         h1 {
           font-size: 60px;
           line-height: 110%;
           padding-top: 40px;
           color: $color_w;
-          letter-spacing: 5px;
+          letter-spacing: 3px;
         }
 
         h2,
@@ -84,38 +30,131 @@
           margin-bottom: 50px;
           color: $color_w;
         }
-        
-       /* &::before{
-          background: url(../sysimages/animate/banner_graf2.svg) no-repeat center center;
-          opacity: .3;
-          content:'';
-          display: block;
-          position: absolute;
-          left: 10px;
-          top: -5%;
-          z-index: 0;
-          width: 200px;
-          height: 200px;
-		  @include animation('slideFromLeft 3s');
-		  
-		  
-        }
-        
-       &::after{
-          background: url(../sysimages/animate/banner_graf4.svg) no-repeat center center;
-          opacity: .3;
-          content:'';
-          display: block;
-          position: absolute;
-          right: 10px;
-          top: 5%;
-          z-index: 0;
-          width: 200px;
-          height: 200px;
-		  @include animation('slideFromRight 3s');
-        }*/
     }
 }
+
+.backgroundBanner{
+    margin: -20%;
+    position: absolute;
+}
+
+#animationFullBanner {
+    //@include verticalAlign();
+    position: absolute;
+    top: -20%;
+    //left: calc(50% - 350px);
+    left: calc(50% - 400px);
+    opacity: .3;
+    animation: Amim1 35s infinite ;
+    -moz-animation: Amim1 35s infinite ;
+    -webkit-animation: Amim1 35s infinite;
+    //    max-width: 82vw;
+    height: 110vh;
+}
+
+.bg1,
+.bg2,
+.bg3{
+    position: absolute;
+    opacity: .3; 
+}
+
+.bg1{
+    position: absolute;
+    left: 2%; top: -5%;
+    z-index: 2; 
+    opacity: 0.2;
+    animation: Amim1 35s infinite ;
+    -moz-animation: Amim1 35s infinite ;
+    -webkit-animation: Amim1 35s infinite;
+    width: 200px; height: 200px;
+}
+
+
+/*TODO - remove from this doc*/
+.bg2{
+    position: absolute;
+    right: 20%;
+    top: -74px;
+    z-index: 9;
+    @include transition( all .4s ease );
+    
+}
+/*TODO - remove from this doc*/
+
+.bg3{
+    position: absolute;
+    right: 5%; top: 5%;
+    z-index: 2; 
+    opacity: .3;
+    width: 200px; height: 200px;
+    animation: Amim1 35s infinite;
+    -moz-animation: Amim1 35s infinite ;
+    -webkit-animation: Amim1 35s infinite;
+}
+
+
+
+/*@include keyframes(anim_opacity) {
+    0% { opacity: .3; }
+    50% { opacity: .1; }
+    100% { opacity: .3; }
+}
+@include keyframes(anim_opacity_invert) {
+    0% { opacity: .1; }
+    50% { opacity: .4; }
+    100% { opacity: .1; }
+}
+@include keyframes(slideFromLeft) {
+    0% { left: -100%; }
+    100% { left: 10px; }
+}
+@include keyframes(slideFromRight) {
+    0% { right: -100%; }
+    100% { right: 10px; }
+}*/
+    
+    
+    
+    
+@keyframes Amim1
+{
+from { transform:rotate(0deg); }
+to { transform:rotate(360deg); }
+}
+
+@-moz-keyframes Amim1
+{
+from { transform:rotate(0deg); }
+to { transform:rotate(360deg); }
+}
+
+@-webkit-keyframes Amim1
+{
+from { transform:rotate(0deg); }
+to { transform:rotate(360deg); }
+}
+
+
+@keyframes Amimb
+{
+from { transform:rotate(360deg); }
+to { transform:rotate(0deg); }
+}
+
+@-moz-keyframes Amimb
+{
+from { transform:rotate(360deg); }
+to { transform:rotate(0deg); }
+}
+
+@-webkit-keyframes Amimb
+{
+from { transform:rotate(360deg); }
+to { transform:rotate(0deg); }
+}
+
+
 
 
 @media screen and (max-width: 900px){
@@ -134,38 +173,3 @@
 		&::after{display: none!important;}
 	}
 }
-
-
-
-
-
- .backgroundBanner{
-        margin: -20%;
-        position: absolute; 
-    }
-    
-    
-    .bg1,
-    .bg2,
-    .bg3{
-        position: absolute; 
-        @include animation('anim_opacity 7s 3');
-    }
-    .bg1{
-        position: absolute;
-        left: 10px; top: -5%;
-        z-index: 2; 
-        width: 200px; height: 200px;
-    }
-    .bg2{
-        position: absolute;
-        right: 10px; top: 5%;
-        z-index: 2; 
-        width: 200px; height: 200px;
-    }
-    .bg3{
-        position: absolute;
-        right: 13%; bottom: 42%;
-        z-index: 2;
-        width: 130px; height: 130px;
-    }
