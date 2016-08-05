@@ -10,11 +10,11 @@
 
 ###Homepage
   - [x] Full banner
-  - [ ] Full banner - animations 4
+  - [x] Full banner - animations 4
   - [x] Highlights
   - [x] Weekly Calendar
   - [x] News
-  - [ ] News animations 3
+  - [x] News animations 3
   
 
 ###Ecosystem
@@ -24,7 +24,7 @@
   - [x] Ecosystem filters
   - [x] Ecosystem accordion
   - [x] Ecosystem list elements
-  - [ ] **Ecosystem elements ( 2 flags)**
+  - [x] Ecosystem elements ( 2 flags)
   - [ ] Ecosystem animations 2
   - [ ] **Ecosystem popup normal - top corner**
   - [x] Ecosystem popup image
