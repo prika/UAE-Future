@@ -141,22 +141,5 @@
 
     </div>
 
-    <script type="text/javascript">
-
-        (function ($) {
-
-            // init controller
-            //var options =   { triggerHook: "onEnter", duration: "200%" };
-            var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
-
-            // build scenes
-            new ScrollMagic.Scene({ triggerElement: "#fullBanner" })
-                            .setTween("#fullBanner > div", { y: "60%", ease: Linear.easeNone })
-                            .addTo(controller);
-
-
-        })(jQuery);
-
-    </script>
 </body>
 </html>

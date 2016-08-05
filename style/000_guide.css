@@ -2507,7 +2507,11 @@ a {
 .inputElement,
 .inputSelect {
   margin-bottom: 25px;
-  position: relative; }
+  position: relative;
+  padding-left: 0;
+  /*&:hover{
+  	background: url(../sysimages/cornerTopInput.png) no-repeat left top;
+  }*/ }
   .inputElement::before,
   .inputSelect::before {
     background: url(../sysimages/cornerTop.png) no-repeat left top;
@@ -3098,7 +3102,7 @@ input[type='submit'],
   animation: Amim1 35s infinite;
   -moz-animation: Amim1 35s infinite;
   -webkit-animation: Amim1 35s infinite;
-  height: 110vh; }
+  height: 800px; }
 
 .bg1,
 .bg2,
@@ -3112,9 +3116,9 @@ input[type='submit'],
   top: -5%;
   z-index: 2;
   opacity: 0.2;
-  animation: Amim1 35s infinite;
-  -moz-animation: Amim1 35s infinite;
-  -webkit-animation: Amim1 35s infinite;
+  animation: AnimRotation 35s infinite;
+  -moz-animation: AnimRotation 35s infinite;
+  -webkit-animation: AnimRotation 35s infinite;
   width: 200px;
   height: 200px; }
 
@@ -3138,9 +3142,9 @@ input[type='submit'],
   opacity: .3;
   width: 200px;
   height: 200px;
-  animation: Amim1 35s infinite;
-  -moz-animation: Amim1 35s infinite;
-  -webkit-animation: Amim1 35s infinite; }
+  animation: AnimRotationReverse 35s infinite;
+  -moz-animation: AnimRotationReverse 35s infinite;
+  -webkit-animation: AnimRotationReverse 35s infinite; }
 
 /*@include keyframes(anim_opacity) {
     0% { opacity: .3; }
@@ -3160,32 +3164,32 @@ input[type='submit'],
     0% { right: -100%; }
     100% { right: 10px; }
 }*/
-@keyframes Amim1 {
+@keyframes AnimRotation {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-@-moz-keyframes Amim1 {
+@-moz-keyframes AnimRotation {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-@-webkit-keyframes Amim1 {
+@-webkit-keyframes AnimRotation {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-@keyframes Amimb {
+@keyframes AnimRotationReverse {
   from {
     transform: rotate(360deg); }
   to {
     transform: rotate(0deg); } }
-@-moz-keyframes Amimb {
+@-moz-keyframes AnimRotationReverse {
   from {
     transform: rotate(360deg); }
   to {
     transform: rotate(0deg); } }
-@-webkit-keyframes Amimb {
+@-webkit-keyframes AnimRotationReverse {
   from {
     transform: rotate(360deg); }
   to {
@@ -3682,12 +3686,19 @@ input[type='submit'],
     background: url(../sysimages/animate/banner_graf1.svg) no-repeat 0 -100%;
     width: 700px;
     height: 700px; }
+  #newsSection .bgLines,
   #newsSection .bgLines2 {
     position: absolute;
-    right: -30%;
-    top: 50px;
+    height: 80px;
     z-index: 9;
     overflow: hidden; }
+  #newsSection .bgLines {
+    right: 0;
+    top: 50px; }
+  #newsSection .bgLines2 {
+    left: 0;
+    top: 200px;
+    width: 80px; }
   #newsSection .container {
     background: url(../sysimages/newsBg.png) no-repeat left top;
     background-size: 100% 100%;
@@ -3747,6 +3758,14 @@ input[type='submit'],
       float: right; }
     #filterSection .filter label:hover {
       color: #21282f; }
+  #filterSection .subtitle h3, #filterSection .subtitle .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a #filterSection .subtitle .accordionHeader {
+    width: 100%; }
+    #filterSection .subtitle h3 #reset, #filterSection .subtitle .accordionMenu > li > a .accordionHeader #reset, .accordionMenu > li > a #filterSection .subtitle .accordionHeader #reset {
+      float: right;
+      font-size: 14px;
+      color: #7b7c7e; }
+      #filterSection .subtitle h3 #reset:hover, #filterSection .subtitle .accordionMenu > li > a .accordionHeader #reset:hover, .accordionMenu > li > a #filterSection .subtitle .accordionHeader #reset:hover {
+        color: #be9857; }
 
 #calendarSection {
   background: url("../sysimages/bg.png");
@@ -3886,5 +3905,25 @@ input[type='submit'],
       font-weight: normal;
       max-width: 70%;
       margin: 30px auto 10px; }
+
+#loginSection {
+  max-width: 900px;
+  margin: 60px auto; }
+  #loginSection .col-md-12 {
+    text-align: center; }
+    #loginSection .col-md-12 hr {
+      width: 100%;
+      border: 1px solid #dfdfdf;
+      margin: 90px auto 40px; }
+    #loginSection .col-md-12 a.link {
+      display: inline-block;
+      text-align: center;
+      font-family: 'intro';
+      font-weight: normal;
+      color: #21282f;
+      padding: 10px; }
+    #loginSection .col-md-12 a.link:hover,
+    #loginSection .col-md-12 a.link.active {
+      color: #be9857; }
 
 /*# sourceMappingURL=000_guide.css.map */

@@ -29,26 +29,6 @@
     <link rel="stylesheet" href="style/000_base.css" type="text/css">
     <link rel="stylesheet" href="style/000_guide.css" type="text/css">
 
-    <style>
-
-        #loginSection{
-            max-width: 900px;
-            margin: 60px auto;
-        }
-        a.link{ 
-            display:table-cell;
-            text-align: center;
-            font-family: 'intro';
-            font-weight: normal;
-            color: #21282f;
-            text-align: center;
-        }
-
-        a.link:hover,
-        a.link.active{
-            color: #be9857;
-        }
-    </style>
 </head>
 
 <body>
@@ -105,6 +85,7 @@
                     </div>
 
                      <div class="col-md-12">
+                         <hr>
                         <a href="" class="link">FORGOT PASSWORD</a>
                         <a href="" class="link">CREATE ACCOUNT</a>
                     </div>
@@ -118,25 +99,6 @@
                     $("#footer").load("templates/view_footer.html");
             </script>
         </footer>
-
     </div>
-
-    <script type="text/javascript">
-
-            (function($) {
-
-                // init controller
-                //var options =   { triggerHook: "onEnter", duration: "200%" };
-                var controller = new ScrollMagic.Controller( { globalSceneOptions: {triggerHook: "onEnter", duration: "200%"} });
-
-                // build scenes
-                new ScrollMagic.Scene({triggerElement: "#fullBanner"})
-                                .setTween("#fullBanner > div", {y: "60%", ease: Linear.easeNone})
-                                .addTo(controller);
-
-            
-               })(jQuery);
-
-    </script>
 </body>
 </html>
