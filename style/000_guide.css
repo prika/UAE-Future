@@ -2421,7 +2421,7 @@ a {
       width: 27px;
       height: 5px;
       content: '';
-      background: url(../sysimages/triangles_title.svg) no-repeat; }
+      background: url(../sysimages/triangles_title.png) no-repeat; }
   .title.leftTitle {
     padding: 70px 0 20px; }
     .title.leftTitle h1 {
@@ -2444,7 +2444,7 @@ a {
       width: 27px;
       height: 5px;
       content: '';
-      background: url(../sysimages/triangles_title.svg) no-repeat; }
+      background: url(../sysimages/triangles_title.png) no-repeat; }
   .subtitle.centeredSubtitle h3, .subtitle.centeredSubtitle .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .subtitle.centeredSubtitle .accordionHeader {
     text-align: center;
     width: 100%; }
@@ -2479,7 +2479,7 @@ a {
         padding-right: 40px;
         position: relative; }
         .accordionMenu > li > a .signal::after {
-          background: url("../sysimages/button/openAccordion.svg") no-repeat center center;
+          background: url("../sysimages/button/openAccordion.png") no-repeat center center;
           display: block;
           width: 20px;
           height: 20px;
@@ -2493,7 +2493,7 @@ a {
     .accordionMenu > li.active .accordionHeader, .accordionMenu > li.active .signal {
       color: rgba(190, 151, 95, 0.8); }
     .accordionMenu > li.active .signal::after {
-      background: url("../sysimages/button/closeAccordion.svg") no-repeat center center; }
+      background: url("../sysimages/button/closeAccordion.png") no-repeat center center; }
     .accordionMenu > li .accordionContent {
       margin: 20px -15px 20px 0; }
       .accordionMenu > li .accordionContent:before, .accordionMenu > li .accordionContent:after {
@@ -2586,7 +2586,7 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
     height: 5px;
     width: 26px;
     content: '';
-    background: url(../sysimages/triangles.svg) no-repeat;
+    background: url(../sysimages/triangles.png) no-repeat;
     opacity: 0;
     left: calc(50% - 12px);
     -moz-transition: all 0.2s ease;
@@ -2870,7 +2870,7 @@ input[type='submit'],
     #header .navbar .navbar-right #searchbutton {
       width: 50px;
       height: 80px;
-      background: url(../sysimages/button/button_search.svg) no-repeat center center; }
+      background: url(../sysimages/button/button_search.png) no-repeat center center; }
       #header .navbar .navbar-right #searchbutton:hover {
         background-color: rgba(190, 151, 95, 0.8); }
     #header .navbar .navbar-right #loginButton {
@@ -2994,34 +2994,34 @@ input[type='submit'],
       height: 108px;
       margin-left: -13px; }
       #footer .socialIcons a.fb {
-        background: url(../sysimages/social/icon_facebook.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_facebook.png) no-repeat center center; }
         #footer .socialIcons a.fb:hover {
-          background: url(../sysimages/social/icon_facebook_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_facebook_over.png) no-repeat center center;
           background-size: 100%; }
       #footer .socialIcons a.yt {
-        background: url(../sysimages/social/icon_youtube.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_youtube.png) no-repeat center center; }
         #footer .socialIcons a.yt:hover {
-          background: url(../sysimages/social/icon_youtube_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_youtube_over.png) no-repeat center center;
           background-size: 100%; }
       #footer .socialIcons a.lk {
-        background: url(../sysimages/social/icon_linkedin.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_linkedin.png) no-repeat center center; }
         #footer .socialIcons a.lk:hover {
-          background: url(../sysimages/social/icon_linkedin_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_linkedin_over.png) no-repeat center center;
           background-size: 100%; }
       #footer .socialIcons a.wap {
-        background: url(../sysimages/social/icon_whatsapp.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_whatsapp.png) no-repeat center center; }
         #footer .socialIcons a.wap:hover {
-          background: url(../sysimages/social/icon_whatsapp_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_whatsapp_over.png) no-repeat center center;
           background-size: 100%; }
       #footer .socialIcons a.twt {
-        background: url(../sysimages/social/icon_twitter.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_twitter.png) no-repeat center center; }
         #footer .socialIcons a.twt:hover {
-          background: url(../sysimages/social/icon_twitter_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_twitter_over.png) no-repeat center center;
           background-size: 100%; }
       #footer .socialIcons a.inst {
-        background: url(../sysimages/social/icon_instagram.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_instagram.png) no-repeat center center; }
         #footer .socialIcons a.inst:hover {
-          background: url(../sysimages/social/icon_instagram_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_instagram_over.png) no-repeat center center;
           background-size: 100%; }
   #footer #backTop {
     height: 108px;
@@ -3113,8 +3113,7 @@ input[type='submit'],
   animation: AnimRotation 35s infinite;
   -moz-animation: AnimRotation 35s infinite;
   -webkit-animation: AnimRotation 35s infinite;
-  width: 200px;
-  height: 200px; }
+  width: 200px; }
 
 /*TODO - remove from this doc*/
 .bg2 {
@@ -3135,7 +3134,6 @@ input[type='submit'],
   z-index: 2;
   opacity: .3;
   width: 200px;
-  height: 200px;
   animation: AnimRotationReverse 35s infinite;
   -moz-animation: AnimRotationReverse 35s infinite;
   -webkit-animation: AnimRotationReverse 35s infinite; }
@@ -3345,7 +3343,7 @@ input[type='submit'],
       font-family: 'helveticabold';
       font-size: 11px;
       color: #FFF;
-      padding: 6px 22px 4px;
+      padding: 2px 22px 4px;
       text-transform: capitalize;
       height: 23px; }
     .listContainer .listElement .elementContent .flagState {
@@ -3447,7 +3445,7 @@ input[type='submit'],
 .trends:hover #elementIcon {
   fill: #991720; }
 .trends.filter label.checked::after {
-  background: url(../sysimages/checkbox/trends.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/trends.png) no-repeat center center !important; }
 .trends.filter label::before {
   background: #991720; }
 
@@ -3460,7 +3458,7 @@ input[type='submit'],
 .institutes:hover #elementIcon {
   fill: #2db677; }
 .institutes.filter label.checked::after {
-  background: url(../sysimages/checkbox/institutes.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/institutes.png) no-repeat center center !important; }
 .institutes.filter label::before {
   background: #2db677; }
 
@@ -3473,7 +3471,7 @@ input[type='submit'],
 .consultancies:hover #elementIcon {
   fill: #515354; }
 .consultancies.filter label.checked::after {
-  background: url(../sysimages/checkbox/consultancies.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/consultancies.png) no-repeat center center !important; }
 .consultancies.filter label::before {
   background: #515354; }
 
@@ -3486,7 +3484,7 @@ input[type='submit'],
 .organizations:hover #elementIcon {
   fill: #b1b2b3; }
 .organizations.filter label.checked::after {
-  background: url(../sysimages/checkbox/consultancies.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/consultancies.png) no-repeat center center !important; }
 .organizations.filter label::before {
   background: #b1b2b3; }
 
@@ -3499,7 +3497,7 @@ input[type='submit'],
 .courses:hover #elementIcon {
   fill: #0064a6; }
 .courses.filter label.checked::after {
-  background: url(../sysimages/checkbox/courses.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/courses.png) no-repeat center center !important; }
 .courses.filter label::before {
   background: #0064a6; }
 
@@ -3512,7 +3510,7 @@ input[type='submit'],
 .news:hover #elementIcon {
   fill: #f7931e; }
 .news.filter label.checked::after {
-  background: url(../sysimages/checkbox/news.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/news.png) no-repeat center center !important; }
 .news.filter label::before {
   background: #f7931e; }
 
@@ -3525,7 +3523,7 @@ input[type='submit'],
 .scholarships:hover #elementIcon {
   fill: #ed1c24; }
 .scholarships.filter label.checked::after {
-  background: url(../sysimages/checkbox/scholarships.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/scholarships.png) no-repeat center center !important; }
 .scholarships.filter label::before {
   background: #ed1c24; }
 
@@ -3538,7 +3536,7 @@ input[type='submit'],
 .conferences:hover #elementIcon {
   fill: #be9857; }
 .conferences.filter label.checked::after {
-  background: url(../sysimages/checkbox/conferences.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/conferences.png) no-repeat center center !important; }
 .conferences.filter label::before {
   background: #be9857; }
 
@@ -3551,7 +3549,7 @@ input[type='submit'],
 .initiatives:hover #elementIcon {
   fill: #998675; }
 .initiatives.filter label.checked::after {
-  background: url(../sysimages/checkbox/initiatives.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/initiatives.png) no-repeat center center !important; }
 .initiatives.filter label::before {
   background: #998675; }
 
@@ -3564,7 +3562,7 @@ input[type='submit'],
 .tools:hover #elementIcon {
   fill: #29abe2; }
 .tools.filter label.checked::after {
-  background: url(../sysimages/checkbox/tools.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/tools.png) no-repeat center center !important; }
 .tools.filter label::before {
   background: #29abe2; }
 
@@ -3577,7 +3575,7 @@ input[type='submit'],
 .academia:hover #elementIcon {
   fill: #935491; }
 .academia.filter label.checked::after {
-  background: url(../sysimages/checkbox/academia.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/academia.png) no-repeat center center !important; }
 .academia.filter label::before {
   background: #935491; }
 
@@ -3590,7 +3588,7 @@ input[type='submit'],
 .briefs:hover #elementIcon {
   fill: #8cc63f; }
 .briefs.filter label.checked::after {
-  background: url(../sysimages/checkbox/briefs.svg) no-repeat center center !important; }
+  background: url(../sysimages/checkbox/briefs.png) no-repeat center center !important; }
 .briefs.filter label::before {
   background: #8cc63f; }
 
@@ -3678,7 +3676,7 @@ input[type='submit'],
     content: '';
     display: block;
     z-index: 0;
-    background: url(../sysimages/animate/banner_graf1.svg) no-repeat 0 -100%;
+    background: url(../sysimages/animate/banner_graf1.png) no-repeat 0 -100%;
     width: 700px;
     height: 700px; }
   #newsSection .bgLines,
@@ -3758,18 +3756,12 @@ input[type='submit'],
       z-index: 100;
       width: 40px;
       height: 20px;
-      background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
+      background: url(../sysimages/checkbox/unchecked.png) no-repeat center center;
       -moz-transition: background 0.4s ease;
       -o-transition: background 0.4s ease;
       -webkit-transition: background 0.4s ease;
       transition: background 0.4s ease; }
     #filterSection .filter label input[type='checkbox'] {
-      /*float: right;
-      -moz-appearance:none;
-      -webkit-appearance: none;
-      appearance: none;
-      border:none;
-      outline: none;*/
       opacity: 0; }
     #filterSection .filter label:hover {
       color: #21282f; }

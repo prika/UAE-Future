@@ -195,7 +195,7 @@ a{
 			width: 27px;
 			height: 5px;
 			content: '';
-			background: url(../sysimages/triangles_title.svg) no-repeat; 
+			background: url(../sysimages/triangles_title.png) no-repeat; 
 		}
 	}
 	
@@ -228,7 +228,7 @@ a{
 			width: 27px;
 			height: 5px;
 			content: '';
-			background: url(../sysimages/triangles_title.svg) no-repeat; 
+			background: url(../sysimages/triangles_title.png) no-repeat; 
 		}
 	}
 	
@@ -285,7 +285,7 @@ a{
 				position: relative;
 				
 				&::after{
-					background: url('../sysimages/button/openAccordion.svg') no-repeat center center;
+					background: url('../sysimages/button/openAccordion.png') no-repeat center center;
 					display: block; 
 					width: 20px;
 					height: 20px;
@@ -304,7 +304,7 @@ a{
 			.accordionHeader,.signal{color: $color_gold;}
 			
 			.signal::after {
-				background: url('../sysimages/button/closeAccordion.svg') no-repeat center center;
+				background: url('../sysimages/button/closeAccordion.png') no-repeat center center;
 			}
 		}
 		
@@ -412,7 +412,7 @@ select {
 		height: 5px;
 		width: 26px;
 		content:'';
-		background: url(../sysimages/triangles.svg) no-repeat;
+		background: url(../sysimages/triangles.png) no-repeat;
 		opacity: 0;
 		left: calc(50% - 12px);
 		@include transition(all .2s ease);
@@ -797,7 +797,7 @@ input[type='submit'],
 				font-family: 'helveticabold';
 				font-size: 11px;
 				color: #FFF;
-				padding: 6px 22px 4px;
+				padding: 2px 22px 4px;
 				text-transform: capitalize;
 				height: 23px;
 			}
@@ -949,7 +949,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/trends.svg)  no-repeat center center!important;
+			background: url(../sysimages/checkbox/trends.png)  no-repeat center center!important;
 		}
 		label::before{
 			background: $c_trends;
@@ -974,7 +974,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/institutes.svg) no-repeat center center!important;
+			background: url(../sysimages/checkbox/institutes.png) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_institutes;
@@ -998,7 +998,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/consultancies.svg)  no-repeat center center!important;
+			background: url(../sysimages/checkbox/consultancies.png)  no-repeat center center!important;
 		}	
 		label::before{
 			background: $c_consultancies;
@@ -1022,7 +1022,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/consultancies.svg) no-repeat center center!important;
+			background: url(../sysimages/checkbox/consultancies.png) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_organizations;
@@ -1046,7 +1046,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/courses.svg) no-repeat center center!important;
+			background: url(../sysimages/checkbox/courses.png) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_courses;
@@ -1070,7 +1070,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/news.svg) no-repeat center center!important;
+			background: url(../sysimages/checkbox/news.png) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_news;
@@ -1094,7 +1094,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/scholarships.svg) no-repeat center center!important;
+			background: url(../sysimages/checkbox/scholarships.png) no-repeat center center!important;
 		}	
 		label::before{
 			background: $c_scholarships;
@@ -1118,7 +1118,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/conferences.svg) no-repeat center center!important;
+			background: url(../sysimages/checkbox/conferences.png) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_conferences;
@@ -1142,7 +1142,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/initiatives.svg) no-repeat center center!important;
+			background: url(../sysimages/checkbox/initiatives.png) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_initiatives;
@@ -1166,7 +1166,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/tools.svg)  no-repeat center center!important;
+			background: url(../sysimages/checkbox/tools.png)  no-repeat center center!important;
 		}
 		label::before{
 			background: $c_tools;
@@ -1190,7 +1190,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/academia.svg) no-repeat center center!important;
+			background: url(../sysimages/checkbox/academia.png) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_academia;
@@ -1214,7 +1214,7 @@ $c_briefs:#8cc63f;
 	&.filter{
 		//input[type='checkbox']:checked {
 		label.checked::after{
-			background: url(../sysimages/checkbox/briefs.svg)  no-repeat center center!important;
+			background: url(../sysimages/checkbox/briefs.png)  no-repeat center center!important;
 		}	
 		label::before{
 			background: $c_briefs;
@@ -1345,7 +1345,7 @@ $c_briefs:#8cc63f;
 		opacity: .3;
 		content: '';
 		display: block; z-index: 0;
-		background: url(../sysimages/animate/banner_graf1.svg) no-repeat 0 -100%;
+		background: url(../sysimages/animate/banner_graf1.png) no-repeat 0 -100%;
     //background-size: 50%;
 	    width: 700px;
     	height: 700px;
@@ -1452,21 +1452,14 @@ $c_briefs:#8cc63f;
 			content: '';
 			display: block;
 			
-			
 			z-index: 100;
 			width: 40px;
 			height: 20px;
-			background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
+			background: url(../sysimages/checkbox/unchecked.png) no-repeat center center;
 			@include transition( background .4s ease);
 		}
 		
 		input[type='checkbox']{
-			/*float: right;
-			-moz-appearance:none;
-			-webkit-appearance: none;
-			appearance: none;
-			border:none;
-			outline: none;*/
 			opacity: 0;
 		}
 		
