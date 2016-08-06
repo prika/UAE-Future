@@ -80,5 +80,39 @@
 <script>
     function reset() {  
         $(".filter input").prop('checked', false);
+        $(".filter label").removeClass('checked');
     };
+   
+    $(".filter label").on('click', function(e)
+    {
+        var label = $(this);
+        var input = $(this).find("input");
+        //console.log(label);
+        //console.log(input);
+       
+        
+         
+        //else {
+            
+        //}
+        
+        // debugger;
+            //input.prop('checked', false);
+            //label.removeClass('checked');
+            //return;
+            
+       if( label.hasClass('checked') ){
+              
+              //input.prop('checked', false);
+            label.removeClass("checked");
+            e.stopPropagation();
+              
+        } else {
+            
+              //input.prop('checked', true);    
+               label.addClass("checked");
+               e.stopPropagation();
+        }
+               
+    });
 </script>

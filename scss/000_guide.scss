@@ -370,19 +370,19 @@ select {
 	}
 }
 
-input[type='checkbox'] {
-	-webkit-appearance: none;
+//input[type='checkbox'] {
+	/*-webkit-appearance: none;
    	-moz-appearance:    none;
-   	appearance:         none;
+   	appearance:         none;*/
 	   
-	display: inline-block;
+	/*display: inline-block;
 	vertical-align: middle;
 	z-index: 100;
 	width: 40px;
 	height: 20px;
 	background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
-	@include transition( background .4s ease);
-}
+	@include transition( background .4s ease);*/
+//}
 
 
 // =================================================================================== //
@@ -797,7 +797,7 @@ input[type='submit'],
 				font-family: 'helveticabold';
 				font-size: 11px;
 				color: #FFF;
-				padding: 4px 22px 4px;
+				padding: 6px 22px 4px;
 				text-transform: capitalize;
 				height: 23px;
 			}
@@ -805,6 +805,7 @@ input[type='submit'],
 			.flagState{
 				top: -10px;
 				font-family: 'intro';
+				padding: 4px 22px 4px;
 				
 				&.new{
 					background: $color_solidGold;
@@ -946,8 +947,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/trends.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/trends.svg)  no-repeat center center!important;
 		}
 		label::before{
 			background: $c_trends;
@@ -970,8 +972,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/institutes.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/institutes.svg) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_institutes;
@@ -993,8 +996,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/consultancies.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/consultancies.svg)  no-repeat center center!important;
 		}	
 		label::before{
 			background: $c_consultancies;
@@ -1016,8 +1020,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/consultancies.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/consultancies.svg) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_organizations;
@@ -1039,8 +1044,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/courses.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/courses.svg) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_courses;
@@ -1062,8 +1068,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/news.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/news.svg) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_news;
@@ -1085,8 +1092,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/scholarships.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/scholarships.svg) no-repeat center center!important;
 		}	
 		label::before{
 			background: $c_scholarships;
@@ -1108,8 +1116,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/conferences.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/conferences.svg) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_conferences;
@@ -1131,8 +1140,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/initiatives.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/initiatives.svg) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_initiatives;
@@ -1154,8 +1164,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/tools.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/tools.svg)  no-repeat center center!important;
 		}
 		label::before{
 			background: $c_tools;
@@ -1177,8 +1188,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/academia.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/academia.svg) no-repeat center center!important;
 		}
 		label::before{
 			background: $c_academia;
@@ -1200,8 +1212,9 @@ $c_briefs:#8cc63f;
 	}
 	
 	&.filter{
-		input[type='checkbox']:checked {
-			background-image: url(../sysimages/checkbox/briefs.svg);
+		//input[type='checkbox']:checked {
+		label.checked::after{
+			background: url(../sysimages/checkbox/briefs.svg)  no-repeat center center!important;
 		}	
 		label::before{
 			background: $c_briefs;
@@ -1429,8 +1442,32 @@ $c_briefs:#8cc63f;
 			display: block;
 		}
 		
+		&::after{
+			position: absolute;
+			right: 0;
+			top: 0;
+			//width: 8px;
+			//height: 8px;
+			//border-radius: 4px;
+			content: '';
+			display: block;
+			
+			
+			z-index: 100;
+			width: 40px;
+			height: 20px;
+			background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
+			@include transition( background .4s ease);
+		}
+		
 		input[type='checkbox']{
-			float: right;
+			/*float: right;
+			-moz-appearance:none;
+			-webkit-appearance: none;
+			appearance: none;
+			border:none;
+			outline: none;*/
+			opacity: 0;
 		}
 		
 		&:hover{
