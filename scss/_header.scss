@@ -222,7 +222,7 @@
 			opacity: 0;
 			@include transition( all .5s ease);
 			
-			form{
+			#frmPesq{
 				width: 100vw;
 				height: 100vh;
 				position: relative;

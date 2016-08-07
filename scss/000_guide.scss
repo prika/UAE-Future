@@ -741,6 +741,11 @@ input[type='submit'],
 // Lists
 .listContainer{
 	
+	.col-xs-12.col-sm-4.col-md-3{
+		padding-right: 7px;
+		padding-left: 7px;
+	}
+		
 	.listElement{
 		position: relative;
 		width: 100%;
@@ -748,6 +753,7 @@ input[type='submit'],
 		display: block;
 		margin-bottom: 15px; 
 		@include clearfix();
+		
 		
 		.Bitmap{
 			opacity: 0;
@@ -761,8 +767,6 @@ input[type='submit'],
 			stroke: $color_lightergrey;
 			@include transition( fill .7s ease );
 		}
-		
-		
 		
 		.elementTitle{
 			position: absolute;
@@ -828,13 +832,16 @@ input[type='submit'],
 				opacity: 1;
 				@include transition( color .2s ease );
 				
-				p{ 
-					margin-top: 25px;
-					//height: 100%;
+				
+				p, h3{
 					display: -webkit-box;
   					-webkit-line-clamp: 3;
   					-webkit-box-orient: vertical; 
-					  overflow: hidden;
+					overflow: hidden;
+				}
+				
+				p{ 
+					margin-top: 25px;
 				}
 			}
 		}

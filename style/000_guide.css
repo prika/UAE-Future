@@ -2902,11 +2902,11 @@ input[type='submit'],
     -o-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease; }
-    #header .navbar .container-search form {
+    #header .navbar .container-search #frmPesq {
       width: 100vw;
       height: 100vh;
       position: relative; }
-      #header .navbar .container-search form .wrapper-input {
+      #header .navbar .container-search #frmPesq .wrapper-input {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -2916,13 +2916,13 @@ input[type='submit'],
         -o-transition: all 0.3s ease 0.2s;
         -webkit-transition: all 0.3s ease 0.2s;
         transition: all 0.3s ease 0.2s; }
-        #header .navbar .container-search form .wrapper-input .search-input {
+        #header .navbar .container-search #frmPesq .wrapper-input .search-input {
           margin-bottom: 20px;
           background: transparent;
           text-align: center;
           padding: 20px 60px;
           font-size: 24px; }
-          #header .navbar .container-search form .wrapper-input .search-input:focus {
+          #header .navbar .container-search #frmPesq .wrapper-input .search-input:focus {
             color: #FFF; }
     #header .navbar .container-search.open .wrapper-input {
       transform: translate(-50%, -50%);
@@ -3281,6 +3281,9 @@ input[type='submit'],
   #ecosystemSection:after {
     clear: both; }
 
+.listContainer .col-xs-12.col-sm-4.col-md-3 {
+  padding-right: 7px;
+  padding-left: 7px; }
 .listContainer .listElement {
   position: relative;
   width: 100%;
@@ -3377,12 +3380,19 @@ input[type='submit'],
       .listContainer .listElement .elementContent .text input[type='search'],
       .listContainer .listElement .elementContent .text input[type='password'],
       .listContainer .listElement .elementContent .text textarea,
-      .listContainer .listElement .elementContent .text select, .listContainer .listElement .elementContent .text #aboutSection blockquote, #aboutSection .listContainer .listElement .elementContent .text blockquote {
-        margin-top: 25px;
+      .listContainer .listElement .elementContent .text select, .listContainer .listElement .elementContent .text #aboutSection blockquote, #aboutSection .listContainer .listElement .elementContent .text blockquote, .listContainer .listElement .elementContent .text h3, .listContainer .listElement .elementContent .text .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .listContainer .listElement .elementContent .text .accordionHeader {
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden; }
+      .listContainer .listElement .elementContent .text p, .listContainer .listElement .elementContent .text input[type='text'],
+      .listContainer .listElement .elementContent .text input[type='number'],
+      .listContainer .listElement .elementContent .text input[type='email'],
+      .listContainer .listElement .elementContent .text input[type='search'],
+      .listContainer .listElement .elementContent .text input[type='password'],
+      .listContainer .listElement .elementContent .text textarea,
+      .listContainer .listElement .elementContent .text select, .listContainer .listElement .elementContent .text #aboutSection blockquote, #aboutSection .listContainer .listElement .elementContent .text blockquote {
+        margin-top: 25px; }
   .listContainer .listElement .downloadPDF {
     position: absolute;
     bottom: 4px;
