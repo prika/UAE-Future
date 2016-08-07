@@ -6,7 +6,7 @@
 
 // ============================================================================================================
 // Mixin and General Animations
-@import '_animations.scss';
+//@import '_animations.scss';
 
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
@@ -550,7 +550,7 @@ input[type='submit'],
 	//@extend %clickable;
 	border: none;
 	border-radius: 0;
-	padding: 20px 25px;
+	padding: 27px 25px;
 	font-size: 16px;
 	@include transition( all .4s ease );
 	
@@ -560,6 +560,8 @@ input[type='submit'],
 	letter-spacing: 1px;
 	color: #FFF;
 	height: 75px;
+	
+	display: inline-block;
 	
 	&::before,
 	&::after{
@@ -753,7 +755,6 @@ input[type='submit'],
 		display: block;
 		margin-bottom: 15px; 
 		@include clearfix();
-		
 		
 		.Bitmap{
 			opacity: 0;

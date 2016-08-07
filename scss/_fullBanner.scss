@@ -39,7 +39,7 @@
 
 #animationFullBanner {
     position: absolute;
-    top: -20%;
+    top: -30%;
     left: calc(50% - 400px);
     opacity: .3;
     animation: Amim1 35s infinite ;
@@ -64,9 +64,8 @@
     animation: AnimRotation 35s infinite;
     -moz-animation: AnimRotation 35s infinite;
     -webkit-animation: AnimRotation 35s infinite;
-    width: 200px;
+    width: 170px;
 }
-
 
 /*TODO - remove from this doc*/
 .bg2{
@@ -76,14 +75,14 @@
     z-index: 9;
     @include transition( all .4s ease );    
 }
-/*TODO - remove from this doc*/
+
 
 .bg3{
     position: absolute;
-    right: 5%; top: 5%;
+    right: 5%; top: 20%;
     z-index: 2; 
     opacity: .3;
-    width: 200px;
+    width: 170px;
     animation: AnimRotationReverse 35s infinite;
     -moz-animation: AnimRotationReverse 35s infinite ;
     -webkit-animation: AnimRotationReverse 35s infinite;
