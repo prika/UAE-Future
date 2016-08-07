@@ -19,39 +19,43 @@
         </ul>
 
         <div class="navbar-right">
-            
+
             <a href="login.html" id="userProfile"><img src="images/user.jpg" alt="Rashid Halam"></a>
 
             <a href="javascript:void(0)" id="searchbutton"></a>
 
             <a href="login.html" id="loginButton">Login</a>
-            
+
             <div id="navIcon"><span></span><span></span><span></span></div>
         </div>
     </div>
 
     <div class="container-search">
-        <form name="frmPesq" method="GET" action="">
-            <!--input type="hidden" name="id" value="36"-->
+        <div id="frmPesq">
             <div class="wrapper-input">
-                <input type="search" class="search-input" placeholder="What are you looking for?" name="term">
-                <button>Search Here</button>
+                <input type="search" class="search-input" id="input-id" placeholder="What are you looking for?">
+                <a href="#" class="button" id="searchSubmitBtn">Search Here</a>
             </div>
-        </form>
+        </div>
     </div>
 </nav>
 
 <script>
 
+    $('#searchSubmitBtn').click(function (ev) {
+        var term = $("#input-id").val();
+        window.location = "uae_searchresults?searchQuery=" + term + "&indexCatalogue=uae-index&wordsMode=0";
+    });
+
     $('#searchbutton').click(function () {
 
         if ($('.container-search').hasClass('open')) {
-            
+
             $('#overlay').fadeOut();
             $('.container-search').removeClass('open');
             $('.container-search').css('visibility', 'hidden').css('opacity', '0');
         } else {
-            
+
             $('#overlay').fadeIn();
             $('.container-search').addClass('open');
             $('.container-search').css('visibility', 'visible').css('opacity', '1');
@@ -62,18 +66,16 @@
         }
     });
 
-function bindClose(){
-    
-    $('.wrapper-input').click(function (ev)
-    {
-        ev.stopPropagation();
-    });
-    
-    $('.container-search.open').click(function (ev) 
-    {
-        $('#overlay').fadeOut();
-        $('.container-search').removeClass('open');
-        $('.container-search').css('visibility', 'hidden').css('opacity', '0');
-    });
-}
+    function bindClose() {
+
+        $('.wrapper-input').click(function (ev) {
+            ev.stopPropagation();
+        });
+
+        $('.container-search.open').click(function (ev) {
+            $('#overlay').fadeOut();
+            $('.container-search').removeClass('open');
+            $('.container-search').css('visibility', 'hidden').css('opacity', '0');
+        });
+    }
 </script>
