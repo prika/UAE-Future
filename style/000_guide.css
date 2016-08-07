@@ -2421,7 +2421,7 @@ a {
       width: 27px;
       height: 5px;
       content: '';
-      background: url(../sysimages/triangles_title.svg) no-repeat; }
+      background: url(../sysimages/triangles_title.png) no-repeat; }
   .title.leftTitle {
     padding: 70px 0 20px; }
     .title.leftTitle h1 {
@@ -2444,7 +2444,7 @@ a {
       width: 27px;
       height: 5px;
       content: '';
-      background: url(../sysimages/triangles_title.svg) no-repeat; }
+      background: url(../sysimages/triangles_title.png) no-repeat; }
   .subtitle.centeredSubtitle h3, .subtitle.centeredSubtitle .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .subtitle.centeredSubtitle .accordionHeader {
     text-align: center;
     width: 100%; }
@@ -2479,7 +2479,7 @@ a {
         padding-right: 40px;
         position: relative; }
         .accordionMenu > li > a .signal::after {
-          background: url("../sysimages/button/openAccordion.svg") no-repeat center center;
+          background: url("../sysimages/button/openAccordion.png") no-repeat center center;
           display: block;
           width: 20px;
           height: 20px;
@@ -2493,7 +2493,7 @@ a {
     .accordionMenu > li.active .accordionHeader, .accordionMenu > li.active .signal {
       color: rgba(190, 151, 95, 0.8); }
     .accordionMenu > li.active .signal::after {
-      background: url("../sysimages/button/closeAccordion.svg") no-repeat center center; }
+      background: url("../sysimages/button/closeAccordion.png") no-repeat center center; }
     .accordionMenu > li .accordionContent {
       margin: 20px -15px 20px 0; }
       .accordionMenu > li .accordionContent:before, .accordionMenu > li .accordionContent:after {
@@ -2558,21 +2558,16 @@ select {
   select:focus {
     border-color: rgba(190, 151, 95, 0.8); }
 
-input[type='checkbox'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  vertical-align: middle;
-  z-index: 100;
-  width: 40px;
-  height: 20px;
-  background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
-  -moz-transition: background 0.4s ease;
-  -o-transition: background 0.4s ease;
-  -webkit-transition: background 0.4s ease;
-  transition: background 0.4s ease; }
-
+	/*-webkit-appearance: none;
+   	-moz-appearance:    none;
+   	appearance:         none;*/
+/*display: inline-block;
+vertical-align: middle;
+z-index: 100;
+width: 40px;
+height: 20px;
+background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
+@include transition( background .4s ease);*/
 #header .navbar #nav li a, #header .navbar .navbar-right #loginButton {
   font-family: 'intro';
   font-weight: 300;
@@ -2591,7 +2586,7 @@ input[type='checkbox'] {
     height: 5px;
     width: 26px;
     content: '';
-    background: url(../sysimages/triangles.svg) no-repeat;
+    background: url(../sysimages/triangles.png) no-repeat;
     opacity: 0;
     left: calc(50% - 12px);
     -moz-transition: all 0.2s ease;
@@ -2875,7 +2870,7 @@ input[type='submit'],
     #header .navbar .navbar-right #searchbutton {
       width: 50px;
       height: 80px;
-      background: url(../sysimages/button/button_search.svg) no-repeat center center; }
+      background: url(../sysimages/button/button_search.png) no-repeat center center; }
       #header .navbar .navbar-right #searchbutton:hover {
         background-color: rgba(190, 151, 95, 0.8); }
     #header .navbar .navbar-right #loginButton {
@@ -2999,34 +2994,34 @@ input[type='submit'],
       height: 108px;
       margin-left: -13px; }
       #footer .socialIcons a.fb {
-        background: url(../sysimages/social/icon_facebook.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_facebook.png) no-repeat center center; }
         #footer .socialIcons a.fb:hover {
-          background: url(../sysimages/social/icon_facebook_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_facebook_over.png) no-repeat center center;
           background-size: 100%; }
       #footer .socialIcons a.yt {
-        background: url(../sysimages/social/icon_youtube.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_youtube.png) no-repeat center center; }
         #footer .socialIcons a.yt:hover {
-          background: url(../sysimages/social/icon_youtube_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_youtube_over.png) no-repeat center center;
           background-size: 100%; }
       #footer .socialIcons a.lk {
-        background: url(../sysimages/social/icon_linkedin.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_linkedin.png) no-repeat center center; }
         #footer .socialIcons a.lk:hover {
-          background: url(../sysimages/social/icon_linkedin_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_linkedin_over.png) no-repeat center center;
           background-size: 100%; }
       #footer .socialIcons a.wap {
-        background: url(../sysimages/social/icon_whatsapp.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_whatsapp.png) no-repeat center center; }
         #footer .socialIcons a.wap:hover {
-          background: url(../sysimages/social/icon_whatsapp_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_whatsapp_over.png) no-repeat center center;
           background-size: 100%; }
       #footer .socialIcons a.twt {
-        background: url(../sysimages/social/icon_twitter.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_twitter.png) no-repeat center center; }
         #footer .socialIcons a.twt:hover {
-          background: url(../sysimages/social/icon_twitter_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_twitter_over.png) no-repeat center center;
           background-size: 100%; }
       #footer .socialIcons a.inst {
-        background: url(../sysimages/social/icon_instagram.svg) no-repeat center center; }
+        background: url(../sysimages/social/icon_instagram.png) no-repeat center center; }
         #footer .socialIcons a.inst:hover {
-          background: url(../sysimages/social/icon_instagram_over.svg) no-repeat center center;
+          background: url(../sysimages/social/icon_instagram_over.png) no-repeat center center;
           background-size: 100%; }
   #footer #backTop {
     height: 108px;
@@ -3065,7 +3060,6 @@ input[type='submit'],
 #fullBanner {
   height: 100vh;
   width: 100%;
-  display: table;
   position: relative;
   overflow: hidden; }
   #fullBanner .bannerContent {
@@ -3119,8 +3113,7 @@ input[type='submit'],
   animation: AnimRotation 35s infinite;
   -moz-animation: AnimRotation 35s infinite;
   -webkit-animation: AnimRotation 35s infinite;
-  width: 200px;
-  height: 200px; }
+  width: 200px; }
 
 /*TODO - remove from this doc*/
 .bg2 {
@@ -3141,7 +3134,6 @@ input[type='submit'],
   z-index: 2;
   opacity: .3;
   width: 200px;
-  height: 200px;
   animation: AnimRotationReverse 35s infinite;
   -moz-animation: AnimRotationReverse 35s infinite;
   -webkit-animation: AnimRotationReverse 35s infinite; }
@@ -3351,12 +3343,13 @@ input[type='submit'],
       font-family: 'helveticabold';
       font-size: 11px;
       color: #FFF;
-      padding: 4px 22px 4px;
+      padding: 2px 22px 4px;
       text-transform: capitalize;
       height: 23px; }
     .listContainer .listElement .elementContent .flagState {
       top: -10px;
-      font-family: 'intro'; }
+      font-family: 'intro';
+      padding: 4px 22px 4px; }
       .listContainer .listElement .elementContent .flagState.new {
         background: #be9857;
         border: 1px solid #FFF; }
@@ -3451,8 +3444,8 @@ input[type='submit'],
   background-image: url(../sysimages/categories/trends@2x.png); }
 .trends:hover #elementIcon {
   fill: #991720; }
-.trends.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/trends.svg); }
+.trends.filter label.checked::after {
+  background: url(../sysimages/checkbox/trends.png) no-repeat center center !important; }
 .trends.filter label::before {
   background: #991720; }
 
@@ -3464,8 +3457,8 @@ input[type='submit'],
   background: url(../sysimages/categories/institutes@2x.png) no-repeat center center; }
 .institutes:hover #elementIcon {
   fill: #2db677; }
-.institutes.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/institutes.svg); }
+.institutes.filter label.checked::after {
+  background: url(../sysimages/checkbox/institutes.png) no-repeat center center !important; }
 .institutes.filter label::before {
   background: #2db677; }
 
@@ -3477,8 +3470,8 @@ input[type='submit'],
   background: url(../sysimages/categories/consultancies@2x.png) no-repeat center center; }
 .consultancies:hover #elementIcon {
   fill: #515354; }
-.consultancies.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/consultancies.svg); }
+.consultancies.filter label.checked::after {
+  background: url(../sysimages/checkbox/consultancies.png) no-repeat center center !important; }
 .consultancies.filter label::before {
   background: #515354; }
 
@@ -3490,8 +3483,8 @@ input[type='submit'],
   background: url(../sysimages/categories/organizations.png) no-repeat center center; }
 .organizations:hover #elementIcon {
   fill: #b1b2b3; }
-.organizations.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/consultancies.svg); }
+.organizations.filter label.checked::after {
+  background: url(../sysimages/checkbox/consultancies.png) no-repeat center center !important; }
 .organizations.filter label::before {
   background: #b1b2b3; }
 
@@ -3503,8 +3496,8 @@ input[type='submit'],
   background: url(../sysimages/categories/courses.png) no-repeat center center; }
 .courses:hover #elementIcon {
   fill: #0064a6; }
-.courses.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/courses.svg); }
+.courses.filter label.checked::after {
+  background: url(../sysimages/checkbox/courses.png) no-repeat center center !important; }
 .courses.filter label::before {
   background: #0064a6; }
 
@@ -3516,8 +3509,8 @@ input[type='submit'],
   background: url(../sysimages/categories/news.png) no-repeat center center; }
 .news:hover #elementIcon {
   fill: #f7931e; }
-.news.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/news.svg); }
+.news.filter label.checked::after {
+  background: url(../sysimages/checkbox/news.png) no-repeat center center !important; }
 .news.filter label::before {
   background: #f7931e; }
 
@@ -3529,8 +3522,8 @@ input[type='submit'],
   background: url(../sysimages/categories/scholarships.png) no-repeat center center; }
 .scholarships:hover #elementIcon {
   fill: #ed1c24; }
-.scholarships.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/scholarships.svg); }
+.scholarships.filter label.checked::after {
+  background: url(../sysimages/checkbox/scholarships.png) no-repeat center center !important; }
 .scholarships.filter label::before {
   background: #ed1c24; }
 
@@ -3542,8 +3535,8 @@ input[type='submit'],
   background: url(../sysimages/categories/conferences.png) no-repeat center center; }
 .conferences:hover #elementIcon {
   fill: #be9857; }
-.conferences.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/conferences.svg); }
+.conferences.filter label.checked::after {
+  background: url(../sysimages/checkbox/conferences.png) no-repeat center center !important; }
 .conferences.filter label::before {
   background: #be9857; }
 
@@ -3555,8 +3548,8 @@ input[type='submit'],
   background: url(../sysimages/categories/initiatives.png) no-repeat center center; }
 .initiatives:hover #elementIcon {
   fill: #998675; }
-.initiatives.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/initiatives.svg); }
+.initiatives.filter label.checked::after {
+  background: url(../sysimages/checkbox/initiatives.png) no-repeat center center !important; }
 .initiatives.filter label::before {
   background: #998675; }
 
@@ -3568,8 +3561,8 @@ input[type='submit'],
   background: url(../sysimages/categories/tools.png) no-repeat center center; }
 .tools:hover #elementIcon {
   fill: #29abe2; }
-.tools.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/tools.svg); }
+.tools.filter label.checked::after {
+  background: url(../sysimages/checkbox/tools.png) no-repeat center center !important; }
 .tools.filter label::before {
   background: #29abe2; }
 
@@ -3581,8 +3574,8 @@ input[type='submit'],
   background: url(../sysimages/categories/academia.png) no-repeat center center; }
 .academia:hover #elementIcon {
   fill: #935491; }
-.academia.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/academia.svg); }
+.academia.filter label.checked::after {
+  background: url(../sysimages/checkbox/academia.png) no-repeat center center !important; }
 .academia.filter label::before {
   background: #935491; }
 
@@ -3594,8 +3587,8 @@ input[type='submit'],
   background: url(../sysimages/categories/briefs.png) no-repeat center center; }
 .briefs:hover #elementIcon {
   fill: #8cc63f; }
-.briefs.filter input[type='checkbox']:checked {
-  background-image: url(../sysimages/checkbox/briefs.svg); }
+.briefs.filter label.checked::after {
+  background: url(../sysimages/checkbox/briefs.png) no-repeat center center !important; }
 .briefs.filter label::before {
   background: #8cc63f; }
 
@@ -3683,7 +3676,7 @@ input[type='submit'],
     content: '';
     display: block;
     z-index: 0;
-    background: url(../sysimages/animate/banner_graf1.svg) no-repeat 0 -100%;
+    background: url(../sysimages/animate/banner_graf1.png) no-repeat 0 -100%;
     width: 700px;
     height: 700px; }
   #newsSection .bgLines,
@@ -3754,8 +3747,22 @@ input[type='submit'],
       border-radius: 4px;
       content: '';
       display: block; }
+    #filterSection .filter label::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: '';
+      display: block;
+      z-index: 100;
+      width: 40px;
+      height: 20px;
+      background: url(../sysimages/checkbox/unchecked.png) no-repeat center center;
+      -moz-transition: background 0.4s ease;
+      -o-transition: background 0.4s ease;
+      -webkit-transition: background 0.4s ease;
+      transition: background 0.4s ease; }
     #filterSection .filter label input[type='checkbox'] {
-      float: right; }
+      opacity: 0; }
     #filterSection .filter label:hover {
       color: #21282f; }
   #filterSection .subtitle h3, #filterSection .subtitle .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a #filterSection .subtitle .accordionHeader {

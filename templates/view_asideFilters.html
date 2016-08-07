@@ -8,77 +8,96 @@
             <input type="checkbox">
         </label>
     </div>
-    
+
     <div class="filter institutes">
         <label>Institutes
             <input type="checkbox">
         </label>
     </div>
-    
+
     <div class="filter consultancies">
         <label>Consultancies
             <input type="checkbox">
         </label>
     </div>
-    
-        <div class="filter organizations">
+
+    <div class="filter organizations">
         <label>Organizations
             <input type="checkbox">
         </label>
     </div>
-    
-        <div class="filter conferences">
+
+    <div class="filter conferences">
         <label>Conferences
             <input type="checkbox">
         </label>
     </div>
-    
-        <div class="filter scholarships">
+
+    <div class="filter scholarships">
         <label>Scholarships
             <input type="checkbox">
         </label>
     </div>
-    
+
     <div class="filter news">
         <label>News
             <input type="checkbox">
         </label>
     </div>
-    
+
     <div class="filter trends">
         <label>Trends
             <input type="checkbox">
         </label>
     </div>
-    
+
     <div class="filter courses">
         <label>Courses
             <input type="checkbox">
         </label>
     </div>
-    
+
     <div class="filter initiatives">
         <label>Initiatives
             <input type="checkbox">
         </label>
     </div>
-    
+
     <div class="filter tools">
         <label>Tools
             <input type="checkbox">
         </label>
     </div>
-    
-        <div class="filter briefs">
+
+    <div class="filter briefs">
         <label>Briefs
             <input type="checkbox">
         </label>
     </div>
-    
 </div>
 
 <script>
-    function reset() {  
+    function reset() 
+    {  
         $(".filter input").prop('checked', false);
+        $(".filter label").removeClass('checked');
     };
+  
+     $(".filter label").click(function(e)
+     {
+          var me = $(this);
+          var isChecked = me.hasClass("checked"); 
+          
+          if (isChecked)  
+          { 
+             me.removeClass("checked");
+          }       
+          else {  
+             me.addClass("checked"); 
+          }
+        
+         e.preventDefault();         
+         me.find('input[type=checkbox]').attr("ckecked", !isChecked);
+       });
+        
 </script>
