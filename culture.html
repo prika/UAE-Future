@@ -33,6 +33,7 @@
 
 <body>
     <script type="text/javascript">
+    
         var scope = {
             currentPage: "culture",
             bgHeader: "rgba(171,188,203,0.80)"
@@ -75,12 +76,12 @@
 
                 var player;
                 var done = false;
-                var playlistId = 'PLt3h35Kb9DZiFkYcnTJItTA2mdcVmiQrG';
-
+              
                 function onYouTubeIframeAPIReady() {
                     player = new YT.Player('player', {
                         height: '390',
                         width: '640',
+                        videoId: 'JW5meKfy3fY',
                         playerVars: {
                             autoplay: 0,
                             controls: 1
@@ -92,30 +93,28 @@
                     });
                 }
 
-                function onPlayerReady(event) {
-                    event.target.cuePlaylist({
-                        listType: 'playlist',
-                        list: playlistId,
-                    });
+                function onPlayerReady(event) 
+                {
+                    event.target.playVideo();
                 }
 
-                function onPlayerStateChange(event) {
-                    
+                function onPlayerStateChange(event) 
+                {    
                     if (event.data == YT.PlayerState.ENDED && !done) {
                         done = true;
-                        console.log('Video Finished');
                         stopVideo();
                     }
                 }
 
-                function stopVideo() {
+                function stopVideo() 
+                {
                     player.stopVideo();
                 }
 
-                function playAtIndex(index) {
-                    player.playVideoAt(index)
+                function play(id) {
+                    player.loadVideoById(id);
                 }
-
+                
             </script>
 
         </section>
@@ -126,9 +125,41 @@
                 <div class="title">
                     <h1>Online Training Video</h1>
                 </div>
-
-                <a href="javascript: playAtIndex(3);">next </a>
-
+                <div class="video-thumb"> 
+                <a href="javascript: play('2Xo8IjO5CKo');">
+                   <img src="http://img.youtube.com/vi/SLaYPmhse30/1.jpg"/>
+                </a>
+                </div>
+                <div class="video-thumb"> 
+                <a href="javascript: play('2Xo8IjO5CKo');">
+                   <img src="http://img.youtube.com/vi/SLaYPmhse30/1.jpg"/>
+                </a>
+                </div>
+                
+                <div class="video-thumb"> 
+                <a href="javascript: play('2Xo8IjO5CKo');">
+                   <img src="http://img.youtube.com/vi/SLaYPmhse30/1.jpg"/>
+                </a>
+                </div>
+                <div class="video-thumb"> 
+                <a href="javascript: play('2Xo8IjO5CKo');">
+                   <img src="http://img.youtube.com/vi/SLaYPmhse30/1.jpg"/>
+                </a>
+                </div>
+                <div class="video-thumb"> 
+                <a href="javascript: play('2Xo8IjO5CKo');">
+                   <img src="http://img.youtube.com/vi/SLaYPmhse30/1.jpg"/>
+                </a>
+                </div>
+                <div class="video-thumb"> 
+                <a href="javascript: play('2Xo8IjO5CKo');">
+                   <img src="http://img.youtube.com/vi/SLaYPmhse30/1.jpg"/>
+                </a>
+                </div><div class="video-thumb"> 
+                <a href="javascript: play('2Xo8IjO5CKo');">
+                   <img src="http://img.youtube.com/vi/SLaYPmhse30/1.jpg"/>
+                </a>
+                </div>
             </div>
         </section>
 
