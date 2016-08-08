@@ -70,7 +70,7 @@
     </div>
 
     <div class="filter briefs">
-        <label>Briefs
+        <label class="checked">Briefs
             <input type="checkbox">
         </label>
     </div>
@@ -78,9 +78,11 @@
 
 <script>
     function reset() 
-    {  
-        $(".filter input").prop('checked', false);
-        $(".filter label").removeClass('checked');
+    {
+        e.preventDefault();
+        $(".filter input").find('input[type=checkbox]').attr("checked", true);
+        $(".filter label").addClass('checked');
+        refreshFilteredAnnouncements();
     };
   
      $(".filter label").click(function(e)
@@ -97,7 +99,40 @@
           }
         
          e.preventDefault();         
-         me.find('input[type=checkbox]').attr("ckecked", !isChecked);
+         me.find('input[type=checkbox]').attr("checked", !isChecked);
+         refreshFilteredAnnouncements();
        });
+
+
+     $(document).ready(function () {
+
+         refreshFilteredAnnouncements();
         
+     });
+
+    
+     var refreshFilteredAnnouncements = function () {
+         var checkedCategories = $('#announcementFilters').find("input[type='checkbox']:checked");
+         var checkedCategoriesIds = new Array();
+
+         if (checkedCategories.length == 0) {
+             checkedCategories = $('#announcementFilters').find("input[type='checkbox']").prop('checked', true);
+         }
+
+         for (var i = 0; i < checkedCategories.length; i++) {
+             checkedCategoriesIds.push(checkedCategories[i].getAttribute("categoryId"));
+         }
+
+         var startDate = $("#filterStartDate").val();
+         var endDate = $("#filterEndDate").val();
+
+         $.ajax({
+             url: "Announcements/FilteredAnnouncementsWithArea?Id=" + checkedCategoriesIds.join(";") + "&StartDate=" + startDate + "&EndDate=" + endDate + "&Category=Ecosystem&idCategory=1",
+             success: function (data) {
+                 $("#filteredAnnouncenemts").html(data);
+             }
+         });
+     }
+    
 </script>
+
