@@ -810,9 +810,9 @@ input[type='submit'],
   top: -30%;
   left: calc(50% - 400px);
   opacity: .3;
-  animation: Amim1 35s infinite;
-  -moz-animation: Amim1 35s infinite;
-  -webkit-animation: Amim1 35s infinite;
+  animation: AnimRotation 35s infinite;
+  -moz-animation: AnimRotation 35s infinite;
+  -webkit-animation: AnimRotation 35s infinite;
   height: 800px; }
 
 .bg1,
@@ -1404,7 +1404,10 @@ input[type='submit'],
     z-index: 0;
     background: url(../sysimages/animate/banner_graf1.png) no-repeat 0 -100%;
     width: 700px;
-    height: 700px; }
+    height: 700px;
+    animation: AnimRotation 35s infinite;
+    -moz-animation: AnimRotation 35s infinite;
+    -webkit-animation: AnimRotation 35s infinite; }
   #newsSection .bgLines,
   #newsSection .bgLines2 {
     position: absolute;
