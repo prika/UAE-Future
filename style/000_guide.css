@@ -1690,9 +1690,18 @@ input[type='submit'],
       #cultureSection #listContainerCulture .element img {
         width: 100%; }
       #cultureSection #listContainerCulture .element .description {
-        padding: 10px; }
+        padding: 10px;
+        background-color: #dfdfdf;
+        margin-top: -4px; }
         #cultureSection #listContainerCulture .element .description .timeEvent {
           font-size: 12px;
           color: rgba(190, 151, 95, 0.8); }
+
+@media (max-width: 1100px) {
+  #listContainerCulture .element {
+    width: 49% !important; } }
+@media (max-width: 900px) {
+  #listContainerCulture .element {
+    width: 99% !important; } }
 
 /*# sourceMappingURL=000_guide.css.map */

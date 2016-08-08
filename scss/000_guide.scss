@@ -1333,7 +1333,6 @@ $c_briefs:#8cc63f;
   .listContainerCalendar .element{
 	  width: 99%!important;
   }
-  
 }
 
 
@@ -1708,6 +1707,7 @@ $c_briefs:#8cc63f;
 			width: 20%;
     		padding: .6%;
 			float: left;
+			 
 			
 			img {
 				width: 100%;
@@ -1715,6 +1715,8 @@ $c_briefs:#8cc63f;
 			
 			.description{
 				padding: 10px;
+				background-color: $color_lightergrey;
+				margin-top: -4px;
 				
 				.timeEvent{
 					font-size: 12px;
@@ -1723,6 +1725,18 @@ $c_briefs:#8cc63f;
 			}
 		}	
 	}
+}
+
+@media (max-width: 1100px) {
+  #listContainerCulture .element{
+	  width: 49%!important;
+  }
+}
+@media (max-width: 900px) {
+	
+  #listContainerCulture .element{
+	  width: 99%!important;
+  }
 }
 
 
