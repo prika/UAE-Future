@@ -560,7 +560,6 @@ input[type='submit'],
 	letter-spacing: 1px;
 	color: #FFF;
 	height: 75px;
-	
 	display: inline-block;
 	
 	&::before,
@@ -1354,9 +1353,12 @@ $c_briefs:#8cc63f;
 		content: '';
 		display: block; z-index: 0;
 		background: url(../sysimages/animate/banner_graf1.png) no-repeat 0 -100%;
-    //background-size: 50%;
+    	//background-size: 50%;
 	    width: 700px;
     	height: 700px;
+		animation: AnimRotation 35s infinite;
+    	-moz-animation: AnimRotation 35s infinite;
+    	-webkit-animation: AnimRotation 35s infinite;
 	}
 	
 	

@@ -42,9 +42,9 @@
     top: -30%;
     left: calc(50% - 400px);
     opacity: .3;
-    animation: Amim1 35s infinite ;
-    -moz-animation: Amim1 35s infinite ;
-    -webkit-animation: Amim1 35s infinite;
+    animation: AnimRotation 35s infinite ;
+    -moz-animation: AnimRotation 35s infinite ;
+    -webkit-animation: AnimRotation 35s infinite;
     height: 800px;
     
 }
@@ -84,7 +84,7 @@
     opacity: .3;
     width: 170px;
     animation: AnimRotationReverse 35s infinite;
-    -moz-animation: AnimRotationReverse 35s infinite ;
+    -moz-animation: AnimRotationReverse 35s infinite;
     -webkit-animation: AnimRotationReverse 35s infinite;
 }
 
