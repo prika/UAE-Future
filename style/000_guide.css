@@ -33,11 +33,6 @@
   100% {
     transform: translateY(0);
     opacity: 1; } }
-/*@include keyframes(anim_rotation) {
-	0% { transform: rotate(0deg)}
-	50% { transform: rotate(5deg)}
-	100% { transform: rotate(0deg)}
-}*/
 .showUp > div {
   -webkit-animation: fadeIn 1s ease;
   -moz-animation: fadeIn 1s ease;
@@ -1031,13 +1026,13 @@ input[type='submit'],
     top: 6px;
     left: 6px;
     right: 0;
-    height: 40px;
+    /*height: 40px;
     width: 40px;
     background-size: 100% 100%;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
+    @include transition( all .4s ease);*/
+    width: 40px;
+    height: 40px;
+    background-image: url("../sysimages/animate/spriteicons.png"); }
   .listContainer .listElement .elementContent {
     position: absolute;
     height: 320px;
@@ -1162,12 +1157,257 @@ input[type='submit'],
     padding: 40% 37px 20px !important; }
     .listContainer .listElement .elementContent .text h3, .listContainer .listElement .elementContent .text .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .listContainer .listElement .elementContent .text .accordionHeader {
       font-size: 24px; } }
+@-webkit-keyframes trends {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+@-moz-keyframes trends {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+@-o-keyframes trends {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+@keyframes trends {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+@-webkit-keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+@-moz-keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+@-o-keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+@keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+@-webkit-keyframes consultancies {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+@-moz-keyframes consultancies {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+@-o-keyframes consultancies {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+@keyframes consultancies {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+@-webkit-keyframes organizations {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+@-moz-keyframes organizations {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+@-o-keyframes organizations {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+@keyframes organizations {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+@-webkit-keyframes courses {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+@-moz-keyframes courses {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+@-o-keyframes courses {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+@keyframes courses {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+@-webkit-keyframes news {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+@-moz-keyframes news {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+@-o-keyframes news {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+@keyframes news {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+@-webkit-keyframes scholarships {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+@-moz-keyframes scholarships {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+@-o-keyframes scholarships {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+@keyframes scholarships {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+@-webkit-keyframes conferences {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+@-moz-keyframes conferences {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+@-o-keyframes conferences {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+@keyframes conferences {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+@-webkit-keyframes initiatives {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+@-moz-keyframes initiatives {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+@-o-keyframes initiatives {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+@keyframes initiatives {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+@-webkit-keyframes tools {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+@-moz-keyframes tools {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+@-o-keyframes tools {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+@keyframes tools {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+@-webkit-keyframes academia {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+@-moz-keyframes academia {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+@-o-keyframes academia {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+@keyframes academia {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+@-webkit-keyframes briefs {
+  from {
+    background-position: -440px 0px; }
+  to {
+    background-position: -440px -200px; } }
+@-moz-keyframes briefs {
+  from {
+    background-position: -440px 0px; }
+  to {
+    background-position: -440px -200px; } }
+@-o-keyframes briefs {
+  from {
+    background-position: -440px 0px; }
+  to {
+    background-position: -440px -200px; } }
+@keyframes briefs {
+  from {
+    background-position: -440px 0px; }
+  to {
+    background-position: -440px -200px; } }
 .trends.tag,
 .trends .flag,
 .trends .downloadPDF {
   background: #991720; }
 .trends .elementTitle {
-  background-image: url(../sysimages/categories/trends@2x.png); }
+  background-position: 0 0; }
+.trends:hover .elementTitle {
+  -webkit-animation: trends steps(5) 0.6s forwards;
+  -moz-animation: trends steps(5) 0.6s forwards;
+  -o-animation: trends steps(5) 0.6s forwards;
+  animation: trends steps(5) 0.6s forwards; }
 .trends:hover #elementIcon {
   fill: #991720; }
 .trends.filter label.checked::after {
@@ -1180,7 +1420,12 @@ input[type='submit'],
 .institutes .downloadPDF {
   background: #2db677; }
 .institutes .elementTitle {
-  background: url(../sysimages/categories/institutes@2x.png) no-repeat center center; }
+  background-position: -40px 0; }
+.institutes:hover .elementTitle {
+  -webkit-animation: institutes steps(5) 0.6s forwards;
+  -moz-animation: institutes steps(5) 0.6s forwards;
+  -o-animation: institutes steps(5) 0.6s forwards;
+  animation: institutes steps(5) 0.6s forwards; }
 .institutes:hover #elementIcon {
   fill: #2db677; }
 .institutes.filter label.checked::after {
@@ -1193,7 +1438,12 @@ input[type='submit'],
 .consultancies .downloadPDF {
   background: #515354; }
 .consultancies .elementTitle {
-  background: url(../sysimages/categories/consultancies@2x.png) no-repeat center center; }
+  background-position: -80px 0; }
+.consultancies:hover .elementTitle {
+  -webkit-animation: consultancies steps(5) 0.6s forwards;
+  -moz-animation: consultancies steps(5) 0.6s forwards;
+  -o-animation: consultancies steps(5) 0.6s forwards;
+  animation: consultancies steps(5) 0.6s forwards; }
 .consultancies:hover #elementIcon {
   fill: #515354; }
 .consultancies.filter label.checked::after {
@@ -1206,7 +1456,12 @@ input[type='submit'],
 .organizations .downloadPDF {
   background: #b1b2b3; }
 .organizations .elementTitle {
-  background: url(../sysimages/categories/organizations.png) no-repeat center center; }
+  background-position: -120px 0; }
+.organizations:hover .elementTitle {
+  -webkit-animation: organizations steps(5) 0.6s forwards;
+  -moz-animation: organizations steps(5) 0.6s forwards;
+  -o-animation: organizations steps(5) 0.6s forwards;
+  animation: organizations steps(5) 0.6s forwards; }
 .organizations:hover #elementIcon {
   fill: #b1b2b3; }
 .organizations.filter label.checked::after {
@@ -1219,7 +1474,12 @@ input[type='submit'],
 .courses .downloadPDF {
   background: #0064a6; }
 .courses .elementTitle {
-  background: url(../sysimages/categories/courses.png) no-repeat center center; }
+  background-position: -160px 0; }
+.courses:hover .elementTitle {
+  -webkit-animation: courses steps(5) 0.6s forwards;
+  -moz-animation: courses steps(5) 0.6s forwards;
+  -o-animation: courses steps(5) 0.6s forwards;
+  animation: courses steps(5) 0.6s forwards; }
 .courses:hover #elementIcon {
   fill: #0064a6; }
 .courses.filter label.checked::after {
@@ -1232,7 +1492,12 @@ input[type='submit'],
 .news .downloadPDF {
   background: #f7931e; }
 .news .elementTitle {
-  background: url(../sysimages/categories/news.png) no-repeat center center; }
+  background-position: -200px 0; }
+.news:hover .elementTitle {
+  -webkit-animation: news steps(5) 0.6s forwards;
+  -moz-animation: news steps(5) 0.6s forwards;
+  -o-animation: news steps(5) 0.6s forwards;
+  animation: news steps(5) 0.6s forwards; }
 .news:hover #elementIcon {
   fill: #f7931e; }
 .news.filter label.checked::after {
@@ -1245,7 +1510,12 @@ input[type='submit'],
 .scholarships .downloadPDF {
   background: #ed1c24; }
 .scholarships .elementTitle {
-  background: url(../sysimages/categories/scholarships.png) no-repeat center center; }
+  background-position: -240px 0; }
+.scholarships:hover .elementTitle {
+  -webkit-animation: scholarships steps(5) 0.6s forwards;
+  -moz-animation: scholarships steps(5) 0.6s forwards;
+  -o-animation: scholarships steps(5) 0.6s forwards;
+  animation: scholarships steps(5) 0.6s forwards; }
 .scholarships:hover #elementIcon {
   fill: #ed1c24; }
 .scholarships.filter label.checked::after {
@@ -1258,7 +1528,12 @@ input[type='submit'],
 .conferences .downloadPDF {
   background: #be9857; }
 .conferences .elementTitle {
-  background: url(../sysimages/categories/conferences.png) no-repeat center center; }
+  background-position: -280px 0; }
+.conferences:hover .elementTitle {
+  -webkit-animation: conferences steps(5) 0.6s forwards;
+  -moz-animation: conferences steps(5) 0.6s forwards;
+  -o-animation: conferences steps(5) 0.6s forwards;
+  animation: conferences steps(5) 0.6s forwards; }
 .conferences:hover #elementIcon {
   fill: #be9857; }
 .conferences.filter label.checked::after {
@@ -1271,7 +1546,12 @@ input[type='submit'],
 .initiatives .downloadPDF {
   background: #998675; }
 .initiatives .elementTitle {
-  background: url(../sysimages/categories/initiatives.png) no-repeat center center; }
+  background-position: -320px 0; }
+.initiatives:hover .elementTitle {
+  -webkit-animation: initiatives steps(5) 0.6s forwards;
+  -moz-animation: initiatives steps(5) 0.6s forwards;
+  -o-animation: initiatives steps(5) 0.6s forwards;
+  animation: initiatives steps(5) 0.6s forwards; }
 .initiatives:hover #elementIcon {
   fill: #998675; }
 .initiatives.filter label.checked::after {
@@ -1284,7 +1564,12 @@ input[type='submit'],
 .tools .downloadPDF {
   background: #29abe2; }
 .tools .elementTitle {
-  background: url(../sysimages/categories/tools.png) no-repeat center center; }
+  background-position: -360px 0; }
+.tools:hover .elementTitle {
+  -webkit-animation: tools steps(5) 0.6s forwards;
+  -moz-animation: tools steps(5) 0.6s forwards;
+  -o-animation: tools steps(5) 0.6s forwards;
+  animation: tools steps(5) 0.6s forwards; }
 .tools:hover #elementIcon {
   fill: #29abe2; }
 .tools.filter label.checked::after {
@@ -1297,7 +1582,12 @@ input[type='submit'],
 .academia .downloadPDF {
   background: #935491; }
 .academia .elementTitle {
-  background: url(../sysimages/categories/academia.png) no-repeat center center; }
+  background-position: -400px 0; }
+.academia:hover .elementTitle {
+  -webkit-animation: academia steps(5) 0.6s forwards;
+  -moz-animation: academia steps(5) 0.6s forwards;
+  -o-animation: academia steps(5) 0.6s forwards;
+  animation: academia steps(5) 0.6s forwards; }
 .academia:hover #elementIcon {
   fill: #935491; }
 .academia.filter label.checked::after {
@@ -1310,7 +1600,12 @@ input[type='submit'],
 .briefs .downloadPDF {
   background: #8cc63f; }
 .briefs .elementTitle {
-  background: url(../sysimages/categories/briefs.png) no-repeat center center; }
+  background-position: -440px 0; }
+.briefs:hover .elementTitle {
+  -webkit-animation: briefs steps(5) 0.6s forwards;
+  -moz-animation: briefs steps(5) 0.6s forwards;
+  -o-animation: briefs steps(5) 0.6s forwards;
+  animation: briefs steps(5) 0.6s forwards; }
 .briefs:hover #elementIcon {
   fill: #8cc63f; }
 .briefs.filter label.checked::after {
@@ -1703,5 +1998,6 @@ input[type='submit'],
 @media (max-width: 900px) {
   #listContainerCulture .element {
     width: 99% !important; } }
+/*-----------*/
 
 /*# sourceMappingURL=000_guide.css.map */
