@@ -39,13 +39,6 @@
 	100% { transform:translateY(0); opacity: 1; }
 }
 
-/*@include keyframes(anim_rotation) {
-	0% { transform: rotate(0deg)}
-	50% { transform: rotate(5deg)}
-	100% { transform: rotate(0deg)}
-}*/
-//@include animation('anim_rotation 4s 3');
-
 .showUp > div {
 	@include animation('fadeIn 1s ease');
 }
@@ -772,11 +765,15 @@ input[type='submit'],
 			position: absolute;
 			top: 6px;
 			left: 6px;
-			right: 0;
-			height: 40px;
+			right: 0; 
+			/*height: 40px;
 			width: 40px;
 			background-size: 100% 100%;
-			@include transition( all .4s ease);
+			@include transition( all .4s ease);*/
+
+			width: 40px;
+			height: 40px;
+			background-image: url("../sysimages/animate/spriteicons.png");
 		}
 		
 		.elementContent{
@@ -938,19 +935,70 @@ $c_tools:#29abe2;
 $c_academia:#935491;
 $c_briefs:#8cc63f;
 
+$step: -40;
+$offset: -200px;
+
+@mixin buildKeyframes($animationName, $col)
+{
+    @-webkit-keyframes #{$animationName} {
+        from { background-position: ($col*$step)+px 0px; }
+          to { background-position: ($col*$step)+px $offset; }
+    }
+
+    @-moz-keyframes #{$animationName}  {
+         from { background-position: ($col*$step)+px 0px; }
+           to { background-position: ($col*$step)+px $offset; }
+    }
+
+    @-o-keyframes #{$animationName} {
+        from { background-position: ($col*$step)+px 0px; }
+          to { background-position: ($col*$step)+px $offset; }
+    }
+
+    @keyframes #{$animationName} {
+        from { background-position: ($col*$step)+px 0px; }
+          to { background-position: ($col*$step)+px $offset; }
+    }
+}
+
+@mixin animation($str) 
+{
+  -webkit-animation: #{$str} steps(5) .6s forwards;
+     -moz-animation: #{$str} steps(5) .6s forwards;
+       -o-animation: #{$str} steps(5) .6s forwards;
+          animation: #{$str} steps(5) .6s forwards;      
+}   
+
+@include buildKeyframes(trends,0);
+@include buildKeyframes(institutes,1);
+@include buildKeyframes(consultancies, 2);
+@include buildKeyframes(organizations, 3);
+@include buildKeyframes(courses, 4);
+@include buildKeyframes(news, 5);
+@include buildKeyframes(scholarships,6);
+@include buildKeyframes(conferences,7);
+@include buildKeyframes(initiatives,8);
+@include buildKeyframes(tools,9);
+@include buildKeyframes(academia,10);
+@include buildKeyframes(briefs, 11);
+
 .trends{
 	// element in list
 	&.tag,
 	.flag,
 	.downloadPDF{ background: $c_trends;}
 	
-	.elementTitle{
-		background-image: url(../sysimages/categories/trends@2x.png) ;
+	.elementTitle { 
+		background-position: 0 0;
 	}
 	
 	&:hover{
-		//.elementTitle { background: $c_trends;}
-		#elementIcon { fill: $c_trends;}
+		.elementTitle { 
+			@include animation(trends);
+		}
+		#elementIcon { 
+			fill: $c_trends;
+		}
 	}
 	
 	&.filter{
@@ -969,12 +1017,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_institutes;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/institutes@2x.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -40px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background: $c_institutes;}
+		.elementTitle { 
+			@include animation(institutes);
+		}
 		#elementIcon { fill: $c_institutes;}
 	}
 	
@@ -993,12 +1043,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_consultancies;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/consultancies@2x.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -80px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background: $c_consultancies;}
+		.elementTitle { 
+			@include animation(consultancies);
+		}
 		#elementIcon { fill: $c_consultancies;}
 	}
 	
@@ -1017,12 +1069,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_organizations;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/organizations.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -120px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background: $c_organizations;}
+		.elementTitle { 
+			@include animation(organizations);
+		}
 		#elementIcon { fill: $c_organizations;}
 	}
 	
@@ -1041,12 +1095,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_courses;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/courses.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -160px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background-color: $c_courses;}
+		.elementTitle { 
+			@include animation(courses);
+		}
 		#elementIcon { fill: $c_courses;}
 	}
 	
@@ -1065,12 +1121,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_news;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/news.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -200px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background-color: $c_news;}
+		.elementTitle { 
+			@include animation(news);
+		}
 		#elementIcon { fill: $c_news;}
 	}
 	
@@ -1089,12 +1147,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_scholarships;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/scholarships.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -240px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background-color: $c_scholarships;}
+		.elementTitle { 
+			@include animation(scholarships);
+		}
 		#elementIcon { fill: $c_scholarships;}
 	}
 	
@@ -1113,12 +1173,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_conferences;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/conferences.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -280px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background-color: $c_conferences;}
+		.elementTitle { 
+			@include animation(conferences);
+		}
 		#elementIcon { fill: $c_conferences;}
 	}
 	
@@ -1137,12 +1199,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_initiatives;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/initiatives.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -320px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background-color: $c_initiatives;}
+		.elementTitle { 
+			@include animation(initiatives);
+		}
 		#elementIcon { fill: $c_initiatives;}
 	}
 	
@@ -1161,12 +1225,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_tools;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/tools.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -360px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background-color: $c_tools;}
+		.elementTitle { 
+			@include animation(tools);
+		}
 		#elementIcon { fill: $c_tools;}
 	}
 	
@@ -1185,12 +1251,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_academia;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/academia.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -400px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background-color: $c_academia;}
+		.elementTitle { 
+			@include animation(academia);
+		}
 		#elementIcon { fill: $c_academia;}
 	}
 	
@@ -1209,12 +1277,14 @@ $c_briefs:#8cc63f;
 	.flag,
 	.downloadPDF{ background: $c_briefs;}
 	
-	.elementTitle{
-		background: url(../sysimages/categories/briefs.png) no-repeat center center;
+	.elementTitle { 
+		background-position: -440px 0;
 	}
 	
 	&:hover{
-		//.elementTitle{ background-color: $c_briefs;}
+		.elementTitle { 
+			@include animation(briefs);
+		}
 		#elementIcon { fill: $c_briefs;}
 	}
 	
@@ -1741,4 +1811,8 @@ $c_briefs:#8cc63f;
 
 
 
-                
+
+
+
+/*-----------*/
+
