@@ -1402,7 +1402,7 @@ input[type='submit'],
 .trends .downloadPDF {
   background: #991720; }
 .trends .elementTitle {
-  background-position: 0 0; }
+  background-position: 0 -200px; }
 .trends:hover .elementTitle {
   -webkit-animation: trends steps(5) 0.6s forwards;
   -moz-animation: trends steps(5) 0.6s forwards;
@@ -1420,7 +1420,7 @@ input[type='submit'],
 .institutes .downloadPDF {
   background: #2db677; }
 .institutes .elementTitle {
-  background-position: -40px 0; }
+  background-position: -40px -200px; }
 .institutes:hover .elementTitle {
   -webkit-animation: institutes steps(5) 0.6s forwards;
   -moz-animation: institutes steps(5) 0.6s forwards;
@@ -1438,7 +1438,7 @@ input[type='submit'],
 .consultancies .downloadPDF {
   background: #515354; }
 .consultancies .elementTitle {
-  background-position: -80px 0; }
+  background-position: -80px -200px; }
 .consultancies:hover .elementTitle {
   -webkit-animation: consultancies steps(5) 0.6s forwards;
   -moz-animation: consultancies steps(5) 0.6s forwards;
@@ -1456,7 +1456,7 @@ input[type='submit'],
 .organizations .downloadPDF {
   background: #b1b2b3; }
 .organizations .elementTitle {
-  background-position: -120px 0; }
+  background-position: -120px -200px; }
 .organizations:hover .elementTitle {
   -webkit-animation: organizations steps(5) 0.6s forwards;
   -moz-animation: organizations steps(5) 0.6s forwards;
@@ -1474,7 +1474,7 @@ input[type='submit'],
 .courses .downloadPDF {
   background: #0064a6; }
 .courses .elementTitle {
-  background-position: -160px 0; }
+  background-position: -160px -200px; }
 .courses:hover .elementTitle {
   -webkit-animation: courses steps(5) 0.6s forwards;
   -moz-animation: courses steps(5) 0.6s forwards;
@@ -1492,7 +1492,7 @@ input[type='submit'],
 .news .downloadPDF {
   background: #f7931e; }
 .news .elementTitle {
-  background-position: -200px 0; }
+  background-position: -200px -200px; }
 .news:hover .elementTitle {
   -webkit-animation: news steps(5) 0.6s forwards;
   -moz-animation: news steps(5) 0.6s forwards;
@@ -1510,7 +1510,7 @@ input[type='submit'],
 .scholarships .downloadPDF {
   background: #ed1c24; }
 .scholarships .elementTitle {
-  background-position: -240px 0; }
+  background-position: -240px -200px; }
 .scholarships:hover .elementTitle {
   -webkit-animation: scholarships steps(5) 0.6s forwards;
   -moz-animation: scholarships steps(5) 0.6s forwards;
@@ -1528,7 +1528,7 @@ input[type='submit'],
 .conferences .downloadPDF {
   background: #be9857; }
 .conferences .elementTitle {
-  background-position: -280px 0; }
+  background-position: -280px -200px; }
 .conferences:hover .elementTitle {
   -webkit-animation: conferences steps(5) 0.6s forwards;
   -moz-animation: conferences steps(5) 0.6s forwards;
@@ -1546,7 +1546,7 @@ input[type='submit'],
 .initiatives .downloadPDF {
   background: #998675; }
 .initiatives .elementTitle {
-  background-position: -320px 0; }
+  background-position: -320px -200px; }
 .initiatives:hover .elementTitle {
   -webkit-animation: initiatives steps(5) 0.6s forwards;
   -moz-animation: initiatives steps(5) 0.6s forwards;
@@ -1564,7 +1564,7 @@ input[type='submit'],
 .tools .downloadPDF {
   background: #29abe2; }
 .tools .elementTitle {
-  background-position: -360px 0; }
+  background-position: -360px -200px; }
 .tools:hover .elementTitle {
   -webkit-animation: tools steps(5) 0.6s forwards;
   -moz-animation: tools steps(5) 0.6s forwards;
@@ -1582,7 +1582,7 @@ input[type='submit'],
 .academia .downloadPDF {
   background: #935491; }
 .academia .elementTitle {
-  background-position: -400px 0; }
+  background-position: -400px -200px; }
 .academia:hover .elementTitle {
   -webkit-animation: academia steps(5) 0.6s forwards;
   -moz-animation: academia steps(5) 0.6s forwards;
@@ -1600,7 +1600,7 @@ input[type='submit'],
 .briefs .downloadPDF {
   background: #8cc63f; }
 .briefs .elementTitle {
-  background-position: -440px 0; }
+  background-position: -440px -200px; }
 .briefs:hover .elementTitle {
   -webkit-animation: briefs steps(5) 0.6s forwards;
   -moz-animation: briefs steps(5) 0.6s forwards;
