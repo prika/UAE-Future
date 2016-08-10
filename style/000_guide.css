@@ -858,15 +858,57 @@ input[type='submit'],
     0% { opacity: .1; }
     50% { opacity: .4; }
     100% { opacity: .1; }
-}
-@include keyframes(slideFromLeft) {
-    0% { left: -100%; }
-    100% { left: 10px; }
-}
-@include keyframes(slideFromRight) {
-    0% { right: -100%; }
-    100% { right: 10px; }
 }*/
+@-webkit-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-moz-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-ms-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-o-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-webkit-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@-moz-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@-ms-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@-o-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
 @keyframes AnimRotation {
   from {
     transform: rotate(0deg); }
@@ -1998,6 +2040,29 @@ input[type='submit'],
 @media (max-width: 900px) {
   #listContainerCulture .element {
     width: 99% !important; } }
-/*-----------*/
+#partnersSection {
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 9; }
+  #partnersSection:before, #partnersSection:after {
+    content: "";
+    display: table; }
+  #partnersSection:after {
+    clear: both; }
+  #partnersSection .listElementImage {
+    border: 1px solid #dfdfdf;
+    min-height: 200px; }
+
+#favoritesSection {
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 9; }
+  #favoritesSection:before, #favoritesSection:after {
+    content: "";
+    display: table; }
+  #favoritesSection:after {
+    clear: both; }
+  #favoritesSection .category {
+    color: #be9857; }
 
 /*# sourceMappingURL=000_guide.css.map */

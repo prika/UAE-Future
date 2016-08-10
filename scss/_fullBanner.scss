@@ -99,7 +99,7 @@
     0% { opacity: .1; }
     50% { opacity: .4; }
     100% { opacity: .1; }
-}
+}*/
 @include keyframes(slideFromLeft) {
     0% { left: -100%; }
     100% { left: 10px; }
@@ -107,7 +107,7 @@
 @include keyframes(slideFromRight) {
     0% { right: -100%; }
     100% { right: 10px; }
-}*/
+}
 
     
 @keyframes AnimRotation

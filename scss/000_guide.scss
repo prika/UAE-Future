@@ -1002,7 +1002,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/trends.png)  no-repeat center center!important;
 		}
@@ -1029,7 +1028,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/institutes.png) no-repeat center center!important;
 		}
@@ -1055,7 +1053,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/consultancies.png)  no-repeat center center!important;
 		}	
@@ -1081,7 +1078,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/consultancies.png) no-repeat center center!important;
 		}
@@ -1107,7 +1103,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/courses.png) no-repeat center center!important;
 		}
@@ -1133,7 +1128,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/news.png) no-repeat center center!important;
 		}
@@ -1159,7 +1153,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/scholarships.png) no-repeat center center!important;
 		}	
@@ -1185,7 +1178,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/conferences.png) no-repeat center center!important;
 		}
@@ -1211,7 +1203,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/initiatives.png) no-repeat center center!important;
 		}
@@ -1237,7 +1228,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/tools.png)  no-repeat center center!important;
 		}
@@ -1263,7 +1253,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/academia.png) no-repeat center center!important;
 		}
@@ -1289,7 +1278,6 @@ $offset: -200px;
 	}
 	
 	&.filter{
-		//input[type='checkbox']:checked {
 		label.checked::after{
 			background: url(../sysimages/checkbox/briefs.png)  no-repeat center center!important;
 		}	
@@ -1811,8 +1799,29 @@ $offset: -200px;
 
 
 
+// ===================================================================================================================
+// Partners Section
+#partnersSection{
+	padding-bottom: 50px;
+	position: relative;
+    z-index: 9;
+	@include clearfix();
+	
+	.listElementImage{
+		border: 1px solid $color_lightergrey;
+		min-height: 200px;
+	}
+}
 
-
-
-/*-----------*/
-
+// ===================================================================================================================
+// Favorites Section
+#favoritesSection{
+	padding-bottom: 50px;
+	position: relative;
+    z-index: 9;
+	@include clearfix();
+	
+	.category{
+		color: $color_solidGold;
+	}
+}
