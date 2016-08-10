@@ -151,37 +151,7 @@
 
                             });
 
-                            function accordionMenu() {
-                                $('.accordionMenu > li > a').click(function () {
-                                    // Set elem as active
-                                    var parent = $(this).parent();
-                                    
-                                    
-                                    // Elem is already active
-                                    if ($(this).parent().hasClass('active')) {
-                                        // Remove the active class
-                                        parent.removeClass('active');
-
-                                        // Hide the content
-                                        parent.find('.accordionContent').stop(true, true).slideUp('normal');
-                                        
-                                    } else {
-                                        
-                                        // Removes all actives
-                                        $('.accordionMenu > li').removeClass('active');
-
-                                        // Hides all contents
-                                        $('.accordionContent').slideUp('normal');
-                                    
-                                        // Set parent as active
-                                        parent.addClass('active');
-
-                                        // Displays the content
-                                        parent.find('.accordionContent').stop(true, true).slideDown('normal');
-                                        
-                                    }
-                                });
-                            }
+                           
                         </script>
                     </section>
                 </div>

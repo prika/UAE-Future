@@ -346,16 +346,6 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     background-size: 33px; }
-  .buttonIc.buttonDownload {
-    background: url(../sysimages/REMOVE/btnDownload.png) no-repeat 3px 0; }
-  .buttonIc.buttonShare {
-    background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0; }
-  .buttonIc.buttonPrint {
-    background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0; }
-  .buttonIc.buttonOpenNew {
-    background: url(../sysimages/REMOVE/btnSend.png) no-repeat 3px 0; }
-  .buttonIc.buttonFav {
-    background: url(../sysimages/button/fav@2x.png) no-repeat top left; }
   .buttonIc:hover {
     background-color: #21282f;
     background-position: 3px -34px;
@@ -363,6 +353,45 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
     .buttonIc:hover span {
       width: 100%;
       opacity: 1; }
+
+.buttonOpened {
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  float: left;
+  height: 37px;
+  width: auto;
+  padding: 10px 10px 10px 50px;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  font-family: 'intro';
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #be9857; }
+  .buttonOpened:hover {
+    background-color: #21282f;
+    color: #FFF;
+    background-position: 3px -34px; }
+
+.buttonDownload {
+  background: url(../sysimages/REMOVE/btnDownload.png) no-repeat 3px 0; }
+
+.buttonShare {
+  background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0; }
+
+.buttonPrint {
+  background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0; }
+
+.buttonOpenNew {
+  background: url(../sysimages/REMOVE/btnSend.png) no-repeat 3px 0; }
+
+.buttonFav {
+  background: url(../sysimages/button/fav@2x.png) no-repeat top left; }
 
 .buttonPrev {
   height: 37px;
@@ -785,11 +814,11 @@ input[type='submit'],
     #fullBanner .bannerContent h1 {
       font-size: 60px;
       line-height: 110%;
-      padding-top: 40px;
+      padding-top: 5px;
       color: #FFF;
       letter-spacing: 3px;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden; }
     #fullBanner .bannerContent h2,
@@ -800,12 +829,12 @@ input[type='submit'],
       margin-bottom: 50px;
       color: #FFF;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       overflow: hidden; }
 
 .backgroundBanner {
-  min-width: 100%;
+  min-width: 110%;
   margin: -5%;
   position: absolute; }
 
@@ -1866,27 +1895,91 @@ input[type='submit'],
   padding-bottom: 40px; }
   #calendarSection #calendar {
     max-width: 1100px;
-    margin: 0 auto; }
-    #calendarSection #calendar .fc-head td,
-    #calendarSection #calendar .fc-head th {
-      border-color: transparent; }
-    #calendarSection #calendar .fc-head th,
-    #calendarSection #calendar .fc-body .fc-day-number {
+    margin: 0 auto;
+    /*.fc-head td,
+    .fc-head th {
+    	border-color: transparent;
+    }
+    
+    .fc-head th,
+    .fc-body .fc-day-number{
+    	text-align: left;
+    	padding: 5px;
+    	font-size: 16px;
+    	font-family: 'merriweather';
+    }
+    .fc-unthemed .fc-content, 
+    .fc-unthemed .fc-divider, 
+    .fc-unthemed .fc-popover, 
+    .fc-unthemed .fc-row, 
+    .fc-unthemed tbody, 
+    .fc-unthemed td, 
+    .fc-unthemed th, 
+    .fc-unthemed thead{
+    	border-color: $color_lightergrey;
+    }
+    
+    .fc-widget-content {
+    	background: $color_w;
+    }*/
+    /*change url for the icon you want*/ }
+    #calendarSection #calendar .rsRow {
+      border: 1px solid #D3D3D3; }
+    #calendarSection #calendar .rsRow td {
+      border: 1px solid #D3D3D3; }
+    #calendarSection #calendar .rsContentTable {
+      background-color: #ffffff; }
+    #calendarSection #calendar .rsTodayCell .rsDateHeader {
+      color: #be9857; }
+    #calendarSection #calendar .rsDateHeader {
+      color: #000000;
+      font-size: 18px;
+      font-family: "Times New Roman";
       text-align: left;
-      padding: 5px;
+      margin-left: 10px;
+      margin-top: 10px; }
+    #calendarSection #calendar .rsHorizontalHeaderTable th {
+      width: 14.35%;
       font-size: 16px;
-      font-family: 'merriweather'; }
-    #calendarSection #calendar .fc-unthemed .fc-content,
-    #calendarSection #calendar .fc-unthemed .fc-divider,
-    #calendarSection #calendar .fc-unthemed .fc-popover,
-    #calendarSection #calendar .fc-unthemed .fc-row,
-    #calendarSection #calendar .fc-unthemed tbody,
-    #calendarSection #calendar .fc-unthemed td,
-    #calendarSection #calendar .fc-unthemed th,
-    #calendarSection #calendar .fc-unthemed thead {
-      border-color: #dfdfdf; }
-    #calendarSection #calendar .fc-widget-content {
-      background: #FFF; }
+      font-family: "Times New Roman"; }
+    #calendarSection #calendar .rsDateBox {
+      margin-top: 5px;
+      font-family: "Times New Roman"; }
+    #calendarSection #calendar .rsPrevDay {
+      content: '';
+      background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA");
+      background-size: cover;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      margin-left: 200px;
+      font-size: 0px; }
+    #calendarSection #calendar .rsNextDay {
+      content: '';
+      background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA");
+      background-size: cover;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      margin-left: 170px;
+      font-size: 0px; }
+    #calendarSection #calendar .sfcalendar {
+      margin-bottom: 5%; }
+    #calendarSection #calendar .k-widget .k-window .sfcalendarEventPreviewWrp {
+      background-color: black; }
+    #calendarSection #calendar div.k-window-content {
+      background-color: #000;
+      font-family: Arial;
+      font-weight: bolder;
+      color: #f2f2f2; }
+    #calendarSection #calendar div.k-window-titlebar {
+      background-color: #000; }
+    #calendarSection #calendar .sfTxtLbl {
+      color: #fff; }
+    #calendarSection #calendar .sfcalendarEventPreviewEditLnk {
+      color: #fff; }
+    #calendarSection #calendar .rsDatePickerActivator {
+      display: none; }
 
 #contactsSection {
   background: url("../sysimages/bg.png");
@@ -1902,12 +1995,31 @@ input[type='submit'],
 
 #aboutSection {
   background: #FFF;
-  padding-bottom: 60px; }
-  #aboutSection .container:before, #aboutSection .container:after {
-    content: "";
-    display: table; }
-  #aboutSection .container:after {
-    clear: both; }
+  padding-bottom: 150px;
+  position: relative;
+  overflow: hidden; }
+  #aboutSection::before {
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    opacity: .1;
+    content: '';
+    display: block;
+    z-index: 0;
+    background: url(../sysimages/animate/banner_graf1.png) no-repeat 0 -100%;
+    width: 700px;
+    height: 700px;
+    animation: AnimRotation 35s infinite;
+    -moz-animation: AnimRotation 35s infinite;
+    -webkit-animation: AnimRotation 35s infinite;
+    overflow: hidden; }
+  #aboutSection .container {
+    position: relative; }
+    #aboutSection .container:before, #aboutSection .container:after {
+      content: "";
+      display: table; }
+    #aboutSection .container:after {
+      clear: both; }
   #aboutSection p, #aboutSection input[type='text'],
   #aboutSection input[type='number'],
   #aboutSection input[type='email'],
@@ -1941,6 +2053,13 @@ input[type='submit'],
     font-weight: bold;
     text-align: center;
     margin-bottom: 25px; }
+  #aboutSection hr {
+    width: 100%;
+    float: left;
+    margin: 20px 0;
+    border-color: rgba(123, 124, 126, 0.3);
+    border-bottom: none;
+    background: none; }
 
 #resourcesSection1 img,
 #resourcesSection2 img {

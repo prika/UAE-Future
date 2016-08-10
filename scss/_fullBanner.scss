@@ -16,10 +16,10 @@
         h1 {
           font-size: 60px;
           line-height: 110%;
-          padding-top: 40px;
+          padding-top: 5px;
           color: $color_w;
           letter-spacing: 3px;
-          @include verticalTruncate();
+          @include verticalTruncate(2);
           	
         }
 
@@ -30,14 +30,13 @@
           line-height: 150%;
           margin-bottom: 50px;
           color: $color_w;
-          @include verticalTruncate();
+          @include verticalTruncate(5);
         }
     }
 }
 
-.backgroundBanner{
-    //margin: -20%; 
-    min-width: 100%;
+.backgroundBanner{ 
+    min-width: 110%;
     margin: -5%;
     position: absolute;
 }

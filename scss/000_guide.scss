@@ -3,7 +3,7 @@
 @mixin verticalAlign(){ position: absolute; top: 50%;  left: 50%; transform: translate(-50%, -50%);}
 @mixin clearfix(){&:before,&:after{content: "";display: table;}&:after {clear: both;}}
 @mixin truncateText{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-@mixin verticalTruncate{display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;}
+@mixin verticalTruncate($lines){display: -webkit-box; -webkit-line-clamp: $lines; -webkit-box-orient: vertical; overflow: hidden;}
 
 // ============================================================================================================
 // Mixin and General Animations
@@ -459,36 +459,7 @@ select {
 		white-space: nowrap; 
 		opacity: 0;
 		@include transition( all .4s ease);
-		
 		background-size: 33px;
-
-	}
-	
-	&.buttonDownload{
-		//background: url(../sysimages/button/download@2x.png) no-repeat top left;
-		background: url(../sysimages/REMOVE/btnDownload.png) no-repeat 3px 0;
-		//@include transition( background .4s ease);
-		
-	}
-
-	&.buttonShare{
-		//background: url(../sysimages/button/share@2x.png) no-repeat top left;
-		background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0;
-		
-	}
-	
-	&.buttonPrint{
-		//background: url(../sysimages/button/print@2x.png) no-repeat top left;
-		background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0;
-	}
-	
-	&.buttonOpenNew{
-		//background: url(../sysimages/button/openNewWindow@2x.png) no-repeat top left;
-		background: url(../sysimages/REMOVE/btnSend.png) no-repeat 3px 0;
-	}
-	
-	&.buttonFav{
-		background: url(../sysimages/button/fav@2x.png) no-repeat top left;
 	}
 	
 
@@ -502,6 +473,59 @@ select {
 			opacity: 1;
 		}
 	}
+}
+
+
+.buttonOpened{
+	position: relative;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	display: block;
+	float: left;
+	height: 37px;
+    width: auto;
+	padding: 10px 10px 10px 50px;
+	@include transition( all .4s ease);
+	
+	font-family: 'intro';
+	font-size: 14px;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $color_solidGold;
+
+	&:hover{
+		background-color: $color_bl;
+		color: $color_w;
+		background-position: 3px -34px;
+	}
+}
+
+
+.buttonDownload{
+	//background: url(../sysimages/button/download@2x.png) no-repeat top left;
+	background: url(../sysimages/REMOVE/btnDownload.png) no-repeat 3px 0;
+	//@include transition( background .4s ease);
+}
+
+.buttonShare{
+	//background: url(../sysimages/button/share@2x.png) no-repeat top left;
+	background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0;
+	
+}
+
+.buttonPrint{
+	//background: url(../sysimages/button/print@2x.png) no-repeat top left;
+	background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0;
+}
+
+.buttonOpenNew{
+	//background: url(../sysimages/button/openNewWindow@2x.png) no-repeat top left;
+	background: url(../sysimages/REMOVE/btnSend.png) no-repeat 3px 0;
+}
+
+.buttonFav{
+	background: url(../sysimages/button/fav@2x.png) no-repeat top left;
 }
 
 .buttonPrev{
@@ -1412,7 +1436,6 @@ $offset: -200px;
 		content: '';
 		display: block; z-index: 0;
 		background: url(../sysimages/animate/banner_graf1.png) no-repeat 0 -100%;
-    	//background-size: 50%;
 	    width: 700px;
     	height: 700px;
 		animation: AnimRotation 35s infinite;
@@ -1459,7 +1482,7 @@ $offset: -200px;
 		}
 		
 		p{
-			@include verticalTruncate();
+			@include verticalTruncate(3);
 		}
 	}
 	
@@ -1568,7 +1591,7 @@ $offset: -200px;
 		margin: 0 auto;
 		
 		//.fc-head,
-		.fc-head td,
+		/*.fc-head td,
 		.fc-head th {
 			border-color: transparent;
 		}
@@ -1593,6 +1616,99 @@ $offset: -200px;
 		
 		.fc-widget-content {
 			background: $color_w;
+		}*/
+		
+		.rsRow {
+		border: 1px solid #D3D3D3;
+		}
+
+		.rsRow td {
+		border: 1px solid #D3D3D3;
+		}
+
+		.rsContentTable {
+		background-color: #ffffff;
+		}
+
+		.rsTodayCell .rsDateHeader {
+		color: #be9857;
+		}
+
+		.rsDateHeader {
+			color: #000000;
+			font-size: 18px;
+			font-family: "Times New Roman";
+			text-align: left;
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+
+		.rsHorizontalHeaderTable th {
+		width: 14.35%;
+		font-size: 16px;
+		font-family: "Times New Roman";
+		}
+
+		.rsDateBox {
+		margin-top: 5px;
+		font-family: "Times New Roman";
+		
+		}
+
+		/*change url for the icon you want*/
+		.rsPrevDay {
+			content: '';
+			background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
+			background-size: cover;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			margin-left: 200px;
+			font-size: 0px;
+
+		}
+
+		.rsNextDay {
+			content: '';
+			background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
+			background-size: cover;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			margin-left: 170px;
+			font-size: 0px;
+
+		}
+
+		.sfcalendar {
+		margin-bottom: 5%;
+		}
+
+		.k-widget .k-window .sfcalendarEventPreviewWrp {
+		background-color: black;
+		}
+
+		div.k-window-content {
+			background-color: #000;
+			font-family: Arial;
+			font-weight: bolder;
+			color: #f2f2f2;
+		}
+
+		div.k-window-titlebar {
+		background-color: #000;
+		}
+
+		.sfTxtLbl {
+		color: #fff
+		}
+
+		.sfcalendarEventPreviewEditLnk {
+		color: #fff;
+		}
+
+		.rsDatePickerActivator {
+		display:none;
 		}
 		
 	}
@@ -1617,10 +1733,31 @@ $offset: -200px;
 // About page
 #aboutSection{
 	background: $color_w;
-	padding-bottom: 60px;
+	padding-bottom: 150px;
+	position: relative;
+	overflow: hidden;
+	
+	&::before{
+		position: absolute;
+		bottom: -30%;
+		left: -10%;
+		opacity: .1;
+		content: '';
+		display: block; z-index: 0;
+		background: url(../sysimages/animate/banner_graf1.png) no-repeat 0 -100%;
+		width: 700px;
+		height: 700px;
+		animation: AnimRotation 35s infinite;
+		-moz-animation: AnimRotation 35s infinite;
+		-webkit-animation: AnimRotation 35s infinite;
+		overflow: hidden;
+	}
+	
 	
 	.container{
-		@include clearfix();	
+		@include clearfix();
+		position: relative;
+		
 	}
 	
 	p{
@@ -1652,6 +1789,15 @@ $offset: -200px;
 		font-weight: bold;
 		text-align: center;
 		margin-bottom: 25px;
+	}
+	
+	hr {
+		width: 100%;
+		float: left;
+		margin: 20px 0;
+		border-color: rgba(123, 124, 126, 0.3); 
+		border-bottom: none;
+		background: none;
 	}
 }
 
