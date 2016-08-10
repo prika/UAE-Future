@@ -3,6 +3,7 @@
 @mixin verticalAlign(){ position: absolute; top: 50%;  left: 50%; transform: translate(-50%, -50%);}
 @mixin clearfix(){&:before,&:after{content: "";display: table;}&:after {clear: both;}}
 @mixin truncateText{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+@mixin verticalTruncate{display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;}
 
 // ============================================================================================================
 // Mixin and General Animations
@@ -641,6 +642,7 @@ input[type='submit'],
 	
 	.bannerTop{
 		position: relative;
+		min-height: 45px;
 		
 		.tag{
 			position: absolute;
@@ -1454,6 +1456,10 @@ $offset: -200px;
 			font-family: "helvetica";
 			font-weight: normal;
 			font-size: 14px;
+		}
+		
+		p{
+			@include verticalTruncate();
 		}
 	}
 	
