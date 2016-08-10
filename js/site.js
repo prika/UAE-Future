@@ -49,7 +49,7 @@ function isMobileDevice(){
     catch(err){return false;}
 }
 
-function accordionFunction(){
+/*function accordionFunction(){
 
     $('.accordion > li ').click(function() {
         
@@ -69,4 +69,54 @@ function accordionFunction(){
         event.stopPropagation();
         $(this).stop;
     });
+}*/
+
+ function accordionMenu() {
+    $('.accordionMenu > li > a').click(function () {
+        // Set elem as active
+        var parent = $(this).parent();
+        
+        
+        // Elem is already active
+        if ($(this).parent().hasClass('active')) {
+            // Remove the active class
+            parent.removeClass('active');
+
+            // Hide the content
+            parent.find('.accordionContent').stop(true, true).slideUp('normal');
+            
+        } else {
+            
+            // Removes all actives
+            $('.accordionMenu > li').removeClass('active');
+
+            // Hides all contents
+            $('.accordionContent').slideUp('normal');
+        
+            // Set parent as active
+            parent.addClass('active');
+
+            // Displays the content
+            parent.find('.accordionContent').stop(true, true).slideDown('normal');
+            
+        }
+    });
 }
+
+
+function parallax(e, parent, child, layer) {
+    var speed = 50 / layer;
+    var $window = $(window);
+    var $target = $(child);
+
+    var z = $window.width() - e.pageX - (parent.offsetWidth / 2);
+    var k = $window.height() - e.pageY - (parent.offsetHeight / 2);
+
+    var x = (z / speed);
+    var y = (k / speed);
+
+    console.log(x, y)
+
+    $target.css('left', x);
+    $target.css('top', y);
+};

@@ -99,23 +99,6 @@
 
                 });
 
-                function parallax(e, parent, child, layer) {
-                    var speed = 50 / layer;
-                    var $window = $(window);
-                    var $target = $(child);
-
-                    var z = $window.width() - e.pageX - (parent.offsetWidth / 2);
-                    var k = $window.height() - e.pageY - (parent.offsetHeight / 2);
-
-                    var x = (z / speed);
-                    var y = (k / speed);
-
-                    console.log(x, y)
-
-                    $target.css('left', x);
-                    $target.css('top', y);
-                };
-
             </script>
         </section>
 
