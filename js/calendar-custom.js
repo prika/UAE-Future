@@ -1,5 +1,4 @@
-﻿
-$(document).ready(function () {
+﻿(function () {
 
     // Lookup for td with events
     $(".rsAptContent").closest("td").each(function () {
@@ -38,5 +37,5 @@ $(document).ready(function () {
             $($(this).find(".rsWrap")[1]).html(p);
         }
     });
-});
+})();
 
