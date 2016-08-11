@@ -43,9 +43,9 @@
   - [x] Full banner
   - [ ] Full banner - animations 4
   - [x] About content 1
-  - [ ] **About content 2**
-  - [ ] **About content 2 - links download**
-  - [ ] **About content 2 - accordion**
+  - [x] About content 2
+  - [x] About content 2 - links download
+  - [x] About content 2 - accordion
   - [ ] About content 2 - animations 2
 
 ###Resources
@@ -68,9 +68,9 @@
   - [ ] **Calendar popups**
 
 ###Culture
-  - [ ] **Full banner - video - script**
+  - [x] Full banner - video - script
   - [ ] **Online training videos - element**
-  - [ ] **Online training videos - list**
+  - [x] Online training videos - list
   - [ ] Online training videos - animations 1
 
 ###Login
