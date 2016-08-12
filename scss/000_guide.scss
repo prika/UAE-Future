@@ -1327,6 +1327,15 @@ $offset: -200px;
 		color: $color_w;
 	}
 	
+	.invertColors > a {
+		display: block;
+		//margin-top: 100px;
+		margin-right: 20px;
+		color: #FFF;
+		font-weight: bold;
+		text-shadow: 1px 1px $color_bl;
+	}
+	
 	.listContainerCalendar{
 		@include clearfix();
 		
@@ -1338,6 +1347,7 @@ $offset: -200px;
 			height: 250px;
 			padding: 20px;
 			position: relative;
+			@include transition( all .4s ease ); 
 			
 			&:first-child{
 				background: $color_w url(../sysimages/REMOVE/newsCorner.png) no-repeat left top;
@@ -1618,7 +1628,9 @@ $offset: -200px;
 			background: $color_w;
 		}*/
 		
-		.rsRow {
+		
+		
+		/*.rsRow {
 		border: 1px solid #D3D3D3;
 		}
 
@@ -1655,7 +1667,6 @@ $offset: -200px;
 		
 		}
 
-		/*change url for the icon you want*/
 		.rsPrevDay {
 			content: '';
 			background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
@@ -1709,7 +1720,7 @@ $offset: -200px;
 
 		.rsDatePickerActivator {
 		display:none;
-		}
+		}*/
 		
 	}
 }
@@ -1757,7 +1768,6 @@ $offset: -200px;
 	.container{
 		@include clearfix();
 		position: relative;
-		
 	}
 	
 	p{
@@ -2000,7 +2010,7 @@ $offset: -200px;
 			opacity: 0;
 			position: absolute;
 			top: 0;
-			@include transition( all .2s linear);
+			@include transition( .2s all .2s linear);
 		}
 		
 		&::before{
@@ -2010,11 +2020,12 @@ $offset: -200px;
 			height: 37px;
     		width: 34px;
 			position: absolute; bottom: 0; left: 5%; opacity: 0;
-			@include transition( all .2s linear);
+			@include transition( .2s all .2s linear);
 		}
 		
 		&:hover {
 			background: rgba($color: $color_lightergrey, $alpha: .6);
+			@include transition( background .2s linear);
 			
 			&::before{
 				bottom: 43%;
@@ -2035,8 +2046,48 @@ $offset: -200px;
 	position: relative;
     z-index: 9;
 	@include clearfix();
+	max-width: 1200px;
+	margin: 0 auto;
 	
 	.category{
 		color: $color_solidGold;
+		font-size: 14px;
+	}
+	
+	.listElement{
+		background: url(../sysimages/bgCard.png) no-repeat left top;
+		margin-bottom: 15px;
+		border-right: 1px solid #F4F4F1;
+		border-bottom: 1px solid #F4F4F1;
+	}
+	
+	.elementContent{
+		min-height: 342px;
+		padding: 40% 20px 20px;
+		position: relative;
+		
+		.text{
+			position: absolute;
+			z-index: 1;
+			top: 0; left: 0;
+			color: inherit;
+			text-decoration: none;
+			padding: 20% 20px 20px;
+			display: block;
+			opacity: 1;
+			@include transition( color .2s ease );
+			
+			
+			p, h3{
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical; 
+				overflow: hidden;
+			}
+			
+			p{ 
+				margin-top: 25px;
+			}
+		}
 	}
 }
