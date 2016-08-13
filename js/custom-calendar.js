@@ -33,7 +33,8 @@ function parseResponse(response)
         var obj = {
             date: new Date(parseInt(event.Start.substr(6))),
             id: event.ID,
-            subject: event.Subject
+            subject: event.Subject,
+            color: event.Attributes[1].Value
         }
 
         eventsArray.push(obj);
@@ -69,13 +70,27 @@ function redrawTable(eventsArray)
 
         for (var i = 0; i < eventsArray.length; i++)
         {
-            if (!checkIfEventDayMatches(fullDate, eventsArray[i].date)) continue;
-            var a = $("<p/>", { text: "09:30 Chakra Balance" });
-            groupEvents.append(a);
+            var event = eventsArray[i];
+            var date = eventsArray[i].date;
+
+            if (!checkIfEventDayMatches(fullDate, date)) continue;
+            
+            // Future me... sorry about that :-)
+            var eventSubject = $("<p style='color:"+ event.color +"'> <span>" + date.getHours() + ":" + date.getMinutes() + " </span>" + event.subject  + "</p>");
+            groupEvents.append(eventSubject);
+
+            var category = $("<div/>", {"class": "category", css: {"background-color": event.color}})
+            groupCategories.append(category); 
             eventsCount++;
         }
 
-        var numberOfEvents = $("<p/>", { "class": "eventsNumber", text: eventsCount == 1 ? "1 event" : eventsCount + "events" });
+        if (eventsCount > 0)
+        {
+            contentEvent.addClass("hasEvents");
+        }
+
+        var eventLabel =  (eventsCount == 0) ? "" : (eventsCount == 1 ? "1 event" : eventsCount + " events");
+        var numberOfEvents = $("<p/>", { "class": "eventsNumber", text: eventLabel });
         
         contentEvent.append(day, groupCategories,numberOfEvents, groupEvents);
         eventContentWrapper.append(contentEvent);
