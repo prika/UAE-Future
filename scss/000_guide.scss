@@ -672,12 +672,16 @@ select {
 .buttonPrev{
 	height: 37px;
     width: 37px;
+	padding:0;
 	background: url(../sysimages/button/previous.png) no-repeat center center;
+	margin: 0 5px;
 }
 .buttonNext{
 	height: 37px;
     width: 37px;
+	padding:0;
 	background: url(../sysimages/button/next.png) no-repeat center center;
+	margin: 0 5px;
 }
 
 .buttonClose{
