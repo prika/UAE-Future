@@ -1,4 +1,6 @@
-﻿var data = {
+﻿
+
+var data = {
     "schedulerInfo":
     {
         "ViewStart": "\/Date(1470009600000)\/",
@@ -23,8 +25,8 @@ $.ajax({
     data: JSON.stringify(data)
 }).done(parseResponse);
 
-function parseResponse(response)
-{
+
+function parseResponse(response) {
     var eventsArray = [];
 
     for (var i = 0; i < response.Appointments.length; i++) {
@@ -43,57 +45,77 @@ function parseResponse(response)
     redrawTable(eventsArray);
 }
 
-function checkIfEventDayMatches(dateToCheck, actualDate)
-{
+function checkIfEventDayMatches(dateToCheck, actualDate) {
     return (dateToCheck.getDate() == actualDate.getDate()
         && dateToCheck.getMonth() == actualDate.getMonth()
         && dateToCheck.getFullYear() == actualDate.getFullYear())
 }
 
-function redrawTable(eventsArray)
+function bindFancybox() {
+    $(".contentEvent.hasEvents").click(function () {
+        $.get("http://54.93.89.184/Sitefinity/Public/Services/RadSchedulerService.svc/event/57abd489-4cf4-696f-a65b-ff0000c51620/?provider=OpenAccessDataProvider", buildFancybox);
+    });
+}
+
+function buildFancybox(data)
 {
-    $($("#calendar .rsContentTable")[0]).find("td").each(function ()
-    {
+    var template = document.getElementById('sample_template').innerHTML;
+
+    var view =
+     {
+         title: data.Item.Title.Value,
+         subject: data.Item.Content.Value,
+         date: "Aug, 9 2015",
+         location: "My location"
+     };
+
+    var output = Mustache.render(template, view);   
+    $.fancybox(output);
+}
+
+function redrawTable(eventsArray) {
+    $($("#calendar .rsContentTable")[0]).find("td").each(function () {
         var td = $(this);
         var day = $(td.find(".rsDateWrap .rsDateBox"));
-       
+
         var fullDate = new Date($(day.find("a")[0]).attr("title"));
-        
+
         td.empty();
 
         var eventContentWrapper = $("<div/>", { "class": "containerEvent" });
         var contentEvent = $("<div/>", { "class": "contentEvent" });
-        var day = $("<p/>", { "class": "day", "text": day.text()});
-        var groupCategories = $("<div />", {"class" :"groupCategories" });
-        var groupEvents = $("<div />", {"class" :"groupEvents" });
+        var day = $("<p/>", { "class": "day", "text": day.text() });
+        var groupCategories = $("<div />", { "class": "groupCategories" });
+        var groupEvents = $("<div />", { "class": "groupEvents" });
         var eventsCount = 0;
 
-        for (var i = 0; i < eventsArray.length; i++)
-        {
+        for (var i = 0; i < eventsArray.length; i++) {
             var event = eventsArray[i];
             var date = eventsArray[i].date;
 
             if (!checkIfEventDayMatches(fullDate, date)) continue;
-            
+
             // Future me... sorry about that :-)
-            var eventSubject = $("<p style='color:"+ event.color +"'> <span>" + date.getHours() + ":" + date.getMinutes() + " </span>" + event.subject  + "</p>");
+            var eventSubject = $("<p style='color:" + event.color + "'> <span>" + date.getHours() + ":" + date.getMinutes() + " </span>" + event.subject + "</p>");
             groupEvents.append(eventSubject);
 
-            var category = $("<div/>", {"class": "category", css: {"background-color": event.color}})
-            groupCategories.append(category); 
+            var category = $("<div/>", { "class": "category", css: { "background-color": event.color } })
+            groupCategories.append(category);
             eventsCount++;
         }
 
-        if (eventsCount > 0)
-        {
+        if (eventsCount > 0) {
             contentEvent.addClass("hasEvents");
         }
 
-        var eventLabel =  (eventsCount == 0) ? "" : (eventsCount == 1 ? "1 event" : eventsCount + " events");
+        var eventLabel = (eventsCount == 0) ? "" : (eventsCount == 1 ? "1 event" : eventsCount + " events");
         var numberOfEvents = $("<p/>", { "class": "eventsNumber", text: eventLabel });
-        
-        contentEvent.append(day, groupCategories,numberOfEvents, groupEvents);
+
+        contentEvent.append(day, groupCategories, numberOfEvents, groupEvents);
         eventContentWrapper.append(contentEvent);
         td.append(eventContentWrapper);
     });
+
+    bindFancybox();
 }
+
