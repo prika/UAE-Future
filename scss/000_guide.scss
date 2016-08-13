@@ -113,9 +113,6 @@ $offset: -200px;
 
 
 
-
-
-
 // ============================================================================================================
 // General Variables
 // Header and Footer Dimensions
@@ -131,10 +128,8 @@ $color_w: #FFF;
 $color_bl: #21282f;
 $color_lightgrey:#7b7c7e;
 $color_lightergrey: #dfdfdf;
-//$color_br: ;
 $color_gold: rgba(190,151,95,0.80);
 $color_solidGold: #be9857;
-//B39155
 
 $bg_img: "../sysimages/bg.png";
 
@@ -558,7 +553,7 @@ select {
 	-webkit-tap-highlight-color: transparent;
 	display: block;
 	float: left;
-	height: 37px;
+	height: 40px;
     width: auto;
 	padding: 10px 10px 10px 50px;
 	@include transition( all .4s ease);
@@ -900,10 +895,17 @@ input[type='submit'],
 // ===================================================================================================================
 // Lists
 .listContainer{
+	//padding-left: 0;
+	//padding-right: 7px;
 	
-	.col-xs-12.col-sm-4.col-md-3{
+	.col-xs-12.col-sm-4.col-md-3,
+	.col-xs-12.col-sm-4.col-md-4{
 		padding-right: 7px;
 		padding-left: 7px;
+		
+		&:first-child{
+			padding-left: 0;
+		}
 	}
 		
 	.listElement{
@@ -1618,6 +1620,7 @@ $c_briefs:#8cc63f;
 // Filters 
 #filterSection{
 	margin-top: -12px;
+	padding: 0;
 	
 	.filter label{
 		width: 100%;
@@ -1711,141 +1714,6 @@ cursor: pointer;
 }
 //Codigo inline 
 
-
-// ===================================================================================================================
-// Calendar Section 
-#calendarSection{
-	background: url($bg_img);
-	padding-bottom: 40px;
-	
-	#calendar {
-		max-width: 1100px;
-		margin: 0 auto;
-		
-		//.fc-head,
-		/*.fc-head td,
-		.fc-head th {
-			border-color: transparent;
-		}
-		
-		.fc-head th,
-		.fc-body .fc-day-number{
-			text-align: left;
-			padding: 5px;
-			font-size: 16px;
-			font-family: 'merriweather';
-		}
-		.fc-unthemed .fc-content, 
-		.fc-unthemed .fc-divider, 
-		.fc-unthemed .fc-popover, 
-		.fc-unthemed .fc-row, 
-		.fc-unthemed tbody, 
-		.fc-unthemed td, 
-		.fc-unthemed th, 
-		.fc-unthemed thead{
-			border-color: $color_lightergrey;
-		}
-		
-		.fc-widget-content {
-			background: $color_w;
-		}*/
-		
-		
-		
-		/*.rsRow {
-		border: 1px solid #D3D3D3;
-		}
-
-		.rsRow td {
-		border: 1px solid #D3D3D3;
-		}
-
-		.rsContentTable {
-		background-color: #ffffff;
-		}
-
-		.rsTodayCell .rsDateHeader {
-		color: #be9857;
-		}
-
-		.rsDateHeader {
-			color: #000000;
-			font-size: 18px;
-			font-family: "Times New Roman";
-			text-align: left;
-			margin-left: 10px;
-			margin-top: 10px;
-		}
-
-		.rsHorizontalHeaderTable th {
-		width: 14.35%;
-		font-size: 16px;
-		font-family: "Times New Roman";
-		}
-
-		.rsDateBox {
-		margin-top: 5px;
-		font-family: "Times New Roman";
-		
-		}
-
-		.rsPrevDay {
-			content: '';
-			background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-			background-size: cover;
-			position: absolute;
-			width: 20px;
-			height: 20px;
-			margin-left: 200px;
-			font-size: 0px;
-
-		}
-
-		.rsNextDay {
-			content: '';
-			background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-			background-size: cover;
-			position: absolute;
-			width: 20px;
-			height: 20px;
-			margin-left: 170px;
-			font-size: 0px;
-
-		}
-
-		.sfcalendar {
-		margin-bottom: 5%;
-		}
-
-		.k-widget .k-window .sfcalendarEventPreviewWrp {
-		background-color: black;
-		}
-
-		div.k-window-content {
-			background-color: #000;
-			font-family: Arial;
-			font-weight: bolder;
-			color: #f2f2f2;
-		}
-
-		div.k-window-titlebar {
-		background-color: #000;
-		}
-
-		.sfTxtLbl {
-		color: #fff
-		}
-
-		.sfcalendarEventPreviewEditLnk {
-		color: #fff;
-		}
-
-		.rsDatePickerActivator {
-		display:none;
-		}*/
-		
-	}
-}
 
 
 // ===================================================================================================================
@@ -2272,3 +2140,13 @@ color: #21282f;
 		}
 	}
 }
+
+
+
+
+
+
+// ===================================================================================================================
+// Calendar Section
+
+@import '_calendar.scss';

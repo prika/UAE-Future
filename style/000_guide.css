@@ -745,7 +745,7 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
   -webkit-tap-highlight-color: transparent;
   display: block;
   float: left;
-  height: 37px;
+  height: 40px;
   width: auto;
   padding: 10px 10px 10px 50px;
   -moz-transition: all 0.4s ease;
@@ -947,7 +947,7 @@ input[type='submit'],
       #header .navbar #nav li a {
         display: table-cell;
         vertical-align: middle;
-        padding: 0 7px;
+        padding: 0 5px;
         margin: 0;
         height: 80px;
         color: rgba(190, 151, 95, 0.8); }
@@ -988,8 +988,7 @@ input[type='submit'],
     flex: 1 auto;
     display: inline-block; }
     #header .navbar .navbar-right a {
-      display: block;
-      float: right; }
+      display: inline-block; }
     #header .navbar .navbar-right #navIcon {
       width: 45px;
       padding: 0 10px;
@@ -1109,7 +1108,7 @@ input[type='submit'],
   #header.stickyHeader .navbar #logo {
     padding-top: 16px; }
   #header.stickyHeader .navbar .navbar-right #userProfile {
-    padding: 10px 0 16px 7px; }
+    padding: 9px 5px 7px 5px; }
 #header.stickyHeader #navIcon {
   margin-top: -10px; }
 #header.stickyHeader .navbar,
@@ -1514,9 +1513,13 @@ input[type='submit'],
   #ecosystemSection:after {
     clear: both; }
 
-.listContainer .col-xs-12.col-sm-4.col-md-3 {
+.listContainer .col-xs-12.col-sm-4.col-md-3,
+.listContainer .col-xs-12.col-sm-4.col-md-4 {
   padding-right: 7px;
   padding-left: 7px; }
+  .listContainer .col-xs-12.col-sm-4.col-md-3:first-child,
+  .listContainer .col-xs-12.col-sm-4.col-md-4:first-child {
+    padding-left: 0; }
 .listContainer .listElement {
   position: relative;
   width: 100%;
@@ -2053,7 +2056,8 @@ input[type='submit'],
   #newsSection .container {
     background: none; } }
 #filterSection {
-  margin-top: -12px; }
+  margin-top: -12px;
+  padding: 0; }
   #filterSection .filter label {
     width: 100%;
     height: 25px;
@@ -2121,130 +2125,6 @@ input[type='submit'],
   color: #7b7c7e;
   margin-bottom: 3px;
   cursor: pointer; }
-
-#calendarSection {
-  background: url("../sysimages/bg.png");
-  padding-bottom: 40px; }
-  #calendarSection #calendar {
-    max-width: 1100px;
-    margin: 0 auto;
-    /*.fc-head td,
-    .fc-head th {
-    	border-color: transparent;
-    }
-    
-    .fc-head th,
-    .fc-body .fc-day-number{
-    	text-align: left;
-    	padding: 5px;
-    	font-size: 16px;
-    	font-family: 'merriweather';
-    }
-    .fc-unthemed .fc-content, 
-    .fc-unthemed .fc-divider, 
-    .fc-unthemed .fc-popover, 
-    .fc-unthemed .fc-row, 
-    .fc-unthemed tbody, 
-    .fc-unthemed td, 
-    .fc-unthemed th, 
-    .fc-unthemed thead{
-    	border-color: $color_lightergrey;
-    }
-    
-    .fc-widget-content {
-    	background: $color_w;
-    }*/
-    		/*.rsRow {
-    		border: 1px solid #D3D3D3;
-    		}
-    
-    		.rsRow td {
-    		border: 1px solid #D3D3D3;
-    		}
-    
-    		.rsContentTable {
-    		background-color: #ffffff;
-    		}
-    
-    		.rsTodayCell .rsDateHeader {
-    		color: #be9857;
-    		}
-    
-    		.rsDateHeader {
-    			color: #000000;
-    			font-size: 18px;
-    			font-family: "Times New Roman";
-    			text-align: left;
-    			margin-left: 10px;
-    			margin-top: 10px;
-    		}
-    
-    		.rsHorizontalHeaderTable th {
-    		width: 14.35%;
-    		font-size: 16px;
-    		font-family: "Times New Roman";
-    		}
-    
-    		.rsDateBox {
-    		margin-top: 5px;
-    		font-family: "Times New Roman";
-    		
-    		}
-    
-    		.rsPrevDay {
-    			content: '';
-    			background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-    			background-size: cover;
-    			position: absolute;
-    			width: 20px;
-    			height: 20px;
-    			margin-left: 200px;
-    			font-size: 0px;
-    
-    		}
-    
-    		.rsNextDay {
-    			content: '';
-    			background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-    			background-size: cover;
-    			position: absolute;
-    			width: 20px;
-    			height: 20px;
-    			margin-left: 170px;
-    			font-size: 0px;
-    
-    		}
-    
-    		.sfcalendar {
-    		margin-bottom: 5%;
-    		}
-    
-    		.k-widget .k-window .sfcalendarEventPreviewWrp {
-    		background-color: black;
-    		}
-    
-    		div.k-window-content {
-    			background-color: #000;
-    			font-family: Arial;
-    			font-weight: bolder;
-    			color: #f2f2f2;
-    		}
-    
-    		div.k-window-titlebar {
-    		background-color: #000;
-    		}
-    
-    		.sfTxtLbl {
-    		color: #fff
-    		}
-    
-    		.sfcalendarEventPreviewEditLnk {
-    		color: #fff;
-    		}
-    
-    		.rsDatePickerActivator {
-    		display:none;
-    		}*/ }
 
 #contactsSection {
   background: url("../sysimages/bg.png");
@@ -2624,5 +2504,151 @@ input[type='submit'],
       #favoritesSection .elementContent .text textarea,
       #favoritesSection .elementContent .text select, #favoritesSection .elementContent .text #aboutSection blockquote, #aboutSection #favoritesSection .elementContent .text blockquote {
         margin-top: 25px; }
+
+#calendarSection {
+  background: url("../sysimages/bg.png");
+  padding-bottom: 40px;
+  /*change url for the icon you want*/
+  /*.rsDatePickerActivator {
+  display:none;
+  }*/ }
+  #calendarSection #calendar {
+    max-width: 1100px;
+    margin: 0 auto; }
+  #calendarSection .containerEvent {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background: #FFF; }
+  #calendarSection .contentEvent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: #FFF;
+    cursor: pointer;
+    padding: 10px; }
+  #calendarSection .day {
+    float: left;
+    width: 50px;
+    color: #CCC;
+    font-size: 14px; }
+  #calendarSection .groupCategories {
+    float: right; }
+  #calendarSection .category {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 3px; }
+  #calendarSection .eventsNumber {
+    clear: right;
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    color: #D8D8D8;
+    line-height: 100%;
+    margin-bottom: 5px; }
+  #calendarSection .groupEvents {
+    opacity: 0;
+    float: left;
+    width: 100%;
+    margin-top: 2px; }
+  #calendarSection .groupEvents p, #calendarSection .groupEvents input[type='text'],
+  #calendarSection .groupEvents input[type='number'],
+  #calendarSection .groupEvents input[type='email'],
+  #calendarSection .groupEvents input[type='search'],
+  #calendarSection .groupEvents input[type='password'],
+  #calendarSection .groupEvents textarea,
+  #calendarSection .groupEvents select, #calendarSection .groupEvents #aboutSection blockquote, #aboutSection #calendarSection .groupEvents blockquote {
+    font-family: "helvetica";
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 140%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  #calendarSection .groupEvents p span, #calendarSection .groupEvents input[type='text'] span,
+  #calendarSection .groupEvents input[type='number'] span,
+  #calendarSection .groupEvents input[type='email'] span,
+  #calendarSection .groupEvents input[type='search'] span,
+  #calendarSection .groupEvents input[type='password'] span,
+  #calendarSection .groupEvents textarea span,
+  #calendarSection .groupEvents select span, #calendarSection .groupEvents #aboutSection blockquote span, #aboutSection #calendarSection .groupEvents blockquote span {
+    font-family: "helveticabold"; }
+  #calendarSection .contentEvent.hasEvents:hover {
+    background: #21282F;
+    border: 2px solid #FFF;
+    top: -10px;
+    bottom: -10px;
+    right: -10px;
+    left: -10px;
+    padding: 10px;
+    z-index: 9;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc; }
+  #calendarSection .contentEvent.hasEvents:hover .day {
+    color: #FFF; }
+  #calendarSection .contentEvent.hasEvents:hover .groupEvents {
+    opacity: 1; }
+  #calendarSection .rsRow td {
+    border: 1px solid #D3D3D3; }
+  #calendarSection .rsContentTable {
+    background-color: #ffffff; }
+  #calendarSection .rsTodayCell .rsDateHeader {
+    color: #be9857; }
+  #calendarSection .rsDateHeader {
+    color: #000000;
+    font-size: 18px;
+    font-family: 'intro';
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px; }
+  #calendarSection .rsHorizontalHeaderTable th {
+    width: 14.35%;
+    font-family: 'merriweather';
+    font-weight: normal;
+    color: #21282F;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 5px; }
+  #calendarSection .rsDateBox {
+    margin-top: 5px; }
+  #calendarSection .rsPrevDay {
+    content: '';
+    background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA");
+    background-size: cover;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 200px;
+    font-size: 0px; }
+  #calendarSection .rsNextDay {
+    content: '';
+    background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA");
+    background-size: cover;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 170px;
+    font-size: 0px; }
+  #calendarSection .sfcalendar {
+    margin-bottom: 5%; }
+  #calendarSection .k-widget .k-window .sfcalendarEventPreviewWrp {
+    background-color: black; }
+  #calendarSection div.k-window-content {
+    background-color: #000;
+    font-family: Arial;
+    font-weight: bolder;
+    color: #f2f2f2; }
+  #calendarSection div.k-window-titlebar {
+    background-color: #000; }
+  #calendarSection .sfTxtLbl {
+    color: #fff; }
+  #calendarSection .sfcalendarEventPreviewEditLnk {
+    color: #fff; }
 
 /*# sourceMappingURL=000_guide.css.map */

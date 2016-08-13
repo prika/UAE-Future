@@ -36,7 +36,7 @@
 					@extend %clickable;
                     display: table-cell;
 	                vertical-align: middle;
-	                padding: 0 7px;
+	                padding: 0 5px;
 	                margin: 0;
 					height: $header_height;
                     color: $color_gold;
@@ -97,8 +97,8 @@
 			display: inline-block;
 			
 			a{
-				display: block;
-				float: right;	
+				display: inline-block;
+				//float: right;	
 			}
 			
 			#navIcon{
@@ -267,7 +267,7 @@
 			}
 			
 			.navbar-right #userProfile{
-				padding: 10px 0 16px 7px;
+				padding: 9px 5px 7px 5px;
 			}
 			
 			
