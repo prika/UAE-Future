@@ -2,7 +2,7 @@
 #calendarSection{
 	background: url($bg_img);
 	padding-bottom: 40px;
-	
+
 	#calendar {
 		max-width: 1100px;
 		margin: 0 auto;
@@ -25,6 +25,7 @@
             background: #FFF;
             cursor: pointer;
             padding: 10px;
+			@include transition( all .2s linear );
         }
 
             .day{
@@ -32,6 +33,7 @@
                 width: 50px;
                 color: #CCC;
                 font-size: 14px;
+				@include transition( color .2s linear );
             }
 
             .groupCategories{
@@ -61,6 +63,7 @@
                 float: left;
                 width: 100%;
                 margin-top: 2px;
+				@include transition( opacity .2s linear );
             }
 
             .groupEvents p{
@@ -84,10 +87,9 @@
         left: -10px;
         padding: 10px;
         z-index: 9;
-        -webkit-box-shadow: 3px 3px 5px 6px #ccc; 
-        -moz-box-shadow:    3px 3px 5px 6px #ccc; 
-        box-shadow:         3px 3px 5px 6px #ccc; 
+		@include box-shadow( 0, 0, 5px, rgba($color: #666, $alpha: .5) );
     }
+
 
     .contentEvent.hasEvents:hover .day{
         color: #FFF;
@@ -136,7 +138,7 @@
 	}
 
 	/*change url for the icon you want*/
-	.rsPrevDay {
+	/*.rsPrevDay {
 		content: '';
 		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
 		background-size: cover;
@@ -156,7 +158,7 @@
 		height: 20px;
 		margin-left: 170px;
 	font-size: 0px;
-	}
+	}*/
 
 
 	.sfcalendar {
@@ -190,3 +192,6 @@
 	display:none;
 	}*/
 }
+
+
+.rsToday{display: none;}
