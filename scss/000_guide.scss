@@ -655,13 +655,13 @@ select {
 
 .buttonPrev{
 	height: 37px;
-    width: 34px;
-	background: url(../sysimages/button/previous@2x.png) no-repeat top left;
+    width: 37px;
+	background: url(../sysimages/button/previous.png) no-repeat center center;
 }
 .buttonNext{
 	height: 37px;
-    width: 34px;
-	background: red url(../sysimages/button/next@2x.png) no-repeat top left;
+    width: 37px;
+	background: url(../sysimages/button/next.png) no-repeat center center;
 }
 
 .buttonClose,
@@ -1622,6 +1622,10 @@ $c_briefs:#8cc63f;
 	margin-top: -12px;
 	padding: 0;
 	
+	.filters{
+		margin-bottom: 30px;
+	}
+
 	.filter label{
 		width: 100%;
 		height: 25px;
@@ -2150,3 +2154,8 @@ color: #21282f;
 // Calendar Section
 
 @import '_calendar.scss';
+
+
+.fancybox-overlay{
+	cursor: url(../sysimages/button/close.png) 0 0, auto;
+}

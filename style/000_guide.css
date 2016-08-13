@@ -830,13 +830,13 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
 
 .buttonPrev {
   height: 37px;
-  width: 34px;
-  background: url(../sysimages/button/previous@2x.png) no-repeat top left; }
+  width: 37px;
+  background: url(../sysimages/button/previous.png) no-repeat center center; }
 
 .buttonNext {
   height: 37px;
-  width: 34px;
-  background: red url(../sysimages/button/next@2x.png) no-repeat top left; }
+  width: 37px;
+  background: url(../sysimages/button/next.png) no-repeat center center; }
 
 .buttonClose,
 .fancybox-close {
@@ -2058,6 +2058,8 @@ input[type='submit'],
 #filterSection {
   margin-top: -12px;
   padding: 0; }
+  #filterSection .filters {
+    margin-bottom: 30px; }
   #filterSection .filter label {
     width: 100%;
     height: 25px;
@@ -2650,5 +2652,8 @@ input[type='submit'],
     color: #fff; }
   #calendarSection .sfcalendarEventPreviewEditLnk {
     color: #fff; }
+
+.fancybox-overlay {
+  cursor: url(../sysimages/button/close.png) 0 0, auto; }
 
 /*# sourceMappingURL=000_guide.css.map */
