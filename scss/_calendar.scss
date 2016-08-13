@@ -195,3 +195,75 @@
 
 
 .rsToday{display: none;}
+
+
+.fc-toolbar .fc-left{float: left;}
+.fc-toolbar .fc-right { float: right; }
+.fc-button-group, .fc-icon {display: inline-block;}
+.fc-clear {clear: both;}
+
+
+.popupCalendar{
+    max-width: 400px;
+
+	img{ max-width: 100%; }
+
+	.contentText{
+		width: 100%;
+		padding: 35px 20px;
+
+		.eventName{
+			font-family: 'helveticabold';
+			font-size: 16px;
+		}
+
+		.eventDate{
+			font-family: 'merriweather';
+			font-size: 14px;
+			margin-bottom: 40px;
+		}
+
+		.eventLocationName{
+			font-family: 'merriweather';
+			font-size: 16px;
+			color: #333333;
+		}
+
+		.eventLocation{
+			font-family: 'merriweather';
+			font-size: 14px;
+			color: #666666;
+		}
+	}
+
+	
+
+	.footer {
+		width: 100%;
+		padding: 10px 20px;
+		background: #9385C8;
+		@include clearfix();
+
+		.tags{
+			float: left;
+
+			a{
+				display: inline-block;
+				margin-right: 5px;
+				font-family: 'helvetica';
+				font-size: 12px;
+				color: #FFFFFF;
+				line-height: 100%;
+			}
+		}
+
+		.category{
+			float: right;
+			font-family: 'helveticabold';
+			font-size: 12px;
+			color: #FFFFFF;
+			line-height: 100%;
+		}
+
+	}
+}

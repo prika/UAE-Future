@@ -2673,6 +2673,65 @@ input[type='submit'],
 .rsToday {
   display: none; }
 
+.fc-toolbar .fc-left {
+  float: left; }
+
+.fc-toolbar .fc-right {
+  float: right; }
+
+.fc-button-group, .fc-icon {
+  display: inline-block; }
+
+.fc-clear {
+  clear: both; }
+
+.popupCalendar {
+  max-width: 400px; }
+  .popupCalendar img {
+    max-width: 100%; }
+  .popupCalendar .contentText {
+    width: 100%;
+    padding: 35px 20px; }
+    .popupCalendar .contentText .eventName {
+      font-family: 'helveticabold';
+      font-size: 16px; }
+    .popupCalendar .contentText .eventDate {
+      font-family: 'merriweather';
+      font-size: 14px;
+      margin-bottom: 40px; }
+    .popupCalendar .contentText .eventLocationName {
+      font-family: 'merriweather';
+      font-size: 16px;
+      color: #333333; }
+    .popupCalendar .contentText .eventLocation {
+      font-family: 'merriweather';
+      font-size: 14px;
+      color: #666666; }
+  .popupCalendar .footer {
+    width: 100%;
+    padding: 10px 20px;
+    background: #9385C8; }
+    .popupCalendar .footer:before, .popupCalendar .footer:after {
+      content: "";
+      display: table; }
+    .popupCalendar .footer:after {
+      clear: both; }
+    .popupCalendar .footer .tags {
+      float: left; }
+      .popupCalendar .footer .tags a {
+        display: inline-block;
+        margin-right: 5px;
+        font-family: 'helvetica';
+        font-size: 12px;
+        color: #FFFFFF;
+        line-height: 100%; }
+    .popupCalendar .footer .category {
+      float: right;
+      font-family: 'helveticabold';
+      font-size: 12px;
+      color: #FFFFFF;
+      line-height: 100%; }
+
 .fancybox-close.fancybox-item {
   display: none !important; }
 
