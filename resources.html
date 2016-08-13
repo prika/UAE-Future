@@ -201,7 +201,14 @@ Every month, five million people move</p>
                 new ScrollMagic.Scene({triggerElement: "#fullBanner"})
                                 .setTween("#fullBanner > div", {y: "60%", ease: Linear.easeNone})
                                 .addTo(controller);
-
+                new ScrollMagic.Scene({ triggerElement: "#resourcesSection1", offset: 50 })
+                            .setClassToggle("#resourcesSection1", "showUp")
+                            //.addIndicators("ipigpgpigpi")
+                            .addTo(controller);
+                new ScrollMagic.Scene({ triggerElement: "#resourcesSection2", offset: 50 })
+                            .setClassToggle("#resourcesSection2", "showUp")
+                            //.addIndicators("ipigpgpigpi")
+                            .addTo(controller);
             
                })(jQuery);
 

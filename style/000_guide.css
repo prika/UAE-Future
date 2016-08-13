@@ -1,45 +1,427 @@
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes showUpAnimation {
   0% {
     transform: translateY(50%);
     opacity: .5; }
   100% {
     transform: translateY(0);
     opacity: 1; } }
-@-moz-keyframes fadeIn {
+@-moz-keyframes showUpAnimation {
   0% {
     transform: translateY(50%);
     opacity: .5; }
   100% {
     transform: translateY(0);
     opacity: 1; } }
-@-ms-keyframes fadeIn {
+@-ms-keyframes showUpAnimation {
   0% {
     transform: translateY(50%);
     opacity: .5; }
   100% {
     transform: translateY(0);
     opacity: 1; } }
-@-o-keyframes fadeIn {
+@-o-keyframes showUpAnimation {
   0% {
     transform: translateY(50%);
     opacity: .5; }
   100% {
     transform: translateY(0);
     opacity: 1; } }
-@keyframes fadeIn {
+@keyframes showUpAnimation {
   0% {
     transform: translateY(50%);
     opacity: .5; }
   100% {
     transform: translateY(0);
+    opacity: 1; } }
+@-webkit-keyframes showDownAnimation {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@-moz-keyframes showDownAnimation {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@-ms-keyframes showDownAnimation {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@-o-keyframes showDownAnimation {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes showDownAnimation {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeInAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-ms-keyframes fadeInAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fadeInAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0; }
+  100% {
     opacity: 1; } }
 .showUp > div {
-  -webkit-animation: fadeIn 1s ease;
-  -moz-animation: fadeIn 1s ease;
-  -ms-animation: fadeIn 1s ease;
-  -o-animation: fadeIn 1s ease;
-  animation: fadeIn 1s ease; }
+  -webkit-animation: showUpAnimation 1s ease;
+  -moz-animation: showUpAnimation 1s ease;
+  -ms-animation: showUpAnimation 1s ease;
+  -o-animation: showUpAnimation 1s ease;
+  animation: showUpAnimation 1s ease; }
 
+.bannerContent h1 {
+  -webkit-animation: showDownAnimation .5s ease;
+  -moz-animation: showDownAnimation .5s ease;
+  -ms-animation: showDownAnimation .5s ease;
+  -o-animation: showDownAnimation .5s ease;
+  animation: showDownAnimation .5s ease; }
+
+.bannerContent h2, #fullBanner .bannerContent h2,
+#fullBanner .bannerContent h2 * {
+  -webkit-animation: showUpAnimation .5s ease;
+  -moz-animation: showUpAnimation .5s ease;
+  -ms-animation: showUpAnimation .5s ease;
+  -o-animation: showUpAnimation .5s ease;
+  animation: showUpAnimation .5s ease; }
+
+.bannerContent button {
+  -webkit-animation: fadeInAnimation 3s ease;
+  -moz-animation: fadeInAnimation 3s ease;
+  -ms-animation: fadeInAnimation 3s ease;
+  -o-animation: fadeInAnimation 3s ease;
+  animation: fadeInAnimation 3s ease; }
+
+@-webkit-keyframes trends {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+@-moz-keyframes trends {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+@-o-keyframes trends {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+@keyframes trends {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: 0px -200px; } }
+@-webkit-keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+@-moz-keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+@-o-keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+@keyframes institutes {
+  from {
+    background-position: -40px 0px; }
+  to {
+    background-position: -40px -200px; } }
+@-webkit-keyframes consultancies {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+@-moz-keyframes consultancies {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+@-o-keyframes consultancies {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+@keyframes consultancies {
+  from {
+    background-position: -80px 0px; }
+  to {
+    background-position: -80px -200px; } }
+@-webkit-keyframes organizations {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+@-moz-keyframes organizations {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+@-o-keyframes organizations {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+@keyframes organizations {
+  from {
+    background-position: -120px 0px; }
+  to {
+    background-position: -120px -200px; } }
+@-webkit-keyframes courses {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+@-moz-keyframes courses {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+@-o-keyframes courses {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+@keyframes courses {
+  from {
+    background-position: -160px 0px; }
+  to {
+    background-position: -160px -200px; } }
+@-webkit-keyframes news {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+@-moz-keyframes news {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+@-o-keyframes news {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+@keyframes news {
+  from {
+    background-position: -200px 0px; }
+  to {
+    background-position: -200px -200px; } }
+@-webkit-keyframes scholarships {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+@-moz-keyframes scholarships {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+@-o-keyframes scholarships {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+@keyframes scholarships {
+  from {
+    background-position: -240px 0px; }
+  to {
+    background-position: -240px -200px; } }
+@-webkit-keyframes conferences {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+@-moz-keyframes conferences {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+@-o-keyframes conferences {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+@keyframes conferences {
+  from {
+    background-position: -280px 0px; }
+  to {
+    background-position: -280px -200px; } }
+@-webkit-keyframes initiatives {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+@-moz-keyframes initiatives {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+@-o-keyframes initiatives {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+@keyframes initiatives {
+  from {
+    background-position: -320px 0px; }
+  to {
+    background-position: -320px -200px; } }
+@-webkit-keyframes tools {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+@-moz-keyframes tools {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+@-o-keyframes tools {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+@keyframes tools {
+  from {
+    background-position: -360px 0px; }
+  to {
+    background-position: -360px -200px; } }
+@-webkit-keyframes academia {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+@-moz-keyframes academia {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+@-o-keyframes academia {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+@keyframes academia {
+  from {
+    background-position: -400px 0px; }
+  to {
+    background-position: -400px -200px; } }
+@-webkit-keyframes download {
+  from {
+    background-position: -480px 0px; }
+  to {
+    background-position: -480px -200px; } }
+@-moz-keyframes download {
+  from {
+    background-position: -480px 0px; }
+  to {
+    background-position: -480px -200px; } }
+@-o-keyframes download {
+  from {
+    background-position: -480px 0px; }
+  to {
+    background-position: -480px -200px; } }
+@keyframes download {
+  from {
+    background-position: -480px 0px; }
+  to {
+    background-position: -480px -200px; } }
+@-webkit-keyframes share {
+  from {
+    background-position: -520px 0px; }
+  to {
+    background-position: -520px -200px; } }
+@-moz-keyframes share {
+  from {
+    background-position: -520px 0px; }
+  to {
+    background-position: -520px -200px; } }
+@-o-keyframes share {
+  from {
+    background-position: -520px 0px; }
+  to {
+    background-position: -520px -200px; } }
+@keyframes share {
+  from {
+    background-position: -520px 0px; }
+  to {
+    background-position: -520px -200px; } }
+@-webkit-keyframes open {
+  from {
+    background-position: -560px 0px; }
+  to {
+    background-position: -560px -200px; } }
+@-moz-keyframes open {
+  from {
+    background-position: -560px 0px; }
+  to {
+    background-position: -560px -200px; } }
+@-o-keyframes open {
+  from {
+    background-position: -560px 0px; }
+  to {
+    background-position: -560px -200px; } }
+@keyframes open {
+  from {
+    background-position: -560px 0px; }
+  to {
+    background-position: -560px -200px; } }
+@-webkit-keyframes favorites {
+  from {
+    background-position: -600px 0px; }
+  to {
+    background-position: -600px -200px; } }
+@-moz-keyframes favorites {
+  from {
+    background-position: -600px 0px; }
+  to {
+    background-position: -600px -200px; } }
+@-o-keyframes favorites {
+  from {
+    background-position: -600px 0px; }
+  to {
+    background-position: -600px -200px; } }
+@keyframes favorites {
+  from {
+    background-position: -600px 0px; }
+  to {
+    background-position: -600px -200px; } }
 #main, #footer {
   -moz-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;
@@ -324,10 +706,12 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   display: inline-block;
-  height: 37px;
-  width: 34px;
+  	/*height: 37px;
+      width: 34px;*/
+  height: 40px;
+  width: 40px;
   overflow: hidden;
-  padding: 4px 10px 4px 40px;
+  padding: 4px 13px 4px 45px;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
@@ -348,11 +732,12 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
     background-size: 33px; }
   .buttonIc:hover {
     background-color: #21282f;
-    background-position: 3px -34px;
     width: auto; }
     .buttonIc:hover span {
       width: 100%;
       opacity: 1; }
+  .buttonIc:after::before {
+    background: red !important; }
 
 .buttonOpened {
   position: relative;
@@ -378,17 +763,67 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
     color: #FFF;
     background-position: 3px -34px; }
 
-.buttonDownload {
-  background: url(../sysimages/REMOVE/btnDownload.png) no-repeat 3px 0; }
+.buttonDownload::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("../sysimages/animate/spriteicons.png");
+  background-position: -480px -200px; }
+.buttonDownload:hover::before {
+  -webkit-animation: download steps(5) 0.6s forwards;
+  -moz-animation: download steps(5) 0.6s forwards;
+  -o-animation: download steps(5) 0.6s forwards;
+  animation: download steps(5) 0.6s forwards; }
 
-.buttonShare {
-  background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0; }
+.buttonShare::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("../sysimages/animate/spriteicons.png");
+  background-position: -520px -200px; }
+.buttonShare:hover::before {
+  -webkit-animation: share steps(5) 0.6s forwards;
+  -moz-animation: share steps(5) 0.6s forwards;
+  -o-animation: share steps(5) 0.6s forwards;
+  animation: share steps(5) 0.6s forwards; }
 
 .buttonPrint {
-  background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0; }
+  background: url(../sysimages/button/print.png) no-repeat 3px 0 !important;
+  border: 1px solid red;
+  /*&::before{
+  	position: absolute;
+  	content: '';
+  	top: 0;
+  	left: 0;
+  	width: 40px;
+  	height: 40px;
+  	background-image: url("../sysimages/animate/spriteicons.png");
+  	background-position: -480px -200px; 
+  }*/
+  /*&:hover::before{
+  	@include animation(print);
+  }*/ }
 
-.buttonOpenNew {
-  background: url(../sysimages/REMOVE/btnSend.png) no-repeat 3px 0; }
+.buttonOpenNew::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("../sysimages/animate/spriteicons.png");
+  background-position: -560px -200px; }
+.buttonOpenNew:hover::before {
+  -webkit-animation: open steps(5) 0.6s forwards;
+  -moz-animation: open steps(5) 0.6s forwards;
+  -o-animation: open steps(5) 0.6s forwards;
+  animation: open steps(5) 0.6s forwards; }
 
 .buttonFav {
   background: url(../sysimages/button/fav@2x.png) no-repeat top left; }
@@ -1000,9 +1435,15 @@ input[type='submit'],
   	display: block;
   	z-index: 9999;*/
   background: #FFF url(../sysimages/cornerTopPopup.png) no-repeat top left; }
+  .popup iframe {
+    max-width: 100%;
+    height: 100%; }
   .popup .bannerTop {
     position: relative;
     min-height: 45px; }
+    .popup .bannerTop img {
+      max-width: 100%;
+      height: 100%; }
     .popup .bannerTop .tag {
       position: absolute;
       top: 15px;
@@ -1238,246 +1679,6 @@ input[type='submit'],
     padding: 40% 37px 20px !important; }
     .listContainer .listElement .elementContent .text h3, .listContainer .listElement .elementContent .text .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .listContainer .listElement .elementContent .text .accordionHeader {
       font-size: 24px; } }
-@-webkit-keyframes trends {
-  from {
-    background-position: 0px 0px; }
-  to {
-    background-position: 0px -200px; } }
-@-moz-keyframes trends {
-  from {
-    background-position: 0px 0px; }
-  to {
-    background-position: 0px -200px; } }
-@-o-keyframes trends {
-  from {
-    background-position: 0px 0px; }
-  to {
-    background-position: 0px -200px; } }
-@keyframes trends {
-  from {
-    background-position: 0px 0px; }
-  to {
-    background-position: 0px -200px; } }
-@-webkit-keyframes institutes {
-  from {
-    background-position: -40px 0px; }
-  to {
-    background-position: -40px -200px; } }
-@-moz-keyframes institutes {
-  from {
-    background-position: -40px 0px; }
-  to {
-    background-position: -40px -200px; } }
-@-o-keyframes institutes {
-  from {
-    background-position: -40px 0px; }
-  to {
-    background-position: -40px -200px; } }
-@keyframes institutes {
-  from {
-    background-position: -40px 0px; }
-  to {
-    background-position: -40px -200px; } }
-@-webkit-keyframes consultancies {
-  from {
-    background-position: -80px 0px; }
-  to {
-    background-position: -80px -200px; } }
-@-moz-keyframes consultancies {
-  from {
-    background-position: -80px 0px; }
-  to {
-    background-position: -80px -200px; } }
-@-o-keyframes consultancies {
-  from {
-    background-position: -80px 0px; }
-  to {
-    background-position: -80px -200px; } }
-@keyframes consultancies {
-  from {
-    background-position: -80px 0px; }
-  to {
-    background-position: -80px -200px; } }
-@-webkit-keyframes organizations {
-  from {
-    background-position: -120px 0px; }
-  to {
-    background-position: -120px -200px; } }
-@-moz-keyframes organizations {
-  from {
-    background-position: -120px 0px; }
-  to {
-    background-position: -120px -200px; } }
-@-o-keyframes organizations {
-  from {
-    background-position: -120px 0px; }
-  to {
-    background-position: -120px -200px; } }
-@keyframes organizations {
-  from {
-    background-position: -120px 0px; }
-  to {
-    background-position: -120px -200px; } }
-@-webkit-keyframes courses {
-  from {
-    background-position: -160px 0px; }
-  to {
-    background-position: -160px -200px; } }
-@-moz-keyframes courses {
-  from {
-    background-position: -160px 0px; }
-  to {
-    background-position: -160px -200px; } }
-@-o-keyframes courses {
-  from {
-    background-position: -160px 0px; }
-  to {
-    background-position: -160px -200px; } }
-@keyframes courses {
-  from {
-    background-position: -160px 0px; }
-  to {
-    background-position: -160px -200px; } }
-@-webkit-keyframes news {
-  from {
-    background-position: -200px 0px; }
-  to {
-    background-position: -200px -200px; } }
-@-moz-keyframes news {
-  from {
-    background-position: -200px 0px; }
-  to {
-    background-position: -200px -200px; } }
-@-o-keyframes news {
-  from {
-    background-position: -200px 0px; }
-  to {
-    background-position: -200px -200px; } }
-@keyframes news {
-  from {
-    background-position: -200px 0px; }
-  to {
-    background-position: -200px -200px; } }
-@-webkit-keyframes scholarships {
-  from {
-    background-position: -240px 0px; }
-  to {
-    background-position: -240px -200px; } }
-@-moz-keyframes scholarships {
-  from {
-    background-position: -240px 0px; }
-  to {
-    background-position: -240px -200px; } }
-@-o-keyframes scholarships {
-  from {
-    background-position: -240px 0px; }
-  to {
-    background-position: -240px -200px; } }
-@keyframes scholarships {
-  from {
-    background-position: -240px 0px; }
-  to {
-    background-position: -240px -200px; } }
-@-webkit-keyframes conferences {
-  from {
-    background-position: -280px 0px; }
-  to {
-    background-position: -280px -200px; } }
-@-moz-keyframes conferences {
-  from {
-    background-position: -280px 0px; }
-  to {
-    background-position: -280px -200px; } }
-@-o-keyframes conferences {
-  from {
-    background-position: -280px 0px; }
-  to {
-    background-position: -280px -200px; } }
-@keyframes conferences {
-  from {
-    background-position: -280px 0px; }
-  to {
-    background-position: -280px -200px; } }
-@-webkit-keyframes initiatives {
-  from {
-    background-position: -320px 0px; }
-  to {
-    background-position: -320px -200px; } }
-@-moz-keyframes initiatives {
-  from {
-    background-position: -320px 0px; }
-  to {
-    background-position: -320px -200px; } }
-@-o-keyframes initiatives {
-  from {
-    background-position: -320px 0px; }
-  to {
-    background-position: -320px -200px; } }
-@keyframes initiatives {
-  from {
-    background-position: -320px 0px; }
-  to {
-    background-position: -320px -200px; } }
-@-webkit-keyframes tools {
-  from {
-    background-position: -360px 0px; }
-  to {
-    background-position: -360px -200px; } }
-@-moz-keyframes tools {
-  from {
-    background-position: -360px 0px; }
-  to {
-    background-position: -360px -200px; } }
-@-o-keyframes tools {
-  from {
-    background-position: -360px 0px; }
-  to {
-    background-position: -360px -200px; } }
-@keyframes tools {
-  from {
-    background-position: -360px 0px; }
-  to {
-    background-position: -360px -200px; } }
-@-webkit-keyframes academia {
-  from {
-    background-position: -400px 0px; }
-  to {
-    background-position: -400px -200px; } }
-@-moz-keyframes academia {
-  from {
-    background-position: -400px 0px; }
-  to {
-    background-position: -400px -200px; } }
-@-o-keyframes academia {
-  from {
-    background-position: -400px 0px; }
-  to {
-    background-position: -400px -200px; } }
-@keyframes academia {
-  from {
-    background-position: -400px 0px; }
-  to {
-    background-position: -400px -200px; } }
-@-webkit-keyframes briefs {
-  from {
-    background-position: -440px 0px; }
-  to {
-    background-position: -440px -200px; } }
-@-moz-keyframes briefs {
-  from {
-    background-position: -440px 0px; }
-  to {
-    background-position: -440px -200px; } }
-@-o-keyframes briefs {
-  from {
-    background-position: -440px 0px; }
-  to {
-    background-position: -440px -200px; } }
-@keyframes briefs {
-  from {
-    background-position: -440px 0px; }
-  to {
-    background-position: -440px -200px; } }
 .trends.tag,
 .trends .flag,
 .trends .downloadPDF {
@@ -1571,7 +1772,7 @@ input[type='submit'],
 .news.tag,
 .news .flag,
 .news .downloadPDF {
-  background: #f7931e; }
+  background: #ff6163; }
 .news .elementTitle {
   background-position: -200px -200px; }
 .news:hover .elementTitle {
@@ -1580,11 +1781,11 @@ input[type='submit'],
   -o-animation: news steps(5) 0.6s forwards;
   animation: news steps(5) 0.6s forwards; }
 .news:hover #elementIcon {
-  fill: #f7931e; }
+  fill: #ff6163; }
 .news.filter label.checked::after {
   background: url(../sysimages/checkbox/news.png) no-repeat center center !important; }
 .news.filter label::before {
-  background: #f7931e; }
+  background: #ff6163; }
 
 .scholarships.tag,
 .scholarships .flag,
@@ -1900,6 +2101,27 @@ input[type='submit'],
       #filterSection .subtitle h3 #reset:hover, #filterSection .subtitle .accordionMenu > li > a .accordionHeader #reset:hover, .accordionMenu > li > a #filterSection .subtitle .accordionHeader #reset:hover {
         color: #be9857; }
 
+#filterSection .filter .date input {
+  width: 100%;
+  display: block;
+  position: relative;
+  font-family: 'helveticabold';
+  font-size: 12px;
+  color: #7b7c7e;
+  cursor: pointer; }
+
+.filterTitle {
+  width: 100%;
+  height: 25px;
+  padding: 1px 0;
+  display: block;
+  position: relative;
+  font-family: 'helveticabold';
+  font-size: 12px;
+  color: #7b7c7e;
+  margin-bottom: 3px;
+  cursor: pointer; }
+
 #calendarSection {
   background: url("../sysimages/bg.png");
   padding-bottom: 40px; }
@@ -2162,6 +2384,40 @@ input[type='submit'],
       max-width: 70%;
       margin: 30px auto 10px; }
 
+/*TODO*/
+#dictionaryResultsSection {
+  max-width: 900px;
+  margin: 0 auto 30px; }
+
+#dictionaryResultsSection .containerLetters {
+  width: 100%;
+  display: table;
+  margin-bottom: 30px; }
+
+.containerLetters > a,
+.containerWords > a {
+  display: table-cell;
+  text-align: center;
+  font-family: 'intro';
+  font-weight: normal;
+  color: #21282f; }
+
+.containerLetters > a:hover,
+.containerLetters > a.active,
+.containerWords > a:hover,
+.containerWords > a.active {
+  color: #be9857; }
+
+.containerWords {
+  min-height: 100px;
+  max-height: 215px;
+  overflow-x: scroll; }
+  .containerWords > a {
+    display: block;
+    clear: right;
+    text-align: left; }
+
+/*TODO*/
 #loginSection {
   max-width: 900px;
   margin: 60px auto; }
@@ -2260,6 +2516,7 @@ input[type='submit'],
       font-size: 20px;
       color: #21282f;
       font-weight: 300;
+      padding: 0 40px;
       width: 100%;
       text-align: center;
       opacity: 0;
@@ -2301,7 +2558,8 @@ input[type='submit'],
   position: relative;
   z-index: 9;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-height: calc(100vh - 397px); }
   #favoritesSection:before, #favoritesSection:after {
     content: "";
     display: table; }
@@ -2319,6 +2577,20 @@ input[type='submit'],
     min-height: 342px;
     padding: 40% 20px 20px;
     position: relative; }
+    #favoritesSection .elementContent::before {
+      position: absolute;
+      content: '';
+      top: 3px;
+      left: 3px;
+      width: 40px;
+      height: 40px;
+      background-image: url("../sysimages/animate/spriteicons.png");
+      background-position: -600px -200px; }
+    #favoritesSection .elementContent:hover::before {
+      -webkit-animation: favorites steps(5) 0.6s forwards;
+      -moz-animation: favorites steps(5) 0.6s forwards;
+      -o-animation: favorites steps(5) 0.6s forwards;
+      animation: favorites steps(5) 0.6s forwards; }
     #favoritesSection .elementContent .text {
       position: absolute;
       z-index: 1;
@@ -2326,7 +2598,7 @@ input[type='submit'],
       left: 0;
       color: inherit;
       text-decoration: none;
-      padding: 20% 20px 20px;
+      padding: 30% 20px 20px;
       display: block;
       opacity: 1;
       -moz-transition: color 0.2s ease;

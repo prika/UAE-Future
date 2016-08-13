@@ -220,5 +220,23 @@
 
     </div>
 
+
+       <script type="text/javascript">
+
+            (function($) {
+
+                // init controller
+                //var options =   { triggerHook: "onEnter", duration: "200%" };
+                var controller = new ScrollMagic.Controller( { globalSceneOptions: {triggerHook: "onEnter", duration: "200%"} });
+
+                // build scenes
+                new ScrollMagic.Scene({ triggerElement: "#listContainerCulture", offset: 50 })
+                            .setClassToggle("#listContainerCulture", "showUp")
+                            //.addIndicators("ipigpgpigpi")
+                            .addTo(controller);
+            
+               })(jQuery);
+
+    </script>
 </body>
 </html>

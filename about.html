@@ -134,6 +134,11 @@ Sheikh Mansour introduced Aref Nuriani of Al Qasimi Hospital in Sharjah, the fir
                             .setTween("#fullBanner > div", { y: "60%", ease: Linear.easeNone })
                             //.addIndicators()
                             .addTo(controller);
+                            
+            new ScrollMagic.Scene({ triggerElement: "#aboutSection", offset: 50 })
+                            .setClassToggle("#aboutSection", "showUp")
+                            //.addIndicators("ipigpgpigpi")
+                            .addTo(controller);
 
         })(jQuery);
 
