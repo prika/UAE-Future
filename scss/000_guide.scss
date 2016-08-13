@@ -528,8 +528,9 @@ select {
 	
 
 	&:hover{
-		background-color: $color_bl;
+		//background-color: $color_bl;
 		//background-position: 3px -34px;
+		background: rgb(83,59,42);
 		width: auto;
 		
 		span{
@@ -649,23 +650,37 @@ select {
 }
 
 
-.buttonFav{
-	background: url(../sysimages/button/fav@2x.png) no-repeat top left;
+.buttonFavorites{
+	//background: url(../sysimages/button/fav@2x.png) no-repeat top left;
+
+	&::before{
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		background-image: url("../sysimages/animate/spriteicons.png");
+		background-position: -600px -200px; 
+	}
+	
+	&:hover::before{
+		@include animation(favorites);
+	}
 }
 
 .buttonPrev{
 	height: 37px;
-    width: 34px;
-	background: url(../sysimages/button/previous@2x.png) no-repeat top left;
+    width: 37px;
+	background: url(../sysimages/button/previous.png) no-repeat center center;
 }
 .buttonNext{
 	height: 37px;
-    width: 34px;
-	background: red url(../sysimages/button/next@2x.png) no-repeat top left;
+    width: 37px;
+	background: url(../sysimages/button/next.png) no-repeat center center;
 }
 
-.buttonClose,
-.fancybox-close{
+.buttonClose{
 	height: 37px;
     width: 34px;
 	position: fixed;
@@ -675,15 +690,6 @@ select {
 	background: url(../sysimages/button/close@2x.png) no-repeat top left;
 }
 
-.fancybox-skin{
-	-webkit-box-shadow: none; 
-    -moz-box-shadow: none;
-    box-shadow: none;
-	-webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0; 
-	padding: 0!important;
-}
 
 /*Buttons*/
 .button,
@@ -1622,6 +1628,10 @@ $c_briefs:#8cc63f;
 	margin-top: -12px;
 	padding: 0;
 	
+	.filters{
+		margin-bottom: 30px;
+	}
+
 	.filter label{
 		width: 100%;
 		height: 25px;
@@ -2143,10 +2153,54 @@ color: #21282f;
 
 
 
-
-
-
 // ===================================================================================================================
 // Calendar Section
 
 @import '_calendar.scss';
+
+
+
+// ===================================================================================================================
+// Popup component
+
+.fancybox-close.fancybox-item{
+	display: none!important;
+}
+
+.fancybox-skin{
+	-webkit-box-shadow: none; 
+    -moz-box-shadow: none;
+    box-shadow: none;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; 
+	padding: 0!important;
+}
+.fancybox-overlay{
+	cursor: url(../sysimages/button/close.png) 0 0, auto;
+}
+
+
+
+
+
+
+/*--para btn do search e profile nao ter hover*/
+#searchbutton:hover,
+#userProfile:hover{
+    background-color:transparent!important;
+}
+
+/*--nao colocar numeros na lista (ol) do search*/
+.sfsearchResultsWrp{
+  list-style-type:none!important;
+}
+
+/*--Centrar a label flag nos cards*/
+.flag{
+    line-height:20px;
+}
+
+.buttonIc > span {
+    line-height:30px!important;
+}

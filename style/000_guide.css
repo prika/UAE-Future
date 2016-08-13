@@ -731,7 +731,7 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
     transition: all 0.4s ease;
     background-size: 33px; }
   .buttonIc:hover {
-    background-color: #21282f;
+    background: #533b2a;
     width: auto; }
     .buttonIc:hover span {
       width: 100%;
@@ -825,21 +825,32 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
   -o-animation: open steps(5) 0.6s forwards;
   animation: open steps(5) 0.6s forwards; }
 
-.buttonFav {
-  background: url(../sysimages/button/fav@2x.png) no-repeat top left; }
+.buttonFavorites::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("../sysimages/animate/spriteicons.png");
+  background-position: -600px -200px; }
+.buttonFavorites:hover::before {
+  -webkit-animation: favorites steps(5) 0.6s forwards;
+  -moz-animation: favorites steps(5) 0.6s forwards;
+  -o-animation: favorites steps(5) 0.6s forwards;
+  animation: favorites steps(5) 0.6s forwards; }
 
 .buttonPrev {
   height: 37px;
-  width: 34px;
-  background: url(../sysimages/button/previous@2x.png) no-repeat top left; }
+  width: 37px;
+  background: url(../sysimages/button/previous.png) no-repeat center center; }
 
 .buttonNext {
   height: 37px;
-  width: 34px;
-  background: red url(../sysimages/button/next@2x.png) no-repeat top left; }
+  width: 37px;
+  background: url(../sysimages/button/next.png) no-repeat center center; }
 
-.buttonClose,
-.fancybox-close {
+.buttonClose {
   height: 37px;
   width: 34px;
   position: fixed;
@@ -847,15 +858,6 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
   right: 20px;
   background-size: cover !important;
   background: url(../sysimages/button/close@2x.png) no-repeat top left; }
-
-.fancybox-skin {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  padding: 0 !important; }
 
 /*Buttons*/
 .button,
@@ -2058,6 +2060,8 @@ input[type='submit'],
 #filterSection {
   margin-top: -12px;
   padding: 0; }
+  #filterSection .filters {
+    margin-bottom: 30px; }
   #filterSection .filter label {
     width: 100%;
     height: 25px;
@@ -2509,6 +2513,27 @@ input[type='submit'],
   background: url("../sysimages/bg.png");
   padding-bottom: 40px;
   /*change url for the icon you want*/
+  	/*.rsPrevDay {
+  		content: '';
+  		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
+  		background-size: cover;
+  		position: absolute;
+  		width: 20px;
+  		height: 20px;
+  		margin-left: 200px;
+  		font-size: 0px;
+  	}
+  
+  	.rsNextDay {
+  		content: '';
+  		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
+  		background-size: cover;
+  		position: absolute;
+  		width: 20px;
+  		height: 20px;
+  		margin-left: 170px;
+  	font-size: 0px;
+  	}*/
   /*.rsDatePickerActivator {
   display:none;
   }*/ }
@@ -2529,12 +2554,20 @@ input[type='submit'],
     z-index: 1;
     background: #FFF;
     cursor: pointer;
-    padding: 10px; }
+    padding: 10px;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
   #calendarSection .day {
     float: left;
     width: 50px;
     color: #CCC;
-    font-size: 14px; }
+    font-size: 14px;
+    -moz-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+    -webkit-transition: color 0.2s linear;
+    transition: color 0.2s linear; }
   #calendarSection .groupCategories {
     float: right; }
   #calendarSection .category {
@@ -2555,7 +2588,11 @@ input[type='submit'],
     opacity: 0;
     float: left;
     width: 100%;
-    margin-top: 2px; }
+    margin-top: 2px;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear; }
   #calendarSection .groupEvents p, #calendarSection .groupEvents input[type='text'],
   #calendarSection .groupEvents input[type='number'],
   #calendarSection .groupEvents input[type='email'],
@@ -2587,9 +2624,9 @@ input[type='submit'],
     left: -10px;
     padding: 10px;
     z-index: 9;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    -moz-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow: 3px 3px 5px 6px #ccc; }
+    -webkit-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
+    -moz-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
+    box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ; }
   #calendarSection .contentEvent.hasEvents:hover .day {
     color: #FFF; }
   #calendarSection .contentEvent.hasEvents:hover .groupEvents {
@@ -2617,24 +2654,6 @@ input[type='submit'],
     padding-left: 5px; }
   #calendarSection .rsDateBox {
     margin-top: 5px; }
-  #calendarSection .rsPrevDay {
-    content: '';
-    background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA");
-    background-size: cover;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-left: 200px;
-    font-size: 0px; }
-  #calendarSection .rsNextDay {
-    content: '';
-    background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA");
-    background-size: cover;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-left: 170px;
-    font-size: 0px; }
   #calendarSection .sfcalendar {
     margin-bottom: 5%; }
   #calendarSection .k-widget .k-window .sfcalendarEventPreviewWrp {
@@ -2650,5 +2669,98 @@ input[type='submit'],
     color: #fff; }
   #calendarSection .sfcalendarEventPreviewEditLnk {
     color: #fff; }
+
+.rsToday {
+  display: none; }
+
+.fc-toolbar .fc-left {
+  float: left; }
+
+.fc-toolbar .fc-right {
+  float: right; }
+
+.fc-button-group, .fc-icon {
+  display: inline-block; }
+
+.fc-clear {
+  clear: both; }
+
+.popupCalendar {
+  max-width: 400px; }
+  .popupCalendar img {
+    max-width: 100%; }
+  .popupCalendar .contentText {
+    width: 100%;
+    padding: 35px 20px; }
+    .popupCalendar .contentText .eventName {
+      font-family: 'helveticabold';
+      font-size: 16px; }
+    .popupCalendar .contentText .eventDate {
+      font-family: 'merriweather';
+      font-size: 14px;
+      margin-bottom: 40px; }
+    .popupCalendar .contentText .eventLocationName {
+      font-family: 'merriweather';
+      font-size: 16px;
+      color: #333333; }
+    .popupCalendar .contentText .eventLocation {
+      font-family: 'merriweather';
+      font-size: 14px;
+      color: #666666; }
+  .popupCalendar .footer {
+    width: 100%;
+    padding: 10px 20px;
+    background: #9385C8; }
+    .popupCalendar .footer:before, .popupCalendar .footer:after {
+      content: "";
+      display: table; }
+    .popupCalendar .footer:after {
+      clear: both; }
+    .popupCalendar .footer .tags {
+      float: left; }
+      .popupCalendar .footer .tags a {
+        display: inline-block;
+        margin-right: 5px;
+        font-family: 'helvetica';
+        font-size: 12px;
+        color: #FFFFFF;
+        line-height: 100%; }
+    .popupCalendar .footer .category {
+      float: right;
+      font-family: 'helveticabold';
+      font-size: 12px;
+      color: #FFFFFF;
+      line-height: 100%; }
+
+.fancybox-close.fancybox-item {
+  display: none !important; }
+
+.fancybox-skin {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0 !important; }
+
+.fancybox-overlay {
+  cursor: url(../sysimages/button/close.png) 0 0, auto; }
+
+/*--para btn do search e profile nao ter hover*/
+#searchbutton:hover,
+#userProfile:hover {
+  background-color: transparent !important; }
+
+/*--nao colocar numeros na lista (ol) do search*/
+.sfsearchResultsWrp {
+  list-style-type: none !important; }
+
+/*--Centrar a label flag nos cards*/
+.flag {
+  line-height: 20px; }
+
+.buttonIc > span {
+  line-height: 30px !important; }
 
 /*# sourceMappingURL=000_guide.css.map */
