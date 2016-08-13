@@ -35,15 +35,81 @@
   animation: #{$str};      
 }
 
-@include keyframes(fadeIn) {
+@include keyframes(showUpAnimation) {
 	0% { transform:translateY(50%); opacity: .5; }
 	100% { transform:translateY(0); opacity: 1; }
 }
 
-.showUp > div {
-	@include animation('fadeIn 1s ease');
+@include keyframes(showDownAnimation) {
+	0% { transform:translateY(-120%); opacity: 0; }
+	100% { transform:translateY(0); opacity: 1; }
 }
 
+@include keyframes(fadeInAnimation) {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.showUp > div {@include animation('showUpAnimation 1s ease');}
+
+.bannerContent h1 {@include animation('showDownAnimation .5s ease');}
+.bannerContent h2 {@include animation('showUpAnimation .5s ease');}
+.bannerContent button {@include animation('fadeInAnimation 3s ease');}
+
+// ============================================================================================================
+//Sprite Animation
+
+$step: -40;
+$offset: -200px;
+
+@mixin buildKeyframes($animationName, $col)
+{
+    @-webkit-keyframes #{$animationName} {
+        from { background-position: ($col*$step)+px 0px; }
+          to { background-position: ($col*$step)+px $offset; }
+    }
+
+    @-moz-keyframes #{$animationName}  {
+         from { background-position: ($col*$step)+px 0px; }
+           to { background-position: ($col*$step)+px $offset; }
+    }
+
+    @-o-keyframes #{$animationName} {
+        from { background-position: ($col*$step)+px 0px; }
+          to { background-position: ($col*$step)+px $offset; }
+    }
+
+    @keyframes #{$animationName} {
+        from { background-position: ($col*$step)+px 0px; }
+          to { background-position: ($col*$step)+px $offset; }
+    }
+}
+
+@mixin animation($str) 
+{
+  -webkit-animation: #{$str} steps(5) .6s forwards;
+     -moz-animation: #{$str} steps(5) .6s forwards;
+       -o-animation: #{$str} steps(5) .6s forwards;
+          animation: #{$str} steps(5) .6s forwards;      
+}   
+
+@include buildKeyframes(trends,0);
+@include buildKeyframes(institutes,1);
+@include buildKeyframes(consultancies, 2);
+@include buildKeyframes(organizations, 3);
+@include buildKeyframes(courses, 4);
+@include buildKeyframes(news, 5);
+@include buildKeyframes(scholarships,6);
+@include buildKeyframes(conferences,7);
+@include buildKeyframes(initiatives,8);
+@include buildKeyframes(tools,9);
+@include buildKeyframes(academia,10);
+
+@include buildKeyframes(download, 12);
+@include buildKeyframes(share, 13);
+
+@include buildKeyframes(open, 14);
+@include buildKeyframes(favorites, 15);
 
 
 
@@ -62,10 +128,8 @@ $color_w: #FFF;
 $color_bl: #21282f;
 $color_lightgrey:#7b7c7e;
 $color_lightergrey: #dfdfdf;
-//$color_br: ;
 $color_gold: rgba(190,151,95,0.80);
 $color_solidGold: #be9857;
-//B39155
 
 $bg_img: "../sysimages/bg.png";
 
@@ -441,12 +505,12 @@ select {
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 	display: inline-block;
-	height: 37px;
-    width: 34px;
+	/*height: 37px;
+    width: 34px;*/
+	height: 40px;
+    width: 40px;
 	overflow: hidden;
-	//background-size: contain!important;
-	padding: 4px 10px 4px 40px;
-	//@include transition( width .4s ease .2s);
+	padding: 4px 13px 4px 45px;
 	@include transition( all .4s ease);
 	
 	span{ 
@@ -465,13 +529,20 @@ select {
 
 	&:hover{
 		background-color: $color_bl;
-		background-position: 3px -34px;
+		//background-position: 3px -34px;
 		width: auto;
 		
 		span{
 			width: 100%;
 			opacity: 1;
 		}
+	}
+	
+	&:after{
+		
+		
+		&::before{background: red!important;}
+		
 	}
 }
 
@@ -482,7 +553,7 @@ select {
 	-webkit-tap-highlight-color: transparent;
 	display: block;
 	float: left;
-	height: 37px;
+	height: 40px;
     width: auto;
 	padding: 10px 10px 10px 50px;
 	@include transition( all .4s ease);
@@ -503,26 +574,80 @@ select {
 
 
 .buttonDownload{
-	//background: url(../sysimages/button/download@2x.png) no-repeat top left;
-	background: url(../sysimages/REMOVE/btnDownload.png) no-repeat 3px 0;
-	//@include transition( background .4s ease);
+	//background: url(../sysimages/REMOVE/btnDownload.png) no-repeat 3px 0;
+	&::before{
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		background-image: url("../sysimages/animate/spriteicons.png");
+		background-position: -480px -200px; 
+	}
+	
+	&:hover::before{
+		@include animation(download);
+	}
 }
 
 .buttonShare{
-	//background: url(../sysimages/button/share@2x.png) no-repeat top left;
-	background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0;
+	//background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0;
 	
+	&::before{
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		background-image: url("../sysimages/animate/spriteicons.png");
+		background-position: -520px -200px; 
+	}
+	
+	&:hover::before{
+		@include animation(share);
+	}
 }
 
 .buttonPrint{
-	//background: url(../sysimages/button/print@2x.png) no-repeat top left;
-	background: url(../sysimages/REMOVE/btnShare.png) no-repeat 3px 0;
+	background: url(../sysimages/button/print.png) no-repeat 3px 0!important;
+	border: 1px solid red;
+	/*&::before{
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		background-image: url("../sysimages/animate/spriteicons.png");
+		background-position: -480px -200px; 
+	}*/
+	
+	/*&:hover::before{
+		@include animation(print);
+	}*/
 }
 
 .buttonOpenNew{
-	//background: url(../sysimages/button/openNewWindow@2x.png) no-repeat top left;
-	background: url(../sysimages/REMOVE/btnSend.png) no-repeat 3px 0;
+	//background: url(../sysimages/REMOVE/btnSend.png) no-repeat 3px 0;
+	
+	&::before{
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		background-image: url("../sysimages/animate/spriteicons.png");
+		background-position: -560px -200px; 
+	}
+	
+	&:hover::before{
+		@include animation(open);
+	}
 }
+
 
 .buttonFav{
 	background: url(../sysimages/button/fav@2x.png) no-repeat top left;
@@ -664,9 +789,19 @@ input[type='submit'],
 	//}
 	
 	
+	iframe{
+		max-width: 100%;
+    		height: 100%;
+	}
+	
 	.bannerTop{
 		position: relative;
 		min-height: 45px;
+		
+		img{
+			max-width: 100%;
+    		height: 100%;
+		}
 		
 		.tag{
 			position: absolute;
@@ -760,10 +895,17 @@ input[type='submit'],
 // ===================================================================================================================
 // Lists
 .listContainer{
+	//padding-left: 0;
+	//padding-right: 7px;
 	
-	.col-xs-12.col-sm-4.col-md-3{
+	.col-xs-12.col-sm-4.col-md-3,
+	.col-xs-12.col-sm-4.col-md-4{
 		padding-right: 7px;
 		padding-left: 7px;
+		
+		&:first-child{
+			padding-left: 0;
+		}
 	}
 		
 	.listElement{
@@ -953,7 +1095,7 @@ $c_institutes:#2db677;
 $c_consultancies:#515354;
 $c_organizations:#b1b2b3;
 $c_courses:#0064a6;
-$c_news:#f7931e;
+$c_news: #ff6163;
 $c_scholarships:#ed1c24;
 $c_conferences:#be9857;
 $c_initiatives:#998675;
@@ -961,52 +1103,6 @@ $c_tools:#29abe2;
 $c_academia:#935491;
 $c_briefs:#8cc63f;
 
-$step: -40;
-$offset: -200px;
-
-@mixin buildKeyframes($animationName, $col)
-{
-    @-webkit-keyframes #{$animationName} {
-        from { background-position: ($col*$step)+px 0px; }
-          to { background-position: ($col*$step)+px $offset; }
-    }
-
-    @-moz-keyframes #{$animationName}  {
-         from { background-position: ($col*$step)+px 0px; }
-           to { background-position: ($col*$step)+px $offset; }
-    }
-
-    @-o-keyframes #{$animationName} {
-        from { background-position: ($col*$step)+px 0px; }
-          to { background-position: ($col*$step)+px $offset; }
-    }
-
-    @keyframes #{$animationName} {
-        from { background-position: ($col*$step)+px 0px; }
-          to { background-position: ($col*$step)+px $offset; }
-    }
-}
-
-@mixin animation($str) 
-{
-  -webkit-animation: #{$str} steps(5) .6s forwards;
-     -moz-animation: #{$str} steps(5) .6s forwards;
-       -o-animation: #{$str} steps(5) .6s forwards;
-          animation: #{$str} steps(5) .6s forwards;      
-}   
-
-@include buildKeyframes(trends,0);
-@include buildKeyframes(institutes,1);
-@include buildKeyframes(consultancies, 2);
-@include buildKeyframes(organizations, 3);
-@include buildKeyframes(courses, 4);
-@include buildKeyframes(news, 5);
-@include buildKeyframes(scholarships,6);
-@include buildKeyframes(conferences,7);
-@include buildKeyframes(initiatives,8);
-@include buildKeyframes(tools,9);
-@include buildKeyframes(academia,10);
-@include buildKeyframes(briefs, 11);
 
 .trends{
 	// element in list
@@ -1327,6 +1423,15 @@ $offset: -200px;
 		color: $color_w;
 	}
 	
+	.invertColors > a {
+		display: block;
+		//margin-top: 100px;
+		margin-right: 20px;
+		color: #FFF;
+		font-weight: bold;
+		text-shadow: 1px 1px $color_bl;
+	}
+	
 	.listContainerCalendar{
 		@include clearfix();
 		
@@ -1338,6 +1443,7 @@ $offset: -200px;
 			height: 250px;
 			padding: 20px;
 			position: relative;
+			@include transition( all .4s ease ); 
 			
 			&:first-child{
 				background: $color_w url(../sysimages/REMOVE/newsCorner.png) no-repeat left top;
@@ -1514,6 +1620,7 @@ $offset: -200px;
 // Filters 
 #filterSection{
 	margin-top: -12px;
+	padding: 0;
 	
 	.filter label{
 		width: 100%;
@@ -1580,139 +1687,33 @@ $offset: -200px;
 }
 
 
-// ===================================================================================================================
-// Calendar Section 
-#calendarSection{
-	background: url($bg_img);
-	padding-bottom: 40px;
-	
-	#calendar {
-		max-width: 1100px;
-		margin: 0 auto;
-		
-		//.fc-head,
-		/*.fc-head td,
-		.fc-head th {
-			border-color: transparent;
-		}
-		
-		.fc-head th,
-		.fc-body .fc-day-number{
-			text-align: left;
-			padding: 5px;
-			font-size: 16px;
-			font-family: 'merriweather';
-		}
-		.fc-unthemed .fc-content, 
-		.fc-unthemed .fc-divider, 
-		.fc-unthemed .fc-popover, 
-		.fc-unthemed .fc-row, 
-		.fc-unthemed tbody, 
-		.fc-unthemed td, 
-		.fc-unthemed th, 
-		.fc-unthemed thead{
-			border-color: $color_lightergrey;
-		}
-		
-		.fc-widget-content {
-			background: $color_w;
-		}*/
-		
-		.rsRow {
-		border: 1px solid #D3D3D3;
-		}
 
-		.rsRow td {
-		border: 1px solid #D3D3D3;
-		}
 
-		.rsContentTable {
-		background-color: #ffffff;
-		}
-
-		.rsTodayCell .rsDateHeader {
-		color: #be9857;
-		}
-
-		.rsDateHeader {
-			color: #000000;
-			font-size: 18px;
-			font-family: "Times New Roman";
-			text-align: left;
-			margin-left: 10px;
-			margin-top: 10px;
-		}
-
-		.rsHorizontalHeaderTable th {
-		width: 14.35%;
-		font-size: 16px;
-		font-family: "Times New Roman";
-		}
-
-		.rsDateBox {
-		margin-top: 5px;
-		font-family: "Times New Roman";
-		
-		}
-
-		/*change url for the icon you want*/
-		.rsPrevDay {
-			content: '';
-			background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-			background-size: cover;
-			position: absolute;
-			width: 20px;
-			height: 20px;
-			margin-left: 200px;
-			font-size: 0px;
-
-		}
-
-		.rsNextDay {
-			content: '';
-			background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-			background-size: cover;
-			position: absolute;
-			width: 20px;
-			height: 20px;
-			margin-left: 170px;
-			font-size: 0px;
-
-		}
-
-		.sfcalendar {
-		margin-bottom: 5%;
-		}
-
-		.k-widget .k-window .sfcalendarEventPreviewWrp {
-		background-color: black;
-		}
-
-		div.k-window-content {
-			background-color: #000;
-			font-family: Arial;
-			font-weight: bolder;
-			color: #f2f2f2;
-		}
-
-		div.k-window-titlebar {
-		background-color: #000;
-		}
-
-		.sfTxtLbl {
-		color: #fff
-		}
-
-		.sfcalendarEventPreviewEditLnk {
-		color: #fff;
-		}
-
-		.rsDatePickerActivator {
-		display:none;
-		}
-		
-	}
+//Codigo inline
+#filterSection .filter .date input {
+width: 100%;
+display: block;
+position: relative;
+font-family: 'helveticabold';
+font-size: 12px;
+color: #7b7c7e;
+cursor: pointer;
 }
+
+.filterTitle {
+width: 100%;
+height: 25px;
+padding: 1px 0;
+display: block;
+position: relative;
+font-family: 'helveticabold';
+font-size: 12px;
+color: #7b7c7e;
+margin-bottom: 3px;
+cursor: pointer;
+}
+//Codigo inline 
+
 
 
 // ===================================================================================================================
@@ -1757,7 +1758,6 @@ $offset: -200px;
 	.container{
 		@include clearfix();
 		position: relative;
-		
 	}
 	
 	p{
@@ -1854,6 +1854,48 @@ $offset: -200px;
 }	
 
 
+/*TODO*/
+#dictionaryResultsSection {
+	max-width: 900px;
+	margin: 0 auto 30px;
+}
+
+#dictionaryResultsSection .containerLetters {
+	width: 100%;
+	display: table;
+	margin-bottom: 30px;
+}
+
+.containerLetters > a,
+.containerWords > a {
+display: table-cell;
+text-align: center;
+font-family: 'intro';
+font-weight: normal;
+color: #21282f;
+}
+
+.containerLetters > a:hover,
+.containerLetters > a.active,
+.containerWords > a:hover,
+.containerWords > a.active {
+	color: #be9857;
+}
+
+.containerWords{
+	min-height: 100px;
+    max-height: 215px;
+    overflow-x: scroll;
+	 
+	& > a {
+		display: block;
+		clear: right;
+		text-align: left;
+	}
+}
+/*TODO*/
+
+
 
 // ===================================================================================================================
 // Login
@@ -1917,7 +1959,21 @@ $offset: -200px;
 			width: 20%;
     		padding: .6%;
 			float: left;
-			 
+			position: relative;
+			
+			
+			/*&::before{
+				width: 19px;
+				height: 19px;
+				content: '';
+				background: #FFF url(../sysimages/REMOVE/newsCorner.png) no-repeat left top;
+				display: block;
+				position: absolute;
+				top: .6%;
+				left: .6%;
+				z-index: 2;
+			}*/
+			
 			
 			img {
 				width: 100%;
@@ -1925,8 +1981,9 @@ $offset: -200px;
 			
 			.description{
 				padding: 10px;
-				background-color: $color_lightergrey;
+				background-color: rgba($color: $color_lightergrey, $alpha: .6);
 				margin-top: -4px;
+				min-height: 90px;
 				
 				.timeEvent{
 					font-size: 12px;
@@ -1950,7 +2007,6 @@ $offset: -200px;
 }
 
 
-
 // ===================================================================================================================
 // Partners Section
 #partnersSection{
@@ -1959,9 +2015,58 @@ $offset: -200px;
     z-index: 9;
 	@include clearfix();
 	
+	.col-xs-12.col-sm-4.col-md-3{
+		margin-bottom: 15px;
+	}
+	
 	.listElementImage{
 		border: 1px solid $color_lightergrey;
+		background-size: 100%;
+	}
+	
+	.elementContent{
+		width: 100%;
+		height: 100%;
+		display: block;
 		min-height: 200px;
+		
+		h3{
+			font-family: 'intro';
+			font-size: 20px;
+			color: #21282f;
+			font-weight: 300;
+			padding: 0 40px;
+			width: 100%;
+			text-align: center;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			@include transition( .2s all .2s linear);
+		}
+		
+		&::before{
+			content: '';
+			display: block;
+			background: url(../sysimages/REMOVE/btnSend.png) no-repeat 3px 0;
+			height: 37px;
+    		width: 34px;
+			position: absolute; bottom: 0; left: 5%; opacity: 0;
+			@include transition( .2s all .2s linear);
+		}
+		
+		&:hover {
+			background: rgba($color: $color_lightergrey, $alpha: .6);
+			@include transition( background .2s linear);
+			
+			&::before{
+				bottom: 43%;
+				opacity: 1;
+			}
+			h3{
+				top: 43%;
+				opacity: 1;
+			}
+		}
 	}
 }
 
@@ -1972,8 +2077,76 @@ $offset: -200px;
 	position: relative;
     z-index: 9;
 	@include clearfix();
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: calc(100vh - 397px); //title+footer
+	
+	
 	
 	.category{
 		color: $color_solidGold;
+		font-size: 14px;
+	}
+	
+	.listElement{
+		background: url(../sysimages/bgCard.png) no-repeat left top;
+		margin-bottom: 15px;
+		border-right: 1px solid #F4F4F1;
+		border-bottom: 1px solid #F4F4F1;
+	}
+	
+	.elementContent{
+		min-height: 342px;
+		padding: 40% 20px 20px;
+		position: relative;
+		
+		&::before{
+			position: absolute;
+			content: '';
+			top: 3px;
+			left: 3px;
+			width: 40px;
+    		height: 40px;
+    		background-image: url("../sysimages/animate/spriteicons.png");
+			background-position: -600px -200px; 
+		}
+		
+		&:hover::before{
+			@include animation(favorites);
+		}
+		
+		.text{
+			position: absolute;
+			z-index: 1;
+			top: 0; left: 0;
+			color: inherit;
+			text-decoration: none;
+			padding: 30% 20px 20px;
+			display: block;
+			opacity: 1;
+			@include transition( color .2s ease );
+			
+			
+			p, h3{
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical; 
+				overflow: hidden;
+			}
+			
+			p{ 
+				margin-top: 25px;
+			}
+		}
 	}
 }
+
+
+
+
+
+
+// ===================================================================================================================
+// Calendar Section
+
+@import '_calendar.scss';
