@@ -1276,8 +1276,8 @@ input[type='submit'],
     padding: 0 20%;
     text-shadow: 1px 1px #21282f; }
     #fullBanner .bannerContent h1 {
-      font-size: 60px;
-      line-height: 110%;
+      font-size: 80px;
+      line-height: 100%;
       padding-top: 5px;
       color: #FFF;
       letter-spacing: 3px;
@@ -1288,8 +1288,8 @@ input[type='submit'],
     #fullBanner .bannerContent h2,
     #fullBanner .bannerContent h2 *,
     #fullBanner .bannerContent h2 * {
-      font-size: 24px;
-      line-height: 150%;
+      font-size: 28px;
+      line-height: 120%;
       margin-bottom: 50px;
       color: #FFF;
       display: -webkit-box;
@@ -1496,8 +1496,13 @@ input[type='submit'],
       clear: both; }
     .popup .content .headerActions {
       height: 60px;
-      float: left;
+      float: right;
       padding-top: 15px; }
+      .popup .content .headerActions:before, .popup .content .headerActions:after {
+        content: "";
+        display: table; }
+      .popup .content .headerActions:after {
+        clear: both; }
     .popup .content .date {
       color: rgba(190, 151, 95, 0.8);
       margin-bottom: 15px; }
@@ -2096,6 +2101,8 @@ input[type='submit'],
 #filterSection {
   margin-top: -12px;
   padding: 0; }
+  #filterSection .subtitle h3, #filterSection .subtitle .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a #filterSection .subtitle .accordionHeader {
+    text-align: right; }
   #filterSection .filters {
     margin-bottom: 30px; }
   #filterSection .filter label {
@@ -2108,7 +2115,8 @@ input[type='submit'],
     font-size: 12px;
     color: #7b7c7e;
     margin-bottom: 3px;
-    cursor: pointer; }
+    cursor: pointer;
+    text-align: right; }
     #filterSection .filter label::before {
       position: absolute;
       right: -21px;
@@ -2120,7 +2128,7 @@ input[type='submit'],
       display: block; }
     #filterSection .filter label::after {
       position: absolute;
-      left: 0;
+      right: 0;
       top: 0;
       content: '';
       display: block;
@@ -2726,6 +2734,10 @@ input[type='submit'],
 .rsToday {
   display: none; }
 
+.fc-toolbar {
+  max-width: 1100px;
+  margin: 0 auto; }
+
 .fc-toolbar .fc-left {
   float: left; }
 
@@ -2804,6 +2816,9 @@ input[type='submit'],
         font-size: 12px;
         color: #FFFFFF;
         line-height: 38px; }
+
+.fancybox-wrap:hover {
+  cursor: initial !important; }
 
 .fancybox-close.fancybox-item {
   display: none !important; }

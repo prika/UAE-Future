@@ -843,6 +843,7 @@ input[type='submit'],
 			height: 60px;
 			float: right;
 			padding-top: 15px;
+			@include clearfix();
 		}
 		
 		.date{
@@ -2164,6 +2165,11 @@ color: #21282f;
 
 // ===================================================================================================================
 // Popup component
+
+
+.fancybox-wrap:hover {
+    cursor: initial!important;
+}
 
 .fancybox-close.fancybox-item{
 	display: none!important;

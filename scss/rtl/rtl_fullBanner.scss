@@ -1,0 +1,171 @@
+#fullBanner{
+    height: 100vh;
+	width: 100%;
+    position: relative;
+	overflow: hidden;
+    
+    .bannerContent{
+        text-align: center;
+        text-transform: uppercase;
+        height: 100vh;
+        position: relative;
+        z-index: 2;
+		padding: 0 20%;
+		text-shadow: 1px 1px $color_bl;
+        
+        h1 {
+          font-size: 80px;
+          line-height: 100%;
+          padding-top: 5px;
+          color: $color_w;
+          letter-spacing: 3px;
+          @include verticalTruncate(2);
+          	
+        }
+
+        h2,
+        h2 * {
+          @extend h2;
+          font-size: 28px;
+          line-height: 120%;
+          margin-bottom: 50px;
+          color: $color_w;
+          @include verticalTruncate(5);
+        }
+    }
+}
+
+.backgroundBanner{ 
+    min-width: 110%;
+    margin: -5%;
+    position: absolute;
+}
+
+#animationFullBanner {
+    position: absolute;
+    top: -30%;
+    left: calc(50% - 400px);
+    opacity: .3;
+    animation: AnimRotation 35s infinite ;
+    -moz-animation: AnimRotation 35s infinite ;
+    -webkit-animation: AnimRotation 35s infinite;
+    height: 800px;
+    
+}
+
+.bg1,
+.bg2,
+.bg3{
+    position: absolute;
+    opacity: .3; 
+}
+
+.bg1{
+    position: absolute;
+    left: 2%; top: -5%;
+    z-index: 2; 
+    opacity: 0.2;
+    animation: AnimRotation 35s infinite;
+    -moz-animation: AnimRotation 35s infinite;
+    -webkit-animation: AnimRotation 35s infinite;
+    width: 170px;
+}
+
+/*TODO - remove from this doc*/
+.bg2{
+    position: absolute;
+    right: 20%;
+    top: -74px;
+    z-index: 9;
+    @include transition( all .4s ease );    
+}
+
+
+.bg3{
+    position: absolute;
+    right: 5%; top: 20%;
+    z-index: 2; 
+    opacity: .3;
+    width: 170px;
+    animation: AnimRotationReverse 35s infinite;
+    -moz-animation: AnimRotationReverse 35s infinite;
+    -webkit-animation: AnimRotationReverse 35s infinite;
+}
+
+
+
+/*@include keyframes(anim_opacity) {
+    0% { opacity: .3; }
+    50% { opacity: .1; }
+    100% { opacity: .3; }
+}
+@include keyframes(anim_opacity_invert) {
+    0% { opacity: .1; }
+    50% { opacity: .4; }
+    100% { opacity: .1; }
+}*/
+@include keyframes(slideFromLeft) {
+    0% { left: -100%; }
+    100% { left: 10px; }
+}
+@include keyframes(slideFromRight) {
+    0% { right: -100%; }
+    100% { right: 10px; }
+}
+
+    
+@keyframes AnimRotation
+{
+from { transform:rotate(0deg); }
+to { transform:rotate(360deg); }
+}
+
+@-moz-keyframes AnimRotation
+{
+from { transform:rotate(0deg); }
+to { transform:rotate(360deg); }
+}
+
+@-webkit-keyframes AnimRotation
+{
+from { transform:rotate(0deg); }
+to { transform:rotate(360deg); }
+}
+
+
+@keyframes AnimRotationReverse
+{
+from { transform:rotate(360deg); }
+to { transform:rotate(0deg); }
+}
+
+@-moz-keyframes AnimRotationReverse
+{
+from { transform:rotate(360deg); }
+to { transform:rotate(0deg); }
+}
+
+@-webkit-keyframes AnimRotationReverse
+{
+from { transform:rotate(360deg); }
+to { transform:rotate(0deg); }
+}
+
+
+
+@media screen and (max-width: 900px){
+	#fullBanner .bannerContent{
+		padding: 0;
+		
+		h1 {
+    		font-size: 35px;
+		}
+		h2{
+			font-size: 19px;
+			line-height: 190%;
+		}
+		
+		&::before,
+		&::after{display: none!important;}
+	}
+}

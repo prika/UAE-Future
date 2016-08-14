@@ -1495,6 +1495,11 @@ input[type='submit'],
       height: 60px;
       float: right;
       padding-top: 15px; }
+      .popup .content .headerActions:before, .popup .content .headerActions:after {
+        content: "";
+        display: table; }
+      .popup .content .headerActions:after {
+        clear: both; }
     .popup .content .date {
       color: rgba(190, 151, 95, 0.8);
       margin-bottom: 15px; }
@@ -2697,6 +2702,10 @@ input[type='submit'],
 .rsToday {
   display: none; }
 
+.fc-toolbar {
+  max-width: 1100px;
+  margin: 0 auto; }
+
 .fc-toolbar .fc-left {
   float: left; }
 
@@ -2775,6 +2784,9 @@ input[type='submit'],
         font-size: 12px;
         color: #FFFFFF;
         line-height: 38px; }
+
+.fancybox-wrap:hover {
+  cursor: initial !important; }
 
 .fancybox-close.fancybox-item {
   display: none !important; }
