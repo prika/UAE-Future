@@ -1487,6 +1487,11 @@ input[type='submit'],
       padding-top: 30px; }
     .popup .bannerTop.bannerText + .content .headerActions {
       padding-top: 60px; }
+      .popup .bannerTop.bannerText + .content .headerActions:before, .popup .bannerTop.bannerText + .content .headerActions:after {
+        content: "";
+        display: table; }
+      .popup .bannerTop.bannerText + .content .headerActions:after {
+        clear: both; }
   .popup .content {
     padding-bottom: 30px; }
     .popup .content:before, .popup .content:after {
@@ -1496,7 +1501,6 @@ input[type='submit'],
       clear: both; }
     .popup .content .headerActions {
       height: 60px;
-      float: right;
       padding-top: 15px; }
       .popup .content .headerActions:before, .popup .content .headerActions:after {
         content: "";

@@ -825,6 +825,7 @@ input[type='submit'],
 			
 			.headerActions{
 				padding-top: 60px;
+				@include clearfix();
 			}
 		}
 	}
@@ -837,7 +838,7 @@ input[type='submit'],
 		
 		.headerActions{
 			height: 60px;
-			float: right;
+			//float: right;
 			padding-top: 15px;
 			@include clearfix();
 		}
