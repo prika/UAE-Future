@@ -104,13 +104,11 @@ $offset: -200px;
 @include buildKeyframes(initiatives,8);
 @include buildKeyframes(tools,9);
 @include buildKeyframes(academia,10);
-
+@include buildKeyframes(briefs,11);
 @include buildKeyframes(download, 12);
 @include buildKeyframes(share, 13);
-
 @include buildKeyframes(open, 14);
 @include buildKeyframes(favorites, 15);
-
 
 
 // ============================================================================================================
@@ -1456,7 +1454,7 @@ $c_briefs:#8cc63f;
 			@include transition( all .4s ease ); 
 			
 			&:first-child{
-				background: $color_w url(../sysimages/REMOVE/newsCorner.png) no-repeat left top;
+				background: $color_w url(../sysimages/cornerTopPopup.png) no-repeat left top;
 				
 				.dateEvent{
 					color: $color_bl;
@@ -1498,7 +1496,7 @@ $c_briefs:#8cc63f;
 			&:hover{
 				
 				&:first-child{
-					background: $color_w url(../sysimages/REMOVE/newsCorner.png) no-repeat left top;
+					background: $color_w url(../sysimages/cornerTopPopup.png) no-repeat left top;
 					
 					.dateEvent{
 						color: $color_bl;
@@ -1971,22 +1969,22 @@ color: #21282f;
 		
 		.element{
 			width: 20%;
-    		padding: .6%;
+    		padding: 10px;
 			float: left;
 			position: relative;
 			
 			
-			/*&::before{
+			&::before{
 				width: 19px;
 				height: 19px;
 				content: '';
-				background: #FFF url(../sysimages/REMOVE/newsCorner.png) no-repeat left top;
+				background: url(../sysimages/cornerTopPopup.png) no-repeat left top;
 				display: block;
 				position: absolute;
-				top: .6%;
-				left: .6%;
+				top: 10px;
+				left: 10px;
 				z-index: 2;
-			}*/
+			}
 			
 			
 			img {

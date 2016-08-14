@@ -342,6 +342,26 @@
     background-position: -400px 0px; }
   to {
     background-position: -400px -200px; } }
+@-webkit-keyframes briefs {
+  from {
+    background-position: -440px 0px; }
+  to {
+    background-position: -440px -200px; } }
+@-moz-keyframes briefs {
+  from {
+    background-position: -440px 0px; }
+  to {
+    background-position: -440px -200px; } }
+@-o-keyframes briefs {
+  from {
+    background-position: -440px 0px; }
+  to {
+    background-position: -440px -200px; } }
+@keyframes briefs {
+  from {
+    background-position: -440px 0px; }
+  to {
+    background-position: -440px -200px; } }
 @-webkit-keyframes download {
   from {
     background-position: -480px 0px; }
@@ -994,7 +1014,8 @@ input[type='submit'],
     flex: 1 auto;
     display: inline-block; }
     #header .navbar .navbar-right a {
-      display: inline-block; }
+      display: block;
+      float: right; }
     #header .navbar .navbar-right #navIcon {
       width: 45px;
       padding: 0 10px;
@@ -1940,7 +1961,7 @@ input[type='submit'],
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
     #weeklycalendarSection .listContainerCalendar .element:first-child {
-      background: #FFF url(../sysimages/REMOVE/newsCorner.png) no-repeat left top; }
+      background: #FFF url(../sysimages/cornerTopPopup.png) no-repeat left top; }
       #weeklycalendarSection .listContainerCalendar .element:first-child .dateEvent {
         color: #21282f; }
       #weeklycalendarSection .listContainerCalendar .element:first-child .timeEvent {
@@ -1970,7 +1991,7 @@ input[type='submit'],
     #weeklycalendarSection .listContainerCalendar .element:hover {
       background: rgba(255, 255, 255, 0.9); }
       #weeklycalendarSection .listContainerCalendar .element:hover:first-child {
-        background: #FFF url(../sysimages/REMOVE/newsCorner.png) no-repeat left top; }
+        background: #FFF url(../sysimages/cornerTopPopup.png) no-repeat left top; }
         #weeklycalendarSection .listContainerCalendar .element:hover:first-child .dateEvent {
           color: #21282f; }
         #weeklycalendarSection .listContainerCalendar .element:hover:first-child .timeEvent {
@@ -2349,20 +2370,19 @@ input[type='submit'],
       clear: both; }
     #cultureSection #listContainerCulture .element {
       width: 20%;
-      padding: .6%;
+      padding: 10px;
       float: left;
-      position: relative;
-      /*&::before{
-      	width: 19px;
-      	height: 19px;
-      	content: '';
-      	background: #FFF url(../sysimages/REMOVE/newsCorner.png) no-repeat left top;
-      	display: block;
-      	position: absolute;
-      	top: .6%;
-      	left: .6%;
-      	z-index: 2;
-      }*/ }
+      position: relative; }
+      #cultureSection #listContainerCulture .element::before {
+        width: 19px;
+        height: 19px;
+        content: '';
+        background: url(../sysimages/cornerTopPopup.png) no-repeat left top;
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 2; }
       #cultureSection #listContainerCulture .element img {
         width: 100%; }
       #cultureSection #listContainerCulture .element .description {
