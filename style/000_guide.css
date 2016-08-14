@@ -843,12 +843,16 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
 .buttonPrev {
   height: 37px;
   width: 37px;
-  background: url(../sysimages/button/previous.png) no-repeat center center; }
+  padding: 0;
+  background: url(../sysimages/button/previous.png) no-repeat center center;
+  margin: 0 5px; }
 
 .buttonNext {
   height: 37px;
   width: 37px;
-  background: url(../sysimages/button/next.png) no-repeat center center; }
+  padding: 0;
+  background: url(../sysimages/button/next.png) no-repeat center center;
+  margin: 0 5px; }
 
 .buttonClose {
   height: 37px;
@@ -2685,52 +2689,72 @@ input[type='submit'],
 .fc-clear {
   clear: both; }
 
+.todayContainer {
+  background: url(../sysimages/bgDateCalendar.png) no-repeat left top;
+  height: 40px;
+  width: 180px;
+  line-height: 40px;
+  margin-right: 15px;
+  font-family: "merriweather";
+  font-size: 14px;
+  color: #7B7C7E;
+  padding: 0 15px; }
+
 .popupCalendar {
   max-width: 400px; }
-  .popupCalendar img {
-    max-width: 100%; }
-  .popupCalendar .contentText {
-    width: 100%;
-    padding: 35px 20px; }
-    .popupCalendar .contentText .eventName {
-      font-family: 'helveticabold';
-      font-size: 16px; }
-    .popupCalendar .contentText .eventDate {
-      font-family: 'merriweather';
-      font-size: 14px;
-      margin-bottom: 40px; }
-    .popupCalendar .contentText .eventLocationName {
-      font-family: 'merriweather';
-      font-size: 16px;
-      color: #333333; }
-    .popupCalendar .contentText .eventLocation {
-      font-family: 'merriweather';
-      font-size: 14px;
-      color: #666666; }
-  .popupCalendar .footer {
-    width: 100%;
-    padding: 10px 20px;
-    background: #9385C8; }
-    .popupCalendar .footer:before, .popupCalendar .footer:after {
-      content: "";
-      display: table; }
-    .popupCalendar .footer:after {
-      clear: both; }
-    .popupCalendar .footer .tags {
-      float: left; }
-      .popupCalendar .footer .tags a {
-        display: inline-block;
-        margin-right: 5px;
-        font-family: 'helvetica';
+  .popupCalendar .content {
+    position: relative; }
+    .popupCalendar .content::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      background: url(../sysimages/cornerTopPopup.png) no-repeat left top; }
+    .popupCalendar .content img {
+      max-width: 100%; }
+    .popupCalendar .content .contentText {
+      width: 100%;
+      padding: 35px 20px; }
+      .popupCalendar .content .contentText .eventName {
+        font-family: 'helveticabold';
+        font-size: 16px; }
+      .popupCalendar .content .contentText .eventDate {
+        font-family: 'merriweather';
+        font-size: 14px;
+        margin-bottom: 40px; }
+      .popupCalendar .content .contentText .eventLocationName {
+        font-family: 'merriweather';
+        font-size: 16px;
+        color: #333333; }
+      .popupCalendar .content .contentText .eventLocation {
+        font-family: 'merriweather';
+        font-size: 14px;
+        color: #666666; }
+    .popupCalendar .content .footer {
+      width: 100%;
+      padding: 0 20px;
+      height: 38px; }
+      .popupCalendar .content .footer:before, .popupCalendar .content .footer:after {
+        content: "";
+        display: table; }
+      .popupCalendar .content .footer:after {
+        clear: both; }
+      .popupCalendar .content .footer .tags {
+        float: left; }
+        .popupCalendar .content .footer .tags a {
+          display: inline-block;
+          margin-right: 5px;
+          font-family: 'helvetica';
+          font-size: 12px;
+          color: #FFFFFF;
+          line-height: 38px; }
+      .popupCalendar .content .footer .category {
+        float: right;
+        font-family: 'helveticabold';
         font-size: 12px;
         color: #FFFFFF;
-        line-height: 100%; }
-    .popupCalendar .footer .category {
-      float: right;
-      font-family: 'helveticabold';
-      font-size: 12px;
-      color: #FFFFFF;
-      line-height: 100%; }
+        line-height: 38px; }
 
 .fancybox-close.fancybox-item {
   display: none !important; }
