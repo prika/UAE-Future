@@ -2119,7 +2119,7 @@ input[type='submit'],
     text-align: right; }
     #filterSection .filter label::before {
       position: absolute;
-      right: -21px;
+      left: -21px;
       top: 7px;
       width: 8px;
       height: 8px;
