@@ -1649,7 +1649,7 @@ $c_briefs:#8cc63f;
 	.filter label{
 		width: 100%;
 		height: 25px;
-		padding: 1px 50px 1px 0;
+		padding: 1px 20px 1px 0;
 		display: block;
 		position: relative;
 		font-family: 'helveticabold';
@@ -1674,12 +1674,8 @@ $c_briefs:#8cc63f;
 			position: absolute;
 			left: -21px;
 			top: 0;
-			//width: 8px;
-			//height: 8px;
-			//border-radius: 4px;
 			content: '';
 			display: block;
-			
 			z-index: 100;
 			width: 40px;
 			height: 20px;
