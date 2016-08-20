@@ -2,6 +2,9 @@
 	height: $footer_height;
 	border-top: 2px solid $color_gold;
 	background: rgba(255,255,255,0.4);
+
+	*{direction: rtl;}
+	
 	
 	p , a {
 		height: $footer_height;
@@ -18,15 +21,15 @@
 		}
 	}
 	
-	.socialIcons {
+	.socialIcons{
 		display: inline-block;
-		margin-right: 40px;
+		margin-left: 40px;
 		
 		a{
 			display: inline-block;
 			width: 70px;
     		height: 108px;
-    		margin-left: -13px;
+    		margin-right: -13px;
 			
 			&.fb{
 				background: url(../sysimages/social/icon_facebook.png) no-repeat center center;
@@ -86,27 +89,12 @@
 		color: $color_w;
 		padding: 40px 20px;
 		background: $color_gold url(../sysimages/button/button_up@2x.png) no-repeat center center;
+		float:left;
 		
 		&:hover{
 			background-color: $color_solidGold; 
 		}
 	}	
-}
-
-#footer.reducedFooter{
-	height: $footer_height_reduced;
-
-	p , a {
-		height: $footer_height_reduced;
-	}
-
-	.socialIcons{ display: none; }
-	
-	#backTop{
-		height: $footer_height_reduced;
-		background-size: 25%;
-		padding: 19px 15px;
-	}
 }
 
 @media (max-width: 900px) {
@@ -119,7 +107,7 @@
 			padding: 10px 7px;
 		}
 		
-		.socialIcons {
+		.socialIcons{
 			margin-right: 0;
 			
 			a{

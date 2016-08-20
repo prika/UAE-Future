@@ -25,11 +25,9 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.velocity.min.js"></script>
 
     <script src="js/vendor/moment.min.js"></script>
-    <script src="js/vendor/fullcalendar.min.js"></script>
     
     <script src="js/site.js"> </script>
 
-    <link rel="stylesheet" href="style/Vendor/fullcalendar.min.css" type="text/css">
     <link rel="stylesheet" href="style/000_base.css" type="text/css">
     <link rel="stylesheet" href="style/000_guide.css" type="text/css">
 
@@ -77,12 +75,30 @@
 
 
         <section id="calendarSection">
+            
             <div class="container">
                 <div class="title">
                     <h1>Calendar</h1>
                 </div>
 
-                <div id="calendar"> </div>
+                <div class="fc-toolbar">
+                    <div class="fc-left">
+                        <div class="fc-left todayContainer">Today, May 9</div>
+                        <div class="fc-right fc-button-group">
+                            <button type="button" class="buttonPrev"></button>
+                            <button type="button" class="buttonNext"></button>
+                        </div>
+
+                    </div>
+                        <div class="fc-right">
+                            <div class="fc-button-group">
+                            <button type="button" class="month">month</button>
+                            <button type="button" class="week">week</button>
+                        </div>
+                    </div>
+                            
+                    <div class="fc-clear"></div>
+                </div>
             </div>
         </section>
 
@@ -108,84 +124,7 @@
                                 .setTween("#fullBanner > div", {y: "60%", ease: Linear.easeNone})
                                 .addTo(controller);
 
-                $('#calendar').fullCalendar({
-                    header: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'month,agendaWeek,agendaDay'
-                    },
-                
-                    eventMouseover: function (event, jsEvent, view) {
-
-                    },
-                    eventClick: function(calEvent, jsEvent, view) {
-
-                        $.get("templates/fancybox-example.html", function (data)
-                        {
-                            $data = $(data);
-                            $.fancybox($data);
-                        });
-
-                    },
-                    defaultDate: '2016-06-12',
-                    businessHours: true, // display business hours
-                    editable: true,
-                    events: [
-                        {
-                            title: 'Business Lunch',
-                            start: '2016-06-03T13:00:00',
-                            constraint: 'businessHours'
-                        },
-                        {
-                            title: 'Meeting',
-                            start: '2016-06-13T11:00:00',
-                            constraint: 'availableForMeeting', // defined below
-                            color: '#257e4a'
-                        },
-                        {
-                            title: 'Conference',
-                            start: '2016-06-18',
-                            end: '2016-06-20'
-                        },
-                        {
-                            title: 'Party',
-                            start: '2016-06-29T20:00:00'
-                        },
-
-                        // areas where "Meeting" must be dropped
-                        {
-                            id: 'availableForMeeting',
-                            start: '2016-06-11T10:00:00',
-                            end: '2016-06-11T16:00:00',
-                            rendering: 'background'
-                        },
-                        {
-                            id: 'availableForMeeting',
-                            start: '2016-06-13T10:00:00',
-                            end: '2016-06-13T16:00:00',
-                            rendering: 'background'
-                        },
-
-                        // red areas where no events can be dropped
-                        {
-                            start: '2016-06-24',
-                            end: '2016-06-28',
-                            overlap: false,
-                            rendering: 'background',
-                            color: '#ff9f89'
-                        },
-                        {
-                            start: '2016-06-06',
-                            end: '2016-06-08',
-                            overlap: false,
-                            rendering: 'background',
-                            color: '#ff9f89'
-                        }
-                    ]
-                });
-            
-               })(jQuery);
-
+            });
 
     </script>
 </body>

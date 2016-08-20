@@ -40,15 +40,6 @@
 	100% { opacity: 1; }
 }
 
-@include keyframes(slideFromLeft) {
-    0% { left: -100%; }
-    100% { left: 10px; }
-}
-@include keyframes(slideFromRight) {
-    0% { right: -100%; }
-    100% { right: 10px; }
-}
-
 .showUp > div {@include animation('showUpAnimation 1s ease');}
 
 .bannerContent h1 {@include animation('showDownAnimation .5s ease');}
@@ -119,7 +110,6 @@ $header_height_sticky: 60px;
 $footer_height: 108px;
 $footer_height_reduced: 38px;
 
-
 // Colors
 $color_w: #FFF;
 $color_bl: #21282f;
@@ -140,49 +130,46 @@ $bg_img: "../sysimages/bg.png";
 // Typography
 @font-face {
     font-family: 'intro';
-    src: url('../fonts/intro-webfont.woff2') format('woff2'),
-         url('../fonts/intro-webfont.woff') format('woff');
+    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
+         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
+		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 @font-face {
     font-family: 'merriweather';
-    src: url('../fonts/merriweather-regular-webfont.woff2') format('woff2'),
-         url('../fonts/merriweather-regular-webfont.woff') format('woff');
+    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
+         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
+		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'merriweatherbold';
-    src: url('../fonts/merriweather-bold-webfont.woff2') format('woff2'),
-         url('../fonts/merriweather-bold-webfont.woff') format('woff');
-    font-weight: bold;
+    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
+         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
+		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'helvetica';
-	src: url('../fonts/helvetic-webfont.eot');
-    src: url('../fonts/helvetic-webfont.eot?#iefix') format('embedded-opentype'), 
-         url('../fonts/helvetic-webfont.woff') format('woff'),
-		 url('../fonts/helvetic-webfont.ttf') format('truetype'),
-		 url('../fonts/helvetic-webfont.svg#atroxnormal') format('svg');
+    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
+         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
+		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;     
+    font-style: normal;   
 }
 
 @font-face {
     font-family: 'helveticabold';
-	src: url('../fonts/helveticabold-webfont.eot');
-    src: url('../fonts/helveticabold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/helveticabold-webfont.woff') format('woff'),
-		 url('../fonts/helveticabold-webfont.ttf') format('truetype'),
-		 url('../fonts/helveticabold-webfont.svg#atroxnormal') format('svg');
-    font-weight: bold;
-    font-style: normal;     
+    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
+         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
+		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;   
 }
 
 
@@ -258,9 +245,9 @@ a{
 		padding: 70px 0 20px;
 		
 		h1 {
-			text-align: left;
+			text-align: right;
 			&::before{
-				left: 0;
+				right: 0;
 				transform: none;
 			}
 		}
@@ -275,11 +262,12 @@ a{
 		display: inline-block;
 		font-family: 'intro';
 		font-weight: 300;
+		//float: right;
 	
 		&::before{
 			position: absolute;
 			top: -20px;
-			left: 0;
+			right: 0;
 			width: 27px;
 			height: 5px;
 			content: '';
@@ -326,17 +314,15 @@ a{
 				width: 70%;
 				color: $color_bl;
 				
-				&:hover{
-					color: $color_gold;
-				}
+				&:hover{ color: $color_gold; }
 			}
 			.signal{
 				font-family: 'merriweather';
 				font-size: 12px;
 				line-height: 21px;
 				color: $color_lightgrey;
-				float: right;
-				padding-right: 40px;
+				float: left;
+				padding-left: 40px;
 				position: relative;
 				
 				&::after{
@@ -344,19 +330,18 @@ a{
 					display: block; 
 					width: 20px;
 					height: 20px;
-					top: 0; right: 0;
+					top: 0; left: 0;
 					content:'';
 					display: block;
 					position: absolute;
 				}
 			}
 			
-			&.hover .accordionHeader{color: $color_gold;}
-			
+			&.hover .accordionHeader{ color: $color_gold; }
 		}
 		
 		&.active{
-			.accordionHeader,.signal{color: $color_gold;}
+			.accordionHeader, .signal{ color: $color_gold; }
 			
 			.signal::after {
 				background: url('../sysimages/button/closeAccordion.png') no-repeat center center;
@@ -393,9 +378,7 @@ a{
 		background-size: 15px;
 	}
 
-	/*&:hover{
-		background: url(../sysimages/cornerTopInput.png) no-repeat left top;
-	}*/
+	/*&:hover{background: url(../sysimages/cornerTopInput.png) no-repeat left top;}*/
 }
 
 input[type='text'],
@@ -502,12 +485,10 @@ select {
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 	display: inline-block;
-	/*height: 37px;
-    width: 34px;*/
 	height: 40px;
     width: 40px;
 	overflow: hidden;
-	padding: 4px 13px 4px 45px;
+	padding: 4px 45px 4px 13px;
 	@include transition( all .4s ease);
 	
 	span{ 
@@ -536,12 +517,9 @@ select {
 		}
 	}
 	
-	&:after{
-		
-		
+/*	&:after{
 		&::before{background: red!important;}
-		
-	}
+	}*/
 }
 
 
@@ -550,10 +528,10 @@ select {
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 	display: block;
-	float: left;
+	float:right;
 	height: 40px;
     width: auto;
-	padding: 10px 10px 10px 50px;
+	padding: 10px 50px 10px 10px;
 	@include transition( all .4s ease);
 	
 	font-family: 'intro';
@@ -577,7 +555,7 @@ select {
 		position: absolute;
 		content: '';
 		top: 0;
-		left: 0;
+		right: 0;
 		width: 40px;
 		height: 40px;
 		background-image: url("../sysimages/animate/spriteicons.png");
@@ -596,7 +574,7 @@ select {
 		position: absolute;
 		content: '';
 		top: 0;
-		left: 0;
+		right: 0;
 		width: 40px;
 		height: 40px;
 		background-image: url("../sysimages/animate/spriteicons.png");
@@ -610,7 +588,7 @@ select {
 
 .buttonPrint{
 	background: url(../sysimages/button/print.png) no-repeat 3px 0!important;
-	border: 1px solid red;
+
 	/*&::before{
 		position: absolute;
 		content: '';
@@ -634,7 +612,7 @@ select {
 		position: absolute;
 		content: '';
 		top: 0;
-		left: 0;
+		right: 0;
 		width: 40px;
 		height: 40px;
 		background-image: url("../sysimages/animate/spriteicons.png");
@@ -654,7 +632,7 @@ select {
 		position: absolute;
 		content: '';
 		top: 0;
-		left: 0;
+		right: 0;
 		width: 40px;
 		height: 40px;
 		background-image: url("../sysimages/animate/spriteicons.png");
@@ -688,7 +666,7 @@ select {
 	top: 20px;
 	right: 20px;
 	background-size: cover!important; 
-	background: url(../sysimages/button/close@2x.png) no-repeat top left;
+	background: url(../sysimages/button/close@2x.png) no-repeat top left!important;
 }
 
 
@@ -760,19 +738,19 @@ input[type='submit'],
 // ===================================================================================================================
 // Header
 
-@import '_header.scss';
+@import 'rtl/rtl_header.scss';
 
 
 // ===================================================================================================================
 // Footer
 
-@import '_footer.scss';
+@import 'rtl/rtl_footer.scss';
 
 
 // ===================================================================================================================
 // Full Banner
 
-@import '_fullBanner.scss';
+@import 'rtl/rtl_fullBanner.scss';
 
 
 
@@ -798,7 +776,7 @@ input[type='submit'],
 	
 	iframe{
 		max-width: 100%;
-    		height: 100%;
+    	height: 100%;
 	}
 	
 	.bannerTop{
@@ -829,6 +807,7 @@ input[type='submit'],
 			
 			.headerActions{
 				padding-top: 60px;
+				@include clearfix();
 			}
 		}
 	}
@@ -837,10 +816,11 @@ input[type='submit'],
 	.content{
 		@include clearfix();
 		padding-bottom: 30px;
+
 		
 		.headerActions{
 			height: 60px;
-			float: right;
+			//float: right;
 			padding-top: 15px;
 			@include clearfix();
 		}
@@ -882,6 +862,10 @@ input[type='submit'],
     z-index: 9;
 	//overflow: hidden;
 	@include clearfix();
+
+	*{
+	direction: rtl;
+	}
 	
 	/*&::before {
         background: url(../sysimages/animate/banner_graf3.svg) no-repeat center center;
@@ -940,8 +924,8 @@ input[type='submit'],
 		.elementTitle{
 			position: absolute;
 			top: 6px;
-			left: 6px;
-			right: 0; 
+			left: 6px!important;
+			//right: 0; 
 			/*height: 40px;
 			width: 40px;
 			background-size: 100% 100%;
@@ -1034,12 +1018,15 @@ input[type='submit'],
 				display: block;
 				position: absolute;
 				top: 9px;
-    			left: -20px;
+    			right: -20px;
 				opacity: 0;
 				content: '';
 				background: url(../sysimages/button/bg_pdf.png) no-repeat left center;
 				width: 300px; height: 20px;
 				@include transition( all .2s ease .3s);
+				-ms-transform: rotate(180deg);
+    			-webkit-transform: rotate(180deg);
+    			transform: rotate(180deg);
 			}
 			
 			
@@ -1047,7 +1034,7 @@ input[type='submit'],
 			span{
 				font-family: 'helveticabold';
 				text-transform: uppercase;
-				float: right;
+				float: left;
 				font-size: 12px;
 				line-height: 21px;
 				padding: 6px 0;
@@ -1076,7 +1063,7 @@ input[type='submit'],
 				height: 40px;
 				
 				&::before{
-					left: 25px;
+					right: 25px;
 					opacity: 1;
 				}
 				span{ display: block; }
@@ -1426,6 +1413,7 @@ $c_briefs:#8cc63f;
 	padding: 30px 30px 100px;
 	position: relative;
 	overflow: hidden;
+	direction: rtl;
 	
 	.title h1 {
 		color: $color_w;
@@ -1446,7 +1434,7 @@ $c_briefs:#8cc63f;
 		.element{
 			width: 19%;
 			margin: 0 .5% 10px;
-			float: left;
+			float:right;
 			background: $color_gold;
 			height: 250px;
 			padding: 20px;
@@ -1470,7 +1458,7 @@ $c_briefs:#8cc63f;
 				color: $color_w;
 				position: absolute;
 				top: -26px;
-    			left: 20px;
+    			right: 20px;
 			}
 			
 			.dateEvent{
@@ -1541,11 +1529,12 @@ $c_briefs:#8cc63f;
 	padding: 40px;
 	position: relative;
 	overflow: hidden;
+	direction: rtl;
 	
 	&::before{
 		position: absolute;
 		bottom: -90%;
-		left: -10%;
+		right: -10%;
 		opacity: .3;
 		content: '';
 		display: block; z-index: 0;
@@ -1589,10 +1578,11 @@ $c_briefs:#8cc63f;
 		
 		a.link{ 
 			display: inline-block; 
-			margin-left: 20px;
+			margin-right: 20px;
 			font-family: "helvetica";
 			font-weight: normal;
 			font-size: 14px;
+			margin-top: -3px;
 		}
 		
 		p{
@@ -1630,6 +1620,10 @@ $c_briefs:#8cc63f;
 	margin-top: -12px;
 	padding: 0;
 	
+	.subtitle h3{
+		text-align: right;
+	}
+
 	.filters{
 		margin-bottom: 30px;
 	}
@@ -1637,7 +1631,7 @@ $c_briefs:#8cc63f;
 	.filter label{
 		width: 100%;
 		height: 25px;
-		padding: 1px 0;
+		padding: 1px 20px 1px 0;
 		display: block;
 		position: relative;
 		font-family: 'helveticabold';
@@ -1645,10 +1639,11 @@ $c_briefs:#8cc63f;
 		color: $color_lightgrey;
 		margin-bottom: 3px;
 		cursor: pointer;
+		text-align: right;
 		
 		&::before{
 			position: absolute;
-			left: -21px;
+			right: 0;
 			top: 7px;
 			width: 8px;
 			height: 8px;
@@ -1659,19 +1654,18 @@ $c_briefs:#8cc63f;
 		
 		&::after{
 			position: absolute;
-			right: 0;
+			left: -21px;
 			top: 0;
-			//width: 8px;
-			//height: 8px;
-			//border-radius: 4px;
 			content: '';
 			display: block;
-			
 			z-index: 100;
 			width: 40px;
 			height: 20px;
 			background: url(../sysimages/checkbox/unchecked.png) no-repeat center center;
 			@include transition( background .4s ease);
+			-ms-transform: rotate(180deg);
+    		-webkit-transform: rotate(180deg);
+    		transform: rotate(180deg);
 		}
 		
 		input[type='checkbox']{
@@ -1685,9 +1679,10 @@ $c_briefs:#8cc63f;
 
 	.subtitle h3{
 		width: 100%;
+		float: right;
 
 		#reset{  
-			float: right;
+			float: left;
 			font-size: 14px;
 			color: $color_lightgrey;
 
@@ -1703,7 +1698,6 @@ $c_briefs:#8cc63f;
 }
 
 .input-group .form-control{height: 34px}
-
 
 //Codigo inline
 #filterSection .filter .date input {
@@ -1753,11 +1747,13 @@ cursor: pointer;
 	padding-bottom: 150px;
 	position: relative;
 	overflow: hidden;
+
+	h2, a, p, .imageContainer, .title.leftTitle, .accordionMenu { direction: rtl; }
 	
 	&::before{
 		position: absolute;
 		bottom: -30%;
-		left: -10%;
+		right: -10%;
 		opacity: .1;
 		content: '';
 		display: block; z-index: 0;
@@ -1779,6 +1775,8 @@ cursor: pointer;
 	p{
 		padding: 15px 0 30px;
 	}
+
+	
 
 	
 	.imageContainer{
@@ -1809,7 +1807,7 @@ cursor: pointer;
 	
 	hr {
 		width: 100%;
-		float: left;
+		float:right;
 		margin: 20px 0;
 		border-color: rgba(123, 124, 126, 0.3); 
 		border-bottom: none;
@@ -1823,6 +1821,8 @@ cursor: pointer;
 // Resources page
 #resourcesSection1,
 #resourcesSection2 {
+
+	direction: rtl;
 	
 	img{ max-width: 100%; }
 	
@@ -1906,7 +1906,7 @@ color: #21282f;
 	& > a {
 		display: block;
 		clear: right;
-		text-align: left;
+		text-align: right;
 	}
 }
 /*TODO*/
@@ -1974,7 +1974,7 @@ color: #21282f;
 		.element{
 			width: 20%;
     		padding: 10px;
-			float: left;
+			float:right;
 			position: relative;
 			
 			
@@ -2066,7 +2066,7 @@ color: #21282f;
 			background: url(../sysimages/REMOVE/btnSend.png) no-repeat 3px 0;
 			height: 37px;
     		width: 34px;
-			position: absolute; bottom: 0; left: 5%; opacity: 0;
+			position: absolute; bottom: 0; right: 5%; opacity: 0;
 			@include transition( .2s all .2s linear);
 		}
 		
@@ -2162,13 +2162,12 @@ color: #21282f;
 // ===================================================================================================================
 // Calendar Section
 
-@import '_calendar.scss';
+@import 'rtl/rtl_calendar.scss';
 
 
 
 // ===================================================================================================================
 // Popup component
-
 
 .fancybox-wrap:hover {
     cursor: initial!important;

@@ -2,6 +2,7 @@
 #calendarSection{
 	//background: url($bg_img);
 	padding-bottom: 40px;
+	direction: rtl;
 
 	#calendar {
 		max-width: 1100px;
@@ -15,7 +16,6 @@
         position: relative;
         background: #FFF;
     }
-
         .contentEvent{
             position: absolute;
             top: 0; 
@@ -69,6 +69,7 @@
 
             .groupEvents p{
                 font-family: "helvetica";
+                font-weight: bold;
                 font-size: 13px;
                 line-height: 140%;
                 @include truncateText();
@@ -142,6 +143,30 @@
 	margin-top: 5px;
 	}
 
+	/*change url for the icon you want*/
+	/*.rsPrevDay {
+		content: '';
+		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
+		background-size: cover;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		margin-left: 200px;
+		font-size: 0px;
+	}
+
+	.rsNextDay {
+		content: '';
+		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
+		background-size: cover;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		margin-left: 170px;
+	font-size: 0px;
+	}*/
+
+
 	.sfcalendar {
 	margin-bottom: 5%;
 	}
@@ -183,8 +208,6 @@
 .fc-button-group, .fc-icon {display: inline-block;}
 .fc-clear {clear: both;}
 
-
-
 .todayContainer{
 	background: url(../sysimages/bgDateCalendar.png) no-repeat left top;
 	height: 40px;
@@ -197,6 +220,7 @@
 	color: #7B7C7E;
 	padding: 0 15px;
 }
+
 
 
 .popupCalendar{
@@ -236,7 +260,7 @@
 
 			.eventLocationName{
 				font-family: 'merriweather';
-				font-size: 14px;
+				font-size: 16px;
 				color: #333333;
 			}
 

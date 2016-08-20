@@ -1,5 +1,8 @@
 #header {
 	
+	*{
+		direction: rtl;
+	}
 	.navbar{
 		top: 20px;
 		height: $header_height;
@@ -43,7 +46,7 @@
 					
 					&::before,
 					&::after{
-						left: -100%;
+						right: -100%;
 					}
 				}
 				
@@ -55,7 +58,7 @@
 					&::before,
 					&::after{
 						opacity: 1;
-						left: calc(50% - 12px);
+						right: calc(50% - 12px);
 					}
 				}
 			}
@@ -98,7 +101,7 @@
 			
 			a{
 				display: block;
-				float: right;	
+				float: left;	
 			}
 			
 			#navIcon{

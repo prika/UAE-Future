@@ -93,56 +93,6 @@
     opacity: 0; }
   100% {
     opacity: 1; } }
-@-webkit-keyframes slideFromLeft {
-  0% {
-    left: -100%; }
-  100% {
-    left: 10px; } }
-@-moz-keyframes slideFromLeft {
-  0% {
-    left: -100%; }
-  100% {
-    left: 10px; } }
-@-ms-keyframes slideFromLeft {
-  0% {
-    left: -100%; }
-  100% {
-    left: 10px; } }
-@-o-keyframes slideFromLeft {
-  0% {
-    left: -100%; }
-  100% {
-    left: 10px; } }
-@keyframes slideFromLeft {
-  0% {
-    left: -100%; }
-  100% {
-    left: 10px; } }
-@-webkit-keyframes slideFromRight {
-  0% {
-    right: -100%; }
-  100% {
-    right: 10px; } }
-@-moz-keyframes slideFromRight {
-  0% {
-    right: -100%; }
-  100% {
-    right: 10px; } }
-@-ms-keyframes slideFromRight {
-  0% {
-    right: -100%; }
-  100% {
-    right: 10px; } }
-@-o-keyframes slideFromRight {
-  0% {
-    right: -100%; }
-  100% {
-    right: 10px; } }
-@keyframes slideFromRight {
-  0% {
-    right: -100%; }
-  100% {
-    right: 10px; } }
 .showUp > div {
   -webkit-animation: showUpAnimation 1s ease;
   -moz-animation: showUpAnimation 1s ease;
@@ -500,30 +450,28 @@
 
 @font-face {
   font-family: 'intro';
-  src: url("../fonts/intro-webfont.woff2") format("woff2"), url("../fonts/intro-webfont.woff") format("woff");
+  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'merriweather';
-  src: url("../fonts/merriweather-regular-webfont.woff2") format("woff2"), url("../fonts/merriweather-regular-webfont.woff") format("woff");
+  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'merriweatherbold';
-  src: url("../fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../fonts/merriweather-bold-webfont.woff") format("woff");
-  font-weight: bold;
+  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'helvetica';
-  src: url("../fonts/helvetic-webfont.eot");
-  src: url("../fonts/helvetic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/helvetic-webfont.woff") format("woff"), url("../fonts/helvetic-webfont.ttf") format("truetype"), url("../fonts/helvetic-webfont.svg#atroxnormal") format("svg");
+  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'helveticabold';
-  src: url("../fonts/helveticabold-webfont.eot");
-  src: url("../fonts/helveticabold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/helveticabold-webfont.woff") format("woff"), url("../fonts/helveticabold-webfont.ttf") format("truetype"), url("../fonts/helveticabold-webfont.svg#atroxnormal") format("svg");
-  font-weight: bold;
+  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal; }
 h1, .h1 {
   font-family: 'intro';
@@ -588,9 +536,9 @@ a {
   .title.leftTitle {
     padding: 70px 0 20px; }
     .title.leftTitle h1 {
-      text-align: left; }
+      text-align: right; }
       .title.leftTitle h1::before {
-        left: 0;
+        right: 0;
         transform: none; }
 
 .subtitle {
@@ -603,7 +551,7 @@ a {
     .subtitle h3::before, .subtitle .accordionMenu > li > a .accordionHeader::before, .accordionMenu > li > a .subtitle .accordionHeader::before {
       position: absolute;
       top: -20px;
-      left: 0;
+      right: 0;
       width: 27px;
       height: 5px;
       content: '';
@@ -638,8 +586,8 @@ a {
         font-size: 12px;
         line-height: 21px;
         color: #7b7c7e;
-        float: right;
-        padding-right: 40px;
+        float: left;
+        padding-left: 40px;
         position: relative; }
         .accordionMenu > li > a .signal::after {
           background: url("../sysimages/button/openAccordion.png") no-repeat center center;
@@ -647,7 +595,7 @@ a {
           width: 20px;
           height: 20px;
           top: 0;
-          right: 0;
+          left: 0;
           content: '';
           display: block;
           position: absolute; }
@@ -672,9 +620,7 @@ a {
   margin-bottom: 25px;
   position: relative;
   padding-left: 0;
-  /*&:hover{
-  	background: url(../sysimages/cornerTopInput.png) no-repeat left top;
-  }*/ }
+  /*&:hover{background: url(../sysimages/cornerTopInput.png) no-repeat left top;}*/ }
   .inputElement::before,
   .inputSelect::before {
     background: url(../sysimages/cornerTop.png) no-repeat left top;
@@ -776,16 +722,17 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   display: inline-block;
-  	/*height: 37px;
-      width: 34px;*/
   height: 40px;
   width: 40px;
   overflow: hidden;
-  padding: 4px 13px 4px 45px;
+  padding: 4px 45px 4px 13px;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  transition: all 0.4s ease;
+  /*	&:after{
+  		&::before{background: red!important;}
+  	}*/ }
   .buttonIc span {
     font-family: 'intro';
     font-size: 12px;
@@ -806,18 +753,16 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
     .buttonIc:hover span {
       width: 100%;
       opacity: 1; }
-  .buttonIc:after::before {
-    background: red !important; }
 
 .buttonOpened {
   position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   display: block;
-  float: left;
+  float: right;
   height: 40px;
   width: auto;
-  padding: 10px 10px 10px 50px;
+  padding: 10px 50px 10px 10px;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
@@ -837,7 +782,7 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
   position: absolute;
   content: '';
   top: 0;
-  left: 0;
+  right: 0;
   width: 40px;
   height: 40px;
   background-image: url("../sysimages/animate/spriteicons.png");
@@ -852,7 +797,7 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
   position: absolute;
   content: '';
   top: 0;
-  left: 0;
+  right: 0;
   width: 40px;
   height: 40px;
   background-image: url("../sysimages/animate/spriteicons.png");
@@ -865,7 +810,6 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
 
 .buttonPrint {
   background: url(../sysimages/button/print.png) no-repeat 3px 0 !important;
-  border: 1px solid red;
   /*&::before{
   	position: absolute;
   	content: '';
@@ -884,7 +828,7 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
   position: absolute;
   content: '';
   top: 0;
-  left: 0;
+  right: 0;
   width: 40px;
   height: 40px;
   background-image: url("../sysimages/animate/spriteicons.png");
@@ -899,7 +843,7 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
   position: absolute;
   content: '';
   top: 0;
-  left: 0;
+  right: 0;
   width: 40px;
   height: 40px;
   background-image: url("../sysimages/animate/spriteicons.png");
@@ -931,7 +875,7 @@ background: url(../sysimages/checkbox/unchecked.svg) no-repeat center center;
   top: 20px;
   right: 20px;
   background-size: cover !important;
-  background: url(../sysimages/button/close@2x.png) no-repeat top left; }
+  background: url(../sysimages/button/close@2x.png) no-repeat top left !important; }
 
 /*Buttons*/
 .button,
@@ -992,6 +936,8 @@ input[type='submit'],
 .globalContainer {
   background: url("../sysimages/bg.png") repeat left top; }
 
+#header * {
+  direction: rtl; }
 #header .navbar {
   top: 20px;
   height: 80px;
@@ -1028,7 +974,7 @@ input[type='submit'],
         height: 80px;
         color: rgba(190, 151, 95, 0.8); }
         #header .navbar #nav li a::before, #header .navbar #nav li a::after {
-          left: -100%; }
+          right: -100%; }
       #header .navbar #nav li.active > a,
       #header .navbar #nav li a:hover {
         background: #BE975F;
@@ -1037,7 +983,7 @@ input[type='submit'],
         #header .navbar #nav li a:hover::before,
         #header .navbar #nav li a:hover::after {
           opacity: 1;
-          left: calc(50% - 12px); }
+          right: calc(50% - 12px); }
     #header .navbar #nav.openNav {
       display: block;
       position: absolute;
@@ -1065,7 +1011,7 @@ input[type='submit'],
     display: inline-block; }
     #header .navbar .navbar-right a {
       display: block;
-      float: right; }
+      float: left; }
     #header .navbar .navbar-right #navIcon {
       width: 45px;
       padding: 0 10px;
@@ -1214,6 +1160,8 @@ input[type='submit'],
   height: 108px;
   border-top: 2px solid rgba(190, 151, 95, 0.8);
   background: rgba(255, 255, 255, 0.4); }
+  #footer * {
+    direction: rtl; }
   #footer p, #footer input[type='text'],
   #footer input[type='number'],
   #footer input[type='email'],
@@ -1239,12 +1187,12 @@ input[type='submit'],
       color: #be9857; }
   #footer .socialIcons {
     display: inline-block;
-    margin-right: 40px; }
+    margin-left: 40px; }
     #footer .socialIcons a {
       display: inline-block;
       width: 70px;
       height: 108px;
-      margin-left: -13px; }
+      margin-right: -13px; }
       #footer .socialIcons a.fb {
         background: url(../sysimages/social/icon_facebook.png) no-repeat center center; }
         #footer .socialIcons a.fb:hover {
@@ -1281,26 +1229,10 @@ input[type='submit'],
     width: 80px;
     color: #FFF;
     padding: 40px 20px;
-    background: rgba(190, 151, 95, 0.8) url(../sysimages/button/button_up@2x.png) no-repeat center center; }
+    background: rgba(190, 151, 95, 0.8) url(../sysimages/button/button_up@2x.png) no-repeat center center;
+    float: left; }
     #footer #backTop:hover {
       background-color: #be9857; }
-
-#footer.reducedFooter {
-  height: 38px; }
-  #footer.reducedFooter p, #footer.reducedFooter input[type='text'],
-  #footer.reducedFooter input[type='number'],
-  #footer.reducedFooter input[type='email'],
-  #footer.reducedFooter input[type='search'],
-  #footer.reducedFooter input[type='password'],
-  #footer.reducedFooter textarea,
-  #footer.reducedFooter select, #footer.reducedFooter #aboutSection blockquote, #aboutSection #footer.reducedFooter blockquote, #footer.reducedFooter a {
-    height: 38px; }
-  #footer.reducedFooter .socialIcons {
-    display: none; }
-  #footer.reducedFooter #backTop {
-    height: 38px;
-    background-size: 25%;
-    padding: 19px 15px; }
 
 @media (max-width: 900px) {
   #footer {
@@ -1340,8 +1272,8 @@ input[type='submit'],
     padding: 0 20%;
     text-shadow: 1px 1px #21282f; }
     #fullBanner .bannerContent h1 {
-      font-size: 60px;
-      line-height: 110%;
+      font-size: 80px;
+      line-height: 100%;
       padding-top: 5px;
       color: #FFF;
       letter-spacing: 3px;
@@ -1352,8 +1284,8 @@ input[type='submit'],
     #fullBanner .bannerContent h2,
     #fullBanner .bannerContent h2 *,
     #fullBanner .bannerContent h2 * {
-      font-size: 24px;
-      line-height: 150%;
+      font-size: 28px;
+      line-height: 120%;
       margin-bottom: 50px;
       color: #FFF;
       display: -webkit-box;
@@ -1393,6 +1325,7 @@ input[type='submit'],
   -webkit-animation: AnimRotation 35s infinite;
   width: 170px; }
 
+/*TODO - remove from this doc*/
 .bg2 {
   position: absolute;
   right: 20%;
@@ -1414,6 +1347,66 @@ input[type='submit'],
   -moz-animation: AnimRotationReverse 35s infinite;
   -webkit-animation: AnimRotationReverse 35s infinite; }
 
+/*@include keyframes(anim_opacity) {
+    0% { opacity: .3; }
+    50% { opacity: .1; }
+    100% { opacity: .3; }
+}
+@include keyframes(anim_opacity_invert) {
+    0% { opacity: .1; }
+    50% { opacity: .4; }
+    100% { opacity: .1; }
+}*/
+@-webkit-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-moz-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-ms-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-o-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-webkit-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@-moz-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@-ms-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@-o-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
 @keyframes AnimRotation {
   from {
     transform: rotate(0deg); }
@@ -1490,6 +1483,11 @@ input[type='submit'],
       padding-top: 30px; }
     .popup .bannerTop.bannerText + .content .headerActions {
       padding-top: 60px; }
+      .popup .bannerTop.bannerText + .content .headerActions:before, .popup .bannerTop.bannerText + .content .headerActions:after {
+        content: "";
+        display: table; }
+      .popup .bannerTop.bannerText + .content .headerActions:after {
+        clear: both; }
   .popup .content {
     padding-bottom: 30px; }
     .popup .content:before, .popup .content:after {
@@ -1499,7 +1497,6 @@ input[type='submit'],
       clear: both; }
     .popup .content .headerActions {
       height: 60px;
-      float: right;
       padding-top: 15px; }
       .popup .content .headerActions:before, .popup .content .headerActions:after {
         content: "";
@@ -1550,6 +1547,9 @@ input[type='submit'],
   #highlightSection:after,
   #ecosystemSection:after {
     clear: both; }
+  #highlightSection *,
+  #ecosystemSection * {
+    direction: rtl; }
 
 .listContainer .col-xs-12.col-sm-4.col-md-3,
 .listContainer .col-xs-12.col-sm-4.col-md-4 {
@@ -1587,8 +1587,7 @@ input[type='submit'],
   .listContainer .listElement .elementTitle {
     position: absolute;
     top: 6px;
-    left: 6px;
-    right: 0;
+    left: 6px !important;
     /*height: 40px;
     width: 40px;
     background-size: 100% 100%;
@@ -1680,7 +1679,7 @@ input[type='submit'],
       display: block;
       position: absolute;
       top: 9px;
-      left: -20px;
+      right: -20px;
       opacity: 0;
       content: '';
       background: url(../sysimages/button/bg_pdf.png) no-repeat left center;
@@ -1689,11 +1688,14 @@ input[type='submit'],
       -moz-transition: all 0.2s ease 0.3s;
       -o-transition: all 0.2s ease 0.3s;
       -webkit-transition: all 0.2s ease 0.3s;
-      transition: all 0.2s ease 0.3s; }
+      transition: all 0.2s ease 0.3s;
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg); }
     .listContainer .listElement .downloadPDF span {
       font-family: 'helveticabold';
       text-transform: uppercase;
-      float: right;
+      float: left;
       font-size: 12px;
       line-height: 21px;
       padding: 6px 0;
@@ -1710,7 +1712,7 @@ input[type='submit'],
   .listContainer .listElement:hover .downloadPDF {
     height: 40px; }
     .listContainer .listElement:hover .downloadPDF::before {
-      left: 25px;
+      right: 25px;
       opacity: 1; }
     .listContainer .listElement:hover .downloadPDF span {
       display: block; }
@@ -1940,7 +1942,8 @@ input[type='submit'],
   background: url(../images/homepageCalendar.jpg) no-repeat center center;
   padding: 30px 30px 100px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  direction: rtl; }
   #weeklycalendarSection:before, #weeklycalendarSection:after {
     content: "";
     display: table; }
@@ -1962,7 +1965,7 @@ input[type='submit'],
   #weeklycalendarSection .listContainerCalendar .element {
     width: 19%;
     margin: 0 .5% 10px;
-    float: left;
+    float: right;
     background: rgba(190, 151, 95, 0.8);
     height: 250px;
     padding: 20px;
@@ -1983,7 +1986,7 @@ input[type='submit'],
       color: #FFF;
       position: absolute;
       top: -26px;
-      left: 20px; }
+      right: 20px; }
     #weeklycalendarSection .listContainerCalendar .element .dateEvent {
       font-family: 'merriweatherbold';
       color: #FFF;
@@ -2021,11 +2024,12 @@ input[type='submit'],
 #newsSection {
   padding: 40px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  direction: rtl; }
   #newsSection::before {
     position: absolute;
     bottom: -90%;
-    left: -10%;
+    right: -10%;
     opacity: .3;
     content: '';
     display: block;
@@ -2058,10 +2062,11 @@ input[type='submit'],
     padding: 55px 40px 55px 55px; }
     #newsSection .element a.link {
       display: inline-block;
-      margin-left: 20px;
+      margin-right: 20px;
       font-family: "helvetica";
       font-weight: normal;
-      font-size: 14px; }
+      font-size: 14px;
+      margin-top: -3px; }
     #newsSection .element p, #newsSection .element input[type='text'],
     #newsSection .element input[type='number'],
     #newsSection .element input[type='email'],
@@ -2096,22 +2101,25 @@ input[type='submit'],
 #filterSection {
   margin-top: -12px;
   padding: 0; }
+  #filterSection .subtitle h3, #filterSection .subtitle .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a #filterSection .subtitle .accordionHeader {
+    text-align: right; }
   #filterSection .filters {
     margin-bottom: 30px; }
   #filterSection .filter label {
     width: 100%;
     height: 25px;
-    padding: 1px 0;
+    padding: 1px 20px 1px 0;
     display: block;
     position: relative;
     font-family: 'helveticabold';
     font-size: 12px;
     color: #7b7c7e;
     margin-bottom: 3px;
-    cursor: pointer; }
+    cursor: pointer;
+    text-align: right; }
     #filterSection .filter label::before {
       position: absolute;
-      left: -21px;
+      right: 0;
       top: 7px;
       width: 8px;
       height: 8px;
@@ -2120,7 +2128,7 @@ input[type='submit'],
       display: block; }
     #filterSection .filter label::after {
       position: absolute;
-      right: 0;
+      left: -21px;
       top: 0;
       content: '';
       display: block;
@@ -2131,15 +2139,19 @@ input[type='submit'],
       -moz-transition: background 0.4s ease;
       -o-transition: background 0.4s ease;
       -webkit-transition: background 0.4s ease;
-      transition: background 0.4s ease; }
+      transition: background 0.4s ease;
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg); }
     #filterSection .filter label input[type='checkbox'] {
       opacity: 0; }
     #filterSection .filter label:hover {
       color: #21282f; }
   #filterSection .subtitle h3, #filterSection .subtitle .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a #filterSection .subtitle .accordionHeader {
-    width: 100%; }
+    width: 100%;
+    float: right; }
     #filterSection .subtitle h3 #reset, #filterSection .subtitle .accordionMenu > li > a .accordionHeader #reset, .accordionMenu > li > a #filterSection .subtitle .accordionHeader #reset {
-      float: right;
+      float: left;
       font-size: 14px;
       color: #7b7c7e; }
       #filterSection .subtitle h3 #reset:hover, #filterSection .subtitle .accordionMenu > li > a .accordionHeader #reset:hover, .accordionMenu > li > a #filterSection .subtitle .accordionHeader #reset:hover {
@@ -2189,10 +2201,20 @@ input[type='submit'],
   padding-bottom: 150px;
   position: relative;
   overflow: hidden; }
+  #aboutSection h2, #aboutSection #fullBanner .bannerContent h2, #fullBanner .bannerContent #aboutSection h2,
+  #aboutSection #fullBanner .bannerContent h2 *,
+  #fullBanner .bannerContent h2 #aboutSection *, #aboutSection a, #aboutSection p, #aboutSection input[type='text'],
+  #aboutSection input[type='number'],
+  #aboutSection input[type='email'],
+  #aboutSection input[type='search'],
+  #aboutSection input[type='password'],
+  #aboutSection textarea,
+  #aboutSection select, #aboutSection blockquote, #aboutSection .imageContainer, #aboutSection .title.leftTitle, #aboutSection .accordionMenu {
+    direction: rtl; }
   #aboutSection::before {
     position: absolute;
     bottom: -30%;
-    left: -10%;
+    right: -10%;
     opacity: .1;
     content: '';
     display: block;
@@ -2246,50 +2268,53 @@ input[type='submit'],
     margin-bottom: 25px; }
   #aboutSection hr {
     width: 100%;
-    float: left;
+    float: right;
     margin: 20px 0;
     border-color: rgba(123, 124, 126, 0.3);
     border-bottom: none;
     background: none; }
 
-#resourcesSection1 img,
-#resourcesSection2 img {
-  max-width: 100%; }
-#resourcesSection1 .element,
-#resourcesSection2 .element {
-  padding: 50px; }
-  #resourcesSection1 .element:before, #resourcesSection1 .element:after,
-  #resourcesSection2 .element:before,
-  #resourcesSection2 .element:after {
-    content: "";
-    display: table; }
-  #resourcesSection1 .element:after,
-  #resourcesSection2 .element:after {
-    clear: both; }
-  #resourcesSection1 .element .subtitle, #resourcesSection1 .element h1, #resourcesSection1 .element p, #resourcesSection1 .element input[type='text'],
-  #resourcesSection1 .element input[type='number'],
-  #resourcesSection1 .element input[type='email'],
-  #resourcesSection1 .element input[type='search'],
-  #resourcesSection1 .element input[type='password'],
-  #resourcesSection1 .element textarea,
-  #resourcesSection1 .element select, #resourcesSection1 .element #aboutSection blockquote, #aboutSection #resourcesSection1 .element blockquote,
-  #resourcesSection2 .element .subtitle,
-  #resourcesSection2 .element h1,
-  #resourcesSection2 .element p,
-  #resourcesSection2 .element input[type='text'],
-  #resourcesSection2 .element input[type='number'],
-  #resourcesSection2 .element input[type='email'],
-  #resourcesSection2 .element input[type='search'],
-  #resourcesSection2 .element input[type='password'],
-  #resourcesSection2 .element textarea,
-  #resourcesSection2 .element select,
-  #resourcesSection2 .element #aboutSection blockquote,
-  #aboutSection #resourcesSection2 .element blockquote {
-    padding-bottom: 15px; }
-  #resourcesSection1 .element .date,
-  #resourcesSection2 .element .date {
-    color: #be9857;
-    padding-bottom: 0; }
+#resourcesSection1,
+#resourcesSection2 {
+  direction: rtl; }
+  #resourcesSection1 img,
+  #resourcesSection2 img {
+    max-width: 100%; }
+  #resourcesSection1 .element,
+  #resourcesSection2 .element {
+    padding: 50px; }
+    #resourcesSection1 .element:before, #resourcesSection1 .element:after,
+    #resourcesSection2 .element:before,
+    #resourcesSection2 .element:after {
+      content: "";
+      display: table; }
+    #resourcesSection1 .element:after,
+    #resourcesSection2 .element:after {
+      clear: both; }
+    #resourcesSection1 .element .subtitle, #resourcesSection1 .element h1, #resourcesSection1 .element p, #resourcesSection1 .element input[type='text'],
+    #resourcesSection1 .element input[type='number'],
+    #resourcesSection1 .element input[type='email'],
+    #resourcesSection1 .element input[type='search'],
+    #resourcesSection1 .element input[type='password'],
+    #resourcesSection1 .element textarea,
+    #resourcesSection1 .element select, #resourcesSection1 .element #aboutSection blockquote, #aboutSection #resourcesSection1 .element blockquote,
+    #resourcesSection2 .element .subtitle,
+    #resourcesSection2 .element h1,
+    #resourcesSection2 .element p,
+    #resourcesSection2 .element input[type='text'],
+    #resourcesSection2 .element input[type='number'],
+    #resourcesSection2 .element input[type='email'],
+    #resourcesSection2 .element input[type='search'],
+    #resourcesSection2 .element input[type='password'],
+    #resourcesSection2 .element textarea,
+    #resourcesSection2 .element select,
+    #resourcesSection2 .element #aboutSection blockquote,
+    #aboutSection #resourcesSection2 .element blockquote {
+      padding-bottom: 15px; }
+    #resourcesSection1 .element .date,
+    #resourcesSection2 .element .date {
+      color: #be9857;
+      padding-bottom: 0; }
 
 #resourcesSection1 {
   background: url("../sysimages/bg.png"); }
@@ -2341,7 +2366,7 @@ input[type='submit'],
   .containerWords > a {
     display: block;
     clear: right;
-    text-align: left; }
+    text-align: right; }
 
 /*TODO*/
 #loginSection {
@@ -2388,7 +2413,7 @@ input[type='submit'],
     #cultureSection #listContainerCulture .element {
       width: 20%;
       padding: 10px;
-      float: left;
+      float: right;
       position: relative; }
       #cultureSection #listContainerCulture .element::before {
         width: 19px;
@@ -2459,7 +2484,7 @@ input[type='submit'],
       width: 34px;
       position: absolute;
       bottom: 0;
-      left: 5%;
+      right: 5%;
       opacity: 0;
       -moz-transition: 0.2s all 0.2s linear;
       -o-transition: 0.2s all 0.2s linear;
@@ -2552,6 +2577,29 @@ input[type='submit'],
 
 #calendarSection {
   padding-bottom: 40px;
+  direction: rtl;
+  /*change url for the icon you want*/
+  	/*.rsPrevDay {
+  		content: '';
+  		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
+  		background-size: cover;
+  		position: absolute;
+  		width: 20px;
+  		height: 20px;
+  		margin-left: 200px;
+  		font-size: 0px;
+  	}
+  
+  	.rsNextDay {
+  		content: '';
+  		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
+  		background-size: cover;
+  		position: absolute;
+  		width: 20px;
+  		height: 20px;
+  		margin-left: 170px;
+  	font-size: 0px;
+  	}*/
   /*.rsDatePickerActivator {
   display:none;
   }*/ }
@@ -2619,6 +2667,7 @@ input[type='submit'],
   #calendarSection .groupEvents textarea,
   #calendarSection .groupEvents select, #calendarSection .groupEvents #aboutSection blockquote, #aboutSection #calendarSection .groupEvents blockquote {
     font-family: "helvetica";
+    font-weight: bold;
     font-size: 13px;
     line-height: 140%;
     overflow: hidden;
@@ -2752,7 +2801,7 @@ input[type='submit'],
         margin-bottom: 40px; }
       .popupCalendar .content .contentText .eventLocationName {
         font-family: 'merriweather';
-        font-size: 14px;
+        font-size: 16px;
         color: #333333; }
       .popupCalendar .content .contentText .eventLocation {
         font-family: 'merriweather';
@@ -2817,4 +2866,4 @@ input[type='submit'],
 .buttonIc > span {
   line-height: 30px !important; }
 
-/*# sourceMappingURL=000_guide.css.map */
+/*# sourceMappingURL=001_guide.css.map */
