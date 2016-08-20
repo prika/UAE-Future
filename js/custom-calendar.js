@@ -1,12 +1,17 @@
 ﻿
 function doTheMagic() {
+
     var eventsArray = [];
 
+    var startDate = "\/Date(1470009600000)\/";
+    var endDate = "\/Date(1573033600000)\/";
+
     var data = {
+
         "schedulerInfo":
         {
-            "ViewStart": "\/Date(1470009600000)\/",
-            "ViewEnd": "\/Date(1473033600000)\/",
+            "ViewStart": startDate ,
+            "ViewEnd": endDate,
             "EnableDescriptionField": true,
             "MinutesPerRow": 30,
             "TimeZoneOffset": 0,
@@ -20,15 +25,19 @@ function doTheMagic() {
         }
     }
 
-    $.ajax({
-        method: "POST",
-        contentType: "application/json",
-        url: "http://54.93.89.184/Sitefinity/Public/Services/RadSchedulerService.svc/GetAppointments",
-        data: JSON.stringify(data)
-    }).done(parseResponse);
+    function callService() {
 
+        $.ajax({
+            method: "POST",
+            contentType: "application/json",
+            url: "http://54.93.89.184/Sitefinity/Public/Services/RadSchedulerService.svc/GetAppointments",
+            data: JSON.stringify(data)
+        }).done(parseResponse);
+    }
 
     function parseResponse(response) {
+
+        eventsArray = [];
 
         for (var i = 0; i < response.Appointments.length; i++) {
             var event = response.Appointments[i];
@@ -89,19 +98,40 @@ function doTheMagic() {
         $.fancybox(output);
     }
 
+    $("#nextCalendarBtn").click(function () {
+
+        $(".rsNextDay")[0].click();
+        setTimeout(callService, 1000);
+    });
+
+    $("#prevCalendarBtn").click(function () {
+
+        $(".rsPrevDay")[0].click();
+        setTimeout(callService, 1000);
+    });
+
+    $(".month.button").click(function () {
+        
+        $(".rsHeaderMonth")[0].click();
+    });
+
+    $(".week.button").click(function () {
+        $(".rsHeaderWeek")[0].click();
+    });
+
     function redrawTable(eventsArray) {
 
         $($("#calendar .rsContentTable")[0]).find("td").each(function () {
             var td = $(this);
-            var day = $(td.find(".rsDateWrap .rsDateBox"));
+            var day = $(td.find(".rsDateWrap"));
 
-            var fullDate = new Date($(day.find("a")[0]).attr("title"));
+            var fullDate = new Date($(day.find(".rsDateHeader")[0]).attr("title"));
 
             td.empty();
 
             var eventContentWrapper = $("<div/>", { "class": "containerEvent" });
             var contentEvent = $("<div/>", { "class": "contentEvent" });
-            var day = $("<p/>", { "class": "day", "text": day.text() });
+           // var day = $("<p/>", { "class": "day", "text": day.text() });
             var groupCategories = $("<div />", { "class": "groupCategories" });
             var groupEvents = $("<div />", { "class": "groupEvents" });
             var eventsCount = 0;
@@ -138,6 +168,7 @@ function doTheMagic() {
         bindFancybox();
     }
 
+    callService();
 }
 
 setTimeout(doTheMagic, 1000);
