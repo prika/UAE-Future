@@ -1,7 +1,7 @@
 
 #calendarSection{
 	//background: url($bg_img);
-	padding-bottom: 40px;
+	//padding-bottom: 40px;
 
 	#calendar {
 		max-width: 1100px;
@@ -263,7 +263,28 @@
 				color: #FFFFFF;
 				line-height: 38px;
 			}
+		}
+	}
+}
 
+.containerLegendCategory{
+	max-width: 1098px;
+
+	.category{
+		display: inline-block;
+		margin-right: 22px;
+
+		p{
+    		font-family: 'intro';
+    		font-size: 12px;
+
+			span{
+				width: 8px;
+				height: 8px;
+				border-radius: 4px;
+				display: inline-block;
+				margin-right: 3px;
+			}
 		}
 	}
 }

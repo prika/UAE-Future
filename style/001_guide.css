@@ -2578,7 +2578,6 @@ input[type='submit'],
         margin-top: 25px; }
 
 #calendarSection {
-  padding-bottom: 40px;
   direction: rtl; }
   #calendarSection #calendar {
     max-width: 1100px;
@@ -2801,6 +2800,33 @@ input[type='submit'],
         font-size: 12px;
         color: #FFFFFF;
         line-height: 38px; }
+
+.containerLegendCategory {
+  max-width: 1098px; }
+  .containerLegendCategory .category {
+    display: inline-block;
+    margin-right: 22px; }
+    .containerLegendCategory .category p, .containerLegendCategory .category input[type='text'],
+    .containerLegendCategory .category input[type='number'],
+    .containerLegendCategory .category input[type='email'],
+    .containerLegendCategory .category input[type='search'],
+    .containerLegendCategory .category input[type='password'],
+    .containerLegendCategory .category textarea,
+    .containerLegendCategory .category select, .containerLegendCategory .category #aboutSection blockquote, #aboutSection .containerLegendCategory .category blockquote, .containerLegendCategory .category #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap .containerLegendCategory .category .rsDateHeader {
+      font-family: 'intro';
+      font-size: 12px; }
+      .containerLegendCategory .category p span, .containerLegendCategory .category input[type='text'] span,
+      .containerLegendCategory .category input[type='number'] span,
+      .containerLegendCategory .category input[type='email'] span,
+      .containerLegendCategory .category input[type='search'] span,
+      .containerLegendCategory .category input[type='password'] span,
+      .containerLegendCategory .category textarea span,
+      .containerLegendCategory .category select span, .containerLegendCategory .category #aboutSection blockquote span, #aboutSection .containerLegendCategory .category blockquote span, .containerLegendCategory .category #calendarSection .rsWrap.rsDateWrap .rsDateHeader span, #calendarSection .rsWrap.rsDateWrap .containerLegendCategory .category .rsDateHeader span {
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-right: 3px; }
 
 .fancybox-wrap:hover {
   cursor: initial !important; }
