@@ -10,21 +10,11 @@
 //@import '_animations.scss';
 
 @mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
-    }
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }  
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }  
-    @keyframes #{$animation-name} {
-        @content;
-    }
+    @-webkit-keyframes #{$animation-name} {@content; }
+    @-moz-keyframes #{$animation-name} { @content; }
+    @-ms-keyframes #{$animation-name} { @content; }
+    @-o-keyframes #{$animation-name} { @content; }
+    @keyframes #{$animation-name} { @content; }
 }
 
 @mixin animation($str) {
@@ -116,9 +106,9 @@ $offset: -200px;
 // Header and Footer Dimensions
 $header_height: 80px;
 $header_height_sticky: 60px;
-$footer_height: 108px;
-//$footer_height_max: 460px;
 
+$footer_height: 108px;
+$footer_height_reduced: 38px;
 
 // Colors
 $color_w: #FFF;
@@ -140,49 +130,46 @@ $bg_img: "../sysimages/bg.png";
 // Typography
 @font-face {
     font-family: 'intro';
-    src: url('../fonts/intro-webfont.woff2') format('woff2'),
-         url('../fonts/intro-webfont.woff') format('woff');
+    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
+         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
+		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 @font-face {
     font-family: 'merriweather';
-    src: url('../fonts/merriweather-regular-webfont.woff2') format('woff2'),
-         url('../fonts/merriweather-regular-webfont.woff') format('woff');
+    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
+         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
+		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'merriweatherbold';
-    src: url('../fonts/merriweather-bold-webfont.woff2') format('woff2'),
-         url('../fonts/merriweather-bold-webfont.woff') format('woff');
-    font-weight: bold;
+    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
+         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
+		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'helvetica';
-	src: url('../fonts/helvetic-webfont.eot');
-    src: url('../fonts/helvetic-webfont.eot?#iefix') format('embedded-opentype'), 
-         url('../fonts/helvetic-webfont.woff') format('woff'),
-		 url('../fonts/helvetic-webfont.ttf') format('truetype'),
-		 url('../fonts/helvetic-webfont.svg#atroxnormal') format('svg');
+    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
+         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
+		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;     
+    font-style: normal;   
 }
 
 @font-face {
     font-family: 'helveticabold';
-	src: url('../fonts/helveticabold-webfont.eot');
-    src: url('../fonts/helveticabold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/helveticabold-webfont.woff') format('woff'),
-		 url('../fonts/helveticabold-webfont.ttf') format('truetype'),
-		 url('../fonts/helveticabold-webfont.svg#atroxnormal') format('svg');
-    font-weight: bold;
-    font-style: normal;     
+    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
+         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
+		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;   
 }
 
 
@@ -327,9 +314,7 @@ a{
 				width: 70%;
 				color: $color_bl;
 				
-				&:hover{
-					color: $color_gold;
-				}
+				&:hover{ color: $color_gold; }
 			}
 			.signal{
 				font-family: 'merriweather';
@@ -352,12 +337,11 @@ a{
 				}
 			}
 			
-			&.hover .accordionHeader{color: $color_gold;}
-			
+			&.hover .accordionHeader{ color: $color_gold; }
 		}
 		
 		&.active{
-			.accordionHeader,.signal{color: $color_gold;}
+			.accordionHeader, .signal{ color: $color_gold; }
 			
 			.signal::after {
 				background: url('../sysimages/button/closeAccordion.png') no-repeat center center;
@@ -394,9 +378,7 @@ a{
 		background-size: 15px;
 	}
 
-	/*&:hover{
-		background: url(../sysimages/cornerTopInput.png) no-repeat left top;
-	}*/
+	/*&:hover{background: url(../sysimages/cornerTopInput.png) no-repeat left top;}*/
 }
 
 input[type='text'],
@@ -794,7 +776,7 @@ input[type='submit'],
 	
 	iframe{
 		max-width: 100%;
-    		height: 100%;
+    	height: 100%;
 	}
 	
 	.bannerTop{
@@ -1711,8 +1693,11 @@ $c_briefs:#8cc63f;
 	}
 }
 
+.form-group {
+	margin-bottom: 15px;
+}
 
-
+.input-group .form-control{height: 34px}
 
 //Codigo inline
 #filterSection .filter .date input {

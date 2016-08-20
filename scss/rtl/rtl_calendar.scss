@@ -1,8 +1,7 @@
 
 #calendarSection{
-	background: url($bg_img);
+	//background: url($bg_img);
 	padding-bottom: 40px;
-	
 	direction: rtl;
 
 	#calendar {
@@ -74,6 +73,11 @@
                 font-size: 13px;
                 line-height: 140%;
                 @include truncateText();
+
+				&:hover{
+					font-family: "helveticabold";
+					color: #C0C0C0;
+				}
             }
             .groupEvents p span{
                 font-family: "helveticabold";
@@ -224,6 +228,7 @@
 	
 	.content{
 		position: relative;
+		padding-bottom: 0;
 	  	
 		&::before{
 			position: absolute;
@@ -233,8 +238,6 @@
 			height: 30px;
 		  	background: url(../sysimages/cornerTopPopup.png) no-repeat left top;
 		}
-
-
 
 		img{ 
 			max-width: 100%;

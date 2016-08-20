@@ -93,6 +93,56 @@
     opacity: 0; }
   100% {
     opacity: 1; } }
+@-webkit-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-moz-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-ms-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-o-keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@keyframes slideFromLeft {
+  0% {
+    left: -100%; }
+  100% {
+    left: 10px; } }
+@-webkit-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@-moz-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@-ms-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@-o-keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
+@keyframes slideFromRight {
+  0% {
+    right: -100%; }
+  100% {
+    right: 10px; } }
 .showUp > div {
   -webkit-animation: showUpAnimation 1s ease;
   -moz-animation: showUpAnimation 1s ease;
@@ -1235,6 +1285,23 @@ input[type='submit'],
     #footer #backTop:hover {
       background-color: #be9857; }
 
+#footer.reducedFooter {
+  height: 38px; }
+  #footer.reducedFooter p, #footer.reducedFooter input[type='text'],
+  #footer.reducedFooter input[type='number'],
+  #footer.reducedFooter input[type='email'],
+  #footer.reducedFooter input[type='search'],
+  #footer.reducedFooter input[type='password'],
+  #footer.reducedFooter textarea,
+  #footer.reducedFooter select, #footer.reducedFooter #aboutSection blockquote, #aboutSection #footer.reducedFooter blockquote, #footer.reducedFooter a {
+    height: 38px; }
+  #footer.reducedFooter .socialIcons {
+    display: none; }
+  #footer.reducedFooter #backTop {
+    height: 38px;
+    background-size: 25%;
+    padding: 19px 15px; }
+
 @media (max-width: 900px) {
   #footer {
     height: auto; }
@@ -1326,7 +1393,6 @@ input[type='submit'],
   -webkit-animation: AnimRotation 35s infinite;
   width: 170px; }
 
-/*TODO - remove from this doc*/
 .bg2 {
   position: absolute;
   right: 20%;
@@ -1348,66 +1414,6 @@ input[type='submit'],
   -moz-animation: AnimRotationReverse 35s infinite;
   -webkit-animation: AnimRotationReverse 35s infinite; }
 
-/*@include keyframes(anim_opacity) {
-    0% { opacity: .3; }
-    50% { opacity: .1; }
-    100% { opacity: .3; }
-}
-@include keyframes(anim_opacity_invert) {
-    0% { opacity: .1; }
-    50% { opacity: .4; }
-    100% { opacity: .1; }
-}*/
-@-webkit-keyframes slideFromLeft {
-  0% {
-    left: -100%; }
-  100% {
-    left: 10px; } }
-@-moz-keyframes slideFromLeft {
-  0% {
-    left: -100%; }
-  100% {
-    left: 10px; } }
-@-ms-keyframes slideFromLeft {
-  0% {
-    left: -100%; }
-  100% {
-    left: 10px; } }
-@-o-keyframes slideFromLeft {
-  0% {
-    left: -100%; }
-  100% {
-    left: 10px; } }
-@keyframes slideFromLeft {
-  0% {
-    left: -100%; }
-  100% {
-    left: 10px; } }
-@-webkit-keyframes slideFromRight {
-  0% {
-    right: -100%; }
-  100% {
-    right: 10px; } }
-@-moz-keyframes slideFromRight {
-  0% {
-    right: -100%; }
-  100% {
-    right: 10px; } }
-@-ms-keyframes slideFromRight {
-  0% {
-    right: -100%; }
-  100% {
-    right: 10px; } }
-@-o-keyframes slideFromRight {
-  0% {
-    right: -100%; }
-  100% {
-    right: 10px; } }
-@keyframes slideFromRight {
-  0% {
-    right: -100%; }
-  100% {
-    right: 10px; } }
 @keyframes AnimRotation {
   from {
     transform: rotate(0deg); }
@@ -2139,6 +2145,12 @@ input[type='submit'],
       #filterSection .subtitle h3 #reset:hover, #filterSection .subtitle .accordionMenu > li > a .accordionHeader #reset:hover, .accordionMenu > li > a #filterSection .subtitle .accordionHeader #reset:hover {
         color: #be9857; }
 
+.form-group {
+  margin-bottom: 15px; }
+
+.input-group .form-control {
+  height: 34px; }
+
 #filterSection .filter .date input {
   width: 100%;
   display: block;
@@ -2539,30 +2551,7 @@ input[type='submit'],
         margin-top: 25px; }
 
 #calendarSection {
-  background: url("../sysimages/bg.png");
   padding-bottom: 40px;
-  /*change url for the icon you want*/
-  	/*.rsPrevDay {
-  		content: '';
-  		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-  		background-size: cover;
-  		position: absolute;
-  		width: 20px;
-  		height: 20px;
-  		margin-left: 200px;
-  		font-size: 0px;
-  	}
-  
-  	.rsNextDay {
-  		content: '';
-  		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-  		background-size: cover;
-  		position: absolute;
-  		width: 20px;
-  		height: 20px;
-  		margin-left: 170px;
-  	font-size: 0px;
-  	}*/
   /*.rsDatePickerActivator {
   display:none;
   }*/ }
@@ -2630,12 +2619,20 @@ input[type='submit'],
   #calendarSection .groupEvents textarea,
   #calendarSection .groupEvents select, #calendarSection .groupEvents #aboutSection blockquote, #aboutSection #calendarSection .groupEvents blockquote {
     font-family: "helvetica";
-    font-weight: bold;
     font-size: 13px;
     line-height: 140%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
+    #calendarSection .groupEvents p:hover, #calendarSection .groupEvents input[type='text']:hover,
+    #calendarSection .groupEvents input[type='number']:hover,
+    #calendarSection .groupEvents input[type='email']:hover,
+    #calendarSection .groupEvents input[type='search']:hover,
+    #calendarSection .groupEvents input[type='password']:hover,
+    #calendarSection .groupEvents textarea:hover,
+    #calendarSection .groupEvents select:hover, #calendarSection .groupEvents #aboutSection blockquote:hover, #aboutSection #calendarSection .groupEvents blockquote:hover {
+      font-family: "helveticabold";
+      color: #C0C0C0; }
   #calendarSection .groupEvents p span, #calendarSection .groupEvents input[type='text'] span,
   #calendarSection .groupEvents input[type='number'] span,
   #calendarSection .groupEvents input[type='email'] span,
@@ -2732,7 +2729,8 @@ input[type='submit'],
 .popupCalendar {
   max-width: 400px; }
   .popupCalendar .content {
-    position: relative; }
+    position: relative;
+    padding-bottom: 0; }
     .popupCalendar .content::before {
       position: absolute;
       content: '';
@@ -2754,7 +2752,7 @@ input[type='submit'],
         margin-bottom: 40px; }
       .popupCalendar .content .contentText .eventLocationName {
         font-family: 'merriweather';
-        font-size: 16px;
+        font-size: 14px;
         color: #333333; }
       .popupCalendar .content .contentText .eventLocation {
         font-family: 'merriweather';

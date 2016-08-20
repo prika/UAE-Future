@@ -1,6 +1,6 @@
 
 #calendarSection{
-	background: url($bg_img);
+	//background: url($bg_img);
 	padding-bottom: 40px;
 
 	#calendar {
@@ -15,6 +15,7 @@
         position: relative;
         background: #FFF;
     }
+
         .contentEvent{
             position: absolute;
             top: 0; 
@@ -68,10 +69,14 @@
 
             .groupEvents p{
                 font-family: "helvetica";
-                font-weight: bold;
                 font-size: 13px;
                 line-height: 140%;
                 @include truncateText();
+
+				&:hover{
+					font-family: "helveticabold";
+					color: #C0C0C0;
+				}
             }
             .groupEvents p span{
                 font-family: "helveticabold";
@@ -137,30 +142,6 @@
 	margin-top: 5px;
 	}
 
-	/*change url for the icon you want*/
-	/*.rsPrevDay {
-		content: '';
-		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-		background-size: cover;
-		position: absolute;
-		width: 20px;
-		height: 20px;
-		margin-left: 200px;
-		font-size: 0px;
-	}
-
-	.rsNextDay {
-		content: '';
-		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-		background-size: cover;
-		position: absolute;
-		width: 20px;
-		height: 20px;
-		margin-left: 170px;
-	font-size: 0px;
-	}*/
-
-
 	.sfcalendar {
 	margin-bottom: 5%;
 	}
@@ -202,6 +183,8 @@
 .fc-button-group, .fc-icon {display: inline-block;}
 .fc-clear {clear: both;}
 
+
+
 .todayContainer{
 	background: url(../sysimages/bgDateCalendar.png) no-repeat left top;
 	height: 40px;
@@ -216,12 +199,12 @@
 }
 
 
-
 .popupCalendar{
     max-width: 400px;
 	
 	.content{
 		position: relative;
+		padding-bottom: 0;
 	  	
 		&::before{
 			position: absolute;
@@ -231,8 +214,6 @@
 			height: 30px;
 		  	background: url(../sysimages/cornerTopPopup.png) no-repeat left top;
 		}
-
-
 
 		img{ 
 			max-width: 100%;
@@ -255,7 +236,7 @@
 
 			.eventLocationName{
 				font-family: 'merriweather';
-				font-size: 16px;
+				font-size: 14px;
 				color: #333333;
 			}
 

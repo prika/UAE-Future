@@ -18,7 +18,7 @@
 		}
 	}
 	
-	.socialIcons{
+	.socialIcons {
 		display: inline-block;
 		margin-right: 40px;
 		
@@ -93,6 +93,22 @@
 	}	
 }
 
+#footer.reducedFooter{
+	height: $footer_height_reduced;
+
+	p , a {
+		height: $footer_height_reduced;
+	}
+
+	.socialIcons{ display: none; }
+	
+	#backTop{
+		height: $footer_height_reduced;
+		background-size: 25%;
+		padding: 19px 15px;
+	}
+}
+
 @media (max-width: 900px) {
 	
 	#footer {
@@ -103,7 +119,7 @@
 			padding: 10px 7px;
 		}
 		
-		.socialIcons{
+		.socialIcons {
 			margin-right: 0;
 			
 			a{

@@ -10,21 +10,11 @@
 //@import '_animations.scss';
 
 @mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
-    }
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }  
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }  
-    @keyframes #{$animation-name} {
-        @content;
-    }
+    @-webkit-keyframes #{$animation-name} {@content; }
+    @-moz-keyframes #{$animation-name} { @content; }
+    @-ms-keyframes #{$animation-name} { @content; }
+    @-o-keyframes #{$animation-name} { @content; }
+    @keyframes #{$animation-name} { @content; }
 }
 
 @mixin animation($str) {
@@ -48,6 +38,15 @@
 @include keyframes(fadeInAnimation) {
 	0% { opacity: 0; }
 	100% { opacity: 1; }
+}
+
+@include keyframes(slideFromLeft) {
+    0% { left: -100%; }
+    100% { left: 10px; }
+}
+@include keyframes(slideFromRight) {
+    0% { right: -100%; }
+    100% { right: 10px; }
 }
 
 .showUp > div {@include animation('showUpAnimation 1s ease');}
@@ -118,7 +117,7 @@ $header_height: 80px;
 $header_height_sticky: 60px;
 
 $footer_height: 108px;
-//$footer_height_max: 460px;
+$footer_height_reduced: 38px;
 
 
 // Colors
@@ -1699,7 +1698,11 @@ $c_briefs:#8cc63f;
 	}
 }
 
+.form-group {
+	margin-bottom: 15px;
+}
 
+.input-group .form-control{height: 34px}
 
 
 //Codigo inline

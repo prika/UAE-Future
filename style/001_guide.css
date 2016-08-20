@@ -450,30 +450,28 @@
 
 @font-face {
   font-family: 'intro';
-  src: url("../fonts/intro-webfont.woff2") format("woff2"), url("../fonts/intro-webfont.woff") format("woff");
+  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'merriweather';
-  src: url("../fonts/merriweather-regular-webfont.woff2") format("woff2"), url("../fonts/merriweather-regular-webfont.woff") format("woff");
+  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'merriweatherbold';
-  src: url("../fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../fonts/merriweather-bold-webfont.woff") format("woff");
-  font-weight: bold;
+  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'helvetica';
-  src: url("../fonts/helvetic-webfont.eot");
-  src: url("../fonts/helvetic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/helvetic-webfont.woff") format("woff"), url("../fonts/helvetic-webfont.ttf") format("truetype"), url("../fonts/helvetic-webfont.svg#atroxnormal") format("svg");
+  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'helveticabold';
-  src: url("../fonts/helveticabold-webfont.eot");
-  src: url("../fonts/helveticabold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/helveticabold-webfont.woff") format("woff"), url("../fonts/helveticabold-webfont.ttf") format("truetype"), url("../fonts/helveticabold-webfont.svg#atroxnormal") format("svg");
-  font-weight: bold;
+  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal; }
 h1, .h1 {
   font-family: 'intro';
@@ -622,9 +620,7 @@ a {
   margin-bottom: 25px;
   position: relative;
   padding-left: 0;
-  /*&:hover{
-  	background: url(../sysimages/cornerTopInput.png) no-repeat left top;
-  }*/ }
+  /*&:hover{background: url(../sysimages/cornerTopInput.png) no-repeat left top;}*/ }
   .inputElement::before,
   .inputSelect::before {
     background: url(../sysimages/cornerTop.png) no-repeat left top;
@@ -2161,6 +2157,12 @@ input[type='submit'],
       #filterSection .subtitle h3 #reset:hover, #filterSection .subtitle .accordionMenu > li > a .accordionHeader #reset:hover, .accordionMenu > li > a #filterSection .subtitle .accordionHeader #reset:hover {
         color: #be9857; }
 
+.form-group {
+  margin-bottom: 15px; }
+
+.input-group .form-control {
+  height: 34px; }
+
 #filterSection .filter .date input {
   width: 100%;
   display: block;
@@ -2574,7 +2576,6 @@ input[type='submit'],
         margin-top: 25px; }
 
 #calendarSection {
-  background: url("../sysimages/bg.png");
   padding-bottom: 40px;
   direction: rtl;
   /*change url for the icon you want*/
@@ -2672,6 +2673,15 @@ input[type='submit'],
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
+    #calendarSection .groupEvents p:hover, #calendarSection .groupEvents input[type='text']:hover,
+    #calendarSection .groupEvents input[type='number']:hover,
+    #calendarSection .groupEvents input[type='email']:hover,
+    #calendarSection .groupEvents input[type='search']:hover,
+    #calendarSection .groupEvents input[type='password']:hover,
+    #calendarSection .groupEvents textarea:hover,
+    #calendarSection .groupEvents select:hover, #calendarSection .groupEvents #aboutSection blockquote:hover, #aboutSection #calendarSection .groupEvents blockquote:hover {
+      font-family: "helveticabold";
+      color: #C0C0C0; }
   #calendarSection .groupEvents p span, #calendarSection .groupEvents input[type='text'] span,
   #calendarSection .groupEvents input[type='number'] span,
   #calendarSection .groupEvents input[type='email'] span,
@@ -2768,7 +2778,8 @@ input[type='submit'],
 .popupCalendar {
   max-width: 400px; }
   .popupCalendar .content {
-    position: relative; }
+    position: relative;
+    padding-bottom: 0; }
     .popupCalendar .content::before {
       position: absolute;
       content: '';
