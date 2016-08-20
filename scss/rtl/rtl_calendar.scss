@@ -29,13 +29,18 @@
 			@include transition( all .2s linear );
         }
 
-            .day{
-                float: left;
-                width: 50px;
-                color: #CCC;
-                font-size: 14px;
-				@include transition( color .2s linear );
-            }
+            //.day
+			.rsWrap.rsDateWrap{
+				float: left;
+    			width: 50px;
+
+				.rsDateHeader{
+					@extend p;
+					color: #CCC;
+					font-size: 14px;
+					@include transition( color .2s linear );
+				}
+			}
 
             .groupCategories{
                 float: right;
@@ -120,14 +125,6 @@
 	.rsTodayCell .rsDateHeader {
 	color: #be9857;
 	}
-	.rsDateHeader {
-		color: #000000;
-		font-size: 18px;
-		font-family: 'intro';
-		text-align: left;
-		margin-left: 10px;
-		margin-top: 10px;
-	}
 
 	.rsHorizontalHeaderTable th {
 		width: 14.35%;
@@ -138,34 +135,6 @@
 		text-align: left;
 		padding-left: 5px;
 	}
-
-	.rsDateBox {
-	margin-top: 5px;
-	}
-
-	/*change url for the icon you want*/
-	/*.rsPrevDay {
-		content: '';
-		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-		background-size: cover;
-		position: absolute;
-		width: 20px;
-		height: 20px;
-		margin-left: 200px;
-		font-size: 0px;
-	}
-
-	.rsNextDay {
-		content: '';
-		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-		background-size: cover;
-		position: absolute;
-		width: 20px;
-		height: 20px;
-		margin-left: 170px;
-	font-size: 0px;
-	}*/
-
 
 	.sfcalendar {
 	margin-bottom: 5%;
@@ -193,10 +162,6 @@
 	.sfcalendarEventPreviewEditLnk {
 	color: #fff;
 	}
-
-	/*.rsDatePickerActivator {
-	display:none;
-	}*/
 }
 
 
@@ -277,6 +242,7 @@
 			width: 100%;
 			padding: 0 20px;
 			height: 38px;
+			background: #CCC;
 			@include clearfix();
 
 			.tags{

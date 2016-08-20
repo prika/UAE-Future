@@ -11,9 +11,9 @@ Error: Undefined mixin 'transition'.
 29: 			@include transition( all .2s linear );
 30:         }
 31: 
-32:             .day{
-33:                 float: left;
-34:                 width: 50px;
+32:             //.day
+33: 			.rsWrap.rsDateWrap{
+34: 				float: left;
 
 Backtrace:
 scss/rtl/rtl_calendar.scss:29:in `transition'
@@ -82,4 +82,4 @@ scss/rtl/rtl_calendar.scss:29
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'transition'.\A         on line 29 of scss/rtl/rtl_calendar.scss, in `transition'\A         from line 29 of scss/rtl/rtl_calendar.scss\A \A 24:             bottom: 0;\A 25:             z-index: 1;\A 26:             background: #FFF;\A 27:             cursor: pointer;\A 28:             padding: 10px;\A 29: 			@include transition( all .2s linear );\A 30:         }\A 31: \A 32:             .day{\A 33:                 float: left;\A 34:                 width: 50px;"; }
+  content: "Error: Undefined mixin 'transition'.\A         on line 29 of scss/rtl/rtl_calendar.scss, in `transition'\A         from line 29 of scss/rtl/rtl_calendar.scss\A \A 24:             bottom: 0;\A 25:             z-index: 1;\A 26:             background: #FFF;\A 27:             cursor: pointer;\A 28:             padding: 10px;\A 29: 			@include transition( all .2s linear );\A 30:         }\A 31: \A 32:             //.day\A 33: 			.rsWrap.rsDateWrap{\A 34: 				float: left;"; }
