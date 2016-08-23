@@ -212,7 +212,8 @@
 .containerLegendCategory {
   max-width: 1098px;
   margin-top: -60px;
-  padding: 0 10px 60px; }
+  padding: 0 10px 60px;
+  direction: rtl; }
   .containerLegendCategory .category {
     display: inline-block;
     margin-right: 22px; }
@@ -224,7 +225,7 @@
         height: 8px;
         border-radius: 4px;
         display: inline-block;
-        margin-right: 3px; }
+        margin-left: 3px; }
 
 .rsContentScrollArea {
   min-height: 550px; }
