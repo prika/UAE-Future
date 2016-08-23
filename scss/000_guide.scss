@@ -336,7 +336,7 @@ a{
 				line-height: 21px;
 				color: $color_lightgrey;
 				float: right;
-				padding-right: 40px;
+				padding-right: 25px;
 				position: relative;
 				
 				&::after{
@@ -697,19 +697,19 @@ select {
 button,
 input[type='submit'],
 .fc-state-default {
-	//@extend %clickable;
+	//@extend %clickable; 
 	border: none;
 	border-radius: 0;
 	padding: 27px 25px;
 	font-size: 16px;
 	@include transition( all .4s ease );
 	
-	background: url(../sysimages/REMOVE/button.png) no-repeat center top;
+	background: url(../sysimages/button/button.png) no-repeat center top;
 	font-family: 'intro';
 	font-weight: 300;
 	letter-spacing: 1px;
 	color: #FFF;
-	height: 75px;
+	height: 73px;
 	display: inline-block;
 	
 	&::before,
@@ -717,7 +717,8 @@ input[type='submit'],
 		opacity: 1;
 	}
 	
-	&:hover{
+	&:hover,
+	&.active{
 		//background: $color_w;
 		background-position: center bottom;
 		color: $color_gold;
@@ -898,6 +899,14 @@ input[type='submit'],
         @include animation('anim_opacity 7s 3');
     }*/
 }
+
+@media (max-width: 768px) {
+  	#ecosystemSection .container,
+	#ecosystemSection .listContainer{
+		padding: 0;
+	}
+}
+
 
 
 // ===================================================================================================================

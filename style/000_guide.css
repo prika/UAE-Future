@@ -639,7 +639,7 @@ a {
         line-height: 21px;
         color: #7b7c7e;
         float: right;
-        padding-right: 40px;
+        padding-right: 25px;
         position: relative; }
         .accordionMenu > li > a .signal::after {
           background: url("../sysimages/button/openAccordion.png") no-repeat center center;
@@ -946,12 +946,12 @@ input[type='submit'],
   -o-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background: url(../sysimages/REMOVE/button.png) no-repeat center top;
+  background: url(../sysimages/button/button.png) no-repeat center top;
   font-family: 'intro';
   font-weight: 300;
   letter-spacing: 1px;
   color: #FFF;
-  height: 75px;
+  height: 73px;
   display: inline-block; }
   .button::before, .button::after,
   button::before,
@@ -961,10 +961,13 @@ input[type='submit'],
   .fc-state-default::before,
   .fc-state-default::after {
     opacity: 1; }
-  .button:hover,
+  .button:hover, .button.active,
   button:hover,
+  button.active,
   input[type='submit']:hover,
-  .fc-state-default:hover {
+  input[type='submit'].active,
+  .fc-state-default:hover,
+  .fc-state-default.active {
     background-position: center bottom;
     color: rgba(190, 151, 95, 0.8); }
 
@@ -1235,7 +1238,13 @@ input[type='submit'],
     #footer input#contacts[type='search']:hover,
     #footer input#contacts[type='password']:hover,
     #footer textarea#contacts:hover,
-    #footer select#contacts:hover, #footer #aboutSection blockquote#contacts:hover, #aboutSection #footer blockquote#contacts:hover, #footer #calendarSection .rsWrap.rsDateWrap #contacts.rsDateHeader:hover, #calendarSection .rsWrap.rsDateWrap #footer #contacts.rsDateHeader:hover, #footer a#contacts:hover {
+    #footer select#contacts:hover, #footer #aboutSection blockquote#contacts:hover, #aboutSection #footer blockquote#contacts:hover, #footer #calendarSection .rsWrap.rsDateWrap #contacts.rsDateHeader:hover, #calendarSection .rsWrap.rsDateWrap #footer #contacts.rsDateHeader:hover, #footer p#changeLanguage:hover, #footer input#changeLanguage[type='text']:hover,
+    #footer input#changeLanguage[type='number']:hover,
+    #footer input#changeLanguage[type='email']:hover,
+    #footer input#changeLanguage[type='search']:hover,
+    #footer input#changeLanguage[type='password']:hover,
+    #footer textarea#changeLanguage:hover,
+    #footer select#changeLanguage:hover, #footer #aboutSection blockquote#changeLanguage:hover, #aboutSection #footer blockquote#changeLanguage:hover, #footer #calendarSection .rsWrap.rsDateWrap #changeLanguage.rsDateHeader:hover, #calendarSection .rsWrap.rsDateWrap #footer #changeLanguage.rsDateHeader:hover, #footer a#contacts:hover, #footer a#changeLanguage:hover {
       color: #be9857; }
   #footer .socialIcons {
     display: inline-block;
@@ -1551,6 +1560,10 @@ input[type='submit'],
   #ecosystemSection:after {
     clear: both; }
 
+@media (max-width: 768px) {
+  #ecosystemSection .container,
+  #ecosystemSection .listContainer {
+    padding: 0; } }
 .listContainer .col-xs-12.col-sm-4.col-md-3,
 .listContainer .col-xs-12.col-sm-4.col-md-4 {
   padding-right: 7px;
@@ -2697,6 +2710,13 @@ input[type='submit'],
 
 .fc-toolbar .fc-right {
   float: right; }
+  .fc-toolbar .fc-right h2, .fc-toolbar .fc-right #fullBanner .bannerContent h2, #fullBanner .bannerContent .fc-toolbar .fc-right h2,
+  .fc-toolbar .fc-right #fullBanner .bannerContent h2 *,
+  #fullBanner .bannerContent h2 .fc-toolbar .fc-right * {
+    float: right;
+    padding: 5px 20px;
+    font-size: 22px;
+    color: #7B7C7E; }
 
 .fc-button-group, .fc-icon {
   display: inline-block; }
@@ -2774,7 +2794,9 @@ input[type='submit'],
         line-height: 38px; }
 
 .containerLegendCategory {
-  max-width: 1098px; }
+  max-width: 1098px;
+  margin-top: -60px;
+  padding: 0 10px 60px; }
   .containerLegendCategory .category {
     display: inline-block;
     margin-right: 22px; }
@@ -2799,6 +2821,9 @@ input[type='submit'],
         border-radius: 4px;
         display: inline-block;
         margin-right: 3px; }
+
+.rsContentScrollArea {
+  min-height: 550px; }
 
 .fancybox-wrap:hover {
   cursor: initial !important; }
