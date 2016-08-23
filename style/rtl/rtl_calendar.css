@@ -1,85 +1,233 @@
-/*
-Error: Undefined mixin 'transition'.
-        on line 29 of scss/rtl/rtl_calendar.scss, in `transition'
-        from line 29 of scss/rtl/rtl_calendar.scss
+#calendarSection {
+  direction: rtl; }
+  #calendarSection #calendar {
+    max-width: 1100px;
+    margin: 0 auto; }
+  #calendarSection .containerEvent {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background: #FFF; }
+  #calendarSection .contentEvent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: #FFF;
+    cursor: pointer;
+    padding: 10px;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+  #calendarSection .rsWrap.rsDateWrap {
+    float: left;
+    width: 50px; }
+    #calendarSection .rsWrap.rsDateWrap .rsDateHeader {
+      color: #CCC;
+      font-size: 14px;
+      -moz-transition: color 0.2s linear;
+      -o-transition: color 0.2s linear;
+      -webkit-transition: color 0.2s linear;
+      transition: color 0.2s linear; }
+  #calendarSection .groupCategories {
+    float: right; }
+  #calendarSection .category {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 3px; }
+  #calendarSection .eventsNumber {
+    clear: right;
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    color: #D8D8D8;
+    line-height: 100%;
+    margin-bottom: 5px; }
+  #calendarSection .groupEvents {
+    opacity: 0;
+    float: left;
+    width: 100%;
+    margin-top: 2px;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear; }
+  #calendarSection .groupEvents p, #calendarSection .groupEvents .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap .groupEvents .rsDateHeader {
+    font-family: "helvetica";
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 140%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    #calendarSection .groupEvents p:hover, #calendarSection .groupEvents .rsWrap.rsDateWrap .rsDateHeader:hover, #calendarSection .rsWrap.rsDateWrap .groupEvents .rsDateHeader:hover {
+      font-family: "helveticabold";
+      color: #C0C0C0; }
+  #calendarSection .groupEvents p span, #calendarSection .groupEvents .rsWrap.rsDateWrap .rsDateHeader span, #calendarSection .rsWrap.rsDateWrap .groupEvents .rsDateHeader span {
+    font-family: "helveticabold"; }
+  #calendarSection .contentEvent.hasEvents:hover {
+    background: #21282F;
+    border: 2px solid #FFF;
+    top: -10px;
+    bottom: -10px;
+    right: -10px;
+    left: -10px;
+    padding: 10px;
+    z-index: 9;
+    -webkit-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
+    -moz-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
+    box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ; }
+  #calendarSection .contentEvent.hasEvents:hover .day {
+    color: #FFF; }
+  #calendarSection .contentEvent.hasEvents:hover .groupEvents {
+    opacity: 1; }
+  #calendarSection .rsRow td {
+    border: 1px solid #D3D3D3; }
+  #calendarSection .rsContentTable {
+    background-color: #ffffff; }
+  #calendarSection .rsTodayCell .rsDateHeader {
+    color: #be9857; }
+  #calendarSection .rsHorizontalHeaderTable th {
+    width: 14.35%;
+    font-family: 'merriweather';
+    font-weight: normal;
+    color: #21282F;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 5px; }
+  #calendarSection .sfcalendar {
+    margin-bottom: 5%; }
+  #calendarSection .k-widget .k-window .sfcalendarEventPreviewWrp {
+    background-color: black; }
+  #calendarSection div.k-window-content {
+    background-color: #000;
+    font-family: Arial;
+    font-weight: bolder;
+    color: #f2f2f2; }
+  #calendarSection div.k-window-titlebar {
+    background-color: #000; }
+  #calendarSection .sfTxtLbl {
+    color: #fff; }
+  #calendarSection .sfcalendarEventPreviewEditLnk {
+    color: #fff; }
 
-24:             bottom: 0;
-25:             z-index: 1;
-26:             background: #FFF;
-27:             cursor: pointer;
-28:             padding: 10px;
-29: 			@include transition( all .2s linear );
-30:         }
-31: 
-32:             .day{
-33:                 float: left;
-34:                 width: 50px;
+.rsToday {
+  display: none; }
 
-Backtrace:
-scss/rtl/rtl_calendar.scss:29:in `transition'
-scss/rtl/rtl_calendar.scss:29
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'transition'.\A         on line 29 of scss/rtl/rtl_calendar.scss, in `transition'\A         from line 29 of scss/rtl/rtl_calendar.scss\A \A 24:             bottom: 0;\A 25:             z-index: 1;\A 26:             background: #FFF;\A 27:             cursor: pointer;\A 28:             padding: 10px;\A 29: 			@include transition( all .2s linear );\A 30:         }\A 31: \A 32:             .day{\A 33:                 float: left;\A 34:                 width: 50px;"; }
+.fc-toolbar {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.fc-toolbar .fc-left {
+  float: left; }
+
+.fc-toolbar .fc-right {
+  float: right; }
+  .fc-toolbar .fc-right h2 {
+    float: right;
+    padding: 5px 20px;
+    font-size: 22px;
+    color: #7B7C7E; }
+
+.fc-button-group, .fc-icon {
+  display: inline-block; }
+
+.fc-clear {
+  clear: both; }
+
+.todayContainer {
+  background: url(../sysimages/bgDateCalendar.png) no-repeat left top;
+  height: 40px;
+  width: 180px;
+  line-height: 40px;
+  margin-right: 15px;
+  font-family: "merriweather";
+  font-size: 14px;
+  color: #7B7C7E;
+  padding: 0 15px; }
+
+.popupCalendar {
+  max-width: 400px; }
+  .popupCalendar .content {
+    position: relative;
+    padding-bottom: 0; }
+    .popupCalendar .content::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      background: url(../sysimages/cornerTopPopup.png) no-repeat left top; }
+    .popupCalendar .content img {
+      max-width: 100%; }
+    .popupCalendar .content .contentText {
+      width: 100%;
+      padding: 35px 20px; }
+      .popupCalendar .content .contentText .eventName {
+        font-family: 'helveticabold';
+        font-size: 16px; }
+      .popupCalendar .content .contentText .eventDate {
+        font-family: 'merriweather';
+        font-size: 14px;
+        margin-bottom: 40px; }
+      .popupCalendar .content .contentText .eventLocationName {
+        font-family: 'merriweather';
+        font-size: 16px;
+        color: #333333; }
+      .popupCalendar .content .contentText .eventLocation {
+        font-family: 'merriweather';
+        font-size: 14px;
+        color: #666666; }
+    .popupCalendar .content .footer {
+      width: 100%;
+      padding: 0 20px;
+      height: 38px;
+      background: #CCC; }
+      .popupCalendar .content .footer:before, .popupCalendar .content .footer:after {
+        content: "";
+        display: table; }
+      .popupCalendar .content .footer:after {
+        clear: both; }
+      .popupCalendar .content .footer .tags {
+        float: left; }
+        .popupCalendar .content .footer .tags a {
+          display: inline-block;
+          margin-right: 5px;
+          font-family: 'helvetica';
+          font-size: 12px;
+          color: #FFFFFF;
+          line-height: 38px; }
+      .popupCalendar .content .footer .category {
+        float: right;
+        font-family: 'helveticabold';
+        font-size: 12px;
+        color: #FFFFFF;
+        line-height: 38px; }
+
+.containerLegendCategory {
+  max-width: 1098px;
+  margin-top: -60px;
+  padding: 0 10px 60px;
+  direction: rtl; }
+  .containerLegendCategory .category {
+    display: inline-block;
+    margin-right: 22px; }
+    .containerLegendCategory .category p, .containerLegendCategory .category #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap .containerLegendCategory .category .rsDateHeader {
+      font-family: 'intro';
+      font-size: 12px; }
+      .containerLegendCategory .category p span, .containerLegendCategory .category #calendarSection .rsWrap.rsDateWrap .rsDateHeader span, #calendarSection .rsWrap.rsDateWrap .containerLegendCategory .category .rsDateHeader span {
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-left: 3px; }
+
+.rsContentScrollArea {
+  min-height: 550px; }
+
+/*# sourceMappingURL=rtl_calendar.css.map */

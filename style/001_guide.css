@@ -499,7 +499,7 @@ input[type='email'],
 input[type='search'],
 input[type='password'],
 textarea,
-select, #aboutSection blockquote {
+select, #aboutSection blockquote, #calendarSection .rsWrap.rsDateWrap .rsDateHeader {
   font-family: 'merriweather';
   font-weight: normal;
   font-size: 16px;
@@ -587,7 +587,7 @@ a {
         line-height: 21px;
         color: #7b7c7e;
         float: left;
-        padding-left: 40px;
+        padding-left: 25px;
         position: relative; }
         .accordionMenu > li > a .signal::after {
           background: url("../sysimages/button/openAccordion.png") no-repeat center center;
@@ -890,12 +890,12 @@ input[type='submit'],
   -o-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background: url(../sysimages/REMOVE/button.png) no-repeat center top;
+  background: url(../sysimages/button/button.png) no-repeat center top;
   font-family: 'intro';
   font-weight: 300;
   letter-spacing: 1px;
   color: #FFF;
-  height: 75px;
+  height: 73px;
   display: inline-block; }
   .button::before, .button::after,
   button::before,
@@ -905,10 +905,13 @@ input[type='submit'],
   .fc-state-default::before,
   .fc-state-default::after {
     opacity: 1; }
-  .button:hover,
+  .button:hover, .button.active,
   button:hover,
+  button.active,
   input[type='submit']:hover,
-  .fc-state-default:hover {
+  input[type='submit'].active,
+  .fc-state-default:hover,
+  .fc-state-default.active {
     background-position: center bottom;
     color: rgba(190, 151, 95, 0.8); }
 
@@ -1168,7 +1171,7 @@ input[type='submit'],
   #footer input[type='search'],
   #footer input[type='password'],
   #footer textarea,
-  #footer select, #footer #aboutSection blockquote, #aboutSection #footer blockquote, #footer a {
+  #footer select, #footer #aboutSection blockquote, #aboutSection #footer blockquote, #footer #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap #footer .rsDateHeader, #footer a {
     height: 108px;
     display: table-cell;
     vertical-align: middle;
@@ -1183,7 +1186,13 @@ input[type='submit'],
     #footer input#contacts[type='search']:hover,
     #footer input#contacts[type='password']:hover,
     #footer textarea#contacts:hover,
-    #footer select#contacts:hover, #footer #aboutSection blockquote#contacts:hover, #aboutSection #footer blockquote#contacts:hover, #footer a#contacts:hover {
+    #footer select#contacts:hover, #footer #aboutSection blockquote#contacts:hover, #aboutSection #footer blockquote#contacts:hover, #footer #calendarSection .rsWrap.rsDateWrap #contacts.rsDateHeader:hover, #calendarSection .rsWrap.rsDateWrap #footer #contacts.rsDateHeader:hover, #footer p#changeLanguage:hover, #footer input#changeLanguage[type='text']:hover,
+    #footer input#changeLanguage[type='number']:hover,
+    #footer input#changeLanguage[type='email']:hover,
+    #footer input#changeLanguage[type='search']:hover,
+    #footer input#changeLanguage[type='password']:hover,
+    #footer textarea#changeLanguage:hover,
+    #footer select#changeLanguage:hover, #footer #aboutSection blockquote#changeLanguage:hover, #aboutSection #footer blockquote#changeLanguage:hover, #footer #calendarSection .rsWrap.rsDateWrap #changeLanguage.rsDateHeader:hover, #calendarSection .rsWrap.rsDateWrap #footer #changeLanguage.rsDateHeader:hover, #footer a#contacts:hover, #footer a#changeLanguage:hover {
       color: #be9857; }
   #footer .socialIcons {
     display: inline-block;
@@ -1229,8 +1238,7 @@ input[type='submit'],
     width: 80px;
     color: #FFF;
     padding: 40px 20px;
-    background: rgba(190, 151, 95, 0.8) url(../sysimages/button/button_up@2x.png) no-repeat center center;
-    float: left; }
+    background: rgba(190, 151, 95, 0.8) url(../sysimages/button/button_up@2x.png) no-repeat center center; }
     #footer #backTop:hover {
       background-color: #be9857; }
 
@@ -1243,7 +1251,7 @@ input[type='submit'],
     #footer input[type='search'],
     #footer input[type='password'],
     #footer textarea,
-    #footer select, #footer #aboutSection blockquote, #aboutSection #footer blockquote, #footer a {
+    #footer select, #footer #aboutSection blockquote, #aboutSection #footer blockquote, #footer #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap #footer .rsDateHeader, #footer a {
       height: auto;
       padding: 10px 7px; }
     #footer .socialIcons {
@@ -1551,6 +1559,10 @@ input[type='submit'],
   #ecosystemSection * {
     direction: rtl; }
 
+@media (max-width: 768px) {
+  #ecosystemSection .container,
+  #ecosystemSection .listContainer {
+    padding: 0; } }
 .listContainer .col-xs-12.col-sm-4.col-md-3,
 .listContainer .col-xs-12.col-sm-4.col-md-4 {
   padding-right: 7px;
@@ -1653,7 +1665,7 @@ input[type='submit'],
       .listContainer .listElement .elementContent .text input[type='search'],
       .listContainer .listElement .elementContent .text input[type='password'],
       .listContainer .listElement .elementContent .text textarea,
-      .listContainer .listElement .elementContent .text select, .listContainer .listElement .elementContent .text #aboutSection blockquote, #aboutSection .listContainer .listElement .elementContent .text blockquote, .listContainer .listElement .elementContent .text h3, .listContainer .listElement .elementContent .text .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .listContainer .listElement .elementContent .text .accordionHeader {
+      .listContainer .listElement .elementContent .text select, .listContainer .listElement .elementContent .text #aboutSection blockquote, #aboutSection .listContainer .listElement .elementContent .text blockquote, .listContainer .listElement .elementContent .text #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap .listContainer .listElement .elementContent .text .rsDateHeader, .listContainer .listElement .elementContent .text h3, .listContainer .listElement .elementContent .text .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a .listContainer .listElement .elementContent .text .accordionHeader {
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
@@ -1664,7 +1676,7 @@ input[type='submit'],
       .listContainer .listElement .elementContent .text input[type='search'],
       .listContainer .listElement .elementContent .text input[type='password'],
       .listContainer .listElement .elementContent .text textarea,
-      .listContainer .listElement .elementContent .text select, .listContainer .listElement .elementContent .text #aboutSection blockquote, #aboutSection .listContainer .listElement .elementContent .text blockquote {
+      .listContainer .listElement .elementContent .text select, .listContainer .listElement .elementContent .text #aboutSection blockquote, #aboutSection .listContainer .listElement .elementContent .text blockquote, .listContainer .listElement .elementContent .text #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap .listContainer .listElement .elementContent .text .rsDateHeader {
         margin-top: 25px; }
   .listContainer .listElement .downloadPDF {
     position: absolute;
@@ -2073,7 +2085,7 @@ input[type='submit'],
     #newsSection .element input[type='search'],
     #newsSection .element input[type='password'],
     #newsSection .element textarea,
-    #newsSection .element select, #newsSection .element #aboutSection blockquote, #aboutSection #newsSection .element blockquote {
+    #newsSection .element select, #newsSection .element #aboutSection blockquote, #aboutSection #newsSection .element blockquote, #newsSection .element #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap #newsSection .element .rsDateHeader {
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -2209,7 +2221,7 @@ input[type='submit'],
   #aboutSection input[type='search'],
   #aboutSection input[type='password'],
   #aboutSection textarea,
-  #aboutSection select, #aboutSection blockquote, #aboutSection .imageContainer, #aboutSection .title.leftTitle, #aboutSection .accordionMenu {
+  #aboutSection select, #aboutSection blockquote, #aboutSection #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap #aboutSection .rsDateHeader, #aboutSection .imageContainer, #aboutSection .title.leftTitle, #aboutSection .accordionMenu {
     direction: rtl; }
   #aboutSection::before {
     position: absolute;
@@ -2239,7 +2251,7 @@ input[type='submit'],
   #aboutSection input[type='search'],
   #aboutSection input[type='password'],
   #aboutSection textarea,
-  #aboutSection select, #aboutSection blockquote {
+  #aboutSection select, #aboutSection blockquote, #aboutSection #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap #aboutSection .rsDateHeader {
     padding: 15px 0 30px; }
   #aboutSection .imageContainer {
     border-bottom: 1px solid #dfdfdf;
@@ -2253,7 +2265,7 @@ input[type='submit'],
     #aboutSection .imageContainer input[type='search'],
     #aboutSection .imageContainer input[type='password'],
     #aboutSection .imageContainer textarea,
-    #aboutSection .imageContainer select, #aboutSection .imageContainer blockquote {
+    #aboutSection .imageContainer select, #aboutSection .imageContainer blockquote, #aboutSection .imageContainer #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap #aboutSection .imageContainer .rsDateHeader {
       font-family: 'helvetica';
       font-size: 12px;
       padding: 5px 0 10px; }
@@ -2297,7 +2309,7 @@ input[type='submit'],
     #resourcesSection1 .element input[type='search'],
     #resourcesSection1 .element input[type='password'],
     #resourcesSection1 .element textarea,
-    #resourcesSection1 .element select, #resourcesSection1 .element #aboutSection blockquote, #aboutSection #resourcesSection1 .element blockquote,
+    #resourcesSection1 .element select, #resourcesSection1 .element #aboutSection blockquote, #aboutSection #resourcesSection1 .element blockquote, #resourcesSection1 .element #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap #resourcesSection1 .element .rsDateHeader,
     #resourcesSection2 .element .subtitle,
     #resourcesSection2 .element h1,
     #resourcesSection2 .element p,
@@ -2309,7 +2321,9 @@ input[type='submit'],
     #resourcesSection2 .element textarea,
     #resourcesSection2 .element select,
     #resourcesSection2 .element #aboutSection blockquote,
-    #aboutSection #resourcesSection2 .element blockquote {
+    #aboutSection #resourcesSection2 .element blockquote,
+    #resourcesSection2 .element #calendarSection .rsWrap.rsDateWrap .rsDateHeader,
+    #calendarSection .rsWrap.rsDateWrap #resourcesSection2 .element .rsDateHeader {
       padding-bottom: 15px; }
     #resourcesSection1 .element .date,
     #resourcesSection2 .element .date {
@@ -2561,7 +2575,7 @@ input[type='submit'],
       #favoritesSection .elementContent .text input[type='search'],
       #favoritesSection .elementContent .text input[type='password'],
       #favoritesSection .elementContent .text textarea,
-      #favoritesSection .elementContent .text select, #favoritesSection .elementContent .text #aboutSection blockquote, #aboutSection #favoritesSection .elementContent .text blockquote, #favoritesSection .elementContent .text h3, #favoritesSection .elementContent .text .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a #favoritesSection .elementContent .text .accordionHeader {
+      #favoritesSection .elementContent .text select, #favoritesSection .elementContent .text #aboutSection blockquote, #aboutSection #favoritesSection .elementContent .text blockquote, #favoritesSection .elementContent .text #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap #favoritesSection .elementContent .text .rsDateHeader, #favoritesSection .elementContent .text h3, #favoritesSection .elementContent .text .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a #favoritesSection .elementContent .text .accordionHeader {
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
@@ -2572,37 +2586,11 @@ input[type='submit'],
       #favoritesSection .elementContent .text input[type='search'],
       #favoritesSection .elementContent .text input[type='password'],
       #favoritesSection .elementContent .text textarea,
-      #favoritesSection .elementContent .text select, #favoritesSection .elementContent .text #aboutSection blockquote, #aboutSection #favoritesSection .elementContent .text blockquote {
+      #favoritesSection .elementContent .text select, #favoritesSection .elementContent .text #aboutSection blockquote, #aboutSection #favoritesSection .elementContent .text blockquote, #favoritesSection .elementContent .text #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap #favoritesSection .elementContent .text .rsDateHeader {
         margin-top: 25px; }
 
 #calendarSection {
-  padding-bottom: 40px;
-  direction: rtl;
-  /*change url for the icon you want*/
-  	/*.rsPrevDay {
-  		content: '';
-  		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-  		background-size: cover;
-  		position: absolute;
-  		width: 20px;
-  		height: 20px;
-  		margin-left: 200px;
-  		font-size: 0px;
-  	}
-  
-  	.rsNextDay {
-  		content: '';
-  		background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSj3XfIpf-OOJRCcWz4iN2CU3qMKVVbj0p0bRvKNGVo1U9pk_8ZIlyR8pWreA');
-  		background-size: cover;
-  		position: absolute;
-  		width: 20px;
-  		height: 20px;
-  		margin-left: 170px;
-  	font-size: 0px;
-  	}*/
-  /*.rsDatePickerActivator {
-  display:none;
-  }*/ }
+  direction: rtl; }
   #calendarSection #calendar {
     max-width: 1100px;
     margin: 0 auto; }
@@ -2625,15 +2613,16 @@ input[type='submit'],
     -o-transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear; }
-  #calendarSection .day {
+  #calendarSection .rsWrap.rsDateWrap {
     float: left;
-    width: 50px;
-    color: #CCC;
-    font-size: 14px;
-    -moz-transition: color 0.2s linear;
-    -o-transition: color 0.2s linear;
-    -webkit-transition: color 0.2s linear;
-    transition: color 0.2s linear; }
+    width: 50px; }
+    #calendarSection .rsWrap.rsDateWrap .rsDateHeader {
+      color: #CCC;
+      font-size: 14px;
+      -moz-transition: color 0.2s linear;
+      -o-transition: color 0.2s linear;
+      -webkit-transition: color 0.2s linear;
+      transition: color 0.2s linear; }
   #calendarSection .groupCategories {
     float: right; }
   #calendarSection .category {
@@ -2665,7 +2654,7 @@ input[type='submit'],
   #calendarSection .groupEvents input[type='search'],
   #calendarSection .groupEvents input[type='password'],
   #calendarSection .groupEvents textarea,
-  #calendarSection .groupEvents select, #calendarSection .groupEvents #aboutSection blockquote, #aboutSection #calendarSection .groupEvents blockquote {
+  #calendarSection .groupEvents select, #calendarSection .groupEvents #aboutSection blockquote, #aboutSection #calendarSection .groupEvents blockquote, #calendarSection .groupEvents .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap .groupEvents .rsDateHeader {
     font-family: "helvetica";
     font-weight: bold;
     font-size: 13px;
@@ -2679,7 +2668,7 @@ input[type='submit'],
     #calendarSection .groupEvents input[type='search']:hover,
     #calendarSection .groupEvents input[type='password']:hover,
     #calendarSection .groupEvents textarea:hover,
-    #calendarSection .groupEvents select:hover, #calendarSection .groupEvents #aboutSection blockquote:hover, #aboutSection #calendarSection .groupEvents blockquote:hover {
+    #calendarSection .groupEvents select:hover, #calendarSection .groupEvents #aboutSection blockquote:hover, #aboutSection #calendarSection .groupEvents blockquote:hover, #calendarSection .groupEvents .rsWrap.rsDateWrap .rsDateHeader:hover, #calendarSection .rsWrap.rsDateWrap .groupEvents .rsDateHeader:hover {
       font-family: "helveticabold";
       color: #C0C0C0; }
   #calendarSection .groupEvents p span, #calendarSection .groupEvents input[type='text'] span,
@@ -2688,7 +2677,7 @@ input[type='submit'],
   #calendarSection .groupEvents input[type='search'] span,
   #calendarSection .groupEvents input[type='password'] span,
   #calendarSection .groupEvents textarea span,
-  #calendarSection .groupEvents select span, #calendarSection .groupEvents #aboutSection blockquote span, #aboutSection #calendarSection .groupEvents blockquote span {
+  #calendarSection .groupEvents select span, #calendarSection .groupEvents #aboutSection blockquote span, #aboutSection #calendarSection .groupEvents blockquote span, #calendarSection .groupEvents .rsWrap.rsDateWrap .rsDateHeader span, #calendarSection .rsWrap.rsDateWrap .groupEvents .rsDateHeader span {
     font-family: "helveticabold"; }
   #calendarSection .contentEvent.hasEvents:hover {
     background: #21282F;
@@ -2712,13 +2701,6 @@ input[type='submit'],
     background-color: #ffffff; }
   #calendarSection .rsTodayCell .rsDateHeader {
     color: #be9857; }
-  #calendarSection .rsDateHeader {
-    color: #000000;
-    font-size: 18px;
-    font-family: 'intro';
-    text-align: left;
-    margin-left: 10px;
-    margin-top: 10px; }
   #calendarSection .rsHorizontalHeaderTable th {
     width: 14.35%;
     font-family: 'merriweather';
@@ -2727,8 +2709,6 @@ input[type='submit'],
     font-size: 14px;
     text-align: left;
     padding-left: 5px; }
-  #calendarSection .rsDateBox {
-    margin-top: 5px; }
   #calendarSection .sfcalendar {
     margin-bottom: 5%; }
   #calendarSection .k-widget .k-window .sfcalendarEventPreviewWrp {
@@ -2757,6 +2737,13 @@ input[type='submit'],
 
 .fc-toolbar .fc-right {
   float: right; }
+  .fc-toolbar .fc-right h2, .fc-toolbar .fc-right #fullBanner .bannerContent h2, #fullBanner .bannerContent .fc-toolbar .fc-right h2,
+  .fc-toolbar .fc-right #fullBanner .bannerContent h2 *,
+  #fullBanner .bannerContent h2 .fc-toolbar .fc-right * {
+    float: right;
+    padding: 5px 20px;
+    font-size: 22px;
+    color: #7B7C7E; }
 
 .fc-button-group, .fc-icon {
   display: inline-block; }
@@ -2810,7 +2797,8 @@ input[type='submit'],
     .popupCalendar .content .footer {
       width: 100%;
       padding: 0 20px;
-      height: 38px; }
+      height: 38px;
+      background: #CCC; }
       .popupCalendar .content .footer:before, .popupCalendar .content .footer:after {
         content: "";
         display: table; }
@@ -2831,6 +2819,39 @@ input[type='submit'],
         font-size: 12px;
         color: #FFFFFF;
         line-height: 38px; }
+
+.containerLegendCategory {
+  max-width: 1098px;
+  margin-top: -60px;
+  padding: 0 10px 60px;
+  direction: rtl; }
+  .containerLegendCategory .category {
+    display: inline-block;
+    margin-right: 22px; }
+    .containerLegendCategory .category p, .containerLegendCategory .category input[type='text'],
+    .containerLegendCategory .category input[type='number'],
+    .containerLegendCategory .category input[type='email'],
+    .containerLegendCategory .category input[type='search'],
+    .containerLegendCategory .category input[type='password'],
+    .containerLegendCategory .category textarea,
+    .containerLegendCategory .category select, .containerLegendCategory .category #aboutSection blockquote, #aboutSection .containerLegendCategory .category blockquote, .containerLegendCategory .category #calendarSection .rsWrap.rsDateWrap .rsDateHeader, #calendarSection .rsWrap.rsDateWrap .containerLegendCategory .category .rsDateHeader {
+      font-family: 'intro';
+      font-size: 12px; }
+      .containerLegendCategory .category p span, .containerLegendCategory .category input[type='text'] span,
+      .containerLegendCategory .category input[type='number'] span,
+      .containerLegendCategory .category input[type='email'] span,
+      .containerLegendCategory .category input[type='search'] span,
+      .containerLegendCategory .category input[type='password'] span,
+      .containerLegendCategory .category textarea span,
+      .containerLegendCategory .category select span, .containerLegendCategory .category #aboutSection blockquote span, #aboutSection .containerLegendCategory .category blockquote span, .containerLegendCategory .category #calendarSection .rsWrap.rsDateWrap .rsDateHeader span, #calendarSection .rsWrap.rsDateWrap .containerLegendCategory .category .rsDateHeader span {
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-left: 3px; }
+
+.rsContentScrollArea {
+  min-height: 550px; }
 
 .fancybox-wrap:hover {
   cursor: initial !important; }

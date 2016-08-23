@@ -1,9 +1,24 @@
+// General Variables
+// Header and Footer Dimensions
+$footer_height: 108px;
+$footer_height_reduced: 38px;
+
+// Colors
+$color_w: #FFF;
+$color_bl: #21282f;
+$color_lightgrey:#7b7c7e;
+$color_lightergrey: #dfdfdf;
+$color_gold: rgba(190,151,95,0.80);
+$color_solidGold: #be9857;
+$bg_img: "../sysimages/bg.png";
+
+
 #footer{
 	height: $footer_height;
 	border-top: 2px solid $color_gold;
 	background: rgba(255,255,255,0.4);
 
-	*{direction: rtl;}
+	*{ direction: rtl; }
 	
 	
 	p , a {
@@ -16,7 +31,8 @@
 		font-size: 12px;
 		color: $color_bl;
 		
-		&#contacts:hover{
+		&#contacts:hover,
+		&#changeLanguage:hover{
 			color: $color_solidGold;
 		}
 	}
@@ -89,7 +105,7 @@
 		color: $color_w;
 		padding: 40px 20px;
 		background: $color_gold url(../sysimages/button/button_up@2x.png) no-repeat center center;
-		float:left;
+		//float: left;
 		
 		&:hover{
 			background-color: $color_solidGold; 
