@@ -1,5 +1,4 @@
-﻿
-function doTheMagic() {
+﻿function doTheMagic() {
 
     var eventsArray = [];
 
@@ -17,7 +16,7 @@ function doTheMagic() {
             "TimeZoneOffset": 0,
             "VisibleAppointmentsPerDay": 2,
             "UpdateMode": 0,
-            "CalendarIds": ["b4fb725d-a02b-4b27-8692-26a725ad3f48", "f0d2d389-4cf4-696f-a65b-ff0000c51620"],
+            "CalendarIds": ["073fd589-4cf4-696f-a65b-ff0000c51620", "013fd589-4cf4-696f-a65b-ff0000c51620", "0a3fd589-4cf4-696f-a65b-ff0000c51620", "fb3ed589-4cf4-696f-a65b-ff0000c51620", "043fd589-4cf4-696f-a65b-ff0000c51620", "fe3ed589-4cf4-696f-a65b-ff0000c51620"],
             "UiCulture": "en",
             "ProviderName": "OpenAccessDataProvider",
             "FilterExpression": "(Visible = true AND Status = Live) AND (PublishedTranslations.Count = 0 OR PublishedTranslations.Contains(\"en\"))",
@@ -66,22 +65,29 @@ function doTheMagic() {
 
             e.preventDefault();
             var id = $(this).attr("data-id");
-            $.get("http://54.93.89.184/Sitefinity/Public/Services/RadSchedulerService.svc/event/" + id + "/?provider=OpenAccessDataProvider", function (data) { buildFancybox(data, id); });
+            var id = "2d3ed589-4cf4-696f-a65b-ff0000c51620"; // Delete this line!!!! 
+            $.get("http://54.93.89.184/Calendario/GetEvtData?Id=" + id, function (data) { buildFancybox(data, id); });
         });
     }
 
     function buildFancybox(data, id) {
 
         var template = document.getElementById('sample_template').innerHTML;
-
+        var json = JSON.parse(data);
+        
         var view =
          {
-             title: data.Item.Title.Value,
-             subject: data.Item.Content.Value,
-             sumary: data.Item.Summary.Value,
-             date: null,
-             color: null,
-             location: "My location",
+             title: json.Title,
+             subject: json.Subject,
+             sumary: json.Sumary,
+             date: json.Datestart,
+             color: json.Color,
+             location: json.City,
+             address: json.Street + " " + json.City + " " + json.State + " " + json.Country, 
+             image: json.Img,
+             category: json.Cat,
+             tags: json.Tag
+
          };
 
         for (var i = 0; i < eventsArray.length; i++) {
@@ -131,7 +137,6 @@ function doTheMagic() {
 
             var eventContentWrapper = $("<div/>", { "class": "containerEvent" });
             var contentEvent = $("<div/>", { "class": "contentEvent" });
-           // var day = $("<p/>", { "class": "day", "text": day.text() });
             var groupCategories = $("<div />", { "class": "groupCategories" });
             var groupEvents = $("<div />", { "class": "groupEvents" });
             var eventsCount = 0;
