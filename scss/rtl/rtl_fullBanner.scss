@@ -154,18 +154,29 @@ to { transform:rotate(0deg); }
 
 
 @media screen and (max-width: 900px){
-	#fullBanner .bannerContent{
-		padding: 0;
-		
-		h1 {
-    		font-size: 35px;
-		}
-		h2{
-			font-size: 19px;
-			line-height: 190%;
-		}
-		
-		&::before,
-		&::after{display: none!important;}
-	}
+	#fullBanner {
+
+        & > div {
+            padding: 140px 15px 0;
+            transform: none!important; 
+        }
+
+        .backgroundBanner{ left: -46%;}
+        .bannerContent{
+            padding: 0;
+            
+            h1 {
+                font-size: 32px;
+                @include verticalTruncate(5);
+            }
+            h2{
+                font-size: 16px;
+                line-height: 190%;
+                @include verticalTruncate(9);
+            }
+            
+            &::before,
+            &::after{display: none!important;}
+	    }
+    }
 }

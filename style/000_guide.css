@@ -1454,14 +1454,27 @@ input[type='submit'],
   to {
     transform: rotate(0deg); } }
 @media screen and (max-width: 900px) {
+  #fullBanner > div {
+    padding: 140px 15px 0;
+    transform: none !important; }
+  #fullBanner .backgroundBanner {
+    left: -46%; }
   #fullBanner .bannerContent {
     padding: 0; }
     #fullBanner .bannerContent h1 {
-      font-size: 35px; }
+      font-size: 32px;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden; }
     #fullBanner .bannerContent h2,
     #fullBanner .bannerContent h2 * {
-      font-size: 19px;
-      line-height: 190%; }
+      font-size: 16px;
+      line-height: 190%;
+      display: -webkit-box;
+      -webkit-line-clamp: 9;
+      -webkit-box-orient: vertical;
+      overflow: hidden; }
     #fullBanner .bannerContent::before, #fullBanner .bannerContent::after {
       display: none !important; } }
 .popup {
