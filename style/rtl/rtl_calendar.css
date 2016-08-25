@@ -79,6 +79,8 @@
     left: -10px;
     padding: 10px;
     z-index: 9;
+    min-width: 180px;
+    min-height: 130px;
     -webkit-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
     -moz-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
     box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ; }

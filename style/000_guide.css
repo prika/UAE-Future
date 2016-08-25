@@ -2341,7 +2341,8 @@ input[type='submit'],
 /*TODO*/
 #dictionaryResultsSection {
   max-width: 900px;
-  margin: 0 auto 30px; }
+  margin: 0 auto;
+  padding-bottom: 50px; }
 
 #dictionaryResultsSection .containerLetters {
   width: 100%;
@@ -2506,6 +2507,19 @@ input[type='submit'],
         top: 43%;
         opacity: 1; }
 
+@media (max-width: 900px) {
+  #partnersSection .elementContent {
+    background: rgba(223, 223, 223, 0.6);
+    -moz-transition: background 0.2s linear;
+    -o-transition: background 0.2s linear;
+    -webkit-transition: background 0.2s linear;
+    transition: background 0.2s linear; }
+    #partnersSection .elementContent::before {
+      bottom: 43%;
+      opacity: 1; }
+    #partnersSection .elementContent h3, #partnersSection .elementContent .accordionMenu > li > a .accordionHeader, .accordionMenu > li > a #partnersSection .elementContent .accordionHeader {
+      top: 43%;
+      opacity: 1; } }
 #favoritesSection {
   padding-bottom: 50px;
   position: relative;
@@ -2674,6 +2688,8 @@ input[type='submit'],
   left: -10px;
   padding: 10px;
   z-index: 9;
+  min-width: 180px;
+  min-height: 130px;
   -webkit-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
   -moz-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
   box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ; }
