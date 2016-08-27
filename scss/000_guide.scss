@@ -1882,7 +1882,8 @@ cursor: pointer;
 /*TODO*/
 #dictionaryResultsSection {
 	max-width: 900px;
-	margin: 0 auto 30px;
+	margin: 0 auto;
+	padding-bottom: 50px;
 }
 
 #dictionaryResultsSection .containerLetters {
@@ -2025,7 +2026,6 @@ color: #21282f;
   }
 }
 @media (max-width: 900px) {
-	
   #listContainerCulture .element{
 	  width: 99%!important;
   }
@@ -2093,6 +2093,22 @@ color: #21282f;
 			}
 		}
 	}
+}
+
+@media (max-width: 900px) {
+  #partnersSection .elementContent{
+	  	background: rgba($color: $color_lightergrey, $alpha: .6);
+		@include transition( background .2s linear);
+		
+		&::before{
+			bottom: 43%;
+			opacity: 1;
+		}
+		h3{
+			top: 43%;
+			opacity: 1;
+		}
+  }
 }
 
 // ===================================================================================================================
@@ -2223,4 +2239,66 @@ color: #21282f;
 
 .buttonIc > span {
     line-height:30px!important;
+}
+
+
+
+// Search @page
+#BodyContainer_C014{
+	
+	#HeaderContainer_C009 .title{padding: 70px 0 50px;}
+
+	#dictionaryResultsSection{
+		.containerWords {
+			min-height: 100px;
+			max-height: 100%;
+			overflow-x: auto;
+		}
+	}
+}
+
+// Pagination
+.sf_pagerNumeric {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+	a {
+		display: inline-block;
+		margin-right: 10px;
+		border-radius: 15px;
+		border: 2px solid #be9857;
+		background: #FFF;
+		min-width: 30px;
+		height: 32px;
+		line-height: 26px;
+		text-align: center;		
+		font-weight: bold;
+
+		&:hover,
+		&.sf_PagerCurrent{
+			background: #be9857;
+			color: #FFF;
+		}
+	}
+}
+
+//Social Share
+.sb-social.active {
+	top: 20px;
+    right: 14px;
+    background: rgba(#FFF,.5);
+    left: 0;
+    bottom: 0;
+	cursor: url(../sysimages/button/close.png) 0 0, auto;
+}
+
+.sb-social ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    line-height: 0;
+    text-align: center;
+    margin-top: calc(50% - 30px);
+	cursor: initial;
 }
