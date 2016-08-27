@@ -1,27 +1,45 @@
 ﻿function doTheMagic() {
 
+    var isMonthly = true;
+
+    // by default month is active
+    $($(".month.button").get(0)).addClass("active")
+
     var eventsArray = [];
+    var calendarIds = $(".containerLegendCategory.container p[id]").map(function () { return this.id; }).get()
+    var allDays;
 
-    var startDate = "\/Date(1470009600000)\/";
-    var endDate = "\/Date(1573033600000)\/";
+    function buildData() {
 
-    var data = {
+        allDays = $(".rsDateBox a");
 
-        "schedulerInfo":
-        {
-            "ViewStart": startDate ,
-            "ViewEnd": endDate,
-            "EnableDescriptionField": true,
-            "MinutesPerRow": 30,
-            "TimeZoneOffset": 0,
-            "VisibleAppointmentsPerDay": 2,
-            "UpdateMode": 0,
-            "CalendarIds": ["073fd589-4cf4-696f-a65b-ff0000c51620", "013fd589-4cf4-696f-a65b-ff0000c51620", "0a3fd589-4cf4-696f-a65b-ff0000c51620", "fb3ed589-4cf4-696f-a65b-ff0000c51620", "043fd589-4cf4-696f-a65b-ff0000c51620", "fe3ed589-4cf4-696f-a65b-ff0000c51620"],
-            "UiCulture": "en",
-            "ProviderName": "OpenAccessDataProvider",
-            "FilterExpression": "(Visible = true AND Status = Live) AND (PublishedTranslations.Count = 0 OR PublishedTranslations.Contains(\"en\"))",
-            "TimeZoneId": "UTC"
+        var data = {
+
+            "schedulerInfo":
+            {
+                "ViewStart": getDate(0),
+                "ViewEnd": getDate(allDays.length - 1),
+                "EnableDescriptionField": true,
+                "MinutesPerRow": 30,
+                "TimeZoneOffset": 0,
+                "VisibleAppointmentsPerDay": 2,
+                "UpdateMode": 0,
+                "CalendarIds": calendarIds,
+                "UiCulture": "en",
+                "ProviderName": "OpenAccessDataProvider",
+                "FilterExpression": "(Visible = true AND Status = Live) AND (PublishedTranslations.Count = 0 OR PublishedTranslations.Contains(\"en\"))",
+                "TimeZoneId": "UTC"
+            }
         }
+
+        return data;
+    }
+
+    function getDate(index) {
+        var strDate = allDays.get(index).title;
+        var dateParts = strDate.split("/");
+        var date = new Date(dateParts[2], (dateParts[0] - 1), dateParts[1]).getTime();
+        return "\/Date(" + date + ")\/";
     }
 
     function callService() {
@@ -29,9 +47,12 @@
         $.ajax({
             method: "POST",
             contentType: "application/json",
-            url: "http://54.93.89.184/Sitefinity/Public/Services/RadSchedulerService.svc/GetAppointments",
-            data: JSON.stringify(data)
+            url: "/Sitefinity/Public/Services/RadSchedulerService.svc/GetAppointments",
+            data: JSON.stringify(buildData())
         }).done(parseResponse);
+
+        var dt = new Date($($($("#calendar .rsContentTable")[0]).find("td").find(".rsDateWrap").find(".rsDateHeader")[10]).attr("title"));
+        $("#lbMonth")[0].innerHTML = dt.format("MMM");
     }
 
     function parseResponse(response) {
@@ -54,27 +75,46 @@
     }
 
     function checkIfEventDayMatches(dateToCheck, actualDate) {
+
         return (dateToCheck.getDate() == actualDate.getDate()
             && dateToCheck.getMonth() == actualDate.getMonth()
             && dateToCheck.getFullYear() == actualDate.getFullYear())
     }
 
+    var currentCallsCount = 0;
+    var renderedEvents = [];
+
     function bindFancybox() {
 
-        $(".contentEvent.hasEvents p").click(function (e) {
-
+        $(".contentEvent.hasEvents").click(function (e) {
+            currentCallsCount = 0;
+            renderedEvents = [];
             e.preventDefault();
-            var id = $(this).attr("data-id");
-            var id = "2d3ed589-4cf4-696f-a65b-ff0000c51620"; // Delete this line!!!! 
-            $.get("http://54.93.89.184/Calendario/GetEvtData?Id=" + id, function (data) { buildFancybox(data, id); });
+            var dateEvents = $($(this).find("p[data-id]")).map(function () { return $(this).attr("data-id") }).get();
+            getAllEvents(dateEvents);
         });
+    }
+
+    function getAllEvents(array) {
+
+        currentCallsCount = array.length;
+
+        for (var i = 0; i < array.length; i++)
+            $.get("/Calendario/GetEvtData?Id=" + array[i], function (data) { buildFancybox(data, array[i]); });
+    }
+
+    function allEventsCompletion() {
+
+        // if it is the last rendered event init fancybox
+        if (renderedEvents.length == currentCallsCount)
+            $.fancybox(renderedEvents);
     }
 
     function buildFancybox(data, id) {
 
         var template = document.getElementById('sample_template').innerHTML;
         var json = JSON.parse(data);
-        
+
         var view =
          {
              title: json.Title,
@@ -83,25 +123,14 @@
              date: json.Datestart,
              color: json.Color,
              location: json.City,
-             address: json.Street + " " + json.City + " " + json.State + " " + json.Country, 
+             address: json.Street + " " + json.City + " " + json.State + " " + json.Country,
              image: json.Img,
              category: json.Cat,
              tags: json.Tag
-
          };
 
-        for (var i = 0; i < eventsArray.length; i++) {
-
-            var elem = eventsArray[i];
-            if (elem.id != id) continue;
-
-            view.color = elem.color;
-            view.date = elem.date;
-            break;
-        }
-
-        var output = Mustache.render(template, view);
-        $.fancybox(output);
+        renderedEvents.push(Mustache.render(template, view));
+        allEventsCompletion();
     }
 
     $("#nextCalendarBtn").click(function () {
@@ -117,17 +146,29 @@
     });
 
     $(".month.button").click(function () {
-        
+
+        $($(".month.button").get(0)).addClass("active")
+        $($(".week.button").get(0)).removeClass("active")
         $(".rsHeaderMonth")[0].click();
     });
 
     $(".week.button").click(function () {
+
+        $($(".month.button").get(0)).removeClass("active")
+        $($(".week.button").get(0)).addClass("active")
         $(".rsHeaderWeek")[0].click();
     });
+
+    function formatMinutes(minutes) {
+        var min = minutes.toString()
+        if (min.length == 1) return "0" + min.toString();
+        return minutes;
+    }
 
     function redrawTable(eventsArray) {
 
         $($("#calendar .rsContentTable")[0]).find("td").each(function () {
+
             var td = $(this);
             var day = $(td.find(".rsDateWrap"));
 
@@ -149,7 +190,7 @@
                 if (!checkIfEventDayMatches(fullDate, date)) continue;
 
                 // Future me... sorry about that :-)
-                var eventSubject = $("<p style='color:" + event.color + "'> <span>" + date.getHours() + ":" + date.getMinutes() + " </span>" + event.subject + "</p>");
+                var eventSubject = $("<p style='color:" + event.color + "'> <span>" + date.getHours() + ":" + formatMinutes(date.getMinutes()) + " </span>" + event.subject + "</p>");
                 eventSubject.attr("data-id", event.id);
                 groupEvents.append(eventSubject);
 
