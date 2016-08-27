@@ -79,7 +79,7 @@
     left: -10px;
     padding: 10px;
     z-index: 9;
-    min-width: 180px;
+    width: 180px;
     min-height: 130px;
     -webkit-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
     -moz-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
@@ -88,20 +88,32 @@
     color: #FFF; }
   #calendarSection .contentEvent.hasEvents:hover .groupEvents {
     opacity: 1; }
-  #calendarSection .rsRow td {
+  #calendarSection .rsRow td,
+  #calendarSection .rsContentTable td {
     border: 1px solid #D3D3D3; }
   #calendarSection .rsContentTable {
     background-color: #ffffff; }
   #calendarSection .rsTodayCell .rsDateHeader {
     color: #be9857; }
-  #calendarSection .rsHorizontalHeaderTable th {
+  #calendarSection .rsHorizontalHeaderTable th,
+  #calendarSection .rsHorizontalHeaderTable th a,
+  #calendarSection .rsAllDayHeader *,
+  #calendarSection .rsVerticalHeaderWrapper div {
     width: 14.35%;
     font-family: 'merriweather';
     font-weight: normal;
     color: #21282F;
     font-size: 14px;
     text-align: left;
-    padding-left: 5px; }
+    padding-left: 5px;
+    white-space: nowrap; }
+  #calendarSection .rsAllDayHeader *,
+  #calendarSection .rsVerticalHeaderWrapper div {
+    text-align: right; }
+  #calendarSection span.rsAmPm {
+    color: #CCC;
+    font-size: 12px;
+    text-transform: lowercase; }
   #calendarSection .sfcalendar {
     margin-bottom: 5%; }
   #calendarSection .k-widget .k-window .sfcalendarEventPreviewWrp {

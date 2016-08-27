@@ -96,7 +96,7 @@
         left: -10px;
         padding: 10px;
         z-index: 9;
-	    min-width: 180px;
+	    width: 180px;
         min-height: 130px;
 		@include box-shadow( 0, 0, 5px, rgba($color: #666, $alpha: .5) );
     }
@@ -110,9 +110,8 @@
         opacity: 1;
     }
 
-
-
-	.rsRow td {
+	.rsRow td,
+	.rsContentTable td {
 		border: 1px solid #D3D3D3;
 	}
 
@@ -124,7 +123,10 @@
 	color: #be9857;
 	}
 
-	.rsHorizontalHeaderTable th {
+	.rsHorizontalHeaderTable th,
+	.rsHorizontalHeaderTable th a,
+	.rsAllDayHeader *,
+	.rsVerticalHeaderWrapper div {
 		width: 14.35%;
 		font-family: 'merriweather';
 		font-weight: normal;
@@ -132,6 +134,16 @@
 		font-size: 14px;
 		text-align: left;
 		padding-left: 5px;
+		white-space: nowrap;
+	}
+
+	.rsAllDayHeader *,
+	.rsVerticalHeaderWrapper div {text-align: right;}
+
+	span.rsAmPm {
+    	color: #CCC;
+		font-size: 12px;
+		text-transform: lowercase;
 	}
 
 	.sfcalendar {
