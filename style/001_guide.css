@@ -2945,4 +2945,21 @@ input[type='submit'],
       background: #be9857;
       color: #FFF; }
 
+.sb-social.active {
+  top: 20px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.5);
+  left: 0;
+  bottom: 0;
+  cursor: url(../sysimages/button/close.png) 0 0, auto; }
+
+.sb-social ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  line-height: 0;
+  text-align: center;
+  margin-top: calc(50% - 30px);
+  cursor: initial; }
+
 /*# sourceMappingURL=001_guide.css.map */
