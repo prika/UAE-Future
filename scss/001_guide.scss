@@ -2244,4 +2244,41 @@ color: #21282f;
 
 
 // Search @page
-#HeaderContainer_C009 .title{padding: 70px 0 50px;}
+#BodyContainer_C014{
+	
+	#HeaderContainer_C009 .title{padding: 70px 0 50px;}
+
+	#dictionaryResultsSection{
+		.containerWords {
+			min-height: 100px;
+			max-height: 100%;
+			overflow-x: auto;
+		}
+	}
+}
+
+// Pagination
+.sf_pagerNumeric {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+	a {
+		display: inline-block;
+		margin-right: 10px;
+		border-radius: 15px;
+		border: 2px solid #be9857;
+		background: #FFF;
+		min-width: 30px;
+		height: 32px;
+		line-height: 26px;
+		text-align: center;		
+		font-weight: bold;
+
+		&:hover,
+		&.sf_PagerCurrent{
+			background: #be9857;
+			color: #FFF;
+		}
+	}
+}

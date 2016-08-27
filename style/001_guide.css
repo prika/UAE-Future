@@ -2919,7 +2919,30 @@ input[type='submit'],
 .buttonIc > span {
   line-height: 30px !important; }
 
-#HeaderContainer_C009 .title {
+#BodyContainer_C014 #HeaderContainer_C009 .title {
   padding: 70px 0 50px; }
+#BodyContainer_C014 #dictionaryResultsSection .containerWords {
+  min-height: 100px;
+  max-height: 100%;
+  overflow-x: auto; }
+
+.sf_pagerNumeric {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 50px; }
+  .sf_pagerNumeric a {
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 15px;
+    border: 2px solid #be9857;
+    background: #FFF;
+    min-width: 30px;
+    height: 32px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: bold; }
+    .sf_pagerNumeric a:hover, .sf_pagerNumeric a.sf_PagerCurrent {
+      background: #be9857;
+      color: #FFF; }
 
 /*# sourceMappingURL=001_guide.css.map */
