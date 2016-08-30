@@ -119,8 +119,7 @@
         opacity: 1;
     }
 
-	.rsRow td,
-	.rsContentTable td {
+	.rsRow td{
 		border: 1px solid #D3D3D3;
 	}
 
@@ -133,10 +132,14 @@
 	}
 
 	.rsHorizontalHeaderTable th,
+	.rsHorizontalHeaderTable th a{
+		width: 14.35%;
+	}
+
+	.rsHorizontalHeaderTable th,
 	.rsHorizontalHeaderTable th a,
 	.rsAllDayHeader *,
 	.rsVerticalHeaderWrapper div {
-		width: 14.35%;
 		font-family: 'merriweather';
 		font-weight: normal;
 		color: #21282F;
@@ -153,6 +156,11 @@
     	color: #CCC;
 		font-size: 12px;
 		text-transform: lowercase;
+	}
+
+	table.rsContentTable td{
+		width: 14%;
+		border: 1px solid #D3D3D3;
 	}
 
 	.sfcalendar {

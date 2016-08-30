@@ -2697,18 +2697,19 @@ input[type='submit'],
   color: #FFF; }
 #calendarSection .contentEvent.hasEvents:hover .groupEvents {
   opacity: 1; }
-#calendarSection .rsRow td,
-#calendarSection .rsContentTable td {
+#calendarSection .rsRow td {
   border: 1px solid #D3D3D3; }
 #calendarSection .rsContentTable {
   background-color: #ffffff; }
 #calendarSection .rsTodayCell .rsDateHeader {
   color: #be9857; }
 #calendarSection .rsHorizontalHeaderTable th,
+#calendarSection .rsHorizontalHeaderTable th a {
+  width: 14.35%; }
+#calendarSection .rsHorizontalHeaderTable th,
 #calendarSection .rsHorizontalHeaderTable th a,
 #calendarSection .rsAllDayHeader *,
 #calendarSection .rsVerticalHeaderWrapper div {
-  width: 14.35%;
   font-family: 'merriweather';
   font-weight: normal;
   color: #21282F;
@@ -2723,6 +2724,9 @@ input[type='submit'],
   color: #CCC;
   font-size: 12px;
   text-transform: lowercase; }
+#calendarSection table.rsContentTable td {
+  width: 14%;
+  border: 1px solid #D3D3D3; }
 #calendarSection .sfcalendar {
   margin-bottom: 5%; }
 #calendarSection .k-widget .k-window .sfcalendarEventPreviewWrp {
