@@ -130,44 +130,39 @@ $bg_img: "../sysimages/bg.png";
 // Typography
 @font-face {
     font-family: 'intro';
-    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
-         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
-		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
+    src: local('GE SS TWO Light'), local('GE-SS-TWO-Light'), url('../fonts/GE_SS_Two_Light.otf') format('opentype');
+	src: local('GE SS TWO Light'), local('GE-SS-TWO-Light'), url('../fonts/GE_SS_Two_Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'merriweather';
-    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
-         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
-		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
+    src: local('GE SS TWO Light'), local('GE-SS-TWO-Light'), url('../fonts/GE_SS_Two_Light.otf') format('opentype');
+	src: local('GE SS TWO Light'), local('GE-SS-TWO-Light'), url('../fonts/GE_SS_Two_Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'merriweatherbold';
-    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
-         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
-		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
+    src: local('GE SS TWO Light'), local('GE-SS-TWO-Light'), url('../fonts/GE_SS_Two_Light.otf') format('opentype');
+	src: local('GE SS TWO Light'), local('GE-SS-TWO-Light'), url('../fonts/GE_SS_Two_Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'helvetica';
-    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
-         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
-		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
+    src: local('GE SS TWO Light'), local('GE-SS-TWO-Light'), url('../fonts/GE_SS_Two_Light.otf') format('opentype');
+	src: local('GE SS TWO Light'), local('GE-SS-TWO-Light'), url('../fonts/GE_SS_Two_Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;   
 }
 
 @font-face {
     font-family: 'helveticabold';
-    src: url('../fonts/arahamahalfidaa-regular.woff2') format('woff2'),
-         url('../fonts/arahamahalfidaa-regular.woff') format('woff'),
-		 url('../fonts/arahamahalfidaa-regular.ttf') format('truetype');
+    src: local('GE SS TWO Light'), local('GE-SS-TWO-Light'), url('../fonts/GE_SS_Two_Light.otf') format('opentype');
+	src: local('GE SS TWO Light'), local('GE-SS-TWO-Light'), url('../fonts/GE_SS_Two_Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;   
 }

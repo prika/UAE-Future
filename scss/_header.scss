@@ -219,6 +219,7 @@
 			z-index: -1;
 			text-align: center;
 			opacity: 0;
+			cursor: url(../sysimages/button/close.png) 0 0, auto;
 			@include transition( all .5s ease);
 			
 			#frmPesq{
@@ -234,6 +235,10 @@
 					opacity: 0;
 					@include transition( all .3s ease);
 					
+					&:hover{
+						cursor: initial!important;
+					}
+
 					.search-input{
 						margin-bottom: 20px;
 						background: transparent;
