@@ -1153,6 +1153,7 @@ input[type='submit'],
     z-index: -1;
     text-align: center;
     opacity: 0;
+    cursor: url(../sysimages/button/close.png) 0 0, auto;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -1171,6 +1172,8 @@ input[type='submit'],
         -o-transition: all 0.3s ease;
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease; }
+        #header .navbar .container-search #frmPesq .wrapper-input:hover {
+          cursor: initial !important; }
         #header .navbar .container-search #frmPesq .wrapper-input .search-input {
           margin-bottom: 20px;
           background: transparent;

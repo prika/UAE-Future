@@ -450,27 +450,32 @@
 
 @font-face {
   font-family: 'intro';
-  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
+  src: local("GE SS TWO Light"), local("GE-SS-TWO-Light"), url("../fonts/GE_SS_Two_Light.otf") format("opentype");
+  src: local("GE SS TWO Light"), local("GE-SS-TWO-Light"), url("../fonts/GE_SS_Two_Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'merriweather';
-  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
+  src: local("GE SS TWO Light"), local("GE-SS-TWO-Light"), url("../fonts/GE_SS_Two_Light.otf") format("opentype");
+  src: local("GE SS TWO Light"), local("GE-SS-TWO-Light"), url("../fonts/GE_SS_Two_Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'merriweatherbold';
-  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
+  src: local("GE SS TWO Light"), local("GE-SS-TWO-Light"), url("../fonts/GE_SS_Two_Light.otf") format("opentype");
+  src: local("GE SS TWO Light"), local("GE-SS-TWO-Light"), url("../fonts/GE_SS_Two_Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'helvetica';
-  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
+  src: local("GE SS TWO Light"), local("GE-SS-TWO-Light"), url("../fonts/GE_SS_Two_Light.otf") format("opentype");
+  src: local("GE SS TWO Light"), local("GE-SS-TWO-Light"), url("../fonts/GE_SS_Two_Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'helveticabold';
-  src: url("../fonts/arahamahalfidaa-regular.woff2") format("woff2"), url("../fonts/arahamahalfidaa-regular.woff") format("woff"), url("../fonts/arahamahalfidaa-regular.ttf") format("truetype");
+  src: local("GE SS TWO Light"), local("GE-SS-TWO-Light"), url("../fonts/GE_SS_Two_Light.otf") format("opentype");
+  src: local("GE SS TWO Light"), local("GE-SS-TWO-Light"), url("../fonts/GE_SS_Two_Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 h1, .h1 {
@@ -1100,6 +1105,7 @@ input[type='submit'],
     z-index: -1;
     text-align: center;
     opacity: 0;
+    cursor: url(../sysimages/button/close.png) 0 0, auto;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -1118,6 +1124,8 @@ input[type='submit'],
         -o-transition: all 0.3s ease;
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease; }
+        #header .navbar .container-search #frmPesq .wrapper-input:hover {
+          cursor: initial !important; }
         #header .navbar .container-search #frmPesq .wrapper-input .search-input {
           margin-bottom: 20px;
           background: transparent;
