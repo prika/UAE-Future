@@ -1,6 +1,10 @@
 #calendarSection{
 	//background: url($bg_img);
 	//padding-bottom: 40px;
+	opacity: 0;
+	@include transition(opacity .1s linear);
+
+	&.show{opacity: 1;}
 
 	#calendar {
 		max-width: 1100px;
@@ -326,3 +330,9 @@
 
 
 .rsContentScrollArea{min-height: 550px;}
+.rsAptContent{
+	font-family: "helveticabold";
+    font-size: 14px;
+    line-height: 140%;
+	padding: 2px 10px 2px;
+}

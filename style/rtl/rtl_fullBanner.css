@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$color_bl".
-        on line 14 of scss/rtl/rtl_fullBanner.scss
+        on line 15 of scss/rtl/rtl_fullBanner.scss
 
-9:         text-transform: uppercase;
-10:         height: 100vh;
-11:         position: relative;
-12:         z-index: 2;
-13: 		padding: 0 20%;
-14: 		text-shadow: 1px 1px $color_bl;
-15:         
-16:         h1 {
-17:           font-size: 80px;
-18:           line-height: 100%;
-19:           padding-top: 5px;
+10:         text-transform: uppercase;
+11:         height: 100vh;
+12:         position: relative;
+13:         z-index: 2;
+14: 		padding: 0 20%;
+15: 		text-shadow: 1px 1px $color_bl;
+16:         
+17:         h1 {
+18:           font-size: 80px;
+19:           line-height: 100%;
+20:           padding-top: 5px;
 
 Backtrace:
-scss/rtl/rtl_fullBanner.scss:14
+scss/rtl/rtl_fullBanner.scss:15
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
@@ -82,4 +82,4 @@ scss/rtl/rtl_fullBanner.scss:14
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color_bl\".\A         on line 14 of scss/rtl/rtl_fullBanner.scss\A \A 9:         text-transform: uppercase;\A 10:         height: 100vh;\A 11:         position: relative;\A 12:         z-index: 2;\A 13: 		padding: 0 20%;\A 14: 		text-shadow: 1px 1px $color_bl;\A 15:         \A 16:         h1 {\A 17:           font-size: 80px;\A 18:           line-height: 100%;\A 19:           padding-top: 5px;"; }
+  content: "Error: Undefined variable: \"$color_bl\".\A         on line 15 of scss/rtl/rtl_fullBanner.scss\A \A 10:         text-transform: uppercase;\A 11:         height: 100vh;\A 12:         position: relative;\A 13:         z-index: 2;\A 14: 		padding: 0 20%;\A 15: 		text-shadow: 1px 1px $color_bl;\A 16:         \A 17:         h1 {\A 18:           font-size: 80px;\A 19:           line-height: 100%;\A 20:           padding-top: 5px;"; }

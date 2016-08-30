@@ -1,5 +1,12 @@
 #calendarSection {
-  direction: rtl; }
+  direction: rtl;
+  opacity: 0;
+  -moz-transition: opacity 0.1s linear;
+  -o-transition: opacity 0.1s linear;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear; }
+  #calendarSection.show {
+    opacity: 1; }
   #calendarSection #calendar {
     max-width: 1100px;
     margin: 0 auto; }
@@ -247,5 +254,20 @@
 
 .rsContentScrollArea {
   min-height: 550px; }
+
+.rsAptContent {
+  font-family: "helveticabold";
+  font-size: 14px;
+  line-height: 140%;
+  padding: 2px 10px 2px; }
+  .rsAptContent:hover {
+    -webkit-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
+    -moz-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
+    box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
+    background: #21282F;
+    border: 2px solid #FFF;
+    color: #FFF;
+    margin: -6px;
+    cursor: pointer; }
 
 /*# sourceMappingURL=rtl_calendar.css.map */
