@@ -335,4 +335,13 @@
     font-size: 14px;
     line-height: 140%;
 	padding: 2px 10px 2px;
+
+	&:hover{
+		@include box-shadow( 0, 0, 5px, rgba($color: #666, $alpha: .5) );
+		background: #21282F;
+        border: 2px solid #FFF;
+		color: #FFF;
+		margin: -6px;
+		cursor: pointer;
+	}
 }

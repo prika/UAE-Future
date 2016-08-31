@@ -2887,6 +2887,15 @@ input[type='submit'],
   font-size: 14px;
   line-height: 140%;
   padding: 2px 10px 2px; }
+  .rsAptContent:hover {
+    -webkit-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
+    -moz-box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
+    box-shadow: 0 0 5px rgba(102, 102, 102, 0.5) ;
+    background: #21282F;
+    border: 2px solid #FFF;
+    color: #FFF;
+    margin: -6px;
+    cursor: pointer; }
 
 .fancybox-wrap:hover {
   cursor: initial !important; }
