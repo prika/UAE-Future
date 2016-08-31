@@ -206,6 +206,20 @@
 					 background-color: $color_gold;
 				}
 			}
+
+			#nav_change_lang{
+				width: 50px;
+				height: 80px;
+				background: url(../sysimages/button/changelanguage.png) no-repeat center center;
+			}
+
+			#nav_contact{
+				width: 50px;
+				height: 80px;
+				background: url(../sysimages/button/contact.png) no-repeat center center;
+			}
+
+
 		}	
 		
 		.container-search{
