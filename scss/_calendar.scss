@@ -305,7 +305,7 @@
 
 .containerLegendCategory{
 	max-width: 1098px;
-	margin-top: -60px;
+	margin-top: -40px;
     padding: 0 10px 60px;
 
 	.category{
@@ -343,5 +343,45 @@
 		color: #FFF;
 		margin: -6px;
 		cursor: pointer;
+	}
+}
+
+
+
+@media (max-width: 992px) {
+	.fc-toolbar{
+		margin-top: 0; 
+		position: fixed;
+		top: 0; bottom: 0; left: 0; right: 0;
+		height: 100vh;
+		width: 100vw;
+		padding: 130px 30px 50px;
+		background: rgba(33, 40, 47, 0.98);
+		z-index: 9;
+		display: none;
+		overflow: auto;
+		
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+
+		.fc-left{
+			width: 100%;
+    		float: none;
+
+			.todayContainer,
+			.fc-right.fc-button-group{    
+				width: 100%;
+    			margin: 20px 0;
+    			float: none;
+			}
+		}
+
+		.fc-right{
+			width: 100%;
+    		float: none;
+			margin: 30px 0;
+		}
 	}
 }
