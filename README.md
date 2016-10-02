@@ -5,7 +5,7 @@
   - [x] Header sticky
   - [x] Header mobile
   - [x] Footer
-  - [ ] **Footer reduced**
+  - [-] Footer reduced
 
 
 ###Homepage
@@ -19,38 +19,38 @@
 
 ###Ecosystem
   - [x] Full banner
-  - [ ] Full banner - animations 4
+  - [-] Full banner - animations 4
   - [ ] **Ecosystem filters accordion**
   - [x] Ecosystem filters
   - [x] Ecosystem accordion
   - [x] Ecosystem list elements
   - [x] Ecosystem elements ( 2 flags)
-  - [ ] Ecosystem animations 2
-  - [ ] **Ecosystem popup normal - top corner**
+  - [-] Ecosystem animations 2
+  - [x] Ecosystem popup normal - top corner
   - [x] Ecosystem popup image
   - [x] Ecosystem popup video
   
 
 ###Contacts
   - [x] Full banner
-  - [ ] Full banner - animations 7
+  - [-] Full banner - animations 7
   - [x] Contacts form
-  - [ ] **Contacts form - inputs/selects corners**
-  - [ ] Contacts form - animations 4
+  - [x] Contacts form - inputs/selects corners
+  - [-] Contacts form - animations 4
   
 
 ###About
   - [x] Full banner
-  - [ ] Full banner - animations 4
+  - [-] Full banner - animations 4
   - [x] About content 1
   - [x] About content 2
   - [x] About content 2 - links download
   - [x] About content 2 - accordion
-  - [ ] About content 2 - animations 2
+  - [-] About content 2 - animations 2
 
 ###Resources
   - [x] Full banner
-  - [ ] Full banner - animations 4
+  - [-] Full banner - animations 4
   - [x] Resources content
   - [x] Resources content - animations 2
   
@@ -60,22 +60,22 @@
   - [x] Resources - Dictionary tabs
 
 ###Calendar
-  - [ ] **Full banner - slider**
-  - [ ] Full banner - animations 4
+  - [x] Full banner - slider
+  - [-] Full banner - animations 4
   - [x] Calendar element
-  - [ ] **Calendar styles**
-  - [ ] **Calendar subtitle**
-  - [ ] **Calendar popups**
+  - [x] Calendar styles
+  - [x] Calendar subtitle
+  - [x] Calendar popups
 
 ###Culture
   - [x] Full banner - video - script
-  - [ ] **Online training videos - element**
+  - [x] Online training videos - element
   - [x] Online training videos - list
-  - [ ] Online training videos - animations 1
+  - [-] Online training videos - animations 1
 
 ###Login
   - [x] Login Form
-  - [ ] **Favorites element**
-  - [ ] **Favorites list**
-  - [ ] Favorites - animations 2
+  - [x] Favorites element
+  - [x] Favorites list
+  - [-] Favorites - animations 2
   
