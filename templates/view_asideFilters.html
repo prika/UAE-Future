@@ -1,3 +1,5 @@
+<div class="centered-xs centered-sm hidden-md hidden-lg"><a onclick="closeFilters()" class="button">Close Filters</a></div>
+
 <div class="subtitle">
     <h3>CATEGORIES <a id="reset" onclick="reset()">Reset</a></h3>
 </div>
@@ -97,6 +99,7 @@
     </div>
 </div>
 
+<div class="centered-xs centered-sm hidden-md hidden-lg"><a onclick="closeFilters()" class="button">Close Filters</a></div>
 
 
 <script>
@@ -108,29 +111,37 @@
         refreshFilteredAnnouncements();
     };
   
-     $(".filter label").click(function(e)
-     {
-          var me = $(this);
-          var isChecked = me.hasClass("checked"); 
-          
-          if (isChecked)  
-          { 
-             me.removeClass("checked");
-          }       
-          else {  
-             me.addClass("checked"); 
-          }
-        
-         e.preventDefault();         
-         me.find('input[type=checkbox]').attr("checked", !isChecked);
-         refreshFilteredAnnouncements();
-       });
+    function closeFilters()
+    {
+        $('#filterSection').fadeOut();
+    }
 
+    function openFilters()
+    {
+        $('#filterSection').fadeIn();
+    }
 
      $(document).ready(function () {
 
          refreshFilteredAnnouncements();
-        
+         
+         $(".filter label").click(function(e)
+        {
+            var me = $(this);
+            var isChecked = me.hasClass("checked"); 
+            
+            if (isChecked)  
+            { 
+                me.removeClass("checked");
+            }       
+            else {  
+                me.addClass("checked"); 
+            }
+
+            e.preventDefault();         
+            me.find('input[type=checkbox]').attr("checked", !isChecked);
+            refreshFilteredAnnouncements();
+        });
      });
 
     
